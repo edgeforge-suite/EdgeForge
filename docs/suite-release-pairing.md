@@ -1,10 +1,12 @@
 # Suite Release-Candidate Pairing
 
 This document defines the bounded release-pairing foundation for the three core EdgeForge Suite
-repositories. The sole active candidate-selection record is
-[`suite-release-candidate.json`](suite-release-candidate.json). It selects revisions for coordinated
-release preparation; it does not recommend installation and does not establish integration,
-security, or release acceptance.
+repositories. The sole candidate-selection descriptor is
+[`suite-release-candidate.json`](suite-release-candidate.json). It currently preserves
+the pre-cutover snapshot below; it does not select the new private repositories'
+v5 release sources, recommend installation or establish integration, security or
+release acceptance. The approved private import is complete. Release preparation
+does not change this descriptor or the historical baseline.
 
 ## Candidate, Run, Evidence, and Release
 
@@ -32,12 +34,16 @@ keeps `acceptance_status` set to `pending`. It selects manifest schema `2.0` and
 | Studio | `santosh-sh/EdgeForgeStudio` | `d23d99f480e242291750724d192875e53b37e85f` |
 | KS | `santosh-sh/EdgeForgeKnowledgeServer` | `51bbff05f36c85c65a37694006e46e8eb3c21bf9` |
 
-The record contains no branch names, version ranges, credentials, or checkout paths. Studio
-dependency remediation and the other public-v5 release gates remain pending independently.
+The record contains no branch names, version ranges, credentials, or checkout paths.
+Its pins and pending status are historical preparation state, not a current
+dependency-remediation assessment or a release decision. The canonical
+[release sequence](v5-release-readiness.md#replacement-cutover-and-release-sequence)
+defines the remaining selection, acceptance and public-launch gates.
 
 ## Preflight Usage
 
-Prepare three separate clean worktrees at the selected commits, then run:
+After separately authorized new-source selection is recorded at P, prepare three
+separate clean worktrees at E/S/K, then run from the recorded P tool checkout:
 
 ```bash
 python scripts/verify_suite_pairing.py \
@@ -79,12 +85,24 @@ identity, environment provenance, evidence bundle, runtime negotiation, or accep
 also does not replace the remaining security closure or final coordinated public-v5 acceptance.
 
 The approved [fresh-repository sequence](v5-release-readiness.md#replacement-cutover-and-release-sequence)
-replaces the old E/P/R/M archive-repository procedure. Frozen reviewed trees
-will be imported into new private repositories; these new commits have new
-identities. After release source checks, select actual new Engine/Studio/KS
-source commits E/S/K. Pairing/evidence records P/R come later and are not
-themselves the product commits exercised by L5. Run L5 from E, with explicit
-S/K paths and strict required-service flags; its recorded SHAs must match E/S/K.
+replaces the old E/P/R/M archive-repository procedure. The approved parentless
+private imports now exist; their new identities do not inherit old acceptance.
+Prepare and independently review the three version/documentation PRs, obtain the
+coordinated pre-merge review, and human-merge them before later selecting actual
+tested new Engine/Studio/KS source commits E/S/K. Engine E must carry the
+`pyproject.toml` version bump that triggers generated-app CI; this workflow has
+no manual trigger. Capture actual generated compile/standalone results at E
+or a verified identical tested merge tree, never another docs-only head.
+
+Commit candidate P later with the full E/S/K hashes and acceptance pending.
+Execute one coordinated acceptance on those clean sources, then record actual
+outcomes at R and obtain independent final release review. Pairing/evidence
+commits P/R are not the product commits exercised by L5. Run L5 from E, with
+explicit S/K paths, separate constrained copied environments and strict
+required-service flags; its recorded SHAs must match E/S/K. Use the dated
+[current-release environment and MCP launch guidance](v5-release-readiness.md#v5-environment-and-mcp-launch).
+Only subsequent authorization permits tags on tested E/S/K, followed by public
+cutover and separately authorized website launch.
 
 The verifier accepts exactly one complete repository cohort:
 `santosh-sh/EdgeForge{,Studio,KnowledgeServer}` for historical selections, or
@@ -97,9 +115,12 @@ The existing descriptor remains unchanged and pending. Only separately
 authorized release selection can replace it with actual new-repository SHAs.
 The accepted-release decision is a separate record, not a new descriptor
 status. The eventual Release body or later record identifies P/R by full SHA;
-R cannot identify itself. Tagged README guidance must direct readers to the
-later accepted record, not imply that an embedded older descriptor is current.
-This preparation does not authorize import, pin refresh, tags or publication.
+R cannot identify itself. The candidate descriptor embedded in release source
+or an eventual tag may predate final selection. After separately authorized
+publication, the v5.0.0 Release record will name accepted E/S/K, P/R, validation
+and limitations; that record and its URL do not yet exist. No current README
+may present a future record as published. This preparation does not authorize
+pin refresh, acceptance, tags or publication.
 
 ## Updating the Selection
 
@@ -110,7 +131,8 @@ compatibility from equal version strings.
 For a pin refresh:
 
 1. Record full commits for exactly Engine, Studio, and KS.
-2. Keep the candidate and acceptance status pending until the required proof completes.
+2. Keep `status: candidate` and `acceptance_status: pending`; record any eventual
+   acceptance decision separately rather than changing descriptor status.
 3. Run the focused verifier tests and a real preflight against separate clean worktrees.
 4. Preserve prior evidence and the historical Suite baseline rather than rewriting them.
 5. Record the actual run revisions in the eventual acceptance evidence.

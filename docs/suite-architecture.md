@@ -132,14 +132,15 @@ proves it runs.
 > clone → setup → generate → build & run the sample app → exercise its test
 > console (~10 min). The commands below are the orientation subset.
 >
-> **One-liners:** the root `Makefile` wraps these — `make setup`, `make test`,
+> **One-liners:** the root `Makefile` wraps routine tasks — `make test`,
 > `make generate-sample`, `make mcp` (run `make help` to list them).
 
-Set up (Python 3.11+):
+Set up for current release preparation (Python 3.11, constrained dependencies):
 
 ```bash
-python3 -m venv .venv
-.venv/bin/pip install -r requirements.txt
+python3.11 -m venv --copies .venv
+.venv/bin/python -m pip install -c requirements-lock.txt -r requirements.txt
+.venv/bin/python -m pip check
 ```
 
 Run the test suite:

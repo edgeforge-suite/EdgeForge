@@ -3,6 +3,10 @@
 **Authority: EF-V5-RELEASE-SCOPE-RESET revision 3, approved by Santosh Hommaradi
 on 2026-10-25.** This supersedes conflicting October 6 release gates and the
 old E/P/R/M procedure. It authorizes private preparation, not release execution.
+**Current update — 2026-11-07:** EF-V5-RELEASE-PREP-ENGINE-S1 revision 2
+authorizes Engine version/documentation preparation in the new private repository.
+The approved private cutover is complete; acceptance, tags and public launch
+remain separate, later gates.
 Broad M2 remains incomplete; historical findings and acceptance pins are unchanged.
 The approved **EF-V5-SOURCE-PREP-ENGINE-S1 revision 2** content amendment below
 documents three advisory-source future-public-import exclusions, not findings clearance.
@@ -43,16 +47,19 @@ satisfy or waive any prerequisite, accept risk or authorize publication.
 Enterprise adoption remains optional and self-managed; the project continues
 to be independently maintained with community contributions welcome.
 
-`edgeforge-suite` is secured. Destinations are `edgeforge-suite/EdgeForge`,
-`edgeforge-suite/EdgeForgeStudio`, `edgeforge-suite/EdgeForgeKnowledgeServer`
-and `edgeforge-suite/website`. Preparation lands first in existing private
-`santosh-sh` repositories; they then remain private pre-v5 archives.
+The three private product repositories now exist: `edgeforge-suite/EdgeForge`,
+`edgeforge-suite/EdgeForgeStudio` and `edgeforge-suite/EdgeForgeKnowledgeServer`.
+Their approved parentless initial imports and repository controls were verified
+and independently approved. Release preparation now belongs in these repositories.
+The original `santosh-sh` repositories remain private pre-v5 archives.
+`edgeforge-suite/website` is a separate lane; product-import completion asserts
+no website creation, deployment or launch.
 Do not import their history, PRs, issues, Actions logs or private working files;
 do not rename, delete, scrub or expose those repositories.
 
 | Lane | Required outcome |
 |---|---|
-| Private preparation | Reviewed source/publication metadata, truthful limitations, ordinary required checks and proportionate proof. Maintainer publication authorization and route activation remain pending without blocking preparation. Engine, Studio and KS prep may run and human-merge independently; KS starts first. Engine alone owns the canonical Suite roadmap/tracker. |
+| Private preparation | Complete version/release-documentation PRs in the three new private repositories, with ordinary required checks and independent review, then human merge. Maintainer publication authorization and route activation remain pending without blocking preparation. The three lanes may proceed in parallel. Engine alone owns the canonical Suite roadmap/tracker. |
 | Coordinated release selection | Actual new-repository source commits, strict clean pairing, required repo/build checks, fresh strict audits, selected Studio-image build/run, full L5 with required services and no skipped-success, newcomer journey, focused security QA and one independent final release review. Green CI or matching pins is not acceptance. |
 | Public exposure | Maintainer publication authorization, reviewed intended trees and attribution, verified email route, verified tags/targets and human authorization. Enable/verify PVR immediately on public cutover before announcing launch. |
 | Website hosting | Protected Cloudflare previews before launch; production only after acceptance and human authorization. Verify the bounded hosting controls below. No live Studio/KS/Engine/demo/generated-app service is authorized. |
@@ -107,38 +114,38 @@ authorization remain mandatory supported-deployment boundaries.
 
 ## Replacement cutover and release sequence
 
-1. **Prepare privately.** Independently review and human-merge scoped preparation
-   in the existing repositories. Keep the three product lanes parallel; website
-   preparation can also proceed privately. No public exposure while maintainer
-   publication authorization is pending.
-2. **Freeze reviewed trees and import.** Review one intended public tree per
-   repository, including decompressed evidence and source-specific attribution.
-   Freeze exact private source commits. Later, separately authorized operations
-   import the reviewed, publication-cleaned tracked trees **minus the three
-   advisory-source Engine exclusions below** as one initial commit each into the new
-   private repositories, using the maintainer's GitHub no-reply identity.
-   Privately retain old-source/tree-to-new-commit correspondence. New histories
-   have new SHAs; do not relabel prior tests or import old histories. Before
-   import, compare every included file's bytes/mode against the frozen tree and
-   verify the exact import-time deletion-only difference against the exclusion
-   table. Earlier content replacements are part of the frozen reviewed tree,
-   not extra unrecorded import-time changes. Any
-   additional difference needs review; this goal authorizes no actual import.
-3. **Establish new-repository controls.** Verify branch protection, required checks,
-   gitleaks and read-only default Actions permissions. Prepare reporting routes.
-   These settings are not inherited by copying files. This preparation PR makes
-   no settings changes.
-4. **Prepare release source and pairing.** In later release work, set versions,
-   changelogs and README tagged-checkout guidance in the new repositories.
-   Freeze tested source commits E/S/K and capture exact-head required checks,
-   **including generated-app compile/standalone proof**. Then commit a later
-   candidate record P selecting their full new SHAs and repository identities.
-   Candidate status remains `candidate`/`pending`; the accepted-release record
-   is separate. Do not invent SHAs or rewrite the old descriptor or v4 baseline.
-5. **Acceptance and independent release review.** Run the [pairing verifier](suite-release-pairing.md)
+**Completed private prerequisite:** the approved tracked-tree projections were
+imported as one parentless initial commit per product repository. Exactly the
+three Engine advisory files below were omitted. Private source/tree/import
+correspondence and independent verification remain in the sealed cutover record;
+old history was not imported. Branch protection, required checks, gitleaks and
+read-only default Actions permissions were verified. Private controls must remain
+supported by the selected organization plan. Reporting-route activation is still
+pending; PVR must be enabled and verified at public cutover, before announcement.
+No re-import or repository-settings change is part of release preparation.
+
+1. **Prepare and human-merge the three release PRs.** Set versions, changelogs
+   and active release/setup guidance in the new private repositories. Complete
+   ordinary applicable CI and independent lane reviews, then the coordinated
+   pre-merge review and human merge decisions. Keep the three product lanes
+   parallel. No acceptance, tags or public exposure is authorized by preparation.
+2. **Select tested source commits E/S/K later.** Select actual new-repository
+   source commits after the preparation merges. Capture exact-source required
+   checks, including Engine **generated-app compile/standalone proof**. Engine E
+   must carry the `pyproject.toml` version bump: both generated-app path filters
+   include it, and the workflow has no manual trigger. Do not nominate a later
+   docs-only head and reuse another head's run. A merge commit qualifies only
+   with checks at that source or a verified identical tested tree. Version inputs
+   also ensure the Python suite and strict audit execute rather than docs-only skip.
+3. **Record candidate P later.** In a separate candidate-record commit, select
+   full E/S/K hashes and the complete `edgeforge-suite` repository cohort.
+   Keep `status: candidate` and `acceptance_status: pending`. The present
+   preparation does not edit the existing descriptor or historical v4 baseline.
+   P names prior source commits; it cannot select itself as Engine E.
+4. **Execute one coordinated acceptance on E/S/K.** Run the [pairing verifier](suite-release-pairing.md)
    from a recorded tool checkout against clean E/S/K. Run L5 **from E**, with
-   `EDGEFORGE_STUDIO_REPO` and `EDGEFORGE_KS_REPO` selecting S/K and the pinned
-   interpreters in the [reproduction guide](handover-evidence/l5-acceptance-run.md#reproduce).
+   `EDGEFORGE_STUDIO_REPO` and `EDGEFORGE_KS_REPO` selecting S/K and the pinned,
+   copied, constrained interpreters described in the current-release note below.
    Use `python scripts/smoke/l5_orchestrator.py --require-sibling-repos --require-services`;
    never `--allow-skipped-success`. Recorded Engine/Studio/KS manifest SHAs must
    match E/S/K. Complete the newcomer journey, fresh strict audits, selected
@@ -146,31 +153,75 @@ authorization remain mandatory supported-deployment boundaries.
    release-QA clarifications within their existing tasks, not new workstreams.
    Retain the bounded Studio-to-Engine adversarial proof and its nested-input/
    concurrent-writer limitations; full M3 automation remains separate.
-   Commit later sanitized acceptance records R. Review all E-to-P/R changes;
+5. **Record results R and obtain independent release review later.** Commit
+   sanitized acceptance records with actual outcomes and limitations. Review all E-to-P/R changes;
    behavior-affecting changes require reselection and affected proof. An R record
    cannot contain its own full SHA: the later Release body or subsequent record
-   names P/R. Final independent release review covers actual tested identities,
+   names P/R. The independent final release review covers actual tested identities,
    later evidence and limitations. An older descriptor embedded in E is not the
-   accepted selection; E's README must explain how to find the later record.
-6. **Verify tags under human authorization.** Immediately before tagging, check
-   current advisories for the unchanged selected inventories; reuse qualifying
+   accepted selection. The candidate descriptor embedded in release source or
+   an eventual tag may predate final selection. After separately authorized
+   publication, the v5.0.0 Release record will identify accepted E/S/K, P/R,
+   validation and limitations. That record does not yet exist; do not invent its URL.
+6. **Verify tags under subsequent human authorization.** Immediately before tagging,
+   check current advisories for the unchanged selected inventories; reuse qualifying
    same-input results rather than duplicate campaigns. Triage new findings;
    required audits must pass. Create/verify annotated v5 tags only on the
-   actual accepted source commits and verify package/version agreement. No
-   historical/fake tags to silence CI, no automatic tag moves/deletions.
+   actual accepted source commits E/S/K, never P/R, and verify package/version
+   agreement. No historical/fake tags to silence CI, no automatic tag moves/deletions.
    The no-tag bootstrap applies **only** to `edgeforge-suite/EdgeForge`; package
    agreement is always checked. Once any tags exist, the normal newest-tag check
-   applies (main push mismatch fails; PR mismatch warns). The existing private
+   applies (main push mismatch fails; PR mismatch warns). The original archive
    repository does not receive a no-tag exemption.
 7. **Human-directed public flip and launch.** Only after maintainer publication authorization,
-   email verification, final review/acceptance and exact-target checks, make the
-   new repositories public; enable/verify PVR before launch announcement.
-   Deploy the accepted informational website only under separate authorization.
-   Existing private repositories remain archives; no old PR/history publication.
+   email verification, full intended-tree approval, final review/acceptance and
+   exact-target checks, make the new repositories public; enable/verify PVR
+   before launch announcement. Deploy the accepted informational website only
+   under separate authorization. Original private repositories remain archives;
+   no old PR/history publication.
 
 Tested source commits, later pairing/evidence commits, import commits and merge
 commits are different identities. No later record SHA substitutes for a tested
-source SHA. This policy authorizes none of the release operations above.
+source SHA. This preparation authorizes none of the later release operations above.
+
+<a id="v5-environment-and-mcp-launch"></a>
+
+### Current-release environment and Engine MCP launch verification — 2026-11-07
+
+The July [L5 record](handover-evidence/l5-acceptance-run.md#reproduce) remains
+historical proof at its recorded pins. Later v5 acceptance uses separate clean
+E/S/K checkouts, each with its own constrained Python 3.11 `.venv` created using
+`python3.11 -m venv --copies .venv`. Do not overwrite active environments or
+combine the three dependency graphs. From E, install with
+`.venv/bin/python -m pip install -c requirements-lock.txt -r requirements.txt`,
+then `.venv/bin/python -m pip check`; S/K use their own selected constraints.
+No system-site packages, inherited `PYTHONHOME`, uncontrolled `PYTHONPATH` or
+global dependency fallback qualifies.
+
+Before that acceptance run, resolve `E/.venv/bin/python` exactly as
+`_engine_mcp_python()` in `scripts/smoke/l5_orchestrator.py` does. Probe that
+exact executable: it must remain inside E's `.venv`, with `sys.prefix` equal to
+that environment and different from `sys.base_prefix`. Record requested/resolved
+paths, executable hash/version, `pyvenv.cfg`, lock identity, installed inventory
+and pip-check results for each environment. Setting `ENGINE_PYTHON` alone does
+not control the Studio-to-Engine MCP child.
+
+During later acceptance, use the approved private acceptance plan's unchanged,
+invocation-scoped parent-spawn observer outside the checkouts. Before L5, require
+startup parity with and without observation for the actual installed environments
+and base interpreter, including loaded `sitecustomize` file/spec origin and path/
+prefix fields. Require copied-path success and base/symlink, async, cached-module
+and unrelated-launch controls. Missing or indistinguishable evidence stops before
+L5. On macOS, a process-list sample alone cannot distinguish framework re-execs.
+
+Bind Studio-parent Engine MCP spawn requests to the L5 PID/time window; each
+requested executable and argv0 must match the preflighted copied Engine path.
+Observe wrong paths too, rather than filtering them out. Prefix probes are
+preflight, parent audit events establish requested launches, and successful MCP/
+L5 results establish completion; correlate all three. Missing records, a base
+interpreter request, startup mismatch or observer failure leaves acceptance
+incomplete. This preparation neither implements, changes nor executes that
+observer, harness or acceptance plan, and does not relabel earlier L5 results.
 
 ## Public-import exclusions and historical replay
 
@@ -185,8 +236,10 @@ These exclusions remove three source files, not all overlapping advisory text.
 Some of the same text remains in GitHub Advisory Database-derived OSV records
 under the source-specific CC-BY-4.0 basis documented in
 [third-party attribution](third-party-attribution.md#github-advisory-database).
-The maintainer must explicitly confirm retention of those copies during the
-intended-tree review before public import; this clarification is not that approval.
+The maintainer explicitly approved retention of the identified permitted copies
+on 2026-11-06. The completed private import preserved them and the dated ownership
+note/protective ignore patterns unchanged. This is not blanket permission for
+other feeds, vulnerability acceptance or full intended-tree publication approval.
 
 All three originals were introduced at private source revision
 `d7f8379374c3757a9cc1aa7fd2febe22ac7fa2e9` and are byte-identical at preparation

@@ -3,7 +3,8 @@
 ## Private reporting and activation
 
 GitHub Private Vulnerability Reporting (PVR) is the selected primary route for
-the future public `edgeforge-suite/EdgeForge` repository. It must be enabled and
+the currently private `edgeforge-suite/EdgeForge` repository after public cutover.
+The private import is complete; PVR must be enabled and
 verified immediately at public cutover, before the launch announcement.
 The selected email route is **security@edgeforgesuite.com**; configure and test
 monitored receipt and replies before the public flip. **Neither PVR activation

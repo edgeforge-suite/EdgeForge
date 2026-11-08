@@ -29,8 +29,9 @@ applies, not EdgeForge's Apache-2.0 license. The
 [complete notice beside the contract](../examples/input-projects/obie-wire-transfer/contracts/OPEN-BANKING-NOTICE.txt)
 discloses the five EdgeForge header-role annotations. Root [NOTICE](../NOTICE)
 also points there. Publication preparation verifies the original copy and the
-current five-annotation delta; it does not update upstream behavior or license
-Studio's separate fixture. Studio owns its provenance and notice check.
+current five-annotation delta; it does not update upstream behavior. Studio
+replaced its former fixture with independently authored Parcel content; the
+Engine specification's licence does not govern that separate fixture.
 
 ## Other sources and retention
 
@@ -50,14 +51,15 @@ planning material are never intended public content.
 ### Adopted repository-local source exclusions
 
 The maintainer approved source-preparation revision 2 to exclude three full
-repository-advisory response files (33 records) from the future public import.
+repository-advisory response files (33 records). The completed private import
+omitted exactly those files; they remain absent from this repository.
 The [single exclusion/reference table](v5-release-readiness.md#public-import-exclusions-and-historical-replay)
 records exact paths, original revision, existing compressed/decompressed hashes,
 upstream references and private-retention/replay boundaries. The originals,
 historical indexes/checksums, finding identities, conclusions and OPEN limitations
-remain unchanged privately. They are not removed from this preparation branch.
-Overlapping database-derived OSV records remain; the intended-tree review must
-explicitly confirm their retention under the source-specific basis above.
+remain unchanged privately. The maintainer explicitly approved retaining the
+identified overlapping database-derived OSV records on 2026-11-06 under the
+source-specific basis above. This is not blanket permission for other feeds.
 This is a publication-content decision, not a conclusion that redistribution
 is unlawful or a vulnerability/risk disposition. No new advisory research,
 prose replacement, upload or archive repackaging is authorized.
