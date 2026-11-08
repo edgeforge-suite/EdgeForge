@@ -1,0 +1,47 @@
+format: fixed-width
+encoding: ISO-8859-1
+record_types:
+  header:
+    indicator:
+      position: 1
+      length: 1
+      value: "H"
+    fields:
+      - name: file_date
+        length: 10
+        type: date
+        format: "yyyy-MM-dd"
+        required: true
+  data:
+    indicator:
+      position: 1
+      length: 1
+      value: "D"
+    fields:
+      - name: account_id
+        length: 36
+        type: string
+        required: true
+      - name: account_number
+        length: 12
+        type: string
+        required: true
+      - name: available_balance
+        length: 10
+        type: decimal
+        required: true
+      - name: opened_date
+        length: 10
+        type: date
+        format: "yyyy-MM-dd"
+        required: true
+  trailer:
+    indicator:
+      position: 1
+      length: 1
+      value: "T"
+    fields:
+      - name: record_count
+        length: 8
+        type: integer
+        required: true

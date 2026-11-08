@@ -1,0 +1,17 @@
+app_name: CSV Inbound Trailer Reconciliation
+bounded_context: accounts
+schema_version: "2.0"
+upstream_interfaces:
+  - name: account-csv-inbound-file
+    system: CORE
+    type: file-csv
+    version: "1.0"
+    spec: upstream/account-csv-inbound-layout.yaml
+    mapping: upstream/account-csv-inbound-mapping.yaml
+    samples:
+      - upstream/sample-account-inbound.csv
+      - upstream/sample-account-inbound-wrong-count.csv
+      - upstream/sample-account-inbound-wrong-sum.csv
+      - upstream/sample-account-inbound-missing-trailer.csv
+      - upstream/sample-account-inbound-duplicate-trailer.csv
+target_profile: springboot-legacy-compatible

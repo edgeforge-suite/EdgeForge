@@ -1,0 +1,29 @@
+interface: widget-api
+entity: Widget
+operations:
+  - name: createWidget
+    request_mappings:
+      - source: widgetName
+        target: Widget.widgetName
+      - source: description
+        target: Widget.description
+    response_mappings:
+      - source: widgetId
+        target: Widget.widgetId
+      - source: widgetName
+        target: Widget.widgetName
+      - source: status
+        target: Widget.status
+      - source: description
+        target: Widget.description
+  - name: getWidget
+    request_mappings: []
+    response_mappings:
+      - source: widgetId
+        target: Widget.widgetId
+      - source: widgetName
+        target: Widget.widgetName
+      - source: status
+        target: Widget.status
+      - source: description
+        target: Widget.description

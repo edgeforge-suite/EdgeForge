@@ -1,0 +1,100 @@
+{
+  "advisory_database_snapshot": "not supplied",
+  "advisory_service": "https://api.osv.dev",
+  "affected_packages": 30,
+  "assessment_time_utc": "2026-09-13T22:52:26.619468+00:00",
+  "exit_code": 1,
+  "findings": 107,
+  "inventory_coverage": "complete",
+  "inventory_sha256": "99d5a3f9effd35d70a6479a5f5ebea95d7caa9cff68591f70384dcf8ef6b9dd1",
+  "maven_warnings": [
+    "[WARNING] Unknown keyword meta:enum - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword",
+    "[WARNING] Unknown keyword deprecated - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword"
+  ],
+  "pom_sha256": "2f688948e26deb4bb3e41f7df58aefa32a4f4a6db61fde391d01d97a2cb94933",
+  "provenance": {
+    "archetype": "kafka-integration",
+    "engine_sha": "582c853f2566ac5cdf45ad239c1827a5aa47f12e",
+    "generation_input": {
+      "app_archetype": "kafka-integration",
+      "app_name": "payment-mediation-adapter",
+      "async_routes": [
+        {
+          "downstream_topic": {
+            "message_schema": "schemas/downstream/settlement-request.json",
+            "name": "xyz.settlement.request.v1",
+            "system": "XYZ_SETTLEMENT"
+          },
+          "name": "payment-initiated",
+          "partition_key": {
+            "source": "accountId",
+            "strategy": "field_value"
+          },
+          "pattern": "fire-and-forget",
+          "transform_mapping": "mappings/payment-to-settlement.yaml",
+          "upstream_topic": {
+            "message_schema": "schemas/upstream/payment-initiated.json",
+            "name": "abc.payments.initiated.v1",
+            "sample": "samples/payment-initiated.json",
+            "system": "ABC_CORE"
+          }
+        },
+        {
+          "downstream_topic": {
+            "message_schema": "schemas/downstream/ledger-update.json",
+            "name": "xyz.ledger.update.v1",
+            "system": "XYZ_LEDGER"
+          },
+          "name": "balance-updated",
+          "pattern": "fire-and-forget",
+          "transform_mapping": "mappings/balance-to-ledger.yaml",
+          "upstream_topic": {
+            "message_schema": "schemas/upstream/balance-updated.json",
+            "name": "abc.balance.updated.v1",
+            "system": "ABC_CORE"
+          }
+        }
+      ],
+      "bounded_context": "payment_mediation",
+      "kafka_config": {
+        "concurrency": 1,
+        "consumer_group": "payment-mediation-group"
+      },
+      "schema_version": "2.0",
+      "target_profile": "springboot-legacy-compatible"
+    },
+    "generation_run_id": "maven-assessment-kafka-h2-j17",
+    "input_manifest": "tests/fixtures/kafka-integration/manifest.yaml",
+    "input_package_sha256": "f086d43e409c0ad89885553ee4a213cf74497e06229869f3658b0cef5f768101",
+    "target_profile": "springboot-legacy-compatible"
+  },
+  "release_acceptance": "not established",
+  "resolved_artifacts": 137,
+  "scanned_maven_packages": 134,
+  "scanner_exit_code": 1,
+  "scopes": [
+    "compile",
+    "provided",
+    "runtime",
+    "system",
+    "test"
+  ],
+  "source_after_sha256": "b16a023907ffd2090e40b64b52daf3a7f7bf9e7a36fdf35b2e8a47b80edcd2bc",
+  "source_before_sha256": "b16a023907ffd2090e40b64b52daf3a7f7bf9e7a36fdf35b2e8a47b80edcd2bc",
+  "source_unchanged": true,
+  "status": "complete",
+  "tools": {
+    "cyclonedx_maven_plugin": "2.9.1",
+    "java": "17.0.18",
+    "java_vendor": "Homebrew",
+    "maven": "3.9.12",
+    "maven_dependency_plugin": "3.8.1",
+    "scanner": [
+      "osv-scanner version: 2.3.8",
+      "osv-scalibr version: 0.4.5",
+      "commit: 408fcd6f8707999a29e7ba45e15809764cf24f67",
+      "built at: 2026-05-08T04:54:35Z"
+    ],
+    "scanner_sha256": "a8cd6507b06239f463a7642430cfd2d154882f150f6e30cdc0653e28dfc34216"
+  }
+}

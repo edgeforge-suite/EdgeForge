@@ -1,0 +1,23 @@
+app_name: XML Account Runtime
+bounded_context: accounts
+schema_version: "2.0"
+upstream_interfaces:
+  - name: account-xml-inbound
+    system: CORE
+    type: xml-xsd
+    xsd_path: contracts/account.xsd
+    root_element: AccountMessage
+    namespace: "urn:edgeforge:examples:account:v1"
+    namespace_alias: acct
+    mapping: upstream/account-inbound-mapping.yaml
+    sample: samples/account.xml
+downstream_interfaces:
+  - name: account-xml-outbound
+    system: ARCHIVE
+    type: xml-xsd
+    xsd_path: contracts/account.xsd
+    root_element: AccountMessage
+    namespace: "urn:edgeforge:examples:account:v1"
+    namespace_alias: acct
+    mapping: downstream/account-outbound-mapping.yaml
+target_profile: springboot-legacy-compatible

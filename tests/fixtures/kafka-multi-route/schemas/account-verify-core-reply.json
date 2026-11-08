@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "requestId": {"type": "string"},
+    "verified": {"type": "boolean"},
+    "reason": {"type": "string"},
+    "riskScore": {"type": "integer"}
+  }
+}

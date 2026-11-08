@@ -1,0 +1,12 @@
+interface: widget-api
+entity: JobLauncher
+operations:
+  - name: createWidget
+    request_mappings:
+      - source: payloadKey
+        target: JobLauncher.payloadKey
+    response_mappings:
+      - source: widgetId
+        target: JobLauncher.widgetId
+      - source: payloadKey
+        target: JobLauncher.payloadKey

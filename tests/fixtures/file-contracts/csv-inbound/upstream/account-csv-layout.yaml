@@ -1,0 +1,35 @@
+format: csv
+encoding: ISO-8859-1
+delimiter: "|"
+quote_char: "\""
+escape_char: "\\"
+has_header_row: true
+line_separator: "\n"
+record_types:
+  data:
+    fields:
+      - name: account_id
+        column: 1
+        type: string
+        required: true
+      - name: account_number
+        column: 2
+        type: string
+        required: true
+      - name: available_balance
+        column: 3
+        type: decimal
+        required: true
+      - name: opened_date
+        column: 4
+        type: date
+        format: yyyy-MM-dd
+        required: true
+      - name: active
+        column: 5
+        type: boolean
+        required: true
+      - name: nickname
+        column: 6
+        type: string
+        required: false

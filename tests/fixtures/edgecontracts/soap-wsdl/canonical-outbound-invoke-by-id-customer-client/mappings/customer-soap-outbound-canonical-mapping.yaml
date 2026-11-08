@@ -1,0 +1,38 @@
+# Outbound SOAP canonical invoke_by_id mapping — EdgeForge proof fixture.
+#
+# This is the INTENDED mapping shape for the outbound canonical invocation MVP
+# as specified in docs/edgecontracts/outbound-soap-canonical-invocation-mvp-design.md
+# (PR #192 / Slice 1).
+#
+# Status (2026-06-02): accepted by the Engine metadata parser for Slice 1.
+# This remains a golden fixture for later runtime slices; no outbound action
+# controller or SOAP invocation path is generated from this mapping yet.
+#
+# Key differences from the inbound read_by_id mapping shape:
+#   - lookup uses request_field (REST endpoint field) + field (canonical entity field)
+#     rather than request_path (SOAP input XML path)
+#   - request_mappings list maps canonical entity fields to SOAP request XML paths
+#   - response block replaces top-level response_mappings; uses response.mode and
+#     response.response_mappings with source_path (SOAP output XML) + target (JSON key)
+#
+operation_mappings:
+  - operation: syncCustomer
+    mode: canonical
+    canonical_operation:
+      kind: invoke_by_id
+      entity: Customer
+      lookup:
+        request_field: id
+        field: customerId
+      request_mappings:
+        - source: Customer.customerId
+          target_path: /SyncCustomerRequest/customerId
+        - source: Customer.status
+          target_path: /SyncCustomerRequest/status
+      response:
+        mode: return_only
+        response_mappings:
+          - source_path: /SyncCustomerResponse/resultCode
+            target: resultCode
+          - source_path: /SyncCustomerResponse/message
+            target: message

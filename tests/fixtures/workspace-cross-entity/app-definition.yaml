@@ -1,0 +1,27 @@
+app_name: Workspace Items
+bounded_context: workspace
+schema_version: "2.0"
+app_archetype: crud
+target_profile: springboot-cross-entity-test
+upstream_interfaces:
+  - name: workspace-api
+    system: ExampleWorkspace
+    type: rest-json
+    spec: contracts/workspace-openapi.yaml
+    mapping: upstream/workspace-mapping.yaml
+    operations:
+      - name: createWorkspace
+        request_sample: upstream/workspace-request.json
+        response_sample: upstream/workspace-response.json
+  - name: item-api
+    system: ExampleWorkspace
+    type: rest-json
+    spec: contracts/workspace-openapi.yaml
+    mapping: upstream/item-mapping.yaml
+    operations:
+      - name: createItem
+        request_sample: upstream/item-request.json
+        response_sample: upstream/item-response.json
+rules:
+  - rules/workspace-rules.yaml
+  - rules/item-rules.yaml

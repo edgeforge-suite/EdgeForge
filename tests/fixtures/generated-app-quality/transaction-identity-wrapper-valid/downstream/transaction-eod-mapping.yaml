@@ -1,0 +1,14 @@
+entity: TransactionHistory
+field_mappings:
+  - source: TransactionHistory.accountId
+    target: account_id
+  - source: TransactionHistory.transactionId
+    target: transaction_id
+  - source: TransactionHistory.amount
+    target: amount
+  - source: TransactionHistory.status
+    target: status
+  - source: TransactionHistory.currentPage
+    target: current_page
+  - source: TransactionHistory.totalElements
+    target: total_elements

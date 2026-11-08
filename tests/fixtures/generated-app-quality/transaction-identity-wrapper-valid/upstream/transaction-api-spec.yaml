@@ -1,0 +1,62 @@
+openapi: 3.0.0
+info:
+  title: Transaction quality fixture
+  version: "1.0"
+paths:
+  /transaction-history:
+    post:
+      operationId: createTransactionHistory
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                accountId: {type: string}
+                transactionRowId: {type: string}
+                transactionId: {type: string}
+                amount: {type: number}
+                status: {type: string}
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  accountId: {type: string}
+                  transactionRowId: {type: string}
+                  transactionId: {type: string}
+                  amount: {type: number}
+                  status: {type: string}
+  /accounts/{accountId}/transactions:
+    parameters:
+      - name: accountId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      operationId: listTransactionsByAccount
+      responses:
+        "200":
+          description: Transactions for account
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    accountId:
+                      type: string
+                    transactionRowId:
+                      type: string
+                    transactionId:
+                      type: string
+                    amount:
+                      type: number
+                    status:
+                      type: string

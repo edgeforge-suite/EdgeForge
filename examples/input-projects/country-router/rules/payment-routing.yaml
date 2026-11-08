@@ -1,0 +1,19 @@
+routing_rules:
+  route_field: countryCode
+  routes:
+    - match: "US"
+      target: APP_A
+    - match: "GB"
+      target: APP_B
+  default_target: APP_C
+
+transforms:
+  - source: amount
+    target: paymentAmount
+  - source: currency
+    target: currencyCode
+  - source: senderName
+    target: originatorName
+    default: "UNKNOWN"
+  - source: recipientName
+    target: beneficiaryName

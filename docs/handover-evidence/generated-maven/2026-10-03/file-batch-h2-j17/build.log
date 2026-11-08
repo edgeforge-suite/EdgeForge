@@ -1,0 +1,105 @@
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ----------------------< com.appbuilder:accounts >-----------------------
+[INFO] Building CSV Downstream File App 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- clean:3.5.0:clean (default-clean) @ accounts ---
+[INFO]
+[INFO] --- resources:3.5.0:resources (default-resources) @ accounts ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO]
+[INFO] --- compiler:3.15.0:compile (default-compile) @ accounts ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 19 source files with javac [debug parameters release 17] to target/classes
+[WARNING] /private<temporary>/isolated/app/src/main/java/com/appbuilder/accounts/batch/AccountEodBatchJob.java:[77,13] <I,O>chunk(int,org.springframework.transaction.PlatformTransactionManager) in org.springframework.batch.core.step.builder.StepBuilder has been deprecated and marked for removal
+[INFO]
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ accounts ---
+[INFO] skip non existing resourceDirectory /private<temporary>/isolated/app/src/test/resources
+[INFO]
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ accounts ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target/test-classes
+[INFO]
+[INFO] --- surefire:3.5.6:test (default-test) @ accounts ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO]
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.appbuilder.accounts.AccountsApplicationTest
+18:49:35.013 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.appbuilder.accounts.AccountsApplicationTest]: AccountsApplicationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:49:35.074 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.appbuilder.accounts.AccountsApplication for test class com.appbuilder.accounts.AccountsApplicationTest
+18:49:35.122 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.appbuilder.accounts.AccountsApplicationTest]: AccountsApplicationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:49:35.123 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.appbuilder.accounts.AccountsApplication for test class com.appbuilder.accounts.AccountsApplicationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-03T18:49:35.322-05:00  INFO 92158 --- [           main] c.a.accounts.AccountsApplicationTest     : Starting AccountsApplicationTest using Java 17.0.18 with PID 92158 (started by santoshhommaradi in /private<temporary>/isolated/app)
+2026-10-03T18:49:35.323-05:00  INFO 92158 --- [           main] c.a.accounts.AccountsApplicationTest     : No active profile set, falling back to 1 default profile: "default"
+2026-10-03T18:49:35.829-05:00  INFO 92158 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-03T18:49:35.860-05:00  INFO 92158 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 1 JPA repository interface.
+2026-10-03T18:49:36.233-05:00  INFO 92158 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-03T18:49:36.368-05:00  INFO 92158 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:accounts user=SA
+2026-10-03T18:49:36.369-05:00  INFO 92158 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-03T18:49:36.376-05:00  INFO 92158 --- [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:accounts (H2 2.4)
+2026-10-03T18:49:36.404-05:00  WARN 92158 --- [           main] o.f.c.internal.database.base.Database    : Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026-10-03T18:49:36.418-05:00  INFO 92158 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-10-03T18:49:36.420-05:00  INFO 92158 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.007s)
+2026-10-03T18:49:36.424-05:00  INFO 92158 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-10-03T18:49:36.451-05:00  INFO 92158 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-10-03T18:49:36.456-05:00  INFO 92158 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create account table"
+2026-10-03T18:49:36.475-05:00  INFO 92158 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - create pkg batch metadata"
+2026-10-03T18:49:36.489-05:00  INFO 92158 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.019s)
+2026-10-03T18:49:36.541-05:00  INFO 92158 --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-03T18:49:36.569-05:00  INFO 92158 --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-03T18:49:36.782-05:00  INFO 92158 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-03T18:49:36.822-05:00  INFO 92158 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:accounts]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: ACCOUNTS/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-03T18:49:37.309-05:00  INFO 92158 --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-03T18:49:37.330-05:00  INFO 92158 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-03T18:49:37.383-05:00  INFO 92158 --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-03T18:49:37.482-05:00  INFO 92158 --- [           main] o.s.b.c.step.item.ChunkOrientedTasklet   : DEPRECATION NOTE: The legacy implementation of the chunk-oriented processing model is deprecated as of Spring Batch 6.0 and will be removed in version 7.0.
+2026-10-03T18:49:37.570-05:00  WARN 92158 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-03T18:49:37.583-05:00  INFO 92158 --- [           main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-10-03T18:49:37.872-05:00  INFO 92158 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-03T18:49:37.914-05:00  INFO 92158 --- [           main] c.a.accounts.AccountsApplicationTest     : Started AccountsApplicationTest in 2.752 seconds (process running for 3.398)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.322 s -- in com.appbuilder.accounts.AccountsApplicationTest
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO]
+[INFO] --- jar:3.5.1:jar (default-jar) @ accounts ---
+[INFO] Building jar: /private<temporary>/isolated/app/target/accounts-0.0.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- spring-boot:4.1.1:repackage (repackage) @ accounts ---
+[INFO] Replacing main artifact /private<temporary>/isolated/app/target/accounts-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /private<temporary>/isolated/app/target/accounts-0.0.1-SNAPSHOT.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.976 s
+[INFO] Finished at: 2026-10-03T18:49:38-05:00
+[INFO] ------------------------------------------------------------------------
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended

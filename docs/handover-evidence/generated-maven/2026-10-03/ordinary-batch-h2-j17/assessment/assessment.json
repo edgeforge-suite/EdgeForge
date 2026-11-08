@@ -1,0 +1,85 @@
+{
+  "advisory_database_snapshot": "not supplied",
+  "advisory_service": "https://api.osv.dev",
+  "affected_packages": 3,
+  "assessment_time_utc": "2026-10-03T23:48:50.577580+00:00",
+  "exit_code": 1,
+  "findings": 10,
+  "inventory_coverage": "complete",
+  "inventory_sha256": "cf4db0026a708610974623c1c189fc271baa94e33ce9f62c2d5055600ff7c39e",
+  "maven_warnings": [
+    "[WARNING] Unknown keyword meta:enum - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword",
+    "[WARNING] Unknown keyword deprecated - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword"
+  ],
+  "pom_sha256": "e1a18f62ab7db990f91055d36b13b61417292ba524e97a87f2aeab1701e6c90d",
+  "provenance": {
+    "archetype": "crud",
+    "engine_sha": "109f6385345047013836f1e32b2d4230b9e8ad2b",
+    "generation_input": {
+      "app_archetype": "crud",
+      "app_name": "Ordinary Batch Preview Proof",
+      "bounded_context": "ordinary_batch_proof",
+      "data_handoffs": [
+        {
+          "mapping": "widget-staging-mapping.yaml",
+          "name": "widget-staging",
+          "spec": "widget-staging.sql",
+          "system": "SYNTHETIC_HANDOFF",
+          "type": "staging-table"
+        }
+      ],
+      "schema_version": "2.0",
+      "target_profile": "springboot-legacy-compatible",
+      "upstream_interfaces": [
+        {
+          "mapping": "widget-api-mapping.yaml",
+          "name": "widget-api",
+          "operations": [
+            {
+              "name": "createWidget",
+              "request_sample": "widget-request.json",
+              "response_sample": "widget-response.json"
+            }
+          ],
+          "spec": "widget-api.json",
+          "system": "SYNTHETIC_SOURCE",
+          "type": "rest-json"
+        }
+      ]
+    },
+    "generation_run_id": "maven-assessment-ordinary-batch-h2-j17",
+    "input_manifest": "tests/fixtures/boot41-batch/ordinary-app-definition.yaml",
+    "input_package_sha256": "2d3aeb144b331e2f14fc620b6e699e1b902e8ea7cb2e5d1737b22e0c4d9d90e7",
+    "target_profile": "springboot-legacy-compatible"
+  },
+  "raw_scanner_stdout_sha256": "3bc474d84c0121d04c9f49880f85f884bffbf1b306c241824571a58d08564c49",
+  "release_acceptance": "not established",
+  "resolved_artifacts": 134,
+  "scanned_maven_packages": 134,
+  "scanner_exit_code": 1,
+  "scopes": [
+    "compile",
+    "provided",
+    "runtime",
+    "system",
+    "test"
+  ],
+  "source_after_sha256": "e8ddcd4f1ad09253f87287adae1de1e61a2b82eac7919dd35de4534420d23612",
+  "source_before_sha256": "e8ddcd4f1ad09253f87287adae1de1e61a2b82eac7919dd35de4534420d23612",
+  "source_unchanged": true,
+  "status": "complete",
+  "tools": {
+    "cyclonedx_maven_plugin": "2.9.1",
+    "java": "17.0.18",
+    "java_vendor": "Homebrew",
+    "maven": "3.9.12",
+    "maven_dependency_plugin": "3.8.1",
+    "scanner": [
+      "osv-scanner version: 2.3.8",
+      "osv-scalibr version: 0.4.5",
+      "commit: 408fcd6f8707999a29e7ba45e15809764cf24f67",
+      "built at: 2026-05-08T04:54:35Z"
+    ],
+    "scanner_sha256": "a8cd6507b06239f463a7642430cfd2d154882f150f6e30cdc0653e28dfc34216"
+  }
+}

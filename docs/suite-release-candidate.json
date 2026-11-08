@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "public-v5-preparation",
+  "target_release": "v5.0.0",
+  "status": "candidate",
+  "acceptance_status": "pending",
+  "manifest_schema_version": "2.0",
+  "repos": {
+    "engine": {
+      "repository": "santosh-sh/EdgeForge",
+      "sha": "e39d415c3f3401247894ca38b7961db769fe637b"
+    },
+    "studio": {
+      "repository": "santosh-sh/EdgeForgeStudio",
+      "sha": "d23d99f480e242291750724d192875e53b37e85f"
+    },
+    "ks": {
+      "repository": "santosh-sh/EdgeForgeKnowledgeServer",
+      "sha": "51bbff05f36c85c65a37694006e46e8eb3c21bf9"
+    }
+  }
+}

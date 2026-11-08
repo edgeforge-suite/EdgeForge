@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Fixture WSDL for EdgeForge outbound SOAP canonical invoke_by_id proof.
+
+  Represents a downstream CustomerSyncService that accepts a syncCustomer
+  operation: given a Customer identity and status, the remote service
+  propagates the change and returns a result code with an optional message.
+
+  Shape:
+    SyncCustomerRequest  -> customerId (xs:string, required)
+                         -> status     (xs:string, required)
+    SyncCustomerResponse -> resultCode (xs:string, required)
+                         -> message    (xs:string, optional, minOccurs=0)
+
+  Namespace: urn:edgeforge:examples:customer-sync:v1
+  Binding:   document/literal-wrapped
+-->
+<wsdl:definitions
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:tns="urn:edgeforge:examples:customer-sync:v1"
+    targetNamespace="urn:edgeforge:examples:customer-sync:v1">
+
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:edgeforge:examples:customer-sync:v1"
+               xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               xmlns:tns="urn:edgeforge:examples:customer-sync:v1"
+               elementFormDefault="qualified">
+
+      <xs:element name="SyncCustomerRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="customerId" type="xs:string"/>
+            <xs:element name="status"     type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="SyncCustomerResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultCode" type="xs:string"/>
+            <xs:element name="message"    type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+    </xs:schema>
+  </wsdl:types>
+
+  <wsdl:message name="SyncCustomerRequestMessage">
+    <wsdl:part name="parameters" element="tns:SyncCustomerRequest"/>
+  </wsdl:message>
+  <wsdl:message name="SyncCustomerResponseMessage">
+    <wsdl:part name="parameters" element="tns:SyncCustomerResponse"/>
+  </wsdl:message>
+
+  <wsdl:portType name="CustomerSyncPortType">
+    <wsdl:operation name="syncCustomer">
+      <wsdl:input  message="tns:SyncCustomerRequestMessage"/>
+      <wsdl:output message="tns:SyncCustomerResponseMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+
+  <wsdl:binding name="CustomerSyncSoapBinding" type="tns:CustomerSyncPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="syncCustomer">
+      <soap:operation soapAction="urn:syncCustomer"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+
+  <wsdl:service name="CustomerSyncService">
+    <wsdl:port name="CustomerSyncServicePort" binding="tns:CustomerSyncSoapBinding">
+      <soap:address location="https://example.invalid/customer-sync"/>
+    </wsdl:port>
+  </wsdl:service>
+
+</wsdl:definitions>

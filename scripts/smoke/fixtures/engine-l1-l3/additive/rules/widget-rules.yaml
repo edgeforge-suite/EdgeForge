@@ -1,0 +1,5 @@
+entity: Widget
+rules:
+  - field: category
+    type: default
+    value: general

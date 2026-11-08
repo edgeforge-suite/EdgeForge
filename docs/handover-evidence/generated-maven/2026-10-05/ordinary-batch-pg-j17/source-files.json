@@ -1,0 +1,134 @@
+[
+  {
+    "path": ".dockerignore",
+    "sha256": "ef5192d0b66b56d908c54f87ef103208a3adf2fbb068da50ac71c939e27f087c"
+  },
+  {
+    "path": ".gitignore",
+    "sha256": "c2aa158420109a5467156c2e4f3bb02ba0b50b423b299de20d698ed3585fdee8"
+  },
+  {
+    "path": "Dockerfile",
+    "sha256": "58664fc99415a6cc939045363077620a0de9709366b8efd6ab0252f538f4c7c7"
+  },
+  {
+    "path": "README.md",
+    "sha256": "9e23944b90c9b294dd0487dc396167b829cd5fbe1177d392a0525033ae8e4d26"
+  },
+  {
+    "path": "agent-context.md",
+    "sha256": "81e3538f7505430512cb715143d75aae17b97291ea0158adbccb20c93a384e66"
+  },
+  {
+    "path": "db/generation-provenance.json",
+    "sha256": "ab0277dca3fb2e8438532494adc5f863770afc982868fa2f0c5fe179ae14ffe2"
+  },
+  {
+    "path": "db/schema-baseline.json",
+    "sha256": "f624e8659536afdd32b65249dd58381bbb6a6959450bbb951393605bb314d7e5"
+  },
+  {
+    "path": "pom.xml",
+    "sha256": "6123322e1cfccf09eb8cf49de563f5c8c26fa77319ec97b06bdf70b613735989"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ordinary_batch_proof/OrdinaryBatchProofApplication.java",
+    "sha256": "e266122f59ae12136b482fc2110b182f1c23b456624a17ba0df2ff542b88c365"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ordinary_batch_proof/adapter/inbound/BatchTriggerController.java",
+    "sha256": "51c5edb08de06f831b4c1312cf7aaf293252300847b236d47ee8fa1931f0e12f"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ordinary_batch_proof/adapter/inbound/CreateWidgetRequest.java",
+    "sha256": "925d3f2738a4910e9eccceab157d524e46b3aed0d89fd01f53fa9cb6aa43a248"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ordinary_batch_proof/adapter/inbound/CreateWidgetResponse.java",
+    "sha256": "6db2fa73b3b0fcb2998a715a9141afd7166121118570603f84a455b18631785b"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ordinary_batch_proof/adapter/inbound/WidgetController.java",
+    "sha256": "12a443159213768c3e86b405449b81324f45b47317b37f49d3f849ebe7596044"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ordinary_batch_proof/adapter/inbound/WidgetResponse.java",
+    "sha256": "96c403e1eb33854f30417fe8ac4b2d9150a9eb3533872b36e58e19ba320d1b22"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ordinary_batch_proof/adapter/inbound/WidgetUpdateRequest.java",
+    "sha256": "29874dabe4980aa10b79cf1526acd5b971c8b5e13c586bfe90f7b1a1f1bd3d3e"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ordinary_batch_proof/adapter/outbound/WidgetStagingWriter.java",
+    "sha256": "100505f246499f5714a4f37ea66df9eb0fbff2183d4969ae455f089076052405"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ordinary_batch_proof/batch/WidgetEodBatchJob.java",
+    "sha256": "dc823373f42611b95c8df6be5f4e94ec63ebc63a926730126c165597b57d0c5d"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ordinary_batch_proof/config/AuditConfig.java",
+    "sha256": "66306f102be90a1b415db898289ccc323d6eeab2615fde44b97b02531187be78"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ordinary_batch_proof/config/DatasourceCredentialConfig.java",
+    "sha256": "31a5fef8d487b9e2d98651144fe874043df2a3cc41bed6eb83b10bf98edabb2a"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ordinary_batch_proof/config/SecurityHeadersFilter.java",
+    "sha256": "c2cb684b959c905e5d3909b60b6e5769c0fb598321e4fb239162e7731b6adf4b"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ordinary_batch_proof/domain/Widget.java",
+    "sha256": "ef126e6c6a8157fdc1bdc8de7c99529ea982016860bbe531cd838351f6c4fc89"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ordinary_batch_proof/exception/DuplicateResourceException.java",
+    "sha256": "c79de01716bae417fe1d53158003fc3e292aa0f4d62165778a35bde36957d053"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ordinary_batch_proof/exception/ErrorResponse.java",
+    "sha256": "efa7c4b13104a4d54d16787f50f32c4168035cd1f77ccbd25c161939819988b9"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ordinary_batch_proof/exception/GlobalExceptionHandler.java",
+    "sha256": "c9b33cc1a4689d5df07a96fda293b4f64f05c861d6f6b2876e3f6436ac61a6c5"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ordinary_batch_proof/exception/ResourceNotFoundException.java",
+    "sha256": "ea740202901f6edcb37c4929fd4898c92650b3db879907eba554484e6af2e47a"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ordinary_batch_proof/repository/WidgetRepository.java",
+    "sha256": "20e2eadee1757cd9b9572f186d89267e52090a47fd1979e3666ae509e1839cbb"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ordinary_batch_proof/service/WidgetService.java",
+    "sha256": "984a3af635eb8608abaeec9b511967550a51477e13fb372d543312d20ddbe199"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ordinary_batch_proof/service/WidgetServiceBase.java",
+    "sha256": "0859355f69f19e5d14a55c14d4d96ec529500f39fb0b3d15cf1ccc5f063cc274"
+  },
+  {
+    "path": "src/main/resources/application.yaml",
+    "sha256": "7ac53af4de95893c28d14717389fd14b8fbd821fe13d9f57d66995592bb164d3"
+  },
+  {
+    "path": "src/main/resources/db/migration/V1__create_widget_table.sql",
+    "sha256": "e9326d12de195f5c04bd49e60b552fe8c8a44a12c488b930639e91bc1f6610ea"
+  },
+  {
+    "path": "src/main/resources/db/migration/V2__create_widget_staging_table.sql",
+    "sha256": "0c1e547a5ec54e459ca293200b7af25fca02d0f548459870e35c679faa6ceed2"
+  },
+  {
+    "path": "src/main/resources/db/migration/V3__create_pkg_batch_metadata.sql",
+    "sha256": "4a6f3462b5cbdb29cb29db2d702441d69fb2a8c04bb1fbc3b81c71d270396143"
+  },
+  {
+    "path": "src/test/java/com/appbuilder/ordinary_batch_proof/OrdinaryBatchProofApplicationTest.java",
+    "sha256": "5cb382596553b6febffd3ebf8597eb4c38b02b94b0eb52f52f01d9a9c9436100"
+  }
+]

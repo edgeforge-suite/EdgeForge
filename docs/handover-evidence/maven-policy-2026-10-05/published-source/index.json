@@ -1,0 +1,61 @@
+[
+  {
+    "file": "lz4-1.11.4-sources--Native.java",
+    "sha256": "45ea81b803a2d2cf025da0f66452c4da2537c7286b8f44e3045e0072f7dc3f04",
+    "source_jar_receipt": {
+      "bytes": 111390,
+      "checked_utc": "2026-10-05T02:58:36.722849+00:00",
+      "file": "lz4-1.11.4-sources.jar",
+      "sha256": "e32b2809f070317520b6ebdbca730b8bf2c24b900265c702cd18f3f0bdd532b7",
+      "status": 200,
+      "url": "https://repo.maven.apache.org/maven2/at/yawk/lz4/lz4-java/1.11.4/lz4-java-1.11.4-sources.jar"
+    }
+  },
+  {
+    "file": "jackson-databind-2.21.7-sources--UnwrappedPropertyHandler.java",
+    "sha256": "540a800ff4e9997471561578139c23eff3e940080cb6ff977b844225e25581db",
+    "source_jar_receipt": {
+      "bytes": 1262746,
+      "retrieved_at": "2026-10-05T03:06:56.717265+00:00",
+      "sha256": "9d0088f4990df572c2e3aa1c14d4c03fd8200283d801836c8044d01b9ccb7e73",
+      "status": 200,
+      "url": "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.21.7/jackson-databind-2.21.7-sources.jar"
+    }
+  },
+  {
+    "file": "batch-core-6.0.5-sources--DefaultExecutionContextSerializer.java",
+    "sha256": "c5f3e1f62de52fc0c4cd79ebf9fd1b86b163c90aad6a7cd4800a8353010467a5",
+    "source_jar_receipt": {
+      "bytes": 697275,
+      "checked_utc": "2026-10-05T02:58:36.663239+00:00",
+      "file": "batch-core-6.0.5-sources.jar",
+      "sha256": "5007653f46aa14b2c7ae9ffbc1f2cb1e018edc178cc5cdbdb8b8ada9b19c93d3",
+      "status": 200,
+      "url": "https://repo.maven.apache.org/maven2/org/springframework/batch/spring-batch-core/6.0.5/spring-batch-core-6.0.5-sources.jar"
+    }
+  },
+  {
+    "file": "batch-core-6.0.5-sources--JdbcDefaultBatchConfiguration.java",
+    "sha256": "500d71219ae7f4d66d4a9a8ca2bc532f3e3a8396d58ae628f60439dfdea7ecbd",
+    "source_jar_receipt": {
+      "bytes": 697275,
+      "checked_utc": "2026-10-05T02:58:36.663239+00:00",
+      "file": "batch-core-6.0.5-sources.jar",
+      "sha256": "5007653f46aa14b2c7ae9ffbc1f2cb1e018edc178cc5cdbdb8b8ada9b19c93d3",
+      "status": 200,
+      "url": "https://repo.maven.apache.org/maven2/org/springframework/batch/spring-batch-core/6.0.5/spring-batch-core-6.0.5-sources.jar"
+    }
+  },
+  {
+    "file": "boot-batch-jdbc-4.1.1-sources--BatchJdbcAutoConfiguration.java",
+    "sha256": "bfc1942103ec9b6ebed944d86f2661b654bf1f67caaccfe84ebb6ad090690414",
+    "source_jar_receipt": {
+      "bytes": 13767,
+      "checked_utc": "2026-10-05T02:58:36.703228+00:00",
+      "file": "boot-batch-jdbc-4.1.1-sources.jar",
+      "sha256": "43b2557277a8fc48455e1550cf777e6c70031ff29709ed0a8df20a887b4c6048",
+      "status": 200,
+      "url": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-batch-jdbc/4.1.1/spring-boot-batch-jdbc-4.1.1-sources.jar"
+    }
+  }
+]

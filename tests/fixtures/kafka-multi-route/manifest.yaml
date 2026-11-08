@@ -1,0 +1,87 @@
+schema_version: "2.0"
+app_name: PaymentMediationHub
+bounded_context: payment-mediation
+target_profile: springboot-standard-enterprise
+app_archetype: kafka-integration
+
+kafka_config:
+  consumer_group: payment-mediation-group
+  concurrency: 3
+  retry:
+    max_attempts: 3
+    backoff_ms: 500
+    backoff_multiplier: 2.0
+  dlq:
+    enabled: true
+    topic_suffix: ".dlq"
+
+async_routes:
+  - name: payment-posted
+    pattern: fire-and-forget
+    upstream_topic:
+      name: abc.payments.posted.v1
+      system: PaymentHub
+      message_schema: schemas/payment-posted-event.json
+    downstream_topic:
+      name: xyz.ledger.entries.v1
+      system: LedgerService
+      message_schema: schemas/ledger-entry-message.json
+    transform_mapping: mappings/payment-to-ledger.yaml
+
+  - name: payment-reversed
+    pattern: fire-and-forget
+    upstream_topic:
+      name: abc.payments.reversed.v1
+      system: PaymentHub
+      message_schema: schemas/payment-reversed-event.json
+    downstream_topic:
+      name: xyz.ledger.reversals.v1
+      system: LedgerService
+      message_schema: schemas/ledger-reversal-message.json
+    transform_mapping: mappings/reversal-to-ledger.yaml
+
+  - name: account-verification
+    pattern: request-reply
+    upstream_topic:
+      name: hub.account.verify.request.v1
+      system: PaymentHub
+      message_schema: schemas/account-verify-hub-request.json
+    downstream_topic:
+      name: core.account.verify.request.v1
+      system: CoreBanking
+      message_schema: schemas/account-verify-core-request.json
+    upstream_reply_topic:
+      name: hub.account.verify.reply.v1
+      message_schema: schemas/account-verify-hub-reply.json
+    downstream_reply_topic:
+      name: core.account.verify.reply.v1
+      message_schema: schemas/account-verify-core-reply.json
+    correlation_id:
+      source: header
+      field_name: X-Correlation-ID
+    reply_timeout_ms: 8000
+    transform_mapping: mappings/account-verify-request.yaml
+    response_transform_mapping: mappings/account-verify-response.yaml
+
+  - name: fraud-check
+    pattern: request-reply
+    upstream_topic:
+      name: hub.fraud.check.request.v1
+      system: PaymentHub
+      message_schema: schemas/fraud-check-hub-request.json
+    downstream_topic:
+      name: fraud.check.request.v1
+      system: FraudService
+      message_schema: schemas/fraud-check-service-request.json
+    upstream_reply_topic:
+      name: hub.fraud.check.reply.v1
+      message_schema: schemas/fraud-check-hub-reply.json
+    downstream_reply_topic:
+      name: fraud.check.reply.v1
+      message_schema: schemas/fraud-check-service-reply.json
+    correlation_id:
+      source: header
+      field_name: X-Request-ID
+    reply_timeout_ms: 5000
+    transform_mapping: mappings/fraud-check-request.yaml
+    response_transform_mapping: mappings/fraud-check-response.yaml

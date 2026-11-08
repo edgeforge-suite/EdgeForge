@@ -1,0 +1,39 @@
+# CODEOWNERS — TEMPLATE ONLY (no active owners)
+#
+# Every line below is COMMENTED OUT and references no real GitHub user or team.
+# The importing organization sets the final owners on import:
+# uncomment the lines you want and replace each `@<org>/<team>` placeholder with
+# a real GitHub team or user. Until then, no code ownership is enforced.
+#
+# Recommended ownership split (see CONTRIBUTING.md and docs/suite-architecture.md;
+# this is the Engine repo, so the entries below cover Engine areas):
+#   - Engine owns the generation contract (manifest -> generated artifacts).
+#   - Studio, Knowledge Server / Assist, TestBench, and shared-specs are separate
+#     repos and set their own CODEOWNERS.
+#   - Generated apps are owned by the consuming app teams after generation.
+#
+# Syntax: <path-pattern>   @<org>/<team-or-user>
+#
+# Default — everything in this repo:
+# *                         @<org>/<engine-team>
+#
+# Generation pipeline and emitters:
+# /appbuilder/generation/   @<org>/<engine-team>
+#
+# Manifest schema, contracts, and canonical metadata/model:
+# /appbuilder/contracts/    @<org>/<engine-team>
+# /appbuilder/metadata/     @<org>/<engine-team>
+# /appbuilder/schema/       @<org>/<engine-team>
+#
+# Target profiles and validation harness:
+# /appbuilder/target_profiles/  @<org>/<engine-team>
+# /appbuilder/harness/          @<org>/<engine-team>
+#
+# Local MCP server surface (bounded — changes are design-gated):
+# /appbuilder/mcp/          @<org>/<engine-team>
+# /appbuilder/mcp_server.py @<org>/<engine-team>
+#
+# Docs and governance:
+# /docs/                    @<org>/<docs-or-engine-team>
+# /CONTRIBUTING.md          @<org>/<engine-team>
+# /SECURITY.md              @<org>/<security-team>

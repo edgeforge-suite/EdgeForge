@@ -1,0 +1,20 @@
+app_name: CSV Downstream File App
+bounded_context: accounts
+schema_version: "2.0"
+upstream_interfaces:
+  - name: account-api
+    system: CORE
+    type: rest-json
+    spec: upstream/account-api-spec.yaml
+    mapping: upstream/account-mapping.yaml
+    operations:
+      - name: createAccount
+        request_sample: upstream/create-account-request.json
+        response_sample: upstream/create-account-response.json
+downstream_interfaces:
+  - name: account-csv-file
+    system: ETL
+    type: file-csv
+    spec: downstream/account-csv-layout.yaml
+    mapping: downstream/account-csv-mapping.yaml
+target_profile: springboot-legacy-compatible

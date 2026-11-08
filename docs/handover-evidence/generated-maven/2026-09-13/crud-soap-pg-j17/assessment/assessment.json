@@ -1,0 +1,87 @@
+{
+  "advisory_database_snapshot": "not supplied",
+  "advisory_service": "https://api.osv.dev",
+  "affected_packages": 22,
+  "assessment_time_utc": "2026-09-13T22:51:20.111729+00:00",
+  "exit_code": 1,
+  "findings": 82,
+  "inventory_coverage": "complete",
+  "inventory_sha256": "27368dc63b8880e00651a509ca3821d24bea104a8d750714d53608309caed5cc",
+  "maven_warnings": [
+    "[WARNING] Unknown keyword meta:enum - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword",
+    "[WARNING] Unknown keyword deprecated - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword"
+  ],
+  "pom_sha256": "5c088233f5d2bc39788f910ab411d9f2a7481fac5849f3747f8c771a146fe9f2",
+  "provenance": {
+    "archetype": "crud",
+    "engine_sha": "582c853f2566ac5cdf45ad239c1827a5aa47f12e",
+    "generation_input": {
+      "app_name": "SOAP Canonical Customer Service",
+      "bounded_context": "soap_canonical_customer",
+      "schema_version": "2.0",
+      "target_profile": "springboot-enterprise-postgres-java17",
+      "upstream_interfaces": [
+        {
+          "mapping": "upstream/customer-mapping.yaml",
+          "name": "customer-api",
+          "operations": [
+            {
+              "name": "createCustomer",
+              "request_sample": "upstream/create-customer-request.json",
+              "response_sample": "upstream/customer-response.json"
+            },
+            {
+              "name": "getCustomer",
+              "response_sample": "upstream/customer-response.json"
+            }
+          ],
+          "spec": "upstream/customer-api-spec.yaml",
+          "system": "CRM",
+          "type": "rest-json"
+        },
+        {
+          "mapping": "mappings/customer-soap-operation-mapping.yaml",
+          "name": "customer-soap-service",
+          "port": "CustomerServicePort",
+          "service": "CustomerService",
+          "system": "CORE",
+          "type": "soap-wsdl",
+          "wsdl_path": "contracts/customer-service.wsdl"
+        }
+      ]
+    },
+    "generation_run_id": "maven-assessment-crud-soap-pg-j17",
+    "input_manifest": "tests/fixtures/edgecontracts/soap-wsdl/canonical-read-by-id-customer-service/app-definition.yaml",
+    "input_package_sha256": "1307a881c948631e17828a752844ffe8de0f123f7da63ed8071bdc40fcb4709b",
+    "target_profile": "springboot-enterprise-postgres-java17"
+  },
+  "release_acceptance": "not established",
+  "resolved_artifacts": 116,
+  "scanned_maven_packages": 116,
+  "scanner_exit_code": 1,
+  "scopes": [
+    "compile",
+    "provided",
+    "runtime",
+    "system",
+    "test"
+  ],
+  "source_after_sha256": "c3bd6c0a93e1914113842cfbb515420574b4ba81f55ce12ba5276b39a05c62e6",
+  "source_before_sha256": "c3bd6c0a93e1914113842cfbb515420574b4ba81f55ce12ba5276b39a05c62e6",
+  "source_unchanged": true,
+  "status": "complete",
+  "tools": {
+    "cyclonedx_maven_plugin": "2.9.1",
+    "java": "17.0.18",
+    "java_vendor": "Homebrew",
+    "maven": "3.9.12",
+    "maven_dependency_plugin": "3.8.1",
+    "scanner": [
+      "osv-scanner version: 2.3.8",
+      "osv-scalibr version: 0.4.5",
+      "commit: 408fcd6f8707999a29e7ba45e15809764cf24f67",
+      "built at: 2026-05-08T04:54:35Z"
+    ],
+    "scanner_sha256": "a8cd6507b06239f463a7642430cfd2d154882f150f6e30cdc0653e28dfc34216"
+  }
+}

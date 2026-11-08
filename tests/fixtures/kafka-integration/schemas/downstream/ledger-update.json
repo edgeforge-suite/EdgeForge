@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "ledgerAccountId": { "type": "string" },
+    "balanceAmount": { "type": "number" },
+    "currencyCode": { "type": "string" }
+  },
+  "required": ["ledgerAccountId", "balanceAmount", "currencyCode"]
+}

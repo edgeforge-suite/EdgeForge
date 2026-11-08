@@ -1,0 +1,454 @@
+{
+  "advisory_qualification": {
+    "conclusion": "4.0.3 is the supported replacement in the executed clean realm; no vulnerable-function use or whole-image clearance is inferred.",
+    "coordinate": "org.codehaus.plexus:plexus-utils",
+    "identities": [
+      "GHSA-6fmv-xxpf-w3cw",
+      "CVE-2025-67030"
+    ],
+    "primary_sources": [
+      {
+        "archive_member": "entry-20261021/sources/advisory.json",
+        "retrieved_at_utc": "2026-10-21T02:53:19.261364+00:00",
+        "sha256": "1e7d8a834eed5e8c710e3802398c290d7d79eeb3849d994a8ab322ee2955281b",
+        "url": "https://api.github.com/advisories/GHSA-6fmv-xxpf-w3cw"
+      },
+      {
+        "archive_member": "entry-20261021/sources/upstream-release.json",
+        "retrieved_at_utc": "2026-10-21T02:53:22.378799+00:00",
+        "sha256": "a838a4137b55253006509610bf4e2e6e183ab9388b44413ca891a0dad34a253d",
+        "url": "https://api.github.com/repos/codehaus-plexus/plexus-utils/releases/tags/plexus-utils-4.0.3"
+      },
+      {
+        "archive_member": "entry-20261021/sources/upstream-fix.patch",
+        "retrieved_at_utc": "2026-10-21T02:53:23.517907+00:00",
+        "sha256": "7945c34f98a7658a634f0e718d1d5e54fef5d62c68087dcca4dee43d01272839",
+        "url": "https://github.com/codehaus-plexus/plexus-utils/commit/6d780b3378829318ba5c2d29547e0012d5b29642.patch"
+      },
+      {
+        "archive_member": "entry-20261021/sources/clean-3.5.0.pom",
+        "retrieved_at_utc": "2026-10-21T02:53:25.137725+00:00",
+        "sha256": "9dc0a3f49b582aa36d2617c69034a66cdf5b1ec789f7e6ff506df962551fde89",
+        "url": "https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.5.0/maven-clean-plugin-3.5.0.pom"
+      },
+      {
+        "archive_member": "entry-20261021/sources/plexus-utils-4.0.3.pom",
+        "retrieved_at_utc": "2026-10-21T02:53:27.161474+00:00",
+        "sha256": "35736658f3fe1efa395086c91df2592664fafa24c3f2608fdaba1136d17fd360",
+        "url": "https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/4.0.3/plexus-utils-4.0.3.pom"
+      },
+      {
+        "archive_member": "entry-20261021/sources/plexus-utils-4.0.3.jar",
+        "retrieved_at_utc": "2026-10-21T02:53:27.314741+00:00",
+        "sha256": "421ff6ed146c53a9d4eaade8f629b52b12af7187101f1bd06c2c64e904019f3c",
+        "url": "https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/4.0.3/plexus-utils-4.0.3.jar"
+      }
+    ],
+    "ranges": [
+      {
+        "affected": ">= 4.0.0, < 4.0.3",
+        "first_patched": "4.0.3"
+      },
+      {
+        "affected": "< 3.6.1",
+        "first_patched": "3.6.1"
+      }
+    ]
+  },
+  "archive": {
+    "descriptor_sha256": "2253c45ebdfa3a2547a9273065d96390a3442d940e957b3857a2b1a5bb756203",
+    "private_archive": {
+      "bytes": 1790494720,
+      "content_manifest_sha256": "eeb7b71d2367aa17b5a2dd1c67485b025c9df68e79fba27ad71664598c70fbbe",
+      "files": 1332,
+      "member_content_verification": "all members independently hashed and compared; unsafe/duplicate members rejected",
+      "name": "clean-plugin-plexus-2026-10-24-private.tar",
+      "sha256": "b03bf4b270ecf304cd1a8795ed396f93d59267cf610e42d5e193db4f62519ac5"
+    },
+    "public_descriptor": "archive-bindings.json",
+    "retention": "Maintainer-held task-private archive; not uploaded. Database/tool payloads retained separately; archive alone is not a fresh scan environment.",
+    "status": "verified-private-retention"
+  },
+  "assessment_scan_dates_utc": [
+    "2026-10-25"
+  ],
+  "cases": [
+    {
+      "assessment_ended_at_utc": "2026-10-25T00:30:55.141680Z",
+      "assessment_exit_code": 1,
+      "assessment_started_at_utc": "2026-10-25T00:30:40.224146Z",
+      "assessment_status": "complete-with-findings",
+      "case": "crud-h2-j17",
+      "config_sha256": "d1a817c313ae90ba173f1e26ca77afceb077f204b61f14587d2dafa4426485b9",
+      "configuration_sha256": "c3e5499b2c0d4b4f663c7b59eed1342cb1d3fdfc292aa940810b2d5ff153046a",
+      "findings_by_scanner": {
+        "grype": 486,
+        "trivy": 156
+      },
+      "image_archive_sha256": "91cc69e1b050ee26c1042e0a3e1ad2f5dc99a2946227f1aa9bcd5650a8f64504",
+      "image_id": "sha256:d1a817c313ae90ba173f1e26ca77afceb077f204b61f14587d2dafa4426485b9",
+      "input_archive_sha256": "63c4d1b8f7d1c100be32a04c39591fbd875f14df07e06ce486d67645f488d717",
+      "jar_sha256": "51e4794b785b1c7a81ef7a5d2ecef0ceefe69352c369bfa5323fc3de7b5ceb83",
+      "java": "17",
+      "normalized_finding_observations": 642,
+      "platform": "linux/amd64",
+      "pom_sha256": "26f3489d5934df12eaae815d07939562d018f7962e4913ae1d5ea8973e5cf438",
+      "pristine_inventory_file_sha256": "d372e9ceb82d4840c07273df5e9956bfd33b1886a8bd11058e2bb78d8b40478c",
+      "private_evidence": {
+        "actual_realms": {
+          "archive_member": "cases/crud-h2-j17/proof/actual-realms.json",
+          "sha256": "4266466193b062ef5379231d21ac26fd83407daa1878a09006c66b83fe9da7bf"
+        },
+        "assessment": {
+          "archive_member": "cases/crud-h2-j17/generated-build-stage/assessment.json",
+          "sha256": "3e4cc7f53d75528ed0887024388a35f7b91c66225baf57c0af5ecb78ee94f1cc"
+        },
+        "findings": {
+          "archive_member": "cases/crud-h2-j17/generated-build-stage/findings.json",
+          "sha256": "47d36e1e3318db0fecdddccb0c821404bb7277696c3443aff3ea4ce406648fa3"
+        },
+        "plexus_physical_copies": {
+          "archive_member": "cases/crud-h2-j17/image-sidecar-fresh-db-r1/plexus-physical-copies.json",
+          "sha256": "7552c6b082da4a9eda402f077233684a77c7750fc1477ae33c9e2cccbc39dd85"
+        },
+        "provenance": {
+          "archive_member": "cases/crud-h2-j17/generated-build-stage-bundle/provenance.json",
+          "sha256": "60351cb7634551c03f15edf9627d80ce7599f22b3fac4b9746626e2460778f2d"
+        }
+      },
+      "profile": "springboot-legacy-compatible",
+      "recipe_sha256": "f68339d097fb6e5831319124e61e630799c15ea0a7db9d5b11e2ada18d89fcf9",
+      "rootfs_diff_ids_sha256": "00b379989232a480ef6bd756c02b19059ecb85330e42948f818d5305832fe1d6",
+      "separate_clean_verify": {
+        "clean_marker_removed": true,
+        "clean_plugin": "3.5.0",
+        "executed_tests": 1,
+        "loaded_clean_plexus": "4.0.3",
+        "packaged_libraries_unchanged": true,
+        "resolved_inventory_unchanged": true,
+        "source_unchanged": true,
+        "test_origin": "engine-emitted"
+      },
+      "source_archive_sha256": "6569c7cbeb00f198d85e19e17a97cc2d019567ae4c5f8770a0ad684da4993f0a",
+      "target_4_0_2_scanner_observations": 0
+    },
+    {
+      "assessment_ended_at_utc": "2026-10-25T00:37:19.130777Z",
+      "assessment_exit_code": 1,
+      "assessment_started_at_utc": "2026-10-25T00:37:04.114018Z",
+      "assessment_status": "complete-with-findings",
+      "case": "crud-pg-j21",
+      "config_sha256": "c9baf59b1387988802074ced9ac5b02a5fa5f7dd8f3fbdd3347c464750ce6aad",
+      "configuration_sha256": "016be8f6c15d6c2fa7be610562916fe57df3eb96981ea35d7f95076b7b0ee44a",
+      "findings_by_scanner": {
+        "grype": 486,
+        "trivy": 156
+      },
+      "image_archive_sha256": "9d5159fe5842dba54c244a1001714f6af35fb094aa41c87b0e6acae21ed5313f",
+      "image_id": "sha256:c9baf59b1387988802074ced9ac5b02a5fa5f7dd8f3fbdd3347c464750ce6aad",
+      "input_archive_sha256": "c2d55c3731d4b0b6e87f848ca6a9693ca98ba91175add722bca9f59b308fccb7",
+      "jar_sha256": "d1fb004b091067eb018a2e969ee5062222cf9f27155cc025ef428e140014d5be",
+      "java": "21",
+      "normalized_finding_observations": 642,
+      "platform": "linux/amd64",
+      "pom_sha256": "2cb887c9e5367a9437fc2007bcfe283e8b16228a3e0260610c61096b17578887",
+      "pristine_inventory_file_sha256": "bb8be82794fca5519f6a1c19b921f70e2d1ad07406b915962d8d444b7546f5a6",
+      "private_evidence": {
+        "actual_realms": {
+          "archive_member": "cases/crud-pg-j21/proof/actual-realms.json",
+          "sha256": "27037fd6619a7fdecf6a4b6a2f8a30c6cb52df6635cbda0f0f1e5804df52b56b"
+        },
+        "assessment": {
+          "archive_member": "cases/crud-pg-j21/generated-build-stage/assessment.json",
+          "sha256": "193403b8faadeb2de3b12afb213503a9215241290b1803add63611572600c8a0"
+        },
+        "findings": {
+          "archive_member": "cases/crud-pg-j21/generated-build-stage/findings.json",
+          "sha256": "47d36e1e3318db0fecdddccb0c821404bb7277696c3443aff3ea4ce406648fa3"
+        },
+        "plexus_physical_copies": {
+          "archive_member": "cases/crud-pg-j21/image-sidecar-fresh-db-r1/plexus-physical-copies.json",
+          "sha256": "7552c6b082da4a9eda402f077233684a77c7750fc1477ae33c9e2cccbc39dd85"
+        },
+        "provenance": {
+          "archive_member": "cases/crud-pg-j21/generated-build-stage-bundle/provenance.json",
+          "sha256": "f2e6d6887ec6d17e4c62db2e304b531bdfaabff7ef4f33aa3385a0f780bec30d"
+        }
+      },
+      "profile": "springboot-standard-enterprise",
+      "recipe_sha256": "3cd6a7f1b2e516473b4b49335f5900cb5ade64b9bfa43ba9177683f56967483f",
+      "rootfs_diff_ids_sha256": "1297d6858247e67a6d98b399c73968d3b88fa079183f5a1f24288d09ba841a36",
+      "separate_clean_verify": {
+        "clean_marker_removed": true,
+        "clean_plugin": "3.5.0",
+        "executed_tests": 1,
+        "loaded_clean_plexus": "4.0.3",
+        "packaged_libraries_unchanged": true,
+        "resolved_inventory_unchanged": true,
+        "source_unchanged": true,
+        "test_origin": "engine-emitted"
+      },
+      "source_archive_sha256": "de4ffc02a78c860a62d350aad221b5ad998ca2456ae60551c8eaf6dca53a1863",
+      "target_4_0_2_scanner_observations": 0
+    },
+    {
+      "assessment_ended_at_utc": "2026-10-25T00:38:36.481093Z",
+      "assessment_exit_code": 1,
+      "assessment_started_at_utc": "2026-10-25T00:38:20.476360Z",
+      "assessment_status": "complete-with-findings",
+      "case": "kafka-pg-j17",
+      "config_sha256": "f511bbe4572a46b41f68902e6b5d5d1904f6171d42aab604cb66f77b1ae3f567",
+      "configuration_sha256": "c3e5499b2c0d4b4f663c7b59eed1342cb1d3fdfc292aa940810b2d5ff153046a",
+      "findings_by_scanner": {
+        "grype": 486,
+        "trivy": 156
+      },
+      "image_archive_sha256": "2e6d602c9962dc983d7b3df0a6c8990c3419524052483594c97eb878b10fd507",
+      "image_id": "sha256:f511bbe4572a46b41f68902e6b5d5d1904f6171d42aab604cb66f77b1ae3f567",
+      "input_archive_sha256": "43a965bc1f0dd83eca65033bde3b6d87d064605b919839cbd174101a9c404e43",
+      "jar_sha256": "19378933c4e55168dc33950099554c65ce94d1497db53603ef1dc9cf8480a3cb",
+      "java": "17",
+      "normalized_finding_observations": 642,
+      "platform": "linux/amd64",
+      "pom_sha256": "f7db22f62d5478eed92a6fad4551a191798375608649be034fef21608f361239",
+      "pristine_inventory_file_sha256": "541651caf613df75344a150c9704b08607d2a462c414968486d0c8d34e8be253",
+      "private_evidence": {
+        "actual_realms": {
+          "archive_member": "cases/kafka-pg-j17/proof/actual-realms.json",
+          "sha256": "b2d5af7f37bf1e2ed2e26d7082cc19c4a0142e61eb84691ac6f68a0a6cde3d83"
+        },
+        "assessment": {
+          "archive_member": "cases/kafka-pg-j17/generated-build-stage/assessment.json",
+          "sha256": "ac5b3d7d4dd56519a4d15e5a61216e282590b929d4c2eb3ef4471fa9819fea6c"
+        },
+        "findings": {
+          "archive_member": "cases/kafka-pg-j17/generated-build-stage/findings.json",
+          "sha256": "47d36e1e3318db0fecdddccb0c821404bb7277696c3443aff3ea4ce406648fa3"
+        },
+        "plexus_physical_copies": {
+          "archive_member": "cases/kafka-pg-j17/image-sidecar-fresh-db-r1/plexus-physical-copies.json",
+          "sha256": "7552c6b082da4a9eda402f077233684a77c7750fc1477ae33c9e2cccbc39dd85"
+        },
+        "provenance": {
+          "archive_member": "cases/kafka-pg-j17/generated-build-stage-bundle/provenance.json",
+          "sha256": "78c6a674143e639d946b8ce157960c1648af55afd1f1a5e9581c51b2b2af21eb"
+        }
+      },
+      "profile": "springboot-enterprise-postgres-java17",
+      "recipe_sha256": "a91582cd08b0bdd9e2be8f2a1e8bda82afd4550258d256d142ca3792229743b8",
+      "rootfs_diff_ids_sha256": "24d17f8d1d0989e3ee68a245f448fc493763fd4cd2d59482b11794adbb5a255d",
+      "separate_clean_verify": {
+        "clean_marker_removed": true,
+        "clean_plugin": "3.5.0",
+        "executed_tests": 13,
+        "loaded_clean_plexus": "4.0.3",
+        "packaged_libraries_unchanged": true,
+        "resolved_inventory_unchanged": true,
+        "source_unchanged": true,
+        "test_origin": "proof-supplied"
+      },
+      "source_archive_sha256": "56c080a0bee90485b6ed5d716ac1f1ca0bee7d1441854567748ebf9cdc7ed343",
+      "target_4_0_2_scanner_observations": 0
+    },
+    {
+      "assessment_ended_at_utc": "2026-10-25T00:39:55.295855Z",
+      "assessment_exit_code": 1,
+      "assessment_started_at_utc": "2026-10-25T00:39:39.115424Z",
+      "assessment_status": "complete-with-findings",
+      "case": "kafka-pg-j21",
+      "config_sha256": "46c765968d7d8e09004711daf25d48dc9ff9ee6d95ffdf9f99d7d956ab635634",
+      "configuration_sha256": "016be8f6c15d6c2fa7be610562916fe57df3eb96981ea35d7f95076b7b0ee44a",
+      "findings_by_scanner": {
+        "grype": 486,
+        "trivy": 156
+      },
+      "image_archive_sha256": "a69e3318d03de14bc7ae2bfdc1096e107714bbcbbbf2ca3a8f8473b941a613d3",
+      "image_id": "sha256:46c765968d7d8e09004711daf25d48dc9ff9ee6d95ffdf9f99d7d956ab635634",
+      "input_archive_sha256": "6f2d58cf67cbd5e2c508c05c258305819b2b0cdc5799a112d37108ec3818648c",
+      "jar_sha256": "06b2e57ca8590c1bd81cf595ad4509c3ed0c22a3cf25978b5454a16d74643d67",
+      "java": "21",
+      "normalized_finding_observations": 642,
+      "platform": "linux/amd64",
+      "pom_sha256": "c7b650509b103852786c511bdc7181938ba3adc96e354ff81d1700855f2b8e28",
+      "pristine_inventory_file_sha256": "bbf2334e7c170f5818fc20b7851374d7953b066f31400ed4c511fe1f18d37ac7",
+      "private_evidence": {
+        "actual_realms": {
+          "archive_member": "cases/kafka-pg-j21/proof/actual-realms.json",
+          "sha256": "3b80f2f38f1b8e7049bce9eddd1f1ea81cf6fbc8965be1c9f9a2d54c759a80cd"
+        },
+        "assessment": {
+          "archive_member": "cases/kafka-pg-j21/generated-build-stage/assessment.json",
+          "sha256": "07ec9959857bc3116ca1ce3a5ae8a4b1290d1a9fadb36d8f637f58212a2b7522"
+        },
+        "findings": {
+          "archive_member": "cases/kafka-pg-j21/generated-build-stage/findings.json",
+          "sha256": "47d36e1e3318db0fecdddccb0c821404bb7277696c3443aff3ea4ce406648fa3"
+        },
+        "plexus_physical_copies": {
+          "archive_member": "cases/kafka-pg-j21/image-sidecar-fresh-db-r1/plexus-physical-copies.json",
+          "sha256": "7552c6b082da4a9eda402f077233684a77c7750fc1477ae33c9e2cccbc39dd85"
+        },
+        "provenance": {
+          "archive_member": "cases/kafka-pg-j21/generated-build-stage-bundle/provenance.json",
+          "sha256": "daa589f51f610437862e8e94bde7631140661ba0874bdda5394242f27ebeca2e"
+        }
+      },
+      "profile": "springboot-standard-enterprise",
+      "recipe_sha256": "83e51842a680d7a42c4fc8a95a0d4afeb7195fc0573079bd54aecf405f94fd06",
+      "rootfs_diff_ids_sha256": "029aebb420f9891520332d6f43edfd6ca79d51975ca073f89da1b8e87b8ccdb3",
+      "separate_clean_verify": {
+        "clean_marker_removed": true,
+        "clean_plugin": "3.5.0",
+        "executed_tests": 13,
+        "loaded_clean_plexus": "4.0.3",
+        "packaged_libraries_unchanged": true,
+        "resolved_inventory_unchanged": true,
+        "source_unchanged": true,
+        "test_origin": "proof-supplied"
+      },
+      "source_archive_sha256": "d32e4c9c8da2ee93fee8fecb5b6627a51c269245e57299e4f972b26da2da707a",
+      "target_4_0_2_scanner_observations": 0
+    }
+  ],
+  "ci": "Reported separately at the exact PR head; not substituted for these retained local executions",
+  "findings_accounting": {
+    "all_non_target_findings_retained_open": true,
+    "per_image_normalized_observations": {
+      "crud-h2-j17": 642,
+      "crud-pg-j21": 642,
+      "kafka-pg-j17": 642,
+      "kafka-pg-j21": 642
+    },
+    "summed_image_observations": 2568,
+    "unique_vulnerability_count_claimed": false
+  },
+  "fresh_database_snapshot": {
+    "default_age_validation": true,
+    "grype_built_at_utc": "2026-10-24T17:45:29Z",
+    "max_age_hours": 120,
+    "old_snapshot_sha256": "b988c37be9e02de1d137654af72fd5cdb9528d8e62de27ff3188e73e0530f1b9",
+    "sha256": "ff21e92f5d2c047295aeefcdf7e830b763dcdd018ec10f39c0e335ccdbc80e2b"
+  },
+  "generator_sha": "b7c48b58341f823c3a87ab02456cd1c10743a32e",
+  "historical_target": {
+    "builder_cases": 30,
+    "case_observations": 60,
+    "historical_closure_claimed": false,
+    "index": {
+      "repo_path": "docs/handover-evidence/engine-m2-dispositions.json",
+      "sha256": "7b719f95e6b0c59d79f69283b3edbfb4d34cbf80849f8c9cda5ebe3c37a2bc17"
+    },
+    "rows": [
+      {
+        "id": "GHSA-6fmv-xxpf-w3cw",
+        "ledger_index": 0,
+        "name": "plexus-utils",
+        "observations": 30,
+        "original_disposition_unchanged": "OPEN; applicability and risk acceptance not established",
+        "scanner": "grype",
+        "scanner_fix_claim": [
+          "4.0.3"
+        ],
+        "version": "4.0.2"
+      },
+      {
+        "id": "CVE-2025-67030",
+        "ledger_index": 603,
+        "name": "org.codehaus.plexus:plexus-utils",
+        "observations": 30,
+        "original_disposition_unchanged": "OPEN; applicability and risk acceptance not established",
+        "scanner": "trivy",
+        "scanner_fix_claim": "4.0.3, 3.6.1",
+        "version": "4.0.2"
+      }
+    ],
+    "scanner_identities": 2,
+    "source_ledger_sha256_unchanged": {
+      "docs/handover-evidence/generated-images/2026-10-20-noble/maven-reconciliation.json": "d65919684930c3fd10056d2bb99c16ed7c5aeaa7f66dd35f1c2b62719e5b0904",
+      "docs/handover-evidence/generated-images/2026-10-20-noble/open-findings.json.gz": "4bea5000c756221b61e421227b9e37bb6150eceffce015f53173e07cf11e8179",
+      "docs/handover-evidence/generated-images/2026-10-20-noble/residual-accounting.json.gz": "52e22711b464825c7f812332d19270ebd5658342aa22f9c552cc353d2fb3a1e1",
+      "docs/handover-evidence/generated-images/2026-10-20-noble/residual-applicability-adoption.json.gz": "4752d3692a72c470678ee1aa9ed6d11b0b7293bb379b93c792ae24b9bf7b8f32",
+      "docs/handover-evidence/generated-images/2026-10-20-noble/summary.json": "73bd96160da29aa32e6fe5f0fda3cc73207a83d2f13074059834d15f21fb0f1c"
+    },
+    "unique_vulnerability_count_claimed": false
+  },
+  "image_build": {
+    "executed_test_credit": 0,
+    "unchanged_recipe_command": "mvn -q -DskipTests clean package"
+  },
+  "independent_review": "Exact-head receipt retained outside the tested tree; reported in PR handoff",
+  "m2_complete": false,
+  "primary_owning_edge": {
+    "baseline_chain": [
+      "maven-clean-plugin:3.5.0",
+      "maven-plugins:44",
+      "maven-parent:44"
+    ],
+    "boundary": "POM inheritance and actual loaded realm are separate proof; neither proves vulnerable-function use",
+    "evidence": [
+      {
+        "archive_member": "entry-20261021/sources/clean-3.5.0.pom",
+        "sha256": "9dc0a3f49b582aa36d2617c69034a66cdf5b1ec789f7e6ff506df962551fde89"
+      },
+      {
+        "archive_member": "primary-parent-sources/maven-plugins-44.pom",
+        "sha256": "d7801d725de2abb706efb931e22eac5df4d0c7fc8c9ea9a4d9986782407aaff7"
+      },
+      {
+        "archive_member": "primary-parent-sources/maven-parent-44.pom",
+        "sha256": "1c0a088d7352d52ea8f3581d05778c0c4a679613fff2c58737fba55f1007fe24"
+      }
+    ],
+    "inherited_baseline_plexus_utils": "4.0.2",
+    "source_receipts": [
+      {
+        "published_sha1": "0429b018d8488eed9ed58c6328ad2571ce4cc984",
+        "retrieved_at_utc": "2026-10-24T23:58:34.163950+00:00",
+        "sha256": "d7801d725de2abb706efb931e22eac5df4d0c7fc8c9ea9a4d9986782407aaff7",
+        "trust_boundary": "Central HTTPS and checksum, not signature verification",
+        "url": "https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/44/maven-plugins-44.pom"
+      },
+      {
+        "published_sha1": "e7857131e733520e8e020e02f0d90f269cc37342",
+        "retrieved_at_utc": "2026-10-24T23:58:34.328797+00:00",
+        "sha256": "1c0a088d7352d52ea8f3581d05778c0c4a679613fff2c58737fba55f1007fe24",
+        "trust_boundary": "Central HTTPS and checksum, not signature verification",
+        "url": "https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/44/maven-parent-44.pom"
+      }
+    ],
+    "targeted_plugin_dependency": "org.codehaus.plexus:plexus-utils:4.0.3"
+  },
+  "release_clearance": false,
+  "risk_accepted": false,
+  "schema_version": 1,
+  "scope": {
+    "artifact_assessments": 4,
+    "configuration_pom_cases": 30,
+    "final_image_runtime": false,
+    "full_30_case_60_stage_manual_campaign": false,
+    "java": [
+      "17",
+      "21"
+    ],
+    "native_jni_lz4_proof": false,
+    "platform": "linux/amd64",
+    "stage": "generated-build-stage",
+    "suite_l5": false
+  },
+  "separate_manual_compatibility": {
+    "cases": 4,
+    "engine_emitted_tests": 2,
+    "evidence": {
+      "archive_member": "compatibility-cycle2.json",
+      "sha256": "21224643a4d5228d8554a43b6c3904ea24d49c6f8f73ac49609b0318bf5bbbc0"
+    },
+    "executed_tests": 28,
+    "lifecycle": [
+      "clean",
+      "verify"
+    ],
+    "proof_supplied_tests": 26
+  },
+  "target_directory": "docs/handover-evidence/clean-plugin-plexus-2026-10-24",
+  "task_date": "2026-10-24"
+}

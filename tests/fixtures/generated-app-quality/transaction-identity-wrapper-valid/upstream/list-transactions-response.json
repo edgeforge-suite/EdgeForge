@@ -1,0 +1,12 @@
+{
+  "transactions": "transport-wrapper",
+  "currentPage": 0,
+  "pageSize": 25,
+  "totalElements": 2,
+  "totalPages": 1,
+  "accountId": "acct-100",
+  "transactionRowId": "row-101",
+  "transactionId": "txn-101",
+  "amount": 19.99,
+  "status": "POSTED"
+}

@@ -1,0 +1,11 @@
+table: acct_staging_tbl
+entity: Account
+field_mappings:
+  - source: Account.accountId
+    target: acct_id
+  - source: Account.customerId
+    target: cust_ref
+  - source: Account.accountType
+    target: acct_type
+  - source: Account.status
+    target: status_cd

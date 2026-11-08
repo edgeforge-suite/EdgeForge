@@ -1,0 +1,28 @@
+app_name: Synthetic Claims Intake Router
+bounded_context: claims-intake-router
+schema_version: '2.0'
+app_archetype: passthrough-router
+target_profile: springboot-legacy-compatible
+upstream_interfaces:
+- name: claim-intake-api
+  type: rest-json
+  version: '1.0'
+  spec: upstream/claim-intake-api-spec.yaml
+downstream_interfaces:
+- name: auto-claims-api
+  system: AUTO_CLAIMS
+  type: rest-json
+  version: '1.0'
+  spec: downstream/auto-claims-api-openapi.yaml
+- name: property-claims-api
+  system: PROP_CLAIMS
+  type: rest-json
+  version: '1.0'
+  spec: downstream/property-claims-api-openapi.yaml
+- name: specialty-claims-api
+  system: SPEC_CLAIMS
+  type: rest-json
+  version: '1.0'
+  spec: downstream/specialty-claims-api-openapi.yaml
+rules:
+- rules/claims-intake-router-passthrough-routing.yaml

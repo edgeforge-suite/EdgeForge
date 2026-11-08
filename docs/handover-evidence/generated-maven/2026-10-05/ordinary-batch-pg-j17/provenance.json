@@ -1,0 +1,40 @@
+{
+  "archetype": "crud",
+  "engine_sha": "38862862a0f4e90eb4f809a0150c6d2702de2423",
+  "generation_input": {
+    "app_archetype": "crud",
+    "app_name": "Ordinary Batch Preview Proof",
+    "bounded_context": "ordinary_batch_proof",
+    "data_handoffs": [
+      {
+        "mapping": "widget-staging-mapping.yaml",
+        "name": "widget-staging",
+        "spec": "widget-staging.sql",
+        "system": "SYNTHETIC_HANDOFF",
+        "type": "staging-table"
+      }
+    ],
+    "schema_version": "2.0",
+    "target_profile": "springboot-enterprise-postgres-java17",
+    "upstream_interfaces": [
+      {
+        "mapping": "widget-api-mapping.yaml",
+        "name": "widget-api",
+        "operations": [
+          {
+            "name": "createWidget",
+            "request_sample": "widget-request.json",
+            "response_sample": "widget-response.json"
+          }
+        ],
+        "spec": "widget-api.json",
+        "system": "SYNTHETIC_SOURCE",
+        "type": "rest-json"
+      }
+    ]
+  },
+  "generation_run_id": "maven-assessment-ordinary-batch-pg-j17",
+  "input_manifest": "tests/fixtures/boot41-batch/ordinary-app-definition.yaml",
+  "input_package_sha256": "4841b0a85adef8cf3d3480409d6dc9f295d9087cff8505c5d678de176f39d491",
+  "target_profile": "springboot-enterprise-postgres-java17"
+}

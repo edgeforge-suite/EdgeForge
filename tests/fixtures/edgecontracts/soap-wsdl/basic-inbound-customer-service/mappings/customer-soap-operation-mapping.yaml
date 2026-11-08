@@ -1,0 +1,3 @@
+operation_mappings:
+  - operation: getCustomer
+    handler_method: handleGetCustomer

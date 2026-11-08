@@ -1,0 +1,24 @@
+app_name: Batch Domain Name Collision Proof
+bounded_context: batch_name_collision
+schema_version: "2.0"
+app_archetype: crud
+data_handoffs:
+  - name: job-launcher-staging
+    system: SYNTHETIC_HANDOFF
+    type: staging-table
+    spec: job-launcher-staging.sql
+    mapping: job-launcher-staging-mapping.yaml
+    run_semantics:
+      run_id: caller_supplied
+      restart: resume
+      dedup_key: [widget_id, payload_key]
+  - name: job-explorer-staging
+    system: SYNTHETIC_HANDOFF
+    type: staging-table
+    spec: job-explorer-staging.sql
+    mapping: job-explorer-staging-mapping.yaml
+    run_semantics:
+      run_id: caller_supplied
+      restart: resume
+      dedup_key: [widget_id, payload_key]
+target_profile: springboot-legacy-compatible

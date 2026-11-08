@@ -1,0 +1,12 @@
+interface: entry-api
+entity: Entry
+operations:
+  - name: createEntry
+    request_mappings:
+      - source: note
+        target: Entry.note
+    response_mappings:
+      - source: entryId
+        target: Entry.entryId
+      - source: note
+        target: Entry.note

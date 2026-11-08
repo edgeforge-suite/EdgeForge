@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "investigationId": {"type": "string"},
+    "customerRef": {"type": "string"},
+    "transactionAmount": {"type": "number"},
+    "channel": {"type": "string"}
+  }
+}

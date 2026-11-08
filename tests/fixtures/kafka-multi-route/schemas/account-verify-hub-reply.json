@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "paymentId": {"type": "string"},
+    "approved": {"type": "boolean"},
+    "declineReason": {"type": "string"},
+    "score": {"type": "integer"}
+  }
+}

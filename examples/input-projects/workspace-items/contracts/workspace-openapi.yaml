@@ -1,0 +1,70 @@
+openapi: 3.0.3
+info:
+  title: Workspace Items Example
+  version: 1.0.0
+  description: Independently authored EdgeForge teaching contract for two related records.
+  license:
+    name: Apache-2.0
+paths:
+  /workspaces:
+    post:
+      operationId: createWorkspace
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WorkspaceInput'
+      responses:
+        '201':
+          description: Workspace created with a server-generated identity.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Workspace'
+  /items:
+    post:
+      operationId: createItem
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ItemInput'
+      responses:
+        '201':
+          description: Item created in an existing workspace.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Item'
+components:
+  schemas:
+    WorkspaceInput:
+      type: object
+      required: [title, state]
+      properties:
+        title: {type: string, minLength: 3, maxLength: 40}
+        state: {type: string, enum: [OPEN, ARCHIVED]}
+    Workspace:
+      type: object
+      required: [workspaceId, title, state]
+      properties:
+        workspaceId: {type: string, maxLength: 36}
+        title: {type: string, minLength: 3, maxLength: 40}
+        state: {type: string, enum: [OPEN, ARCHIVED]}
+    ItemInput:
+      type: object
+      required: [workspaceId, label, priority]
+      properties:
+        workspaceId: {type: string, maxLength: 36}
+        label: {type: string, minLength: 2, maxLength: 60}
+        priority: {type: integer, minimum: 1, maximum: 5}
+    Item:
+      type: object
+      required: [itemId, workspaceId, label, priority]
+      properties:
+        itemId: {type: string, maxLength: 36}
+        workspaceId: {type: string, maxLength: 36}
+        label: {type: string, minLength: 2, maxLength: 60}
+        priority: {type: integer, minimum: 1, maximum: 5}

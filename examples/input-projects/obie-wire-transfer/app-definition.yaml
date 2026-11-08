@@ -1,0 +1,43 @@
+app_name: obie-wire-transfer
+bounded_context: wire_transfer
+schema_version: "2.0"
+app_archetype: crud
+target_profile: springboot-legacy-compatible
+
+# Preserve the existing selected key independently of GET route inference.
+identity_overrides:
+  - entity: InternationalPayment
+    persistence_id: InternationalPaymentId
+
+upstream_interfaces:
+  - name: obie-payment-initiation-api
+    system: OBIE
+    version: "4.0.1"
+    type: rest-json
+    spec: contracts/payment-initiation-openapi.yaml
+    mapping: upstream/international-payment-mapping.yaml
+    operations:
+      - name: CreateInternationalPayments
+        request_sample: upstream/create-international-payment-request.json
+        response_sample: upstream/create-international-payment-response.json
+      - name: GetInternationalPaymentsInternationalPaymentId
+        response_sample: upstream/get-international-payment-response.json
+
+downstream_interfaces:
+  - name: payment-confirmation-file
+    system: SettlementOps
+    version: "1.0"
+    type: file-fixed-width
+    spec: downstream/payment-confirmation-layout.yaml
+    mapping: downstream/payment-confirmation-mapping.yaml
+
+data_handoffs:
+  - name: settlement-stage
+    system: SettlementETL
+    version: "1.0"
+    type: staging-table
+    spec: data-handoffs/settlement-stage.sql
+    mapping: data-handoffs/settlement-stage-mapping.yaml
+
+rules:
+  - rules/international-payment-rules.yaml

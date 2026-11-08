@@ -1,0 +1,130 @@
+[
+  {
+    "path": ".dockerignore",
+    "sha256": "e69cd71a48eb2d25a1f56bc5877bb55408c88197a2f924a5c1a789ae4ca02d29"
+  },
+  {
+    "path": ".gitignore",
+    "sha256": "2801c4d95bbe40b2aacd36dfb46a9aef4d713924ef07ce0ba87f42f4960c11aa"
+  },
+  {
+    "path": "Dockerfile",
+    "sha256": "9b37dc789fb1920b25b1804c8467968b96a09d9a6a1fadda28891ea0dab4a50f"
+  },
+  {
+    "path": "README.md",
+    "sha256": "6db915d52cc43daf32409edf24de86c3a4a458ec3980e1e3039f76c71e0a31e7"
+  },
+  {
+    "path": "agent-context.md",
+    "sha256": "9619093d69aa3f45a379402c513fb995d725d1f100492ebd334f5de266be68e8"
+  },
+  {
+    "path": "db/generation-provenance.json",
+    "sha256": "ab0277dca3fb2e8438532494adc5f863770afc982868fa2f0c5fe179ae14ffe2"
+  },
+  {
+    "path": "db/schema-baseline.json",
+    "sha256": "b030fbf52e71a1b756f1990def5ad21b1bccdc1402e9d60695c1c9897d282613"
+  },
+  {
+    "path": "pom.xml",
+    "sha256": "caeefb69e3e8aa3a68f5f065b40aaa1def516b9bbd62581cbea10068e729f141"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/accounts/AccountsApplication.java",
+    "sha256": "15715e97038913d3e72d0baf285ab5a0539a692078931142af1fb274a352c862"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/accounts/adapter/inbound/AccountController.java",
+    "sha256": "bc1f54738d74cb6195119b6d6bbfaa887f7531d0e626530c27c7e63b1fcbc25c"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/accounts/adapter/inbound/AccountResponse.java",
+    "sha256": "1fba7962ce9c32af731ea2b2194361bb10f867f6db6f4848773b1f2dc8455d87"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/accounts/adapter/inbound/AccountUpdateRequest.java",
+    "sha256": "4804e3bb08fbce8e08394f591f94ae822adeba72e610578e839907743d89ec21"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/accounts/adapter/inbound/BatchTriggerController.java",
+    "sha256": "6194ecb12971538d817e72e5800cb7f161a21445c5804cf3c7f201994cdba40a"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/accounts/adapter/inbound/CreateAccountRequest.java",
+    "sha256": "d614712b1d743bdfaf09b48d5f47e79711f01edbe57b321e201f0a0bf25455d2"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/accounts/adapter/inbound/CreateAccountResponse.java",
+    "sha256": "ca47b42eeecd074984e5e2d5742701ec78edbfd00e29c22f3f08fb8541da3f99"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/accounts/adapter/inbound/DemoController.java",
+    "sha256": "b52022873488b3558673798d200a095399907a0a335944ee109ea6d1133691b4"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/accounts/adapter/outbound/AccountEodHandoffFileWriter.java",
+    "sha256": "a9f4dfe33214c250b466e3601ac177489b6689287ac4ef626fd118fb3e6bf905"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/accounts/batch/AccountEodBatchJob.java",
+    "sha256": "44bba6f8f3fe9375fc390e2180f46dacf369b210e6f828cd34e0185ee219307a"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/accounts/config/SecurityHeadersFilter.java",
+    "sha256": "b6f979230aa983b688552098ff559036b49ee471ec961bae27ecc5935b20fba5"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/accounts/domain/Account.java",
+    "sha256": "61f052481113262e26672b63d92d6ccb7501830b639f9e96e521e2d18be773ca"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/accounts/exception/DuplicateResourceException.java",
+    "sha256": "9fb610f053e511847c9b467e727fc9872b09e79049bf87008cf59b1c78d4b31b"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/accounts/exception/ErrorResponse.java",
+    "sha256": "6ad944f7a0200e146edd5472cea476f530bfa25c97a1cbffbed2bf3f938c4fb2"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/accounts/exception/GlobalExceptionHandler.java",
+    "sha256": "4e16fe5088f8c191ebd53c0455af1ba27e93a0989da51901389768a4f79609f3"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/accounts/exception/ResourceNotFoundException.java",
+    "sha256": "dcec5358912d8a3e7f684d3048673ed7b4d39f0d29607bef2200f20f67e65f09"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/accounts/repository/AccountRepository.java",
+    "sha256": "a7c194856de77a8bcef90d85655c3259a12a5e816f821238ec5640648fa37bff"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/accounts/service/AccountService.java",
+    "sha256": "6a623a5323e3ed069154f3ed7610b86cd49ae155d8f8616d82fb3095994a4f36"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/accounts/service/AccountServiceBase.java",
+    "sha256": "5d551f4be6eb19742719897854e0e33d8431531c97b771ce73d00746670ad074"
+  },
+  {
+    "path": "src/main/resources/application.yaml",
+    "sha256": "8f311dfead72182178e276c8d20600c21c235e98f60fadf4b6e5263a524a3f1c"
+  },
+  {
+    "path": "src/main/resources/db/migration/V1__create_account_table.sql",
+    "sha256": "57e989ceefa9584bff1476d1301bb5357d785163bdff4f4e5f01817801e2eda3"
+  },
+  {
+    "path": "src/main/resources/db/migration/V2__create_pkg_batch_metadata.sql",
+    "sha256": "feee7f9f07c1a99efeb706b481462d911bd8c1ce73b8feb8c077ade31663b1c2"
+  },
+  {
+    "path": "src/main/resources/static/index.html",
+    "sha256": "dce3620be5cef63d95b3245dc07046b2f93b60b40cfe019d96de6e6001c6a46a"
+  },
+  {
+    "path": "src/test/java/com/appbuilder/accounts/AccountsApplicationTest.java",
+    "sha256": "de06bc5e4d0375a05fa533b0f86705fbede7546e76d925d29a206aba5bfbd263"
+  }
+]

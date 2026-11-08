@@ -1,0 +1,84 @@
+{
+  "advisory_database_snapshot": "not supplied",
+  "advisory_service": "https://api.osv.dev",
+  "affected_packages": 3,
+  "assessment_time_utc": "2026-10-03T23:49:40.645528+00:00",
+  "exit_code": 1,
+  "findings": 10,
+  "inventory_coverage": "complete",
+  "inventory_sha256": "cf4db0026a708610974623c1c189fc271baa94e33ce9f62c2d5055600ff7c39e",
+  "maven_warnings": [
+    "[WARNING] Unknown keyword meta:enum - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword",
+    "[WARNING] Unknown keyword deprecated - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword"
+  ],
+  "pom_sha256": "bc008f3e9f9d2d955e4cc97438e2eefb30af81ec26645a3c44bab8aaab3ab815",
+  "provenance": {
+    "archetype": "crud",
+    "engine_sha": "109f6385345047013836f1e32b2d4230b9e8ad2b",
+    "generation_input": {
+      "app_name": "CSV Downstream File App",
+      "bounded_context": "accounts",
+      "downstream_interfaces": [
+        {
+          "mapping": "downstream/account-csv-mapping.yaml",
+          "name": "account-csv-file",
+          "spec": "downstream/account-csv-layout.yaml",
+          "system": "ETL",
+          "type": "file-csv"
+        }
+      ],
+      "schema_version": "2.0",
+      "target_profile": "springboot-legacy-compatible",
+      "upstream_interfaces": [
+        {
+          "mapping": "upstream/account-mapping.yaml",
+          "name": "account-api",
+          "operations": [
+            {
+              "name": "createAccount",
+              "request_sample": "upstream/create-account-request.json",
+              "response_sample": "upstream/create-account-response.json"
+            }
+          ],
+          "spec": "upstream/account-api-spec.yaml",
+          "system": "CORE",
+          "type": "rest-json"
+        }
+      ]
+    },
+    "generation_run_id": "maven-assessment-file-batch-h2-j17",
+    "input_manifest": "tests/fixtures/file-contracts/csv-downstream/app-definition.yaml",
+    "input_package_sha256": "ab4c63bb9b2db88180146498e6f1df502d29fd6157deb2d8e06c3157f7d69a26",
+    "target_profile": "springboot-legacy-compatible"
+  },
+  "raw_scanner_stdout_sha256": "8dfbeb9861047d2006b95edc3269004deed88cf2d3f3ab6a6f582f49f05ad6f3",
+  "release_acceptance": "not established",
+  "resolved_artifacts": 134,
+  "scanned_maven_packages": 134,
+  "scanner_exit_code": 1,
+  "scopes": [
+    "compile",
+    "provided",
+    "runtime",
+    "system",
+    "test"
+  ],
+  "source_after_sha256": "2d2cfa667b3afc0ce2a2e6daf523cf69ca480494b60c6bb00b019dc18a8d5ff0",
+  "source_before_sha256": "2d2cfa667b3afc0ce2a2e6daf523cf69ca480494b60c6bb00b019dc18a8d5ff0",
+  "source_unchanged": true,
+  "status": "complete",
+  "tools": {
+    "cyclonedx_maven_plugin": "2.9.1",
+    "java": "17.0.18",
+    "java_vendor": "Homebrew",
+    "maven": "3.9.12",
+    "maven_dependency_plugin": "3.8.1",
+    "scanner": [
+      "osv-scanner version: 2.3.8",
+      "osv-scalibr version: 0.4.5",
+      "commit: 408fcd6f8707999a29e7ba45e15809764cf24f67",
+      "built at: 2026-05-08T04:54:35Z"
+    ],
+    "scanner_sha256": "a8cd6507b06239f463a7642430cfd2d154882f150f6e30cdc0653e28dfc34216"
+  }
+}

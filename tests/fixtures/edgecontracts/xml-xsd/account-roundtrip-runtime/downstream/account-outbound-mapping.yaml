@@ -1,0 +1,15 @@
+entity: Account
+direction: outbound
+field_mappings:
+  - source: Account.sourceSystem
+    target: sourceSystem
+  - source: Account.accountId
+    target: accountId
+  - source: Account.accountNumber
+    target: accountNumber
+  - source: Account.availableBalance
+    target: availableBalance
+  - source: Account.openedDate
+    target: openedDate
+  - source: Account.active
+    target: active

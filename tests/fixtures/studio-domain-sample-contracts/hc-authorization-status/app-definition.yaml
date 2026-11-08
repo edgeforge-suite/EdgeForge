@@ -1,0 +1,35 @@
+app_name: Synthetic Authorization Status
+bounded_context: authorization-status
+schema_version: '2.0'
+app_archetype: crud
+target_profile: springboot-legacy-compatible
+identity_overrides:
+- entity: AuthorizationRecord
+  persistence_id: authorizationId
+upstream_interfaces:
+- name: authorization-api
+  type: rest-json
+  version: '1.0'
+  spec: contracts/authorization-api-spec.json
+  mapping: upstream/authorization-api-mapping.yaml
+  operations:
+  - name: createAuthorization
+    request_sample: upstream/sample-createauthorization-request.json
+    response_sample: upstream/sample-createauthorization-response.json
+downstream_interfaces:
+- name: authorization
+  type: xml-xsd
+  version: '1.0'
+  xsd_path: downstream/authorization-schema.xsd
+  root_element: Authorization
+  namespace: urn:edgeforge:samples:authorization:v1
+  namespace_alias: tns
+  mapping: downstream/authorization-mapping.yaml
+data_handoffs:
+- name: authorization-staging-table
+  type: staging-table
+  version: '1.0'
+  spec: data-handoffs/authorization-staging-table.sql
+  mapping: data-handoffs/authorization-staging-table-mapping.yaml
+rules:
+- rules/authorizationrecord-business-rules.yaml

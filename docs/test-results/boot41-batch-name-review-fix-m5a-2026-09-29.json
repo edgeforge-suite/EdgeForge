@@ -1,0 +1,25 @@
+{
+  "batch_schema": "6.0.5",
+  "boot": "4.1.1",
+  "builds": [
+    {
+      "case": "m5a",
+      "generation_and_regeneration_deterministic": true,
+      "maven": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 4
+      },
+      "profile": "springboot-legacy-compatible-boot41-preview",
+      "source_and_jar_independent": true,
+      "source_digest": "f8ee6d802d95a8471aef312371e0d5099ea71bb8544fb09999c37bac1c27eaf3"
+    }
+  ],
+  "h2_restart_boundary": "same-process",
+  "mode": "h2",
+  "observed_at": "2026-09-29T02:34:03.766671+00:00",
+  "release_acceptance": "not-established",
+  "source_dirty": false,
+  "source_sha": "a99ee99cfc944a56d925e5e215de4723a9bdfc10"
+}

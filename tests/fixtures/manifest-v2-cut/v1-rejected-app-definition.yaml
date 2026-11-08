@@ -1,0 +1,9 @@
+app_name: Pre-Cut Manifest Rejection Fixture
+bounded_context: manifest_v1_rejection
+schema_version: "1.0"
+app_archetype: crud
+upstream_interfaces:
+  - name: widget-api
+    type: rest-json
+    spec: widget-openapi.json
+target_profile: springboot-legacy-compatible

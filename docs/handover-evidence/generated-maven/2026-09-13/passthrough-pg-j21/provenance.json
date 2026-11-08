@@ -1,0 +1,45 @@
+{
+  "archetype": "passthrough-router",
+  "engine_sha": "582c853f2566ac5cdf45ad239c1827a5aa47f12e",
+  "generation_input": {
+    "app_archetype": "passthrough-router",
+    "app_name": "CountryRouter",
+    "bounded_context": "payments",
+    "downstream_interfaces": [
+      {
+        "name": "app-a-api",
+        "spec": "downstream/app-a-openapi.yaml",
+        "system": "APP_A",
+        "type": "rest-json"
+      },
+      {
+        "name": "app-b-api",
+        "spec": "downstream/app-b-openapi.yaml",
+        "system": "APP_B",
+        "type": "rest-json"
+      },
+      {
+        "name": "app-c-api",
+        "spec": "downstream/app-c-openapi.yaml",
+        "system": "APP_C",
+        "type": "rest-json"
+      }
+    ],
+    "rules": [
+      "rules/payment-routing.yaml"
+    ],
+    "schema_version": "2.0",
+    "target_profile": "springboot-standard-enterprise",
+    "upstream_interfaces": [
+      {
+        "name": "inbound-payments-api",
+        "spec": "upstream/payments-openapi.yaml",
+        "type": "rest-json"
+      }
+    ]
+  },
+  "generation_run_id": "maven-assessment-passthrough-pg-j21",
+  "input_manifest": "examples/input-projects/country-router/app-definition.yaml",
+  "input_package_sha256": "5118d890450282f9cedcc41c636f685c48453afd78246c0745aa005d5858bac2",
+  "target_profile": "springboot-standard-enterprise"
+}

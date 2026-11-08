@@ -1,0 +1,53 @@
+openapi: 3.0.3
+info:
+  title: Inbound Payments API
+  version: "1.0"
+paths:
+  /payments:
+    post:
+      operationId: routePayment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PaymentRequest"
+      responses:
+        "200":
+          description: Routed payment response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PaymentResponse"
+components:
+  schemas:
+    PaymentRequest:
+      type: object
+      required:
+        - amount
+        - currency
+        - countryCode
+        - senderName
+        - recipientName
+      properties:
+        amount:
+          type: number
+          format: double
+        currency:
+          type: string
+        countryCode:
+          type: string
+        senderName:
+          type: string
+        recipientName:
+          type: string
+    PaymentResponse:
+      type: object
+      required:
+        - paymentId
+        - status
+      properties:
+        paymentId:
+          type: string
+        status:
+          type: string

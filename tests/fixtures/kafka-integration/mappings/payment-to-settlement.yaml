@@ -1,0 +1,7 @@
+transforms:
+  - source: accountId
+    target: accountReference
+  - source: amount
+    target: settlementAmount
+  - source: currency
+    target: settlementCurrency

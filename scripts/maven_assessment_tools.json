@@ -1,0 +1,13 @@
+{
+  "cyclonedx_maven_plugin": "2.9.1",
+  "maven_dependency_plugin": "3.8.1",
+  "cyclonedx_schema": "1.6",
+  "osv_scanner": "2.3.8",
+  "checksum_source": "https://github.com/google/osv-scanner/releases/download/v2.3.8/osv-scanner_SHA256SUMS",
+  "scanner_sha256": {
+    "osv-scanner_darwin_amd64": "b8a80a9f14ca4c0cd0fc2d351b28f740da9e6a5b18385ac9f9d083360b5b504e",
+    "osv-scanner_darwin_arm64": "a8cd6507b06239f463a7642430cfd2d154882f150f6e30cdc0653e28dfc34216",
+    "osv-scanner_linux_amd64": "bc98e15319ed0d515e3f9235287ba53cdc5535d576d24fd573978ecfe9ab92dc",
+    "osv-scanner_linux_arm64": "8158b18edd2d03b1a30d905ca91b032bc62262167be8f206c27114f08823e27c"
+  }
+}

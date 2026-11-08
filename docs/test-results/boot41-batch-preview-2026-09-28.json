@@ -1,0 +1,563 @@
+{
+  "batch_schema": "6.0.5",
+  "boot": "4.1.1",
+  "builds": [
+    {
+      "case": "m5a",
+      "generation_and_regeneration_deterministic": true,
+      "maven": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 4
+      },
+      "profile": "springboot-legacy-compatible-boot41-preview",
+      "source_and_jar_independent": true,
+      "source_digest": "f8ee6d802d95a8471aef312371e0d5099ea71bb8544fb09999c37bac1c27eaf3"
+    },
+    {
+      "case": "ordinary",
+      "generation_and_regeneration_deterministic": true,
+      "maven": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 2
+      },
+      "ordinary_wire_and_file_output": {
+        "file_bytes": null,
+        "rerun": [
+          200,
+          [
+            "application/json",
+            []
+          ],
+          {
+            "exitCode": "COMPLETED",
+            "jobId": "<validated-instance-id>",
+            "jobName": "widgetEodJob",
+            "startTime": "<validated-start-time>",
+            "status": "COMPLETED"
+          }
+        ],
+        "trigger": [
+          200,
+          [
+            "application/json",
+            []
+          ],
+          {
+            "exitCode": "COMPLETED",
+            "jobId": "<validated-instance-id>",
+            "jobName": "widgetEodJob",
+            "startTime": "<validated-start-time>",
+            "status": "COMPLETED"
+          }
+        ],
+        "unknown": [
+          404,
+          [
+            "application/json",
+            []
+          ],
+          {
+            "available": [
+              "widgetEodJob"
+            ],
+            "error": "Job not found: notAJob"
+          }
+        ]
+      },
+      "profile": "springboot-legacy-compatible-boot41-preview",
+      "source_and_jar_independent": true,
+      "source_digest": "f5f58908d859306f2f69332dfd44141b9cfb06349c1a0328bae999903abbfcc3"
+    },
+    {
+      "case": "file",
+      "generation_and_regeneration_deterministic": true,
+      "maven": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 1
+      },
+      "ordinary_wire_and_file_output": {
+        "file_bytes": "6163636f756e745f69647c6163636f756e745f6e756d6265727c617661696c61626c655f62616c616e63655f6d696e6f727c6f70656e65645f646174657c6163746976657c6e69636b6e616d650a3c76616c6964617465642d637265617465642d69643e7c4143433132333435363738397c3132353030307c323032362d30352d31397c747275657c0a",
+        "rerun": [
+          200,
+          [
+            "application/json",
+            []
+          ],
+          {
+            "exitCode": "COMPLETED",
+            "jobId": "<validated-instance-id>",
+            "jobName": "accountEodJob",
+            "startTime": "<validated-start-time>",
+            "status": "COMPLETED"
+          }
+        ],
+        "trigger": [
+          200,
+          [
+            "application/json",
+            []
+          ],
+          {
+            "exitCode": "COMPLETED",
+            "jobId": "<validated-instance-id>",
+            "jobName": "accountEodJob",
+            "startTime": "<validated-start-time>",
+            "status": "COMPLETED"
+          }
+        ],
+        "unknown": [
+          404,
+          [
+            "application/json",
+            []
+          ],
+          {
+            "available": [
+              "accountEodJob"
+            ],
+            "error": "Job not found: notAJob"
+          }
+        ]
+      },
+      "profile": "springboot-legacy-compatible-boot41-preview",
+      "source_and_jar_independent": true,
+      "source_digest": "3dbaaa1046e88f55eaf742ec39342e0e59b510feb51355ab9de687bae8df156e"
+    },
+    {
+      "case": "mixed",
+      "generation_and_regeneration_deterministic": true,
+      "maven": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 4
+      },
+      "mixed_bodyless_file_job_executed": true,
+      "profile": "springboot-legacy-compatible-boot41-preview",
+      "source_and_jar_independent": true,
+      "source_digest": "0368f68ff85d2cb9b004c9b71f64304b5eb18b7fd923f68ce1cfb911132f4164"
+    },
+    {
+      "case": "m5a",
+      "generation_and_regeneration_deterministic": true,
+      "maven": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 1
+      },
+      "profile": "springboot-enterprise-postgres-java17",
+      "source_and_jar_independent": true,
+      "source_digest": "e75bc6afaf00f77d43fae45c45abf1b6afc3a837264da72b174df605d3693b4a"
+    },
+    {
+      "case": "m5a",
+      "flyway_versions": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "generation_and_regeneration_deterministic": true,
+      "maven": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 4
+      },
+      "old_schema_negative_control": {
+        "all_business_batch_and_flyway_records_unchanged": true,
+        "disposable_batch5_startup_refused": true,
+        "universal_old_database_detection": false
+      },
+      "postgres_durability": {
+        "abrupt_running_replacement_fails_closed": true,
+        "classification_after_owner_gone": true,
+        "completed_across_replacement": true,
+        "concurrent_duplicate_serialized": true,
+        "failed_and_classified_stopped_restart": true,
+        "flyway_history_preserved": true,
+        "same_instance_and_frozen_date": true,
+        "source_rows_immutable": true
+      },
+      "profile": "springboot-enterprise-postgres-java17-boot41-preview",
+      "source_and_jar_independent": true,
+      "source_digest": "9a7b5501813119f2799ab276be710a3fcc719935afdfa037d704736c9fd47520"
+    },
+    {
+      "case": "ordinary",
+      "flyway_versions": [
+        "1",
+        "2",
+        "3"
+      ],
+      "generation_and_regeneration_deterministic": true,
+      "maven": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 2
+      },
+      "ordinary_wire_and_file_output": {
+        "file_bytes": null,
+        "rerun": [
+          200,
+          [
+            "application/json",
+            []
+          ],
+          {
+            "exitCode": "COMPLETED",
+            "jobId": "<validated-instance-id>",
+            "jobName": "widgetEodJob",
+            "startTime": "<validated-start-time>",
+            "status": "COMPLETED"
+          }
+        ],
+        "trigger": [
+          200,
+          [
+            "application/json",
+            []
+          ],
+          {
+            "exitCode": "COMPLETED",
+            "jobId": "<validated-instance-id>",
+            "jobName": "widgetEodJob",
+            "startTime": "<validated-start-time>",
+            "status": "COMPLETED"
+          }
+        ],
+        "unknown": [
+          404,
+          [
+            "application/json",
+            []
+          ],
+          {
+            "available": [
+              "widgetEodJob"
+            ],
+            "error": "Job not found: notAJob"
+          }
+        ]
+      },
+      "profile": "springboot-enterprise-postgres-java17-boot41-preview",
+      "source_and_jar_independent": true,
+      "source_digest": "3f807e0639da0f2c56505c3bc7058fd283c49dbba1c1d090e7b34a23027713fb"
+    },
+    {
+      "case": "file",
+      "flyway_versions": [
+        "1",
+        "2"
+      ],
+      "generation_and_regeneration_deterministic": true,
+      "maven": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 1
+      },
+      "ordinary_wire_and_file_output": {
+        "file_bytes": "6163636f756e745f69647c6163636f756e745f6e756d6265727c617661696c61626c655f62616c616e63655f6d696e6f727c6f70656e65645f646174657c6163746976657c6e69636b6e616d650a3c76616c6964617465642d637265617465642d69643e7c4143433132333435363738397c3132353030307c323032362d30352d31397c747275657c0a",
+        "rerun": [
+          200,
+          [
+            "application/json",
+            []
+          ],
+          {
+            "exitCode": "COMPLETED",
+            "jobId": "<validated-instance-id>",
+            "jobName": "accountEodJob",
+            "startTime": "<validated-start-time>",
+            "status": "COMPLETED"
+          }
+        ],
+        "trigger": [
+          200,
+          [
+            "application/json",
+            []
+          ],
+          {
+            "exitCode": "COMPLETED",
+            "jobId": "<validated-instance-id>",
+            "jobName": "accountEodJob",
+            "startTime": "<validated-start-time>",
+            "status": "COMPLETED"
+          }
+        ],
+        "unknown": [
+          404,
+          [
+            "application/json",
+            []
+          ],
+          {
+            "available": [
+              "accountEodJob"
+            ],
+            "error": "Job not found: notAJob"
+          }
+        ]
+      },
+      "profile": "springboot-enterprise-postgres-java17-boot41-preview",
+      "source_and_jar_independent": true,
+      "source_digest": "f41b751edfc0567ee517dbb4d9c773b49936ff1d6adcba6c81f96db9ead976db"
+    },
+    {
+      "case": "mixed",
+      "flyway_versions": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "generation_and_regeneration_deterministic": true,
+      "maven": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 4
+      },
+      "mixed_bodyless_file_job_executed": true,
+      "profile": "springboot-enterprise-postgres-java17-boot41-preview",
+      "source_and_jar_independent": true,
+      "source_digest": "64fc5813ade8734cc278c7647116fcb8b81c8a7de7c1379bc3d7580171df9d3e"
+    },
+    {
+      "case": "m5a",
+      "generation_and_regeneration_deterministic": true,
+      "maven": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 1
+      },
+      "profile": "springboot-standard-enterprise",
+      "source_and_jar_independent": true,
+      "source_digest": "4401de12b3276dbb8ad1ad71b01eaa30b9d96ad0a06e118b9a364a6ce434869d"
+    },
+    {
+      "case": "m5a",
+      "flyway_versions": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "generation_and_regeneration_deterministic": true,
+      "maven": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 4
+      },
+      "old_schema_negative_control": {
+        "all_business_batch_and_flyway_records_unchanged": true,
+        "disposable_batch5_startup_refused": true,
+        "universal_old_database_detection": false
+      },
+      "postgres_durability": {
+        "abrupt_running_replacement_fails_closed": true,
+        "classification_after_owner_gone": true,
+        "completed_across_replacement": true,
+        "concurrent_duplicate_serialized": true,
+        "failed_and_classified_stopped_restart": true,
+        "flyway_history_preserved": true,
+        "same_instance_and_frozen_date": true,
+        "source_rows_immutable": true
+      },
+      "profile": "springboot-standard-enterprise-boot41-preview",
+      "source_and_jar_independent": true,
+      "source_digest": "3cefdc5b251c3e340ca7b42bc0427a55499134d88550161b51260f8c6eba4025"
+    },
+    {
+      "case": "ordinary",
+      "flyway_versions": [
+        "1",
+        "2",
+        "3"
+      ],
+      "generation_and_regeneration_deterministic": true,
+      "maven": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 2
+      },
+      "ordinary_wire_and_file_output": {
+        "file_bytes": null,
+        "rerun": [
+          200,
+          [
+            "application/json",
+            []
+          ],
+          {
+            "exitCode": "COMPLETED",
+            "jobId": "<validated-instance-id>",
+            "jobName": "widgetEodJob",
+            "startTime": "<validated-start-time>",
+            "status": "COMPLETED"
+          }
+        ],
+        "trigger": [
+          200,
+          [
+            "application/json",
+            []
+          ],
+          {
+            "exitCode": "COMPLETED",
+            "jobId": "<validated-instance-id>",
+            "jobName": "widgetEodJob",
+            "startTime": "<validated-start-time>",
+            "status": "COMPLETED"
+          }
+        ],
+        "unknown": [
+          404,
+          [
+            "application/json",
+            []
+          ],
+          {
+            "available": [
+              "widgetEodJob"
+            ],
+            "error": "Job not found: notAJob"
+          }
+        ]
+      },
+      "profile": "springboot-standard-enterprise-boot41-preview",
+      "source_and_jar_independent": true,
+      "source_digest": "ed6b8666d6e53b52ed01b28e3a3ff41a5783abbc4f4da528351609f5b3ad4061"
+    },
+    {
+      "case": "file",
+      "flyway_versions": [
+        "1",
+        "2"
+      ],
+      "generation_and_regeneration_deterministic": true,
+      "maven": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 1
+      },
+      "ordinary_wire_and_file_output": {
+        "file_bytes": "6163636f756e745f69647c6163636f756e745f6e756d6265727c617661696c61626c655f62616c616e63655f6d696e6f727c6f70656e65645f646174657c6163746976657c6e69636b6e616d650a3c76616c6964617465642d637265617465642d69643e7c4143433132333435363738397c3132353030307c323032362d30352d31397c747275657c0a",
+        "rerun": [
+          200,
+          [
+            "application/json",
+            []
+          ],
+          {
+            "exitCode": "COMPLETED",
+            "jobId": "<validated-instance-id>",
+            "jobName": "accountEodJob",
+            "startTime": "<validated-start-time>",
+            "status": "COMPLETED"
+          }
+        ],
+        "trigger": [
+          200,
+          [
+            "application/json",
+            []
+          ],
+          {
+            "exitCode": "COMPLETED",
+            "jobId": "<validated-instance-id>",
+            "jobName": "accountEodJob",
+            "startTime": "<validated-start-time>",
+            "status": "COMPLETED"
+          }
+        ],
+        "unknown": [
+          404,
+          [
+            "application/json",
+            []
+          ],
+          {
+            "available": [
+              "accountEodJob"
+            ],
+            "error": "Job not found: notAJob"
+          }
+        ]
+      },
+      "profile": "springboot-standard-enterprise-boot41-preview",
+      "source_and_jar_independent": true,
+      "source_digest": "50680b46a893211c0ecfb8939b6c15e4ae497c5c1758ab91591fbb8e701a9be2"
+    },
+    {
+      "case": "mixed",
+      "flyway_versions": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "generation_and_regeneration_deterministic": true,
+      "maven": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 4
+      },
+      "mixed_bodyless_file_job_executed": true,
+      "profile": "springboot-standard-enterprise-boot41-preview",
+      "source_and_jar_independent": true,
+      "source_digest": "18ab67caca454ef60cbdf000fec706ad97adb0b741a94c25b529f64a4a8eb90c"
+    },
+    {
+      "boot3_boot4_wire_and_output_match": true,
+      "case": "ordinary",
+      "generation_and_regeneration_deterministic": true,
+      "maven": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 2
+      },
+      "profile": "springboot-legacy-compatible",
+      "source_and_jar_independent": true,
+      "source_digest": "4454725834fa9322b879660814c04f1d1b61d870ce1da902ab425b235872e103"
+    },
+    {
+      "boot3_boot4_wire_and_output_match": true,
+      "case": "file",
+      "generation_and_regeneration_deterministic": true,
+      "maven": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 1
+      },
+      "profile": "springboot-legacy-compatible",
+      "source_and_jar_independent": true,
+      "source_digest": "54f07d44269c49563cc80dcf10904c0ef61c585ed3fa9fbefcbbd6a759205313"
+    }
+  ],
+  "h2_restart_boundary": "same-process",
+  "mode": "full",
+  "observed_at": "2026-09-28T04:38:39.127230+00:00",
+  "release_acceptance": "not-established",
+  "source_dirty": false,
+  "source_sha": "c60424859d4434eae782733ad74c9738c3e22cc4"
+}

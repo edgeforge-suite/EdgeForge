@@ -1,0 +1,218 @@
+[
+  {
+    "advisory_modified": "2026-09-11T08:25:52.825871989Z",
+    "aliases": [
+      "BIT-tomcat-2026-65905",
+      "CVE-2026-65905"
+    ],
+    "coordinate": "org.apache.tomcat.embed:tomcat-embed-core",
+    "disposition": "remediation decision pending",
+    "fixed_versions": [
+      "10.1.58",
+      "11.0.25",
+      "9.0.121"
+    ],
+    "id": "GHSA-9xv2-5v5q-p794",
+    "severity": "CRITICAL",
+    "severity_vectors": [
+      {
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "type": "CVSS_V3"
+      }
+    ],
+    "version": "11.0.24"
+  },
+  {
+    "advisory_modified": "2026-09-11T08:25:41.300012858Z",
+    "aliases": [
+      "BIT-tomcat-2026-65182",
+      "CVE-2026-65182"
+    ],
+    "coordinate": "org.apache.tomcat.embed:tomcat-embed-core",
+    "disposition": "remediation decision pending",
+    "fixed_versions": [
+      "10.1.58",
+      "11.0.25",
+      "9.0.121"
+    ],
+    "id": "GHSA-gcx9-497g-6cp6",
+    "severity": "CRITICAL",
+    "severity_vectors": [
+      {
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "type": "CVSS_V3"
+      }
+    ],
+    "version": "11.0.24"
+  },
+  {
+    "advisory_modified": "2026-09-11T08:25:40.118635278Z",
+    "aliases": [
+      "BIT-tomcat-2026-68525",
+      "CVE-2026-68525"
+    ],
+    "coordinate": "org.apache.tomcat.embed:tomcat-embed-core",
+    "disposition": "remediation decision pending",
+    "fixed_versions": [
+      "10.1.58",
+      "11.0.25",
+      "9.0.121"
+    ],
+    "id": "GHSA-h3x4-894j-xpx5",
+    "severity": "CRITICAL",
+    "severity_vectors": [
+      {
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "type": "CVSS_V3"
+      }
+    ],
+    "version": "11.0.24"
+  },
+  {
+    "advisory_modified": "2026-10-01T15:30:05.552671898Z",
+    "aliases": [
+      "CVE-2026-89425"
+    ],
+    "coordinate": "tools.jackson.core:jackson-core",
+    "disposition": "remediation decision pending",
+    "fixed_versions": [
+      "3.1.7",
+      "3.2.3"
+    ],
+    "id": "GHSA-7hhh-6rmp-j9qf",
+    "severity": "HIGH",
+    "severity_vectors": [
+      {
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "type": "CVSS_V3"
+      }
+    ],
+    "version": "3.1.5"
+  },
+  {
+    "advisory_modified": "2026-10-01T15:30:13.452657713Z",
+    "aliases": [
+      "CVE-2026-89407"
+    ],
+    "coordinate": "tools.jackson.core:jackson-core",
+    "disposition": "remediation decision pending",
+    "fixed_versions": [
+      "3.1.7",
+      "3.2.2"
+    ],
+    "id": "GHSA-p6pp-m3f8-5c89",
+    "severity": "HIGH",
+    "severity_vectors": [
+      {
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "type": "CVSS_V3"
+      }
+    ],
+    "version": "3.1.5"
+  },
+  {
+    "advisory_modified": "2026-09-30T15:46:18.051343022Z",
+    "aliases": [
+      "CVE-2026-91777"
+    ],
+    "coordinate": "tools.jackson.core:jackson-databind",
+    "disposition": "remediation decision pending",
+    "fixed_versions": [
+      "3.1.7",
+      "3.2.3"
+    ],
+    "id": "GHSA-cxp5-3px4-pw24",
+    "severity": "HIGH",
+    "severity_vectors": [
+      {
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "type": "CVSS_V3"
+      }
+    ],
+    "version": "3.1.5"
+  },
+  {
+    "advisory_modified": "2026-09-28T21:00:05.608227628Z",
+    "aliases": [
+      "CVE-2026-83557"
+    ],
+    "coordinate": "tools.jackson.core:jackson-databind",
+    "disposition": "remediation decision pending",
+    "fixed_versions": [
+      "3.1.6",
+      "3.2.2"
+    ],
+    "id": "GHSA-gx83-3vf8-gh7j",
+    "severity": "MODERATE",
+    "severity_vectors": [
+      {
+        "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "type": "CVSS_V3"
+      }
+    ],
+    "version": "3.1.5"
+  },
+  {
+    "advisory_modified": "2026-09-28T20:30:05.315085978Z",
+    "aliases": [
+      "CVE-2026-68497"
+    ],
+    "coordinate": "tools.jackson.core:jackson-databind",
+    "disposition": "remediation decision pending",
+    "fixed_versions": [
+      "3.1.6",
+      "3.2.2"
+    ],
+    "id": "GHSA-q4xh-88c3-wmh7",
+    "severity": "HIGH",
+    "severity_vectors": [
+      {
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "type": "CVSS_V3"
+      }
+    ],
+    "version": "3.1.5"
+  },
+  {
+    "advisory_modified": "2026-09-28T20:30:05.331167692Z",
+    "aliases": [
+      "CVE-2026-19032"
+    ],
+    "coordinate": "tools.jackson.core:jackson-databind",
+    "disposition": "remediation decision pending",
+    "fixed_versions": [
+      "3.1.6",
+      "3.2.2"
+    ],
+    "id": "GHSA-wjgm-6hv5-3cvf",
+    "severity": "MODERATE",
+    "severity_vectors": [
+      {
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "type": "CVSS_V3"
+      }
+    ],
+    "version": "3.1.5"
+  },
+  {
+    "advisory_modified": "2026-09-30T15:46:18.451708212Z",
+    "aliases": [
+      "CVE-2026-91776"
+    ],
+    "coordinate": "tools.jackson.core:jackson-databind",
+    "disposition": "remediation decision pending",
+    "fixed_versions": [
+      "3.1.7",
+      "3.2.3"
+    ],
+    "id": "GHSA-wv8q-qhhj-9h54",
+    "severity": "HIGH",
+    "severity_vectors": [
+      {
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "type": "CVSS_V3"
+      }
+    ],
+    "version": "3.1.5"
+  }
+]

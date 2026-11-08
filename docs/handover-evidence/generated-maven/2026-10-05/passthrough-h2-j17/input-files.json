@@ -1,0 +1,26 @@
+[
+  {
+    "path": "app-definition.yaml",
+    "sha256": "592f984dda2969e9a58b6bf8d40c75f1a78c8d1b84a8f2841f1557a0e37cad75"
+  },
+  {
+    "path": "downstream/app-a-openapi.yaml",
+    "sha256": "f6d1ee17dc2ed3c8323343e08fbcfea2b76d1c1bdec2b3499302fc118f99cbbf"
+  },
+  {
+    "path": "downstream/app-b-openapi.yaml",
+    "sha256": "ff184b03d18e67ffe6bd6144ed97f8bfd18a5f56edd37406c24f806315fbaa26"
+  },
+  {
+    "path": "downstream/app-c-openapi.yaml",
+    "sha256": "d66f8ad8de15f55f61624dd44835b55a1f4ba8129e3102c01cab80c819700f81"
+  },
+  {
+    "path": "rules/payment-routing.yaml",
+    "sha256": "ac760e030651fdb0000eff2fe72a5a2ff2e13d3f84c157321af4331dd6c68357"
+  },
+  {
+    "path": "upstream/payments-openapi.yaml",
+    "sha256": "159e43fb6a0d9e476aca7e61c5e2199f69abc504254097fd63254100b3760fcc"
+  }
+]

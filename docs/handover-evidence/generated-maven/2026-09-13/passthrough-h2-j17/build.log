@@ -1,0 +1,38 @@
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ----------------------< com.appbuilder:payments >-----------------------
+[INFO] Building CountryRouter 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- clean:3.3.2:clean (default-clean) @ payments ---
+[INFO]
+[INFO] --- resources:3.3.1:resources (default-resources) @ payments ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO]
+[INFO] --- compiler:3.13.0:compile (default-compile) @ payments ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 14 source files with javac [debug parameters release 17] to target/classes
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ payments ---
+[INFO] skip non existing resourceDirectory /private<temporary>/isolated/app/src/test/resources
+[INFO]
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ payments ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- surefire:3.2.5:test (default-test) @ payments ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- jar:3.4.2:jar (default-jar) @ payments ---
+[INFO] Building jar: /private<temporary>/isolated/app/target/payments-0.0.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- spring-boot:3.3.5:repackage (repackage) @ payments ---
+[INFO] Replacing main artifact /private<temporary>/isolated/app/target/payments-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /private<temporary>/isolated/app/target/payments-0.0.1-SNAPSHOT.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.689 s
+[INFO] Finished at: 2026-09-13T17:51:48-05:00
+[INFO] ------------------------------------------------------------------------

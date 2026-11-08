@@ -1,0 +1,166 @@
+{
+  "advisory_database_snapshot": "not supplied",
+  "advisory_service": "https://api.osv.dev",
+  "affected_packages": 6,
+  "assessment_time_utc": "2026-10-03T23:47:53.314020+00:00",
+  "exit_code": 1,
+  "findings": 18,
+  "inventory_coverage": "complete",
+  "inventory_sha256": "34cfae0f19a64cf941d3c046e6547624fd675e30601890be765d6e7d828b22d3",
+  "maven_warnings": [
+    "[WARNING] Unknown keyword meta:enum - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword",
+    "[WARNING] Unknown keyword deprecated - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword"
+  ],
+  "pom_sha256": "926420dc3a508783bf1486e34632f6157c1551cf124dc7b7791c67608f94fe87",
+  "provenance": {
+    "archetype": "kafka-integration",
+    "engine_sha": "109f6385345047013836f1e32b2d4230b9e8ad2b",
+    "generation_input": {
+      "app_archetype": "kafka-integration",
+      "app_name": "Payment Router",
+      "async_routes": [
+        {
+          "name": "payment_router",
+          "pattern": "router",
+          "router_config": {
+            "correlation_store": {
+              "eviction_interval_ms": 60000,
+              "timeout_ms": 30000,
+              "type": "in_memory"
+            },
+            "duplicate_correlation_policy": "reject-new",
+            "inbound_schema": {
+              "failure_behavior": "nack",
+              "file": "schemas/ro-request.json",
+              "validation_policy": "strict"
+            },
+            "nack_routing": {
+              "default_error_topic": "payment-router-error",
+              "fixed_topic": "payment-router-nack",
+              "mode": "fixed"
+            },
+            "outbound_schema": {
+              "failure_behavior": "nack",
+              "file": "schemas/ro-response.json",
+              "validation_policy": "strict"
+            },
+            "payload_logging": {
+              "policy": "none"
+            },
+            "routing_rules": {
+              "default_target": null,
+              "routing_fields": [
+                {
+                  "json_path": "$.country",
+                  "name": "country"
+                }
+              ],
+              "rules": [
+                {
+                  "conditions": [
+                    {
+                      "field": "country",
+                      "operator": "eq",
+                      "value": "UK"
+                    }
+                  ],
+                  "id": "uk_payments",
+                  "target": "d1_processor"
+                }
+              ]
+            },
+            "targets": [
+              {
+                "id": "d1_processor",
+                "request_schema": {
+                  "failure_behavior": "nack",
+                  "file": "schemas/d1-request.json",
+                  "validation_policy": "strict"
+                },
+                "request_topic": "d1-payment-request",
+                "request_transform": {
+                  "file": "transforms/ro-to-d1-request.yaml"
+                },
+                "response_schema": {
+                  "failure_behavior": "nack",
+                  "file": "schemas/d1-response.json",
+                  "validation_policy": "strict"
+                },
+                "response_topic": "d1-payment-response",
+                "response_transform": {
+                  "file": "transforms/d1-to-ro-response.yaml"
+                },
+                "retry": {
+                  "backoff_ms": 1000,
+                  "dlq_topic": "d1-payment-request-dlq",
+                  "max_attempts": 3
+                },
+                "timeout_ms": 30000
+              }
+            ],
+            "timeout": {
+              "behavior_with_known_reply": "nack",
+              "behavior_without_reply": "error_topic"
+            },
+            "upstream_topics": [
+              {
+                "consumer_group": "payment-router-u1",
+                "id": "u1_intake",
+                "name": "u1-payment-request",
+                "reply_destination_extraction": {
+                  "header_key": "X-Reply-To",
+                  "mode": "header"
+                },
+                "source_system_extraction": {
+                  "header_key": "X-Source-System",
+                  "mode": "header"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "bounded_context": "payments",
+      "kafka_config": {
+        "concurrency": 1,
+        "consumer_group": "payment-router-group"
+      },
+      "schema_version": "2.0",
+      "target_profile": "springboot-legacy-compatible"
+    },
+    "generation_run_id": "maven-assessment-kafka-router-h2-j17",
+    "input_manifest": "tests/fixtures/kafka-router-contract/manifest.yaml",
+    "input_package_sha256": "b4a849f25d6370533c4ba0d4f5069cd038a56b963f6a96e35561848282dbc2b1",
+    "target_profile": "springboot-legacy-compatible"
+  },
+  "raw_scanner_stdout_sha256": "74fa08342489726f708efe52768c61ac510178d9399c9b0d9f2adaafdde1baa6",
+  "release_acceptance": "not established",
+  "resolved_artifacts": 143,
+  "scanned_maven_packages": 141,
+  "scanner_exit_code": 1,
+  "scopes": [
+    "compile",
+    "provided",
+    "runtime",
+    "system",
+    "test"
+  ],
+  "source_after_sha256": "09f946a6f0501b7f9bc91dab2fb5973eb26a1406e32e74df0d9257c2508e90ca",
+  "source_before_sha256": "09f946a6f0501b7f9bc91dab2fb5973eb26a1406e32e74df0d9257c2508e90ca",
+  "source_unchanged": true,
+  "status": "complete",
+  "tools": {
+    "cyclonedx_maven_plugin": "2.9.1",
+    "java": "17.0.18",
+    "java_vendor": "Homebrew",
+    "maven": "3.9.12",
+    "maven_dependency_plugin": "3.8.1",
+    "scanner": [
+      "osv-scanner version: 2.3.8",
+      "osv-scalibr version: 0.4.5",
+      "commit: 408fcd6f8707999a29e7ba45e15809764cf24f67",
+      "built at: 2026-05-08T04:54:35Z"
+    ],
+    "scanner_sha256": "a8cd6507b06239f463a7642430cfd2d154882f150f6e30cdc0653e28dfc34216"
+  }
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "path": "README.md",
+    "sha256": "f2117fa3a79bc48ecdbf8d14308273082f7c0dc4e6c5d2c2d5b921346ff49969"
+  },
+  {
+    "path": "app-definition.yaml",
+    "sha256": "3f492a567e2292327d5c8599c107a14a39753051013d076d4e8162a0e12d47cf"
+  },
+  {
+    "path": "contracts/ci-smoke-openapi.yaml",
+    "sha256": "e37e22a28d46f10d4694764db9aa6d9abc0e2b0cb7597a698491932054a1255b"
+  },
+  {
+    "path": "rules/ci-smoke-rules.yaml",
+    "sha256": "785b79da09bce15fa61421107e264e3d3217d4800e69ff87b5bf2794bdde4995"
+  },
+  {
+    "path": "upstream/entry-mapping.yaml",
+    "sha256": "f1925c8b89b1689def9d4e5d4855aedaaa8497548d0693d6a9125d8c1955bd25"
+  },
+  {
+    "path": "upstream/record-mapping.yaml",
+    "sha256": "5ea615dc8f823dec3f2462cc3b1789a64a4e99e932924343729fea09d54ee11f"
+  },
+  {
+    "path": "upstream/sample-create-entry-request.json",
+    "sha256": "e4e87307054bc7042a260465771977d0e68225a2b2342ebb320b45909aecaa16"
+  },
+  {
+    "path": "upstream/sample-create-entry-response.json",
+    "sha256": "b282cba9dafbb6b8d8834ffa28de1605d60e81a93b86bce33b92a66671c62f44"
+  },
+  {
+    "path": "upstream/sample-create-record-request.json",
+    "sha256": "c660edb2c7fb594ec2ef6e2cc0b944c1966496f48327fc8aabcc9032dc8c6a21"
+  },
+  {
+    "path": "upstream/sample-create-record-response.json",
+    "sha256": "189512d338119ab8754ee2cee1d8056f620d668a8ca06df13a3ebc69a752b0a7"
+  }
+]

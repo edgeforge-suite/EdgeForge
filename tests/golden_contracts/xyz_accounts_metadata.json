@@ -1,0 +1,534 @@
+{
+  "app_name": "XYZ Accounts Replacement",
+  "bounded_context": "accounts",
+  "schema_version": "2.0",
+  "app_archetype": "crud",
+  "target_profile": "springboot-legacy-compatible",
+  "systems": [
+    {
+      "name": "CRM",
+      "role": "upstream"
+    },
+    {
+      "name": "DOWNSTREAM_APPS",
+      "role": "downstream"
+    },
+    {
+      "name": "ETL",
+      "role": "handoff"
+    }
+  ],
+  "contracts": [
+    {
+      "name": "crm-account-api",
+      "type": "rest-json",
+      "version": "v1",
+      "source": "https://bank-internal.example.com/xyz/swagger.json",
+      "physical_name": null,
+      "sample_paths": [
+        "upstream/sample-create-account-request.json",
+        "upstream/sample-create-account-response.json"
+      ],
+      "mapping_path": "upstream/crm-account-mapping.yaml",
+      "ingestion_notes": [
+        "spec_url fetch failed: Failed to fetch OpenAPI spec from https://bank-internal.example.com/xyz/swagger.json: URLError. Falling back to sample ingestion."
+      ]
+    },
+    {
+      "name": "eod-handoff-file",
+      "type": "file-fixed-width",
+      "version": "v1",
+      "source": "downstream/eod-handoff-layout.yaml",
+      "physical_name": null,
+      "sample_paths": [
+        "downstream/sample-output-file.txt"
+      ],
+      "mapping_path": "downstream/eod-handoff-mapping.yaml",
+      "ingestion_notes": []
+    },
+    {
+      "name": "account-staging-table",
+      "type": "staging-table",
+      "version": "v1",
+      "source": "data-handoffs/account-staging-table.sql",
+      "physical_name": "acct_staging_tbl",
+      "sample_paths": [],
+      "mapping_path": "data-handoffs/staging-table-mapping.yaml",
+      "ingestion_notes": []
+    }
+  ],
+  "operations": [
+    {
+      "name": "createAccount",
+      "interface_name": "crm-account-api",
+      "request_entity": "Account",
+      "response_entity": "Account",
+      "http_method": "POST",
+      "path": null,
+      "path_parameters": [],
+      "operation_parameters": [],
+      "has_request_body": false,
+      "response_shape": null,
+      "pageable": false,
+      "request_fields": [],
+      "response_fields": []
+    },
+    {
+      "name": "emitAccountEodHandoff",
+      "interface_name": "eod-handoff-file",
+      "request_entity": "Account",
+      "response_entity": null,
+      "http_method": null,
+      "path": null,
+      "path_parameters": [],
+      "operation_parameters": [],
+      "has_request_body": false,
+      "response_shape": null,
+      "pageable": false,
+      "request_fields": [],
+      "response_fields": []
+    },
+    {
+      "name": "stageAccountForEod",
+      "interface_name": "account-staging-table",
+      "request_entity": "Account",
+      "response_entity": null,
+      "http_method": null,
+      "path": null,
+      "path_parameters": [],
+      "operation_parameters": [],
+      "has_request_body": false,
+      "response_shape": null,
+      "pageable": false,
+      "request_fields": [],
+      "response_fields": []
+    }
+  ],
+  "entities": [
+    {
+      "name": "Account",
+      "fields": [
+        {
+          "name": "customerId",
+          "type": "string",
+          "is_id": false,
+          "required": true,
+          "not_null": false,
+          "max_length": null,
+          "min_length": null,
+          "pattern": null,
+          "range_min": null,
+          "range_max": null,
+          "format": null,
+          "default_value": null,
+          "allowed_values": [],
+          "source_paths": [
+            "crm-account-api.request.customerId",
+            "eod-handoff-file.layout.customer_id",
+            "account-staging-table.cust_ref"
+          ],
+          "server_generated_id": true,
+          "id_generation_strategy": null,
+          "id_sequence_name": null
+        },
+        {
+          "name": "accountType",
+          "type": "string",
+          "is_id": false,
+          "required": true,
+          "not_null": false,
+          "max_length": 10,
+          "min_length": null,
+          "pattern": null,
+          "range_min": null,
+          "range_max": null,
+          "format": null,
+          "default_value": null,
+          "allowed_values": [
+            "CHQ",
+            "SAV",
+            "CUR",
+            "LON"
+          ],
+          "source_paths": [
+            "crm-account-api.request.accountType",
+            "account-staging-table.acct_type",
+            "rules.Account.accountType.allowed-values"
+          ],
+          "server_generated_id": true,
+          "id_generation_strategy": null,
+          "id_sequence_name": null
+        },
+        {
+          "name": "currency",
+          "type": "string",
+          "is_id": false,
+          "required": true,
+          "not_null": false,
+          "max_length": 3,
+          "min_length": null,
+          "pattern": null,
+          "range_min": null,
+          "range_max": null,
+          "format": "iso-4217",
+          "default_value": null,
+          "allowed_values": [],
+          "source_paths": [
+            "crm-account-api.request.currency",
+            "rules.Account.currency.iso-4217"
+          ],
+          "server_generated_id": true,
+          "id_generation_strategy": null,
+          "id_sequence_name": null
+        },
+        {
+          "name": "accountId",
+          "type": "string",
+          "is_id": true,
+          "required": true,
+          "not_null": false,
+          "max_length": null,
+          "min_length": null,
+          "pattern": null,
+          "range_min": null,
+          "range_max": null,
+          "format": null,
+          "default_value": null,
+          "allowed_values": [],
+          "source_paths": [
+            "crm-account-api.response.accountId",
+            "eod-handoff-file.layout.account_id",
+            "account-staging-table.acct_id"
+          ],
+          "server_generated_id": true,
+          "id_generation_strategy": null,
+          "id_sequence_name": null
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "is_id": false,
+          "required": false,
+          "not_null": false,
+          "max_length": 10,
+          "min_length": null,
+          "pattern": null,
+          "range_min": null,
+          "range_max": null,
+          "format": null,
+          "default_value": "PENDING",
+          "allowed_values": [],
+          "source_paths": [
+            "crm-account-api.response.status",
+            "eod-handoff-file.layout.status",
+            "account-staging-table.status_cd",
+            "rules.Account.status.default"
+          ],
+          "server_generated_id": true,
+          "id_generation_strategy": null,
+          "id_sequence_name": null
+        },
+        {
+          "name": "createdDate",
+          "type": "date",
+          "is_id": false,
+          "required": false,
+          "not_null": false,
+          "max_length": null,
+          "min_length": null,
+          "pattern": null,
+          "range_min": null,
+          "range_max": null,
+          "format": null,
+          "default_value": null,
+          "allowed_values": [],
+          "source_paths": [
+            "crm-account-api.response.createdDate"
+          ],
+          "server_generated_id": true,
+          "id_generation_strategy": null,
+          "id_sequence_name": null
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "mappings": [
+    {
+      "contract_name": "crm-account-api",
+      "direction": "upstream-to-canonical",
+      "operation_name": "createAccount",
+      "source_path": "crm-account-api.createAccount.request.customerId",
+      "target_path": "Account.customerId",
+      "source_required": true,
+      "source_location": "examples/input-projects/xyz-accounts-modernization/upstream/crm-account-mapping.yaml",
+      "layout_width": null,
+      "notes": [],
+      "type_coercion": null
+    },
+    {
+      "contract_name": "crm-account-api",
+      "direction": "upstream-to-canonical",
+      "operation_name": "createAccount",
+      "source_path": "crm-account-api.createAccount.request.accountType",
+      "target_path": "Account.accountType",
+      "source_required": true,
+      "source_location": "examples/input-projects/xyz-accounts-modernization/upstream/crm-account-mapping.yaml",
+      "layout_width": null,
+      "notes": [],
+      "type_coercion": null
+    },
+    {
+      "contract_name": "crm-account-api",
+      "direction": "upstream-to-canonical",
+      "operation_name": "createAccount",
+      "source_path": "crm-account-api.createAccount.request.currency",
+      "target_path": "Account.currency",
+      "source_required": true,
+      "source_location": "examples/input-projects/xyz-accounts-modernization/upstream/crm-account-mapping.yaml",
+      "layout_width": null,
+      "notes": [],
+      "type_coercion": null
+    },
+    {
+      "contract_name": "crm-account-api",
+      "direction": "upstream-to-canonical",
+      "operation_name": "createAccount",
+      "source_path": "crm-account-api.createAccount.response.accountId",
+      "target_path": "Account.accountId",
+      "source_required": false,
+      "source_location": "examples/input-projects/xyz-accounts-modernization/upstream/crm-account-mapping.yaml",
+      "layout_width": null,
+      "notes": [],
+      "type_coercion": null
+    },
+    {
+      "contract_name": "crm-account-api",
+      "direction": "upstream-to-canonical",
+      "operation_name": "createAccount",
+      "source_path": "crm-account-api.createAccount.response.status",
+      "target_path": "Account.status",
+      "source_required": false,
+      "source_location": "examples/input-projects/xyz-accounts-modernization/upstream/crm-account-mapping.yaml",
+      "layout_width": null,
+      "notes": [],
+      "type_coercion": null
+    },
+    {
+      "contract_name": "crm-account-api",
+      "direction": "upstream-to-canonical",
+      "operation_name": "createAccount",
+      "source_path": "crm-account-api.createAccount.response.createdDate",
+      "target_path": "Account.createdDate",
+      "source_required": false,
+      "source_location": "examples/input-projects/xyz-accounts-modernization/upstream/crm-account-mapping.yaml",
+      "layout_width": null,
+      "notes": [],
+      "type_coercion": null
+    },
+    {
+      "contract_name": "eod-handoff-file",
+      "direction": "canonical-to-downstream",
+      "operation_name": null,
+      "source_path": "Account.accountId",
+      "target_path": "eod-handoff-file.account_id",
+      "source_required": false,
+      "source_location": "examples/input-projects/xyz-accounts-modernization/downstream/eod-handoff-mapping.yaml",
+      "layout_width": 12,
+      "notes": [],
+      "type_coercion": null
+    },
+    {
+      "contract_name": "eod-handoff-file",
+      "direction": "canonical-to-downstream",
+      "operation_name": null,
+      "source_path": "Account.customerId",
+      "target_path": "eod-handoff-file.customer_id",
+      "source_required": false,
+      "source_location": "examples/input-projects/xyz-accounts-modernization/downstream/eod-handoff-mapping.yaml",
+      "layout_width": 12,
+      "notes": [],
+      "type_coercion": null
+    },
+    {
+      "contract_name": "eod-handoff-file",
+      "direction": "canonical-to-downstream",
+      "operation_name": null,
+      "source_path": "Account.status",
+      "target_path": "eod-handoff-file.status",
+      "source_required": false,
+      "source_location": "examples/input-projects/xyz-accounts-modernization/downstream/eod-handoff-mapping.yaml",
+      "layout_width": 10,
+      "notes": [],
+      "type_coercion": null
+    },
+    {
+      "contract_name": "account-staging-table",
+      "direction": "canonical-to-handoff",
+      "operation_name": null,
+      "source_path": "Account.accountId",
+      "target_path": "account-staging-table.acct_id",
+      "source_required": false,
+      "source_location": "examples/input-projects/xyz-accounts-modernization/data-handoffs/staging-table-mapping.yaml",
+      "layout_width": null,
+      "notes": [],
+      "type_coercion": null
+    },
+    {
+      "contract_name": "account-staging-table",
+      "direction": "canonical-to-handoff",
+      "operation_name": null,
+      "source_path": "Account.customerId",
+      "target_path": "account-staging-table.cust_ref",
+      "source_required": false,
+      "source_location": "examples/input-projects/xyz-accounts-modernization/data-handoffs/staging-table-mapping.yaml",
+      "layout_width": null,
+      "notes": [],
+      "type_coercion": null
+    },
+    {
+      "contract_name": "account-staging-table",
+      "direction": "canonical-to-handoff",
+      "operation_name": null,
+      "source_path": "Account.accountType",
+      "target_path": "account-staging-table.acct_type",
+      "source_required": false,
+      "source_location": "examples/input-projects/xyz-accounts-modernization/data-handoffs/staging-table-mapping.yaml",
+      "layout_width": null,
+      "notes": [],
+      "type_coercion": null
+    },
+    {
+      "contract_name": "account-staging-table",
+      "direction": "canonical-to-handoff",
+      "operation_name": null,
+      "source_path": "Account.status",
+      "target_path": "account-staging-table.status_cd",
+      "source_required": false,
+      "source_location": "examples/input-projects/xyz-accounts-modernization/data-handoffs/staging-table-mapping.yaml",
+      "layout_width": null,
+      "notes": [],
+      "type_coercion": null
+    }
+  ],
+  "mapping_reports": [
+    {
+      "contract_name": "crm-account-api",
+      "direction": "upstream-to-canonical",
+      "status": "complete",
+      "issues": []
+    },
+    {
+      "contract_name": "eod-handoff-file",
+      "direction": "canonical-to-downstream",
+      "status": "complete",
+      "issues": []
+    },
+    {
+      "contract_name": "account-staging-table",
+      "direction": "canonical-to-handoff",
+      "status": "error",
+      "issues": [
+        {
+          "contract_name": "account-staging-table",
+          "direction": "canonical-to-handoff",
+          "severity": "error",
+          "message": "Contract target 'batch_flag' is required but not mapped.",
+          "location": "examples/input-projects/xyz-accounts-modernization/data-handoffs/staging-table-mapping.yaml"
+        },
+        {
+          "contract_name": "account-staging-table",
+          "direction": "canonical-to-handoff",
+          "severity": "warning",
+          "message": "Staging column 'acct_id' in table 'account-staging-table' is VARCHAR(20), which may be too narrow for a 36-char UUID value mapped from 'Account.accountId'. Consider widening to VARCHAR(36) in the DDL spec.",
+          "location": "examples/input-projects/xyz-accounts-modernization/data-handoffs/account-staging-table.sql"
+        },
+        {
+          "contract_name": "account-staging-table",
+          "direction": "canonical-to-handoff",
+          "severity": "warning",
+          "message": "Staging column 'cust_ref' in table 'account-staging-table' is VARCHAR(20), which may be too narrow for a 36-char UUID value mapped from 'Account.customerId'. Consider widening to VARCHAR(36) in the DDL spec.",
+          "location": "examples/input-projects/xyz-accounts-modernization/data-handoffs/account-staging-table.sql"
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "entity_name": "Account",
+      "field_name": "accountType",
+      "type": "allowed-values",
+      "source_path": "rules.Account.accountType.allowed-values",
+      "values": [
+        "CHQ",
+        "SAV",
+        "CUR",
+        "LON"
+      ],
+      "value": null,
+      "format": null,
+      "max_length": null,
+      "min_length": null,
+      "pattern": null,
+      "range_min": null,
+      "range_max": null,
+      "target_entity": null,
+      "target_field": null,
+      "source_field": null,
+      "operator": null,
+      "expected_value": null,
+      "error_message": null,
+      "compare_to_field": null
+    },
+    {
+      "entity_name": "Account",
+      "field_name": "currency",
+      "type": "format",
+      "source_path": "rules.Account.currency.iso-4217",
+      "values": [],
+      "value": null,
+      "format": "iso-4217",
+      "max_length": null,
+      "min_length": null,
+      "pattern": null,
+      "range_min": null,
+      "range_max": null,
+      "target_entity": null,
+      "target_field": null,
+      "source_field": null,
+      "operator": null,
+      "expected_value": null,
+      "error_message": null,
+      "compare_to_field": null
+    },
+    {
+      "entity_name": "Account",
+      "field_name": "status",
+      "type": "default",
+      "source_path": "rules.Account.status.default",
+      "values": [],
+      "value": "PENDING",
+      "format": null,
+      "max_length": null,
+      "min_length": null,
+      "pattern": null,
+      "range_min": null,
+      "range_max": null,
+      "target_entity": null,
+      "target_field": null,
+      "source_field": null,
+      "operator": null,
+      "expected_value": null,
+      "error_message": null,
+      "compare_to_field": null
+    }
+  ],
+  "relationships": [],
+  "identity_roles": [],
+  "routing_rules": [],
+  "transform_mappings": [],
+  "warnings": [],
+  "staging_table_ddls": {
+    "acct_staging_tbl": "CREATE TABLE acct_staging_tbl (\n    acct_id VARCHAR(20) NOT NULL,\n    cust_ref VARCHAR(20) NOT NULL,\n    acct_type VARCHAR(10) NOT NULL,\n    status_cd VARCHAR(10) NOT NULL,\n    batch_flag CHAR(1) NOT NULL\n);\n"
+  }
+}

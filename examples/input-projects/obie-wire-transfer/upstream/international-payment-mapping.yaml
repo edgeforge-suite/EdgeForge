@@ -1,0 +1,48 @@
+interface: obie-payment-initiation-api
+entity: InternationalPayment
+# Option B retains flat transport aliases; use the sampled canonical fields
+# explicitly, rather than creating a second case-variant property for each alias.
+operations:
+  - name: CreateInternationalPayments
+    request_mappings:
+      - source: ConsentId
+        target: InternationalPayment.ConsentId
+      - source: InstructionIdentification
+        target: InternationalPayment.InstructionIdentification
+      - source: EndToEndIdentification
+        target: InternationalPayment.EndToEndIdentification
+      - source: CurrencyOfTransfer
+        target: InternationalPayment.CurrencyOfTransfer
+      - source: InstructedAmount
+        target: InternationalPayment.instructedAmount
+      - source: CreditorName
+        target: InternationalPayment.creditorName
+    response_mappings:
+      - source: InternationalPaymentId
+        target: InternationalPayment.InternationalPaymentId
+      - source: ConsentId
+        target: InternationalPayment.ConsentId
+      - source: Status
+        target: InternationalPayment.Status
+      - source: StatusUpdateDateTime
+        target: InternationalPayment.StatusUpdateDateTime
+      - source: CurrencyOfTransfer
+        target: InternationalPayment.CurrencyOfTransfer
+      - source: InstructedAmount
+        target: InternationalPayment.instructedAmount
+  - name: GetInternationalPaymentsInternationalPaymentId
+    response_mappings:
+      - source: InternationalPaymentId
+        target: InternationalPayment.InternationalPaymentId
+      - source: ConsentId
+        target: InternationalPayment.ConsentId
+      - source: Status
+        target: InternationalPayment.Status
+      - source: StatusUpdateDateTime
+        target: InternationalPayment.StatusUpdateDateTime
+      - source: CurrencyOfTransfer
+        target: InternationalPayment.CurrencyOfTransfer
+      - source: InstructedAmount
+        target: InternationalPayment.instructedAmount
+      - source: CreditorName
+        target: InternationalPayment.creditorName

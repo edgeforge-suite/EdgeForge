@@ -1,0 +1,17 @@
+operation_mappings:
+  - operation: getCustomer
+    mode: canonical
+    canonical_operation:
+      kind: read_by_id
+      entity: Customer
+      lookup:
+        field: customerId
+        request_path: /GetCustomerRequest/customerId
+      response_mappings:
+        - source: Customer.customerId
+          target_path: /GetCustomerResponse/customerId
+        - source: Customer.status
+          target_path: /GetCustomerResponse/status
+      not_found_fault:
+        fault: customerFault
+        message: "Customer not found for id:"

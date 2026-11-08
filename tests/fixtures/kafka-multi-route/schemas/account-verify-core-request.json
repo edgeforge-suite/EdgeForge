@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "requestId": {"type": "string"},
+    "accountRef": {"type": "string"},
+    "amountMinorUnits": {"type": "integer"},
+    "sourceSystem": {"type": "string"}
+  }
+}

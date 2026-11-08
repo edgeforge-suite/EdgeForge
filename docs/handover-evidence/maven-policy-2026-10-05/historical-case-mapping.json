@@ -1,0 +1,188 @@
+{
+  "cases": [
+    {
+      "current_case": "crud-h2-j17",
+      "current_profile": "springboot-legacy-compatible",
+      "historical_case": "crud-h2-j17",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "crud-pg-j17",
+      "current_profile": "springboot-enterprise-postgres-java17",
+      "historical_case": "crud-pg-j17",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "crud-pg-j21",
+      "current_profile": "springboot-standard-enterprise",
+      "historical_case": "crud-pg-j21",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "crud-soap-h2-j17",
+      "current_profile": "springboot-legacy-compatible",
+      "historical_case": "crud-soap-h2-j17",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "crud-soap-pg-j17",
+      "current_profile": "springboot-enterprise-postgres-java17",
+      "historical_case": "crud-soap-pg-j17",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "crud-soap-pg-j21",
+      "current_profile": "springboot-standard-enterprise",
+      "historical_case": "crud-soap-pg-j21",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "passthrough-h2-j17",
+      "current_profile": "springboot-legacy-compatible",
+      "historical_case": "passthrough-h2-j17",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "passthrough-pg-j17",
+      "current_profile": "springboot-enterprise-postgres-java17",
+      "historical_case": "passthrough-pg-j17",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "passthrough-pg-j21",
+      "current_profile": "springboot-standard-enterprise",
+      "historical_case": "passthrough-pg-j21",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "kafka-h2-j17",
+      "current_profile": "springboot-legacy-compatible",
+      "historical_case": "kafka-h2-j17",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "kafka-pg-j17",
+      "current_profile": "springboot-enterprise-postgres-java17",
+      "historical_case": "kafka-pg-j17",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "kafka-pg-j21",
+      "current_profile": "springboot-standard-enterprise",
+      "historical_case": "kafka-pg-j21",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "kafka-router-h2-j17",
+      "current_profile": "springboot-legacy-compatible",
+      "historical_case": "kafka-router-h2-j17",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "kafka-router-pg-j17",
+      "current_profile": "springboot-enterprise-postgres-java17",
+      "historical_case": "kafka-router-pg-j17",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "kafka-router-pg-j21",
+      "current_profile": "springboot-standard-enterprise",
+      "historical_case": "kafka-router-pg-j21",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "ordinary-batch-h2-j17",
+      "current_profile": "springboot-legacy-compatible",
+      "historical_case": "ordinary-batch-h2-j17",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "ordinary-batch-pg-j17",
+      "current_profile": "springboot-enterprise-postgres-java17",
+      "historical_case": "ordinary-batch-pg-j17",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "ordinary-batch-pg-j21",
+      "current_profile": "springboot-standard-enterprise",
+      "historical_case": "ordinary-batch-pg-j21",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "file-batch-h2-j17",
+      "current_profile": "springboot-legacy-compatible",
+      "historical_case": "file-batch-h2-j17",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "file-batch-pg-j17",
+      "current_profile": "springboot-enterprise-postgres-java17",
+      "historical_case": "file-batch-pg-j17",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "file-batch-pg-j21",
+      "current_profile": "springboot-standard-enterprise",
+      "historical_case": "file-batch-pg-j21",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "m5a-h2-j17",
+      "current_profile": "springboot-legacy-compatible",
+      "historical_case": "m5a-h2-j17",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "m5a-pg-j17",
+      "current_profile": "springboot-enterprise-postgres-java17",
+      "historical_case": "m5a-pg-j17",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "m5a-pg-j21",
+      "current_profile": "springboot-standard-enterprise",
+      "historical_case": "m5a-pg-j21",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "mixed-batch-h2-j17",
+      "current_profile": "springboot-legacy-compatible",
+      "historical_case": "mixed-batch-h2-j17",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "mixed-batch-pg-j17",
+      "current_profile": "springboot-enterprise-postgres-java17",
+      "historical_case": "mixed-batch-pg-j17",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "mixed-batch-pg-j21",
+      "current_profile": "springboot-standard-enterprise",
+      "historical_case": "mixed-batch-pg-j21",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "kafka-mixed-h2-j17",
+      "current_profile": "springboot-legacy-compatible",
+      "historical_case": "kafka-mixed-h2-j17",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "kafka-mixed-pg-j17",
+      "current_profile": "springboot-enterprise-postgres-java17",
+      "historical_case": "kafka-mixed-pg-j17",
+      "preview_alias_in_either_campaign": false
+    },
+    {
+      "current_case": "kafka-mixed-pg-j21",
+      "current_profile": "springboot-standard-enterprise",
+      "historical_case": "kafka-mixed-pg-j21",
+      "preview_alias_in_either_campaign": false
+    }
+  ],
+  "current_generator_sha": "38862862a0f4e90eb4f809a0150c6d2702de2423",
+  "executed_assessment_passes": 60,
+  "executed_cases": 30,
+  "historical_generator_sha": "109f6385345047013836f1e32b2d4230b9e8ad2b"
+}

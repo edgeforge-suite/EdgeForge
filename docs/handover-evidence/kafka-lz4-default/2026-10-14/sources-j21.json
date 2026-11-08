@@ -1,0 +1,41 @@
+{
+  "application_class": "com.appbuilder.payment_mediation.PaymentMediationHubApplication",
+  "instrumented": {
+    ".dockerignore": "a279067cb49eadb242da818cd87814c564712d2fa7a62ab8d4f9d0465d3b373b",
+    ".gitignore": "ee8c61924d78ea688dd666dc24775f388c7dd76e3defe1172b8d5b1654812b6e",
+    "Dockerfile": "e294ebb01cac72405123fdd8bbd186f9c9017ba176bf67897dad5267521fea06",
+    "README.md": "4ed274756004959159e3760f2bb02d674284b2af519df83ef3b5faf1cab473e9",
+    "db/generation-provenance.json": "ab0277dca3fb2e8438532494adc5f863770afc982868fa2f0c5fe179ae14ffe2",
+    "pom.xml": "f74cdfeb0922b6c28efd11d0f0e190184991ff8166f09bc690b174cd8886035e",
+    "src/main/java/com/appbuilder/payment_mediation/PaymentMediationHubApplication.java": "ce9f6c3022f5bde0ba73eb4f445e75b9292540f662f3434f4f9f8741e4f93c65",
+    "src/main/java/com/appbuilder/payment_mediation/config/KafkaConsumerConfig.java": "0be9f97dc700262de330c72e62851662cdff4b66c7b4d51dec293a8685e7ebd8",
+    "src/main/java/com/appbuilder/payment_mediation/config/KafkaProducerConfig.java": "dc4e4f768c83f2e06caaa8b1f1a21086d9745a120fb6f638396c046ef1dd6a7d",
+    "src/main/java/com/appbuilder/payment_mediation/config/SecurityHeadersFilter.java": "6349444f0df72f88409ce86781df6f2706b82b5b82f0b84ab02fe2cb08a1c86c",
+    "src/main/java/com/appbuilder/payment_mediation/consumer/PaymentPostedConsumer.java": "63f1236696c73670722d9ddbc046221e0c39075f1a7fc356a1a5738a22d32377",
+    "src/main/java/com/appbuilder/payment_mediation/dto/inbound/PaymentPostedEvent.java": "e21da6a25d5635f0c45101385c7af4e61eb128d9eef1be2cc397458d4c3cfe8d",
+    "src/main/java/com/appbuilder/payment_mediation/dto/outbound/LedgerEntryMessage.java": "5a796fef8d14f785f2e3cd7b49d2d18003671483b31f0932ae3d5c2e7d703e15",
+    "src/main/java/com/appbuilder/payment_mediation/producer/PaymentPostedProducer.java": "b412a01b2971193465ef24319bbe5b4d412edc4fb206590a8e986c87d5026cdb",
+    "src/main/java/com/appbuilder/payment_mediation/proof/Lz4DefaultObserver.java": "d52c0162dc7b0c5076671a56fc25f279410f4d77e1cf4998d9721b759699321c",
+    "src/main/java/com/appbuilder/payment_mediation/transform/PaymentPostedTransformer.java": "798d42597eb7e5adf0a999dc7c5de688f295b11a0bacc95f627337c5ac8d61c3",
+    "src/main/resources/application.yaml": "14253ed7a6a5bf75d387ee6a09793d5f8d6fd223e17ea8beb950ae5e65e0aba9"
+  },
+  "observer_path": "src/main/java/com/appbuilder/payment_mediation/proof/Lz4DefaultObserver.java",
+  "production": {
+    ".dockerignore": "a279067cb49eadb242da818cd87814c564712d2fa7a62ab8d4f9d0465d3b373b",
+    ".gitignore": "ee8c61924d78ea688dd666dc24775f388c7dd76e3defe1172b8d5b1654812b6e",
+    "Dockerfile": "e294ebb01cac72405123fdd8bbd186f9c9017ba176bf67897dad5267521fea06",
+    "README.md": "4ed274756004959159e3760f2bb02d674284b2af519df83ef3b5faf1cab473e9",
+    "db/generation-provenance.json": "ab0277dca3fb2e8438532494adc5f863770afc982868fa2f0c5fe179ae14ffe2",
+    "pom.xml": "f74cdfeb0922b6c28efd11d0f0e190184991ff8166f09bc690b174cd8886035e",
+    "src/main/java/com/appbuilder/payment_mediation/PaymentMediationHubApplication.java": "ce9f6c3022f5bde0ba73eb4f445e75b9292540f662f3434f4f9f8741e4f93c65",
+    "src/main/java/com/appbuilder/payment_mediation/config/KafkaConsumerConfig.java": "0be9f97dc700262de330c72e62851662cdff4b66c7b4d51dec293a8685e7ebd8",
+    "src/main/java/com/appbuilder/payment_mediation/config/KafkaProducerConfig.java": "dc4e4f768c83f2e06caaa8b1f1a21086d9745a120fb6f638396c046ef1dd6a7d",
+    "src/main/java/com/appbuilder/payment_mediation/config/SecurityHeadersFilter.java": "6349444f0df72f88409ce86781df6f2706b82b5b82f0b84ab02fe2cb08a1c86c",
+    "src/main/java/com/appbuilder/payment_mediation/consumer/PaymentPostedConsumer.java": "63f1236696c73670722d9ddbc046221e0c39075f1a7fc356a1a5738a22d32377",
+    "src/main/java/com/appbuilder/payment_mediation/dto/inbound/PaymentPostedEvent.java": "e21da6a25d5635f0c45101385c7af4e61eb128d9eef1be2cc397458d4c3cfe8d",
+    "src/main/java/com/appbuilder/payment_mediation/dto/outbound/LedgerEntryMessage.java": "5a796fef8d14f785f2e3cd7b49d2d18003671483b31f0932ae3d5c2e7d703e15",
+    "src/main/java/com/appbuilder/payment_mediation/producer/PaymentPostedProducer.java": "b412a01b2971193465ef24319bbe5b4d412edc4fb206590a8e986c87d5026cdb",
+    "src/main/java/com/appbuilder/payment_mediation/transform/PaymentPostedTransformer.java": "798d42597eb7e5adf0a999dc7c5de688f295b11a0bacc95f627337c5ac8d61c3",
+    "src/main/resources/application.yaml": "14253ed7a6a5bf75d387ee6a09793d5f8d6fd223e17ea8beb950ae5e65e0aba9"
+  }
+}

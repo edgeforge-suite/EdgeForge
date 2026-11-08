@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "investigationId": {"type": "string"},
+    "clear": {"type": "boolean"},
+    "decisionCode": {"type": "string"},
+    "reviewLevel": {"type": "integer"}
+  }
+}

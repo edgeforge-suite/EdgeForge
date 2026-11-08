@@ -1,0 +1,108 @@
+openapi: 3.0.0
+info:
+  title: CRUD DTO List Contract Quality
+  version: "1.0"
+paths:
+  /customers:
+    post:
+      operationId: createCustomer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateCustomerRequest"
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Customer"
+    get:
+      operationId: listCustomers
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Customer"
+  /customers/{customerId}:
+    get:
+      operationId: getCustomer
+      parameters:
+        - name: customerId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Customer"
+    put:
+      operationId: updateCustomer
+      parameters:
+        - name: customerId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateCustomerRequest"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Customer"
+  /customers/page:
+    get:
+      operationId: pageCustomers
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Customer"
+components:
+  schemas:
+    CreateCustomerRequest:
+      type: object
+      required:
+        - customerName
+      properties:
+        customerName:
+          type: string
+        email:
+          type: string
+    UpdateCustomerRequest:
+      type: object
+      properties:
+        email:
+          type: string
+        status:
+          type: string
+    Customer:
+      type: object
+      required:
+        - customerId
+        - customerName
+      properties:
+        customerId:
+          type: string
+        customerName:
+          type: string
+        email:
+          type: string
+        status:
+          type: string

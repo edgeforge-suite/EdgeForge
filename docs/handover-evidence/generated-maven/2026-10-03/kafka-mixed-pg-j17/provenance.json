@@ -1,0 +1,269 @@
+{
+  "archetype": "kafka-integration",
+  "engine_sha": "109f6385345047013836f1e32b2d4230b9e8ad2b",
+  "generation_input": {
+    "app_archetype": "kafka-integration",
+    "app_name": "Kafka Preview Proof",
+    "async_routes": [
+      {
+        "downstream_topic": {
+          "message_schema": "schemas/ledger-entry-message.json",
+          "name": "xyz.ledger.entries.v1",
+          "system": "LedgerService"
+        },
+        "name": "payment-posted",
+        "pattern": "fire-and-forget",
+        "transform_mapping": "mappings/payment-to-ledger.yaml",
+        "upstream_topic": {
+          "message_schema": "schemas/payment-posted-event.json",
+          "name": "abc.payments.posted.v1",
+          "system": "PaymentHub"
+        }
+      },
+      {
+        "downstream_topic": {
+          "message_schema": "schemas/ledger-reversal-message.json",
+          "name": "xyz.ledger.reversals.v1",
+          "system": "LedgerService"
+        },
+        "name": "payment-reversed",
+        "pattern": "fire-and-forget",
+        "transform_mapping": "mappings/reversal-to-ledger.yaml",
+        "upstream_topic": {
+          "message_schema": "schemas/payment-reversed-event.json",
+          "name": "abc.payments.reversed.v1",
+          "system": "PaymentHub"
+        }
+      },
+      {
+        "correlation_id": {
+          "field_name": "X-Correlation-ID",
+          "source": "header"
+        },
+        "downstream_reply_topic": {
+          "message_schema": "schemas/account-verify-core-reply.json",
+          "name": "core.account.verify.reply.v1"
+        },
+        "downstream_topic": {
+          "message_schema": "schemas/account-verify-core-request.json",
+          "name": "core.account.verify.request.v1",
+          "system": "CoreBanking"
+        },
+        "name": "account-verification",
+        "pattern": "request-reply",
+        "reply_timeout_ms": 8000,
+        "response_transform_mapping": "mappings/account-verify-response.yaml",
+        "transform_mapping": "mappings/account-verify-request.yaml",
+        "upstream_reply_topic": {
+          "message_schema": "schemas/account-verify-hub-reply.json",
+          "name": "hub.account.verify.reply.v1"
+        },
+        "upstream_topic": {
+          "message_schema": "schemas/account-verify-hub-request.json",
+          "name": "hub.account.verify.request.v1",
+          "system": "PaymentHub"
+        }
+      },
+      {
+        "correlation_id": {
+          "field_name": "X-Request-ID",
+          "source": "header"
+        },
+        "downstream_reply_topic": {
+          "message_schema": "schemas/fraud-check-service-reply.json",
+          "name": "fraud.check.reply.v1"
+        },
+        "downstream_topic": {
+          "message_schema": "schemas/fraud-check-service-request.json",
+          "name": "fraud.check.request.v1",
+          "system": "FraudService"
+        },
+        "name": "fraud-check",
+        "pattern": "request-reply",
+        "reply_timeout_ms": 5000,
+        "response_transform_mapping": "mappings/fraud-check-response.yaml",
+        "transform_mapping": "mappings/fraud-check-request.yaml",
+        "upstream_reply_topic": {
+          "message_schema": "schemas/fraud-check-hub-reply.json",
+          "name": "hub.fraud.check.reply.v1"
+        },
+        "upstream_topic": {
+          "message_schema": "schemas/fraud-check-hub-request.json",
+          "name": "hub.fraud.check.request.v1",
+          "system": "PaymentHub"
+        }
+      },
+      {
+        "name": "payment_router",
+        "pattern": "router",
+        "router_config": {
+          "correlation_store": {
+            "eviction_interval_ms": 1000,
+            "timeout_ms": 30000,
+            "type": "in_memory"
+          },
+          "duplicate_correlation_policy": "reject-new",
+          "inbound_schema": {
+            "failure_behavior": "nack",
+            "file": "router/schemas/ro-request.json",
+            "validation_policy": "strict"
+          },
+          "nack_routing": {
+            "default_error_topic": "payment-router-error",
+            "fixed_topic": "payment-router-nack",
+            "mode": "fixed"
+          },
+          "outbound_schema": {
+            "failure_behavior": "nack",
+            "file": "router/schemas/ro-response.json",
+            "validation_policy": "strict"
+          },
+          "payload_logging": {
+            "policy": "none"
+          },
+          "routing_rules": {
+            "default_target": null,
+            "routing_fields": [
+              {
+                "json_path": "$.country",
+                "name": "country"
+              }
+            ],
+            "rules": [
+              {
+                "conditions": [
+                  {
+                    "field": "country",
+                    "operator": "eq",
+                    "value": "UK"
+                  }
+                ],
+                "id": "uk_payments",
+                "target": "d1_processor"
+              },
+              {
+                "conditions": [
+                  {
+                    "field": "country",
+                    "operator": "eq",
+                    "value": "US"
+                  }
+                ],
+                "id": "us",
+                "target": "d2_processor"
+              }
+            ]
+          },
+          "targets": [
+            {
+              "id": "d1_processor",
+              "request_schema": {
+                "failure_behavior": "nack",
+                "file": "router/schemas/d1-request.json",
+                "validation_policy": "strict"
+              },
+              "request_topic": "d1-payment-request",
+              "request_transform": {
+                "file": "router/transforms/ro-to-d1-request.yaml"
+              },
+              "response_schema": {
+                "failure_behavior": "nack",
+                "file": "router/schemas/d1-response.json",
+                "validation_policy": "strict"
+              },
+              "response_topic": "d1-payment-response",
+              "response_transform": {
+                "file": "router/transforms/d1-to-ro-response.yaml"
+              },
+              "retry": {
+                "backoff_ms": 1000,
+                "dlq_topic": "d1-payment-request-dlq",
+                "max_attempts": 3
+              },
+              "timeout_ms": 2000
+            },
+            {
+              "id": "d2_processor",
+              "request_schema": {
+                "failure_behavior": "nack",
+                "file": "router/schemas/d1-request.json",
+                "validation_policy": "strict"
+              },
+              "request_topic": "d2-payment-request",
+              "request_transform": {
+                "file": "router/transforms/ro-to-d1-request.yaml"
+              },
+              "response_schema": {
+                "failure_behavior": "nack",
+                "file": "router/schemas/d1-response.json",
+                "validation_policy": "strict"
+              },
+              "response_topic": "d2-payment-response",
+              "response_transform": {
+                "file": "router/transforms/d1-to-ro-response.yaml"
+              },
+              "retry": {
+                "backoff_ms": 1000,
+                "dlq_topic": "d1-payment-request-dlq",
+                "max_attempts": 3
+              },
+              "timeout_ms": 2000
+            }
+          ],
+          "timeout": {
+            "behavior_with_known_reply": "nack",
+            "behavior_without_reply": "error_topic"
+          },
+          "upstream_topics": [
+            {
+              "consumer_group": "payment-router-u1",
+              "id": "u1_intake",
+              "name": "u1-payment-request",
+              "reply_destination_extraction": {
+                "header_key": "X-Reply-To",
+                "mode": "header"
+              },
+              "source_system_extraction": {
+                "header_key": "X-Source-System",
+                "mode": "header"
+              }
+            },
+            {
+              "consumer_group": "proof-u2",
+              "id": "u2_intake",
+              "name": "u2-payment-request",
+              "reply_destination_extraction": {
+                "body_field_path": "$.replyTopic",
+                "mode": "body_field"
+              },
+              "source_system_extraction": {
+                "body_field_path": "$.sourceSystem",
+                "mode": "body_field"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bounded_context": "kafka-proof",
+    "kafka_config": {
+      "concurrency": 1,
+      "consumer_group": "payment-mediation-group",
+      "dlq": {
+        "enabled": true,
+        "topic_suffix": ".dlq"
+      },
+      "retry": {
+        "backoff_ms": 100,
+        "backoff_multiplier": 1.0,
+        "max_attempts": 3
+      }
+    },
+    "schema_version": "2.0",
+    "target_profile": "springboot-enterprise-postgres-java17"
+  },
+  "generation_run_id": "maven-assessment-kafka-mixed-pg-j17",
+  "input_manifest": "tests/fixtures/kafka-multi-route/manifest.yaml",
+  "input_package_sha256": "d08e254efdd65250d5a84dc0a83c5fb8d9a0f1c3f0857b8c9bfa87c56c5bee55",
+  "target_profile": "springboot-enterprise-postgres-java17"
+}

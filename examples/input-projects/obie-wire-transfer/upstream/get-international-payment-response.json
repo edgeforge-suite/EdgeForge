@@ -1,0 +1,29 @@
+{
+  "Data": {
+    "InternationalPaymentId": "IPMT-20260401-001",
+    "ConsentId": "CONSENT-20260401-001",
+    "CreationDateTime": "2026-04-01T10:15:30+00:00",
+    "Status": "AcceptedSettlementCompleted",
+    "StatusUpdateDateTime": "2026-04-01T10:17:00+00:00",
+    "Initiation": {
+      "InstructionIdentification": "WIRE-20260401-001",
+      "EndToEndIdentification": "E2E-20260401-001",
+      "CurrencyOfTransfer": "GBP",
+      "InstructedAmount": {
+        "Amount": "1250.00",
+        "Currency": "GBP"
+      },
+      "CreditorAccount": {
+        "SchemeName": "UK.OBIE.IBAN",
+        "Identification": "GB12BARC20040112345678",
+        "Name": "ACME SUPPLIER LTD"
+      }
+    }
+  },
+  "Links": {
+    "Self": "https://api.bank.example/open-banking/v4.0/pisp/international-payments/IPMT-20260401-001"
+  },
+  "Meta": {
+    "TotalPages": 1
+  }
+}

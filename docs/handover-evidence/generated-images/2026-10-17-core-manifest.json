@@ -1,0 +1,990 @@
+{
+  "archive": {
+    "bytes": 104775680,
+    "command": "git -c tar.umask=0002 archive --format=tar 377d45229c6d6c6cdb87dff80e34f437003938d4 -- docs/handover-evidence/generated-images/2026-10-17",
+    "directories": 98,
+    "files": 1997,
+    "git_version": "git version 2.39.5 (Apple Git-154)",
+    "sha256": "f80e6ff1f4f47e9a4a786e94e850f5d2593ef62eb1662f53d7d854f52e8f17c6",
+    "tar_umask": "0002"
+  },
+  "archive_only_files": 1836,
+  "bundle_tree": "928db42f90ff07aefcea095470352d37114c22ed",
+  "core": [
+    {
+      "bytes": 8492,
+      "git_blob": "f1e305b618517a2d32a7d022987162154b9bc835",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/README.md",
+      "sha256": "0a1ebfe23d5929009ad4ee59b1d7950e7223b905b1a48b6e710d27f2d433fdee"
+    },
+    {
+      "bytes": 1129,
+      "git_blob": "6a4c359c6c6dd522723c7d1ccb6e7aa79fcfe095",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/campaign.json.gz",
+      "sha256": "8bf5185767ce6e79f3b3dfedde9e19daf756e18f677c1c56cbecc35a019fd868"
+    },
+    {
+      "bytes": 254830,
+      "git_blob": "36a05877cfe1023405c50be0e8fefd52667c49d5",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/composition-copy-manifest.json.gz",
+      "sha256": "7b28b7b7b0a84d2e87e6f6fa466c265f4c3008ced12c586b29d19ba60d14b572"
+    },
+    {
+      "bytes": 960,
+      "git_blob": "fa01a8aac516bf159f92fd7d73428fd5761af2b0",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/composition-inputs/first/campaign.json.gz",
+      "sha256": "b74db8bb44fbeee3e08e3e852bc0f8f64eb5b0b088879f5d01d2b55e813001ee"
+    },
+    {
+      "bytes": 884,
+      "git_blob": "875ff3290e2e5d85a1bbddd9688a6ed234cd5fb1",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/composition-inputs/remaining/campaign.json.gz",
+      "sha256": "cb73468149163feefa3fe82bc7ea65f73950944a5ed3c9be27ee8ab1a93f8a11"
+    },
+    {
+      "bytes": 623,
+      "git_blob": "ffef7f13d6c10f3ace35f46afd4dc9f669186d44",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/composition-inputs/tls-failure/image-build.receipt.json.gz",
+      "sha256": "2305fe47b54b460d49dd8852a2dcf85d8c0852cd44e7355693b8e1c5f608471e"
+    },
+    {
+      "bytes": 651,
+      "git_blob": "4cc0e40c48b3293528e7b4764dc2bb40aa466318",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/composition-inputs/tls-failure/image-build.stderr.json.gz",
+      "sha256": "49d5cad63f9e74fe067fd8d9f02ec0a0514a610a4bd295c2bd60d71677b3d466"
+    },
+    {
+      "bytes": 37,
+      "git_blob": "6fc177ae87c40477c990eede64e1598a02f66b80",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/composition-inputs/tls-failure/image-build.stdout.json.gz",
+      "sha256": "262c73e70b4237b0beadc26a1a0771fdcfe5558a57de4bf32900c27c774e1565"
+    },
+    {
+      "bytes": 8677,
+      "git_blob": "a1596b5175918ab1d23a5eecdae0b4cc390e73a1",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/composition.json.gz",
+      "sha256": "badffe8a537579f3609d96419bf69ab4b7974191ae96824b183d3e88c94914d7"
+    },
+    {
+      "bytes": 1114,
+      "git_blob": "54eeb8b3c69682c3c7bef8be255c6857270db2d1",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/coverage-declared.json.gz",
+      "sha256": "6ed63d0c7c0edc0ff70608c96a2d9e5a604e878c6b6aef1372ca681eaaee5620"
+    },
+    {
+      "bytes": 24318,
+      "git_blob": "88cd8dbe56da289ea56cd25c2622493a2d468900",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-h2-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "4dbf5287643e0baa8a5f21cf5be4d18c8a2ac0d30a8201560938a9b299637287"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-h2-j17/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5755,
+      "git_blob": "c5fe8862bb026c834c544c0530c9547845ea8607",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-h2-j17/generated-final-image/assessment.json.gz",
+      "sha256": "fa436046edaa0353531cddc2a8a3962e470842be20309e107f514495b280870c"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-h2-j17/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 495,
+      "git_blob": "d68de03fc5733ee0c57f235abad9f96cf27ac58f",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-h2-j17/runtime-create.receipt.json.gz",
+      "sha256": "fa8d6beff50ca31fc9a7c6fcec52762244dc2f0c1565cf6ce0faa7d974aca646"
+    },
+    {
+      "bytes": 397,
+      "git_blob": "297859c3c1dd5990d1bfe7decc3f7c73cbd912e8",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-h2-j17/runtime-created-state.receipt.json.gz",
+      "sha256": "b15d98b091a555ce292e24ca6a38cc1190e752e3fc518a784745a5843646e4ba"
+    },
+    {
+      "bytes": 2225,
+      "git_blob": "bddea21469bcb4bd927aa87bf81ee1a09ce0473e",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-h2-j17/runtime-created-state.stdout.gz",
+      "sha256": "bd970cb82e836b7b711df687440ab8abd28f9226a9dfae32e53a2d2b612cab4d"
+    },
+    {
+      "bytes": 1091,
+      "git_blob": "e9db5817e386340ad8245ac19d9dbdfe011432b4",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-h2-j17/runtime-identity.json.gz",
+      "sha256": "d3335e38c556ee6c3bd0c4d0f944f6deabbe5d8a58076e18202cb6cb7e6f87cd"
+    },
+    {
+      "bytes": 1584,
+      "git_blob": "1cb6445f0df02d85c77f1e20b021cbb1ad151fae",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-h2-j17/runtime-image-inspect.stdout.gz",
+      "sha256": "a397c95f93821b03ec213a1732c6c1db3c3048d8b4e1b06203d53f8a6499063d"
+    },
+    {
+      "bytes": 694,
+      "git_blob": "8d26b3c2073e3e6d0d8b181497a1d4bf46abf8ff",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-h2-j17/runtime-manifest.json.gz",
+      "sha256": "398bb68ad1ab95a581e45e2e1b6d7342e18ef3c78323fa84f5a253fc50c17483"
+    },
+    {
+      "bytes": 394,
+      "git_blob": "586d7c79d10bd8a8b183e39e99aff480bf557252",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-h2-j17/runtime-start.receipt.json.gz",
+      "sha256": "1023d90a494e86da348d7275b4d0f3ef406f4088f28d45ecde5b73a8bb0b4159"
+    },
+    {
+      "bytes": 534,
+      "git_blob": "334ff8d879fce070d1a457078eba6d8ba9181d1f",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-h2-j17/runtime.json.gz",
+      "sha256": "a9b7f4bc5c3a2fc9b51de1baea251787b4ef9d44ce939eb83acb00e24c78ff2f"
+    },
+    {
+      "bytes": 24529,
+      "git_blob": "744c78af9aeae9b242bbe263a196f553d6e861d4",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-pg-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "c261b37476660b0d26fdd9c1a46d52c0ee5c29de17074dc5cf10ca561d65559d"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-pg-j17/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5776,
+      "git_blob": "f180c9263993e6ecd3595b402bee5c61d4e84d4d",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-pg-j17/generated-final-image/assessment.json.gz",
+      "sha256": "de4a05ec745004f1f8cb66f6b521fbed6c97d78be81103f588ab1593664e1d5d"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-pg-j17/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 24534,
+      "git_blob": "f01bb1b577392e206d4e7a5e27efee7be4450598",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-pg-j21/generated-build-stage/assessment.json.gz",
+      "sha256": "7dcf65988f6da149903b7d606aa8bb00e0a60ff1a9835c4062474eb0121c1025"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-pg-j21/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5785,
+      "git_blob": "0d96fe86d484934899dda439daa8faf54ed06e20",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-pg-j21/generated-final-image/assessment.json.gz",
+      "sha256": "95c0955dbc81d839369170726de5f78dc0f3a40d36555eee7e3791495ee1b451"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-pg-j21/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 25515,
+      "git_blob": "db62caf920886dc4620a15ea560b1d60a195f993",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-soap-h2-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "6a64f957dd066f3b88e4313a22a81f0ea0f5b6af35f1fc27f5d1ab69cf610f79"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-soap-h2-j17/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5809,
+      "git_blob": "528b946db861c1ce5f8d81a52a87ecd8a77254d1",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-soap-h2-j17/generated-final-image/assessment.json.gz",
+      "sha256": "8a0f52320a9950a78a74a905684748e86e69483127c5d39631982e07725957c6"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-soap-h2-j17/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 25705,
+      "git_blob": "49ef01bf0ac7969fd8a0d67a8b635cdb7d5d9a91",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-soap-pg-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "6736cdd29c03557cca49c66b2b1799e8d921f85d0bd9e848783de22c1640be22"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-soap-pg-j17/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5833,
+      "git_blob": "83d86b345cca7b65cc3aa1065090999c2a72bb76",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-soap-pg-j17/generated-final-image/assessment.json.gz",
+      "sha256": "f190a997a74ec67af1f095e96cae2b50b98b925a5e048e7b0cd70ccf477f6922"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-soap-pg-j17/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 25711,
+      "git_blob": "62b171e055f0f9a0cd0c30da963b852b2e6a7928",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-soap-pg-j21/generated-build-stage/assessment.json.gz",
+      "sha256": "57ebc31a781cfcddbe5f00f846d4bcdeb0ddee5fad60d2ffd75d228b1273f078"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-soap-pg-j21/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5851,
+      "git_blob": "d707901812ade457d31dc2955a41c3baf8e05839",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-soap-pg-j21/generated-final-image/assessment.json.gz",
+      "sha256": "8ac0ae8369b5ca3dc413d51981cc2dfb93cc4c25c79e3d8c2d1a053d3804b093"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/crud-soap-pg-j21/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 24917,
+      "git_blob": "2cfaefe14cb31cbf68f4541776ce85630e4f160a",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/file-batch-h2-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "1b87901e99b11f2dc2556192cc7757dae2ddede700c6cfffc74f6b17c9e5354d"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/file-batch-h2-j17/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5785,
+      "git_blob": "f713408e35b58b922b9fb23491f42e5b4cf93e2c",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/file-batch-h2-j17/generated-final-image/assessment.json.gz",
+      "sha256": "4b60dca2f5f271dfe475b050d541ed8f4de777e6f67f2daf818e68053778e555"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/file-batch-h2-j17/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 25098,
+      "git_blob": "f8ad660a5c86daf208a85e00725309cd1c4aef21",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/file-batch-pg-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "6ded8d712bf68c89cae404862f8c22c5fb5d44efff56127ce95140ac6cda847a"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/file-batch-pg-j17/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5814,
+      "git_blob": "4f4b9f312d4918cef0d8b85b1dd7c361f18078e9",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/file-batch-pg-j17/generated-final-image/assessment.json.gz",
+      "sha256": "fec4269524bed7a95ef7973f0c7901c0e7dc096833bcd4de256b5a8481b78459"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/file-batch-pg-j17/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 25104,
+      "git_blob": "1ffc3893ded6974afd9ad07a00a6164381cbca4e",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/file-batch-pg-j21/generated-build-stage/assessment.json.gz",
+      "sha256": "96819fdf4a098cb4f817d9edf0d0cf885bf416d2ef61d66b0d63ca83baac37ff"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/file-batch-pg-j21/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5833,
+      "git_blob": "333565b35b7939807062158e22f7df46aaa972fc",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/file-batch-pg-j21/generated-final-image/assessment.json.gz",
+      "sha256": "3887fd71581a4be04c8d100b33f02b5ddcd94daaa2d360e855a4b960f68f42b5"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/file-batch-pg-j21/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 6598,
+      "git_blob": "8dc73b415908f466877f26615b50330635e2497b",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/findings.md",
+      "sha256": "eadeafe6f65cc0b67b80301714ab06d81803ab149cab48045ed4287f207fe21a"
+    },
+    {
+      "bytes": 25675,
+      "git_blob": "55d8c5277ad4a49a1f05a403001eb65848c2a0d6",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-h2-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "749a0b60521d7919da7b721f5bde520fadab00aa003edeead5af5c822604dae0"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-h2-j17/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5663,
+      "git_blob": "442afddb882a1c46cb31e6c4c461ca9394ee6b2d",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-h2-j17/generated-final-image/assessment.json.gz",
+      "sha256": "7e074716175c3498bd5dacf60f5d96c459ca34f3d66b0707772d844e6aa17572"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-h2-j17/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 26100,
+      "git_blob": "4ca6208e8a5a581a2644f376fb4963c5cd684da2",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-mixed-h2-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "ed9977c5ec01f63e5cc25b35e287e5b0ff551001e472a4efbd735020f481d0e9"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-mixed-h2-j17/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5724,
+      "git_blob": "2a5a3960afd709eebebd3f6c55163cffbf74efe7",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-mixed-h2-j17/generated-final-image/assessment.json.gz",
+      "sha256": "d20633c23cd98cba4edf0f779127cc1b31ce2894cbb3f8e9e7428127149e62ec"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-mixed-h2-j17/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 26106,
+      "git_blob": "00b1358282592a990d635ad0a2b6000d4d73ba1e",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-mixed-pg-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "d08fbf68191a98e021e2cd4789f8459417aa0b7316cc437c559a1a2e2ec6bd36"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-mixed-pg-j17/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5732,
+      "git_blob": "9dcb57e6b4f32eaf3165f4b2849ba5d7f2163124",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-mixed-pg-j17/generated-final-image/assessment.json.gz",
+      "sha256": "fd003e0684a2994b1d68d681c58e699e317c5742e09d26aa469d469159aed6f7"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-mixed-pg-j17/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 26119,
+      "git_blob": "fa7339dd064a6cd22144098c0d52ea1350da1a41",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-mixed-pg-j21/generated-build-stage/assessment.json.gz",
+      "sha256": "74327b70752984db8d1349ea6eca8482f3e2b8cad606ee1cb833b7670117c448"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-mixed-pg-j21/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5724,
+      "git_blob": "96d23df63c8ef73b28cbc736b9b49c993336ed24",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-mixed-pg-j21/generated-final-image/assessment.json.gz",
+      "sha256": "9d4a68888d39712f58b4162ed6eb48262a2395b2ccf724140c79107e1beddbb6"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-mixed-pg-j21/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 25672,
+      "git_blob": "854f811b8ba3bbc9d42d42f45d5e6c603fdc7640",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-pg-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "0dd76555caa3a74b3b05105a9d08469dcfc88dc6352a7595437d1b276e1d0801"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-pg-j17/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5672,
+      "git_blob": "90144aa498eb98222e3487d1d412f03987cbbb3e",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-pg-j17/generated-final-image/assessment.json.gz",
+      "sha256": "40941dbd2ff29cf61090cb4eaffb5e1f6cba2760373c6bc7bfa18be06e06fe3c"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-pg-j17/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 25691,
+      "git_blob": "771bdff0d8826b86ac26add7e9aef32e3aebbb07",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-pg-j21/generated-build-stage/assessment.json.gz",
+      "sha256": "d66c034afbe7b654da899e597a0209e2236ed6d8028f747a2ea6ae839586bd21"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-pg-j21/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5678,
+      "git_blob": "60d88dd6e0508933514dc0d19c199889e334d858",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-pg-j21/generated-final-image/assessment.json.gz",
+      "sha256": "d22186298afe02c7ab294cbadcf3e2062ea33e5205065ae098b933ecde4e8f49"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-pg-j21/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 26102,
+      "git_blob": "380539694b19913b7cc62ba3e82c17d407a27785",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-router-h2-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "dc2828e3f16c91bb9d1e657c254454fd6a2f90b7a25f0562ced1506bdae643c6"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-router-h2-j17/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5717,
+      "git_blob": "6da6b2665ce5945d486eb345100b4059108657b7",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-router-h2-j17/generated-final-image/assessment.json.gz",
+      "sha256": "22ea9b19a705aa399f22a937e0b14c65e66ffc5bb819a4b22ec71106612b6c6d"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-router-h2-j17/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 561,
+      "git_blob": "697dd70663957f110ae9a5a79da89acf61b79779",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-router-h2-j17/runtime-create.receipt.json.gz",
+      "sha256": "80aa54cdabcf10fd3dab89f928c218e09d909fc30d85810f2eb6a374d214af08"
+    },
+    {
+      "bytes": 402,
+      "git_blob": "b02c847c7e46f0f80c69a9e03754ed7e85a2ffef",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-router-h2-j17/runtime-created-state.receipt.json.gz",
+      "sha256": "0b246a8e48bb916416467f8e71a2c4a3dfa44ea664f5d4235409157e8dcce600"
+    },
+    {
+      "bytes": 2273,
+      "git_blob": "2ff2c30fdee1af718e59758b83eba4df934cfa97",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-router-h2-j17/runtime-created-state.stdout.gz",
+      "sha256": "bcb3001f2bfcbde243dd814b8f9fb39bc4e719e48c0a5a700d48d41623359cfc"
+    },
+    {
+      "bytes": 1097,
+      "git_blob": "2698cede94ce9270d06d6d7cbbd27a7af610f2a8",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-router-h2-j17/runtime-identity.json.gz",
+      "sha256": "5d48315ae8e4f0cc7468a8edec435e1e8fc051744dec13e61b8d3786b527a4bd"
+    },
+    {
+      "bytes": 1589,
+      "git_blob": "6426297c60eb96498db00e5f101d57ed1fd18b45",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-router-h2-j17/runtime-image-inspect.stdout.gz",
+      "sha256": "11ad8acbf65a45e32ec98bda23c8a543dda3adf9be579cfdef698b93bf82878c"
+    },
+    {
+      "bytes": 697,
+      "git_blob": "e823810091f6bc3bd458d9f9d5e247f4e9084b8f",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-router-h2-j17/runtime-manifest.json.gz",
+      "sha256": "126f897414de1d2b95a0b0185c069d7aa620f470b2e3d3880e76f070db140f43"
+    },
+    {
+      "bytes": 399,
+      "git_blob": "bde8fecdf308bb214461f2793beeecee97d9f936",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-router-h2-j17/runtime-start.receipt.json.gz",
+      "sha256": "af0642eb323bce9e5ad0f4ab6ef0f3ea3ef25dc6a34094587d587723a1fd2ff7"
+    },
+    {
+      "bytes": 440,
+      "git_blob": "f37397b7e5ad249ddbe436b25644005120d06f81",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-router-h2-j17/runtime.json.gz",
+      "sha256": "bba83e2e3688b2b48f4df91c40c8f05d5f0484304f97c16e6b09677dc8898459"
+    },
+    {
+      "bytes": 26096,
+      "git_blob": "63d6a5f4c43bfcec59d4aa286e93d8582d57590e",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-router-pg-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "566089d80a0ab992f8380977d01333c4d7828ca4aa75d6fb7b3625a8c3166700"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-router-pg-j17/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5712,
+      "git_blob": "5d8c3a86bf3b5051008639d6a878573dab64044a",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-router-pg-j17/generated-final-image/assessment.json.gz",
+      "sha256": "8f49b47abbc2d1533cd1a9f8bf0a19d73f3024a5a09af69396796ed5d0a2937b"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-router-pg-j17/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 26121,
+      "git_blob": "ecccd9caa7e103c008d3b328e72a0797fbc0afe7",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-router-pg-j21/generated-build-stage/assessment.json.gz",
+      "sha256": "df3b68fd700fd0a6b6c20cc5f746303f61819544b2376b6b99ba23f48df8df24"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-router-pg-j21/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5717,
+      "git_blob": "578436daac77d86f9985a7bd7d18871daec3b0ce",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-router-pg-j21/generated-final-image/assessment.json.gz",
+      "sha256": "eae24de85f8d704100984bf3f03792ae0943e2bfa46b93b338c09fa83dadeea4"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/kafka-router-pg-j21/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 24906,
+      "git_blob": "05a84d30f66fbd26b30fa586af5d09935b3bba00",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/m5a-h2-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "2eff84758e59503d719ee46c22f3fffdbf5dde824222e874c76f90c1d77e8e0b"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/m5a-h2-j17/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5776,
+      "git_blob": "40ea16a4dbcc4e27f06d500365c678cdabd275a1",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/m5a-h2-j17/generated-final-image/assessment.json.gz",
+      "sha256": "4d0c272d4a10202141cd0028c756dde7b5725e8dbd26813376f510d162c84ba5"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/m5a-h2-j17/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 25099,
+      "git_blob": "e46e361abcb7646f8be24307a123b29a56a7525b",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/m5a-pg-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "de044cabd3834f2c7da1ef3ac31f24b2a6fe0a0c20c6b5459d91a92b368edf5e"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/m5a-pg-j17/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5801,
+      "git_blob": "7fea10c35a543d4889dd928f64da7c1617d9cd00",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/m5a-pg-j17/generated-final-image/assessment.json.gz",
+      "sha256": "8059f6a68f8359fcec39edca3eafb73d023807edd291e65291caa4bd322d5e4b"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/m5a-pg-j17/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 25103,
+      "git_blob": "9cc084c60693f7bba53a67e38b0fe76ad246b449",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/m5a-pg-j21/generated-build-stage/assessment.json.gz",
+      "sha256": "b3c0eb599b64a72463d683d8bd3f1b27ececf3db72df1aca8248f6eac9c687b4"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/m5a-pg-j21/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5809,
+      "git_blob": "3543e2dc5c9a1621dbbcec70bad948ab43417da1",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/m5a-pg-j21/generated-final-image/assessment.json.gz",
+      "sha256": "1533e92e7eda01c95fa2f5565b4979f55e2029c5b9f0cb92255764656348def3"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/m5a-pg-j21/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 889972,
+      "git_blob": "c8674934aacdfb9ac3e26de731b4fd274b1af12c",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/maven-reconciliation.json",
+      "sha256": "b2a60c10616a7a06622c45adeefea9f494a783ef41f4b19e7ac84712f2f95e78"
+    },
+    {
+      "bytes": 24914,
+      "git_blob": "d305c6a81ad6c73ccaa51602798d60349fbf2f63",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/mixed-batch-h2-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "e4703781ee8f2f06fd96c903a650dc8998a2ab20595d217e4dca20bae7f62c37"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/mixed-batch-h2-j17/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5796,
+      "git_blob": "7b31521e3036116276c69b0c8edfaf5b6b929a84",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/mixed-batch-h2-j17/generated-final-image/assessment.json.gz",
+      "sha256": "64a9dba4950f9bbda9e055f08a37b894962e65c224e8323fe96b4faa186b368d"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/mixed-batch-h2-j17/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 25101,
+      "git_blob": "8c30b60ee1a23b670bf931013e5c71ec1641d69a",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/mixed-batch-pg-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "7f7ec78beb8f0cadfe37d85444ddedd44e8dc8aaa75d8b9b4203a494dc154130"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/mixed-batch-pg-j17/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5824,
+      "git_blob": "ccef7d18810cc2289728a81325f7fce7d4f627ba",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/mixed-batch-pg-j17/generated-final-image/assessment.json.gz",
+      "sha256": "0ea4a4d7c7d1b0bf6a12ddc2632084e0e070e42e7ebcb3484f125504cd2e9dac"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/mixed-batch-pg-j17/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 25116,
+      "git_blob": "496027628cd17461623ec4f1996db5e87ae98744",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/mixed-batch-pg-j21/generated-build-stage/assessment.json.gz",
+      "sha256": "1cac0d758ba74ab1b4f6b30ba15b94bfcec08e072aa87362888dc724e15c8cf5"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/mixed-batch-pg-j21/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5817,
+      "git_blob": "a5206be7514cbfb77e7d89bb9bf01b2f39b45372",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/mixed-batch-pg-j21/generated-final-image/assessment.json.gz",
+      "sha256": "61eca3dc7b04fd02a099318d39e9e1e4370347779263a7b728aab3be3b31b4ea"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/mixed-batch-pg-j21/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 60960,
+      "git_blob": "d3e1e99bd47ad8bdc4bbe9a8f9f135d0a3371287",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/open-findings.json.gz",
+      "sha256": "9eccefe41a2a86b42f336db1921989fbddc589e98d0c37daebd37a166a7a22a5"
+    },
+    {
+      "bytes": 24907,
+      "git_blob": "ff8d20c0a8ef198a8404ba1caa5e1fe030c1b41f",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/ordinary-batch-h2-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "b66acdeb477124e93d6701b67d8286b9dc7416da4ec23b8078f8cc0332a33bed"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/ordinary-batch-h2-j17/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5789,
+      "git_blob": "35ce8631001b57e2a481900f1f8c4bfdafaa3961",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/ordinary-batch-h2-j17/generated-final-image/assessment.json.gz",
+      "sha256": "29496c08c241301c85c3eea34dd122877295dc97c095d2aa5b1a8db48d7d6d26"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/ordinary-batch-h2-j17/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 25099,
+      "git_blob": "8cfd8647772a939d3ae9969fcfaeaac1dca5e464",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/ordinary-batch-pg-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "105f5fa61b1ba6d9baf8c567889cf2b5e54dc51c1ac21ece80d3b5af00257850"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/ordinary-batch-pg-j17/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5816,
+      "git_blob": "50241ad35d0c09445394043b8d95cd19194faa42",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/ordinary-batch-pg-j17/generated-final-image/assessment.json.gz",
+      "sha256": "3eb25ee3fc8891c5898b9296499ed3c4e289fd4ba1bcffb056263b49230bbe48"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/ordinary-batch-pg-j17/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 25107,
+      "git_blob": "0b09fa5a986f082df9df630ce511611497dcabef",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/ordinary-batch-pg-j21/generated-build-stage/assessment.json.gz",
+      "sha256": "33e9928e73bca38ecb49e6cc2c6364bc73696e610ae663e5e0471a86b8f8585e"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/ordinary-batch-pg-j21/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5826,
+      "git_blob": "e6c4042a99ed0cf6c934c0b73cc0f4a460fe8736",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/ordinary-batch-pg-j21/generated-final-image/assessment.json.gz",
+      "sha256": "e1e41123fe39b71679ad6e965a908e5b8c6db3ac88c58bed17a02457e9d88142"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/ordinary-batch-pg-j21/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5050,
+      "git_blob": "0f32a37cca38d0b70c89a6f124745b3a8c2e314e",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/packaged-inventories.json.gz",
+      "sha256": "1d804d0a0cafd88bcd7b55fcc85b10c822625a5223f28327184a50ce2b8dc158"
+    },
+    {
+      "bytes": 21296,
+      "git_blob": "c36c6589a7895e67e35646e5c64d054998e641cd",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/passthrough-h2-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "03f4f64122645ac1153d33bc7c1dede379bb90477a86d1434ccc3dc04f273afa"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/passthrough-h2-j17/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5509,
+      "git_blob": "be925862233b93ef20f2178a032546d38d29f517",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/passthrough-h2-j17/generated-final-image/assessment.json.gz",
+      "sha256": "89bdb103fc35aade4f583efe22703595f03ed16a220e561adfad2fd6f3ee27a1"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/passthrough-h2-j17/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 21284,
+      "git_blob": "c21d68c2b145354cf00840ca5aaf2f0341ad04d7",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/passthrough-pg-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "2418ff158a9fb971b0c6e9995d69eac37e823f5b170e7cc98de75a3a42d51e4e"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/passthrough-pg-j17/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5516,
+      "git_blob": "217da9e1829078237269a64b0dc42ed3e11827c6",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/passthrough-pg-j17/generated-final-image/assessment.json.gz",
+      "sha256": "b0a3c869488959b552e69693777cd0323c7085f810ed6951e4f879f1fe33afa2"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/passthrough-pg-j17/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 21293,
+      "git_blob": "b37e3af2e5ffe1d3e0442bcd3e2fb75e532a7ee0",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/passthrough-pg-j21/generated-build-stage/assessment.json.gz",
+      "sha256": "c8cbbd0b614db1a983edeadc61d4d0b8886ec567991dbf02f865096a32af78b0"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/passthrough-pg-j21/generated-build-stage/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 5507,
+      "git_blob": "4db5bd63864b0525aa7105be23053ebce797d2e6",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/passthrough-pg-j21/generated-final-image/assessment.json.gz",
+      "sha256": "8115244cb17d2a1452719e0a4202320fb8ac805b3d34500a356a1db942cbb075"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "51f167ffeeb5e2ff44ba1d98780a19d0ff8a04cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/passthrough-pg-j21/generated-final-image/databases.json.gz",
+      "sha256": "8ad23b968111c4269d82caa032e5ea1d95ded7c7e1d26ce4f4a99b5d4d386568"
+    },
+    {
+      "bytes": 505,
+      "git_blob": "eee09f31c4cd3f506ac370132fa6cffd2a701a03",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/passthrough-pg-j21/runtime-create.receipt.json.gz",
+      "sha256": "23d71be8039a83a1df7f9f955d5d5504505ec871ea90769c040111af383c5295"
+    },
+    {
+      "bytes": 402,
+      "git_blob": "4c3a7b4a326982778c5f516cb00677146dd93f51",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/passthrough-pg-j21/runtime-created-state.receipt.json.gz",
+      "sha256": "07fd0e95a00b37ab36bd92ab4ac0f400b693c2cfc8a1137f1e7c41ba7ed306b6"
+    },
+    {
+      "bytes": 2230,
+      "git_blob": "7359c926805ab339b15aef57cd4f1c7160519d03",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/passthrough-pg-j21/runtime-created-state.stdout.gz",
+      "sha256": "d73fe2716ecaccf27f7076a7b2bd561c5917153d28127cf1fec9e7ae34b2e980"
+    },
+    {
+      "bytes": 1096,
+      "git_blob": "19bf9ebae970c85d14fd7563556b0a465f3d0594",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/passthrough-pg-j21/runtime-identity.json.gz",
+      "sha256": "3aacefec438441ddb38cfdc929fe199f187040b8967efa0be4e0eba85323d6f4"
+    },
+    {
+      "bytes": 1586,
+      "git_blob": "2ccf6fd543996b527102f52e110f8820db0a477e",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/passthrough-pg-j21/runtime-image-inspect.stdout.gz",
+      "sha256": "33a90972df755ecdcc2d36a00867a9a57ef641fd9c43219ce6f45ccbbc3dfc49"
+    },
+    {
+      "bytes": 695,
+      "git_blob": "3779ea007be61232885cd3796d9157a5ffcbbfea",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/passthrough-pg-j21/runtime-manifest.json.gz",
+      "sha256": "1f0d3766ec328ec9d182225c260c8678d26f29aa15815792fd7d6c16bd1f8617"
+    },
+    {
+      "bytes": 398,
+      "git_blob": "838cdc8d2704a8490ee9465c83ac4c051f9d77bb",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/passthrough-pg-j21/runtime-start.receipt.json.gz",
+      "sha256": "f08392657a8e4a080189d711d3eaf3474a21998f2c7b5c9889340519aacfcc6a"
+    },
+    {
+      "bytes": 442,
+      "git_blob": "27c538bb0735c90b3542efbccd1989a4534ffe51",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/passthrough-pg-j21/runtime.json.gz",
+      "sha256": "de3024cff2e872b0ef3aaa3d1958db124de45bfba60dd0cb466e4dee7cc4e7c5"
+    },
+    {
+      "bytes": 947909,
+      "git_blob": "5031ee9fb86667171fbf61eec8ab9fe85a876147",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/publication.json",
+      "sha256": "873be15520ce964a087c4df703b555b1bf57435ec63119e1804a61dee1f65d77"
+    },
+    {
+      "bytes": 2572,
+      "git_blob": "9c75f831f44a21c2d6ab12d44bd6d08310dcd19f",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/summary.json",
+      "sha256": "caeaf632f796fe16f5a5db462ebe87ac008aab328dfc474e9aa88485c5bc9ac7"
+    },
+    {
+      "bytes": 261,
+      "git_blob": "2b787d661978d44a1052c52757f0ab999ca2c095",
+      "path": "docs/handover-evidence/generated-images/2026-10-17/summary.txt",
+      "sha256": "bbb6a530819785abcedb72e059258efeedb8c29d0d391dda29ed0212d0346124"
+    }
+  ],
+  "core_rule": [
+    "All paths are under docs/handover-evidence/generated-images/2026-10-17/.",
+    "Top level (12): README.md, findings.md, summary.json, summary.txt, publication.json, campaign.json.gz, coverage-declared.json.gz, composition.json.gz, composition-copy-manifest.json.gz, open-findings.json.gz, packaged-inventories.json.gz, maven-reconciliation.json.",
+    "composition-inputs/** (5 files).",
+    "<case>/<stage>/assessment.json.gz (60) and <case>/<stage>/databases.json.gz (60).",
+    "crud-h2-j17/runtime*, passthrough-pg-j21/runtime*, kafka-router-h2-j17/runtime* (24)."
+  ],
+  "reviewed_commit": "377d45229c6d6c6cdb87dff80e34f437003938d4",
+  "schema_version": "1.0"
+}

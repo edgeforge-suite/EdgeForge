@@ -1,0 +1,39 @@
+contract_name: payment-confirmation-file
+contract_type: file-fixed-width
+fields:
+  - name: internationalPaymentId
+    type: STRING
+    length: 40
+    required: true
+  - name: consentId
+    type: STRING
+    length: 128
+    required: true
+  - name: instructionIdentification
+    type: STRING
+    length: 35
+    required: true
+  - name: endToEndIdentification
+    type: STRING
+    length: 35
+    required: true
+  - name: currencyOfTransfer
+    type: STRING
+    length: 3
+    required: true
+  - name: instructedAmount
+    type: DECIMAL
+    length: 14
+    required: true
+  - name: creditorName
+    type: STRING
+    length: 70
+    required: true
+  - name: status
+    type: STRING
+    length: 40
+    required: true
+  - name: statusUpdateDateTime
+    type: DATETIME
+    length: 25
+    required: true

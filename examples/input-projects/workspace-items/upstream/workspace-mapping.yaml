@@ -1,0 +1,11 @@
+interface: workspace-api
+entity: Workspace
+operations:
+  - name: createWorkspace
+    request_mappings:
+      - {source: title, target: Workspace.title}
+      - {source: state, target: Workspace.state}
+    response_mappings:
+      - {source: workspaceId, target: Workspace.workspaceId}
+      - {source: title, target: Workspace.title}
+      - {source: state, target: Workspace.state}

@@ -1,0 +1,42 @@
+app_name: XYZ Accounts Replacement
+bounded_context: accounts
+schema_version: "2.0"
+app_archetype: crud
+
+upstream_interfaces:
+  - name: crm-account-api
+    system: CRM
+    type: rest-json
+    version: v1
+    spec_url: https://bank-internal.example.com/xyz/swagger.json
+    mapping: upstream/crm-account-mapping.yaml
+    operations:
+      - name: createAccount
+        request_sample: upstream/sample-create-account-request.json
+        response_sample: upstream/sample-create-account-response.json
+
+downstream_interfaces:
+  - name: eod-handoff-file
+    system: DOWNSTREAM_APPS
+    type: file-fixed-width
+    version: v1
+    spec: downstream/eod-handoff-layout.yaml
+    mapping: downstream/eod-handoff-mapping.yaml
+    samples:
+      - downstream/sample-output-file.txt
+
+data_handoffs:
+  - name: account-staging-table
+    system: ETL
+    type: staging-table
+    version: v1
+    spec: data-handoffs/account-staging-table.sql
+    mapping: data-handoffs/staging-table-mapping.yaml
+
+rules:
+  - rules/account-business-rules.yaml
+
+legacy_references:
+  - legacy/xyz-notes.md
+
+target_profile: springboot-legacy-compatible

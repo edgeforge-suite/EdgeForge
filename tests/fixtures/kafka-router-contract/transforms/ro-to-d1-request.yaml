@@ -1,0 +1,10 @@
+transforms:
+  - source: paymentId
+    target: transactionId
+  - source: amount
+    target: amount
+  - source: status
+    target: decisionCode
+    value_map:
+      APPROVED: A
+      DECLINED: D

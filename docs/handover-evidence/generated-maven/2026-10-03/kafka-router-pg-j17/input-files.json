@@ -1,0 +1,30 @@
+[
+  {
+    "path": "manifest.yaml",
+    "sha256": "8900e33cc9530988e0b5820b4d463298ee66b5cd32adddab3c72ff9e184e5833"
+  },
+  {
+    "path": "schemas/d1-request.json",
+    "sha256": "817a6e48eb2c5bd6fcad747b441747bd3cd11af255f57d87409cb89f4ecef786"
+  },
+  {
+    "path": "schemas/d1-response.json",
+    "sha256": "9d15eaf97f7d4393f659ba37a9b75520c1c8e2946580a5353d000478c45aafac"
+  },
+  {
+    "path": "schemas/ro-request.json",
+    "sha256": "c67558fd4a8fb188afd2005ac7faff1a65e2821fb4bf6689cabd703b941fbc7f"
+  },
+  {
+    "path": "schemas/ro-response.json",
+    "sha256": "07964906a038387bbe88b7b31c58074e2892fd731e4c60153f29ff1fb2a682d5"
+  },
+  {
+    "path": "transforms/d1-to-ro-response.yaml",
+    "sha256": "814995cca32004691ab1e51ab67bdbd380467702a1edd69ec83e94eeabae7ac6"
+  },
+  {
+    "path": "transforms/ro-to-d1-request.yaml",
+    "sha256": "62971a6c762a5cdcc2d74c99c778b012d194b54a032b6d323695e22684624073"
+  }
+]

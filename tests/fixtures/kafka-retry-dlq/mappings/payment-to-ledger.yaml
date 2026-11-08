@@ -1,0 +1,10 @@
+transforms:
+  - source: paymentId
+    target: entryId
+  - source: amount
+    target: amountMinorUnits
+    type_coercion: major_to_minor_units
+  - source: currency
+    target: currencyCode
+  - source: valueDate
+    target: postingDate

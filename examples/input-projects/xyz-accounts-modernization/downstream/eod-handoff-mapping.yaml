@@ -1,0 +1,9 @@
+interface: eod-handoff-file
+entity: Account
+field_mappings:
+  - source: Account.accountId
+    target: account_id
+  - source: Account.customerId
+    target: customer_id
+  - source: Account.status
+    target: status

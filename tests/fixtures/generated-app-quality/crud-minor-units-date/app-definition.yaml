@@ -1,0 +1,26 @@
+app_name: CRUD Minor Units Date Quality
+bounded_context: minorunitsdate
+schema_version: "2.0"
+upstream_interfaces:
+  - name: account-api
+    system: CORE
+    type: rest-json
+    spec: upstream/account-api-spec.yaml
+    mapping: upstream/account-mapping.yaml
+    operations:
+      - name: createAccount
+        request_sample: upstream/create-account-request.json
+        response_sample: upstream/create-account-response.json
+downstream_interfaces:
+  - name: account-eod-file
+    system: EOD
+    type: file-fixed-width
+    spec: downstream/account-eod-layout.yaml
+    mapping: downstream/account-eod-mapping.yaml
+data_handoffs:
+  - name: account-staging-table
+    system: ETL
+    type: staging-table
+    spec: data-handoffs/account-staging-table.sql
+    mapping: data-handoffs/account-staging-mapping.yaml
+target_profile: springboot-legacy-compatible

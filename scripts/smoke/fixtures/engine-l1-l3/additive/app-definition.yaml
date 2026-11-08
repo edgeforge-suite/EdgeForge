@@ -1,0 +1,22 @@
+app_name: Engine Smoke Widget App
+bounded_context: smoke
+schema_version: "2.0"
+app_archetype: crud
+
+upstream_interfaces:
+  - name: widget-api
+    system: SYSTEM_A
+    type: rest-json
+    spec: upstream/widget-api.yaml
+    mapping: upstream/widget-mapping.yaml
+    operations:
+      - name: createWidget
+        request_sample: upstream/create-widget-request.json
+        response_sample: upstream/widget-response.json
+      - name: getWidget
+        response_sample: upstream/widget-response.json
+
+rules:
+  - rules/widget-rules.yaml
+
+target_profile: springboot-legacy-compatible

@@ -1,0 +1,1175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://edgeforge.dev/schema/manifest-v2.schema.json",
+  "title": "EdgeForge Manifest v2",
+  "description": "CRUD archetype manifest contract for EdgeForge input packages.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "app_name",
+    "bounded_context",
+    "schema_version",
+    "target_profile"
+  ],
+  "properties": {
+    "app_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "bounded_context": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schema_version": {
+      "type": "string",
+      "enum": ["2.0"]
+    },
+    "app_archetype": {
+      "type": "string",
+      "enum": ["crud", "passthrough-router", "kafka-integration"],
+      "$comment": "passthrough-router is supported by the Engine MVP generator",
+      "default": "crud"
+    },
+    "upstream_interfaces": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/interfaceDefinition"
+      }
+    },
+    "downstream_interfaces": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/interfaceDefinition"
+      }
+    },
+    "data_handoffs": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/dataHandoffDefinition"
+      }
+    },
+    "identity_overrides": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/identityOverrideDefinition"
+      }
+    },
+    "identity_roles": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/identityRoleDefinition"
+      }
+    },
+    "id_generation_overrides": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/idGenerationOverrideDefinition"
+      }
+    },
+    "kafka_config": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "consumer_group": {
+          "type": "string",
+          "minLength": 1
+        },
+        "concurrency": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1
+        },
+        "retry": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "max_attempts": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10,
+              "default": 3
+            },
+            "backoff_ms": {
+              "type": "integer",
+              "minimum": 100,
+              "maximum": 60000,
+              "default": 1000
+            },
+            "backoff_multiplier": {
+              "type": "number",
+              "minimum": 1.0,
+              "default": 2.0
+            }
+          }
+        },
+        "dlq": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": true
+            },
+            "topic_suffix": {
+              "type": "string",
+              "pattern": "^\\.",
+              "default": ".dlq"
+            }
+          }
+        }
+      },
+      "required": ["consumer_group"]
+    },
+    "async_routes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/asyncRouteDefinition"
+      }
+    },
+    "rules": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/relativePath"
+      }
+    },
+    "legacy_references": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/relativePath"
+      }
+    },
+    "target_profile": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "app_archetype": {
+            "const": "kafka-integration"
+          }
+        },
+        "required": ["app_archetype"]
+      },
+      "then": {
+        "required": ["kafka_config", "async_routes"]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "app_archetype": {
+            "enum": ["passthrough-router", "kafka-integration"]
+          }
+        },
+        "required": ["app_archetype"]
+      },
+      "then": {
+        "not": {
+          "required": ["identity_roles"]
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "data_handoffs": {
+            "contains": {
+              "type": "object",
+              "required": ["run_semantics"]
+            }
+          }
+        },
+        "required": ["data_handoffs"]
+      },
+      "then": {
+        "properties": {
+          "app_archetype": {
+            "const": "crud"
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "relativePath": {
+      "type": "string",
+      "minLength": 1,
+      "not": {
+        "pattern": "^(/|[A-Za-z]:[\\\\/])"
+      }
+    },
+    "interfaceOperationDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "request_sample": {
+          "$ref": "#/$defs/relativePath"
+        },
+        "response_sample": {
+          "$ref": "#/$defs/relativePath"
+        },
+        "pageable": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "anyOf": [
+        {
+          "required": ["request_sample"]
+        },
+        {
+          "required": ["response_sample"]
+        }
+      ]
+    },
+    "interfaceDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "type"],
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "system": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "type": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "version": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "spec": {
+          "$ref": "#/$defs/relativePath"
+        },
+        "spec_url": {
+          "type": "string",
+          "pattern": "^https?://.+"
+        },
+        "xsd_path": {
+          "$ref": "#/$defs/relativePath"
+        },
+        "wsdl_path": {
+          "$ref": "#/$defs/relativePath"
+        },
+        "root_element": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "namespace": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "namespace_alias": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "service": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "port": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "binding": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "sample": {
+          "$ref": "#/$defs/relativePath"
+        },
+        "mapping": {
+          "$ref": "#/$defs/relativePath"
+        },
+        "samples": {
+          "type": "array",
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/relativePath"
+          }
+        },
+        "operations": {
+          "type": "array",
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/interfaceOperationDefinition"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "xml-xsd"
+              }
+            },
+            "required": ["type"]
+          },
+          "then": {
+            "required": ["root_element"],
+            "not": {
+              "anyOf": [
+                {
+                  "required": ["spec_url"]
+                },
+                {
+                  "required": ["spec", "xsd_path"]
+                },
+                {
+                  "required": ["wsdl_path"]
+                },
+                {
+                  "required": ["service"]
+                },
+                {
+                  "required": ["port"]
+                },
+                {
+                  "required": ["binding"]
+                }
+              ]
+            },
+            "oneOf": [
+              {
+                "required": ["xsd_path"]
+              },
+              {
+                "required": ["spec"]
+              }
+            ]
+          },
+          "else": {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "soap-wsdl"
+                }
+              },
+              "required": ["type"]
+            },
+            "then": {
+              "not": {
+                "anyOf": [
+                  {
+                    "required": ["spec_url"]
+                  },
+                  {
+                    "required": ["spec", "wsdl_path"]
+                  },
+                  {
+                    "required": ["xsd_path"]
+                  },
+                  {
+                    "required": ["root_element"]
+                  },
+                  {
+                    "required": ["namespace"]
+                  },
+                  {
+                    "required": ["namespace_alias"]
+                  }
+                ]
+              },
+              "oneOf": [
+                {
+                  "required": ["wsdl_path"]
+                },
+                {
+                  "required": ["spec"]
+                }
+              ]
+            },
+            "else": {
+              "not": {
+                "anyOf": [
+                  {
+                    "required": ["xsd_path"]
+                  },
+                  {
+                    "required": ["root_element"]
+                  },
+                  {
+                    "required": ["wsdl_path"]
+                  },
+                  {
+                    "required": ["service"]
+                  },
+                  {
+                    "required": ["port"]
+                  },
+                  {
+                    "required": ["binding"]
+                  }
+                ]
+              },
+              "oneOf": [
+                {
+                  "required": ["spec"],
+                  "not": {
+                    "required": ["spec_url"]
+                  }
+                },
+                {
+                  "required": ["spec_url"],
+                  "not": {
+                    "required": ["spec"]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "dataHandoffDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "type", "spec"],
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "system": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "type": {
+          "allOf": [
+            {
+              "$ref": "#/$defs/nonEmptyString"
+            },
+            {
+              "not": {
+                "enum": ["file-fixed-width", "file-csv", "xml-xsd", "soap-wsdl"]
+              }
+            }
+          ]
+        },
+        "version": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "spec": {
+          "$ref": "#/$defs/relativePath"
+        },
+        "mapping": {
+          "$ref": "#/$defs/relativePath"
+        },
+        "run_semantics": {
+          "$ref": "#/$defs/runSemanticsDefinition"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": ["run_semantics"]
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "const": "staging-table"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "runSemanticsDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["run_id", "restart", "dedup_key"],
+      "properties": {
+        "run_id": {
+          "const": "caller_supplied"
+        },
+        "restart": {
+          "const": "resume"
+        },
+        "dedup_key": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+          }
+        },
+        "internal_schema_id": {
+          "type": "string",
+          "pattern": "^m5a-staging-(?:00[1-9]|0[1-9][0-9]|[1-9][0-9]{2,})$"
+        }
+      }
+    },
+    "identityOverrideDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["entity", "persistence_id"],
+      "properties": {
+        "entity": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "persistence_id": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "identityRoleDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["entity", "field", "role", "mode"],
+      "properties": {
+        "entity": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "field": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "parent_reference",
+            "business_key",
+            "event_id",
+            "idempotency_key",
+            "correlation_id",
+            "external_reference"
+          ]
+        },
+        "mode": {
+          "type": "string",
+          "enum": ["metadata_only", "active"]
+        },
+        "policy": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "active"
+              }
+            },
+            "required": ["mode"]
+          },
+          "then": {
+            "required": ["policy"]
+          }
+        }
+      ]
+    },
+    "idGenerationOverrideDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["entity", "strategy"],
+      "properties": {
+        "entity": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "strategy": {
+          "type": "string",
+          "enum": ["uuid", "caller_supplied", "db_identity", "db_sequence"]
+        },
+        "field": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "sequence_name": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "kafkaTopicDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "system", "message_schema"],
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "system": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "message_schema": {
+          "$ref": "#/$defs/relativePath"
+        },
+        "sample": {
+          "$ref": "#/$defs/relativePath"
+        }
+      }
+    },
+    "kafkaReplyTopicDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "message_schema"],
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "message_schema": {
+          "$ref": "#/$defs/relativePath"
+        }
+      }
+    },
+    "routerExtractionDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode"],
+      "properties": {
+        "mode": {
+          "enum": ["header", "body_field"]
+        },
+        "header_key": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "body_field_path": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "header"
+              }
+            },
+            "required": ["mode"]
+          },
+          "then": {
+            "required": ["header_key"]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "body_field"
+              }
+            },
+            "required": ["mode"]
+          },
+          "then": {
+            "required": ["body_field_path"]
+          }
+        }
+      ]
+    },
+    "routerUpstreamTopicDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "consumer_group",
+        "source_system_extraction",
+        "reply_destination_extraction"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "consumer_group": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "source_system_extraction": {
+          "$ref": "#/$defs/routerExtractionDefinition"
+        },
+        "reply_destination_extraction": {
+          "$ref": "#/$defs/routerExtractionDefinition"
+        }
+      }
+    },
+    "routerSchemaReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["file"],
+      "properties": {
+        "file": {
+          "$ref": "#/$defs/relativePath"
+        },
+        "validation_policy": {
+          "enum": ["strict", "lenient"],
+          "default": "strict"
+        },
+        "failure_behavior": {
+          "const": "nack",
+          "default": "nack"
+        }
+      }
+    },
+    "routerTransformReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["file"],
+      "properties": {
+        "file": {
+          "$ref": "#/$defs/relativePath"
+        }
+      }
+    },
+    "routerRoutingFieldDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "json_path"],
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "json_path": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "routerRoutingConditionDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["field", "operator", "value"],
+      "properties": {
+        "field": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "operator": {
+          "enum": ["eq", "in", "lt", "lte", "gt", "gte", "not_null"]
+        },
+        "value": {}
+      }
+    },
+    "routerRoutingRuleDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "conditions", "target"],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/routerRoutingConditionDefinition"
+          }
+        },
+        "target": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "routerRoutingRulesDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["routing_fields", "rules"],
+      "properties": {
+        "routing_fields": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/routerRoutingFieldDefinition"
+          }
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/routerRoutingRuleDefinition"
+          }
+        },
+        "default_target": {
+          "anyOf": [
+            { "$ref": "#/$defs/nonEmptyString" },
+            { "type": "null" }
+          ]
+        }
+      }
+    },
+    "routerTargetRetryDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dlq_topic"],
+      "properties": {
+        "max_attempts": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 3
+        },
+        "backoff_ms": {
+          "type": "integer",
+          "minimum": 100,
+          "default": 1000
+        },
+        "dlq_topic": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "routerTargetDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "request_topic",
+        "response_topic",
+        "request_schema",
+        "response_schema",
+        "request_transform",
+        "response_transform"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "request_topic": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "response_topic": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "request_schema": {
+          "$ref": "#/$defs/routerSchemaReference"
+        },
+        "response_schema": {
+          "$ref": "#/$defs/routerSchemaReference"
+        },
+        "request_transform": {
+          "$ref": "#/$defs/routerTransformReference"
+        },
+        "response_transform": {
+          "$ref": "#/$defs/routerTransformReference"
+        },
+        "retry": {
+          "$ref": "#/$defs/routerTargetRetryDefinition"
+        },
+        "timeout_ms": {
+          "type": "integer",
+          "minimum": 1000,
+          "default": 30000
+        }
+      }
+    },
+    "routerNackRoutingDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "default_error_topic"],
+      "properties": {
+        "mode": {
+          "enum": ["same_as_reply", "per_source_system", "fixed", "default_error"]
+        },
+        "per_source_system": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "$ref": "#/$defs/nonEmptyString"
+          },
+          "default": {}
+        },
+        "fixed_topic": {
+          "anyOf": [
+            { "$ref": "#/$defs/nonEmptyString" },
+            { "type": "null" }
+          ]
+        },
+        "default_error_topic": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "fixed"
+              }
+            },
+            "required": ["mode"]
+          },
+          "then": {
+            "required": ["fixed_topic"],
+            "properties": {
+              "fixed_topic": {
+                "$ref": "#/$defs/nonEmptyString"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "per_source_system"
+              }
+            },
+            "required": ["mode"]
+          },
+          "then": {
+            "required": ["per_source_system"]
+          }
+        }
+      ]
+    },
+    "routerTimeoutDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "behavior_with_known_reply": {
+          "enum": ["nack", "error_topic"],
+          "default": "nack"
+        },
+        "behavior_without_reply": {
+          "const": "error_topic",
+          "default": "error_topic"
+        }
+      }
+    },
+    "routerPayloadLoggingDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "policy": {
+          "enum": ["none", "hash", "redacted", "capped_raw"],
+          "default": "none"
+        },
+        "capped_raw_bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 512
+        }
+      }
+    },
+    "routerCorrelationStoreDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "in_memory",
+          "default": "in_memory"
+        },
+        "timeout_ms": {
+          "type": "integer",
+          "minimum": 1000,
+          "default": 30000
+        },
+        "eviction_interval_ms": {
+          "type": "integer",
+          "minimum": 1000,
+          "default": 60000
+        }
+      }
+    },
+    "routerConfig": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "upstream_topics",
+        "inbound_schema",
+        "routing_rules",
+        "targets",
+        "outbound_schema",
+        "nack_routing"
+      ],
+      "properties": {
+        "upstream_topics": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/routerUpstreamTopicDefinition"
+          }
+        },
+        "inbound_schema": {
+          "$ref": "#/$defs/routerSchemaReference"
+        },
+        "routing_rules": {
+          "$ref": "#/$defs/routerRoutingRulesDefinition"
+        },
+        "duplicate_correlation_policy": {
+          "enum": ["reject-new", "accept-last"],
+          "default": "reject-new"
+        },
+        "targets": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/routerTargetDefinition"
+          }
+        },
+        "outbound_schema": {
+          "$ref": "#/$defs/routerSchemaReference"
+        },
+        "nack_routing": {
+          "$ref": "#/$defs/routerNackRoutingDefinition"
+        },
+        "timeout": {
+          "$ref": "#/$defs/routerTimeoutDefinition"
+        },
+        "payload_logging": {
+          "$ref": "#/$defs/routerPayloadLoggingDefinition"
+        },
+        "correlation_store": {
+          "$ref": "#/$defs/routerCorrelationStoreDefinition"
+        }
+      }
+    },
+    "asyncRouteDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "pattern"],
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "pattern": {
+          "enum": ["fire-and-forget", "request-reply", "router"]
+        },
+        "upstream_topic": {
+          "$ref": "#/$defs/kafkaTopicDefinition"
+        },
+        "downstream_topic": {
+          "$ref": "#/$defs/kafkaTopicDefinition"
+        },
+        "upstream_reply_topic": {
+          "$ref": "#/$defs/kafkaReplyTopicDefinition"
+        },
+        "downstream_reply_topic": {
+          "$ref": "#/$defs/kafkaReplyTopicDefinition"
+        },
+        "transform_mapping": {
+          "$ref": "#/$defs/relativePath"
+        },
+        "response_transform_mapping": {
+          "$ref": "#/$defs/relativePath"
+        },
+        "router_config": {
+          "$ref": "#/$defs/routerConfig"
+        },
+        "correlation_id": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "source": {
+              "enum": ["header", "body_field"],
+              "default": "header"
+            },
+            "field_name": {
+              "type": "string",
+              "default": "correlationId"
+            }
+          }
+        },
+        "partition_key": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "strategy": {
+              "enum": ["field_value", "correlation_id", "round_robin"],
+              "default": "round_robin"
+            },
+            "source": {
+              "type": "string"
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "strategy": {
+                    "const": "field_value"
+                  }
+                },
+                "required": ["strategy"]
+              },
+              "then": {
+                "required": ["source"]
+              }
+            }
+          ]
+        },
+        "reply_timeout_ms": {
+          "type": "integer",
+          "minimum": 1000,
+          "default": 30000
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "pattern": {
+                "const": "router"
+              }
+            },
+            "required": ["pattern"]
+          },
+          "then": {
+            "required": ["router_config"],
+            "not": {
+              "anyOf": [
+                { "required": ["upstream_topic"] },
+                { "required": ["downstream_topic"] },
+                { "required": ["transform_mapping"] },
+                { "required": ["upstream_reply_topic"] },
+                { "required": ["downstream_reply_topic"] },
+                { "required": ["response_transform_mapping"] }
+              ]
+            }
+          },
+          "else": {
+            "required": ["upstream_topic", "downstream_topic", "transform_mapping"],
+            "not": {
+              "required": ["router_config"]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "pattern": {
+                "const": "request-reply"
+              }
+            },
+            "required": ["pattern"]
+          },
+          "then": {
+            "required": [
+              "upstream_reply_topic",
+              "downstream_reply_topic",
+              "response_transform_mapping"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "pattern": {
+                "const": "fire-and-forget"
+              }
+            },
+            "required": ["pattern"]
+          },
+          "then": {
+            "not": {
+              "anyOf": [
+                { "required": ["upstream_reply_topic"] },
+                { "required": ["downstream_reply_topic"] },
+                { "required": ["response_transform_mapping"] }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

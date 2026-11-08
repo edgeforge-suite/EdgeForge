@@ -1,0 +1,50 @@
+{
+  "archetype": "crud",
+  "engine_sha": "109f6385345047013836f1e32b2d4230b9e8ad2b",
+  "generation_input": {
+    "app_archetype": "crud",
+    "app_name": "Generated App CI Smoke",
+    "bounded_context": "ci_smoke",
+    "rules": [
+      "rules/ci-smoke-rules.yaml"
+    ],
+    "schema_version": "2.0",
+    "target_profile": "springboot-standard-enterprise",
+    "upstream_interfaces": [
+      {
+        "mapping": "upstream/record-mapping.yaml",
+        "name": "record-api",
+        "operations": [
+          {
+            "name": "createRecord",
+            "request_sample": "upstream/sample-create-record-request.json",
+            "response_sample": "upstream/sample-create-record-response.json"
+          }
+        ],
+        "spec": "contracts/ci-smoke-openapi.yaml",
+        "system": "CiSmokeSource",
+        "type": "rest-json",
+        "version": "1.0"
+      },
+      {
+        "mapping": "upstream/entry-mapping.yaml",
+        "name": "entry-api",
+        "operations": [
+          {
+            "name": "createEntry",
+            "request_sample": "upstream/sample-create-entry-request.json",
+            "response_sample": "upstream/sample-create-entry-response.json"
+          }
+        ],
+        "spec": "contracts/ci-smoke-openapi.yaml",
+        "system": "CiSmokeSource",
+        "type": "rest-json",
+        "version": "1.0"
+      }
+    ]
+  },
+  "generation_run_id": "maven-assessment-crud-pg-j21",
+  "input_manifest": "examples/input-projects/generated-app-ci-smoke/app-definition.yaml",
+  "input_package_sha256": "23093e681e0370486b475583114e93dd0dd15dc3c20e63199d59ddcf4ada72fd",
+  "target_profile": "springboot-standard-enterprise"
+}

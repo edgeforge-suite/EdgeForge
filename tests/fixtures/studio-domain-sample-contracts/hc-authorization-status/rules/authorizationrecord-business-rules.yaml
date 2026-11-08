@@ -1,0 +1,8 @@
+entity: AuthorizationRecord
+rules:
+- field: status
+  type: allowed-values
+  values:
+  - APPROVED
+  - PENDED
+  - DENIED

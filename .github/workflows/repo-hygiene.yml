@@ -1,0 +1,74 @@
+name: Repo Hygiene
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  absolute-path-guard:
+    name: No committed local home paths
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fail on local home path leaks
+        shell: bash
+        run: |
+          set -euo pipefail
+          needle="/""Users/"
+          if git grep -n -- "$needle" -- .; then
+            echo "Found a committed local macOS home path marker."
+            exit 1
+          fi
+
+  version-tag:
+    name: pyproject version matches latest tag
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Compare pyproject version with latest tag
+        shell: bash
+        run: python3 -m scripts.ci.verify_release_version
+
+  ruff:
+    name: Ruff lint (non-blocking)
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run Ruff
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip install ruff
+          set +e
+          ruff_output="$(ruff check . 2>&1)"
+          ruff_status=$?
+          set -e
+          printf '%s\n' "$ruff_output"
+          if [[ "$ruff_status" -ne 0 ]]; then
+            summary="$(printf '%s\n' "$ruff_output" | grep -E '^Found [0-9]+ errors\\.' || true)"
+            if [[ -z "$summary" ]]; then
+              summary="Ruff reported advisory findings; see job logs."
+            fi
+            echo "::warning title=Ruff advisory::$summary"
+          fi
+          exit 0

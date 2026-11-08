@@ -1,0 +1,29 @@
+{
+  "assessment_time_utc": "2026-10-20T21:07:11.244048Z",
+  "audit_dependency_count": 74,
+  "audit_exit_code": 0,
+  "dependency_count": 74,
+  "engine_source_sha": "232d7d6ccc9458970ee6b7efa8a7189d84b9cdd3",
+  "exclusions": [
+    "local Engine package",
+    "pip/setuptools/wheel bootstrap tools"
+  ],
+  "finding_count": 0,
+  "license_row_count": 74,
+  "lock_sha256": "302d4806b24e99fabdf49057a0cebadf142b271e42b2beefdd71ec3b3d1a625c",
+  "reference_image": "python:3.11.15-bookworm@sha256:a8f8fbe1a0edc9e4dddafa64ba73f7e04be7be5ebc23f332362e779e0a2e4e52",
+  "reference_python": {
+    "libc": "2.36",
+    "machine": "x86_64",
+    "python": "3.11.15",
+    "system": "Linux"
+  },
+  "requirements_sha256": "823a1fd2cf5b65263b1e0efa7c09cb85a9e0e4562888bfb660a955dd75b33e4e",
+  "sbom_component_count": 74,
+  "schema_version": "1.0",
+  "tools": {
+    "cyclonedx_bom": "7.3.0",
+    "pip_audit": "pip-audit 2.9.0",
+    "pip_licenses": "pip-licenses 5.5.5"
+  }
+}

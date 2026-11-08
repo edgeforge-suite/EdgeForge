@@ -1,0 +1,33 @@
+# Adapter-only variant manifest for outbound SOAP canonical invoke_by_id proof.
+#
+# References the adapter_only mapping so it is accepted by the Engine today.
+# Used to:
+#   1. Verify the outbound SOAP client scaffold continues to generate correctly
+#      while the canonical invoke_by_id implementation is in progress.
+#   2. Guard against regressions to the existing adapter-only client generation
+#      path as Slices 1-5 are added.
+#
+app_name: SOAP Outbound Adapter-Only Customer Client
+bounded_context: soap_outbound_canonical_customer
+schema_version: "2.0"
+upstream_interfaces:
+  - name: customer-api
+    system: CRM
+    type: rest-json
+    spec: upstream/customer-api-spec.yaml
+    mapping: upstream/customer-mapping.yaml
+    operations:
+      - name: createCustomer
+        request_sample: upstream/create-customer-request.json
+        response_sample: upstream/customer-response.json
+      - name: getCustomer
+        response_sample: upstream/customer-response.json
+downstream_interfaces:
+  - name: customer-sync-client
+    system: CUSTOMER_CORE
+    type: soap-wsdl
+    wsdl_path: contracts/customer-sync-service.wsdl
+    service: CustomerSyncService
+    port: CustomerSyncServicePort
+    mapping: mappings/customer-soap-outbound-adapter-mapping.yaml
+target_profile: springboot-legacy-compatible

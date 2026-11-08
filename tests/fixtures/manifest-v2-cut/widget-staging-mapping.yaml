@@ -1,0 +1,7 @@
+table: widget_staging
+entity: Widget
+field_mappings:
+  - source: Widget.widgetId
+    target: widget_id
+  - source: Widget.payloadKey
+    target: payload_key

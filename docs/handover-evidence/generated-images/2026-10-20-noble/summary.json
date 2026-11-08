@@ -1,0 +1,38 @@
+{
+  "assessment_helpers_by_case": null,
+  "capacity_continuation": null,
+  "cases": 30,
+  "collector_sha": "c8798275065a8a0b619046707fad053f8a9b9ad1",
+  "continuation": null,
+  "counting": "Scanner counts overlap; repeated case/stage observations are not unique vulnerabilities.",
+  "disposition": "OPEN",
+  "distinct_finding_records": 622,
+  "ended_at_utc": "2026-10-20T05:46:06.228403Z",
+  "excluded": "Images, source/input tarballs, binaries, DB contents and raw logs remain private.",
+  "generator_sha": "c8798275065a8a0b619046707fad053f8a9b9ad1",
+  "generator_sha_semantics": "campaign freeze; actual generators are recorded per case",
+  "generator_shas": [
+    "c8798275065a8a0b619046707fad053f8a9b9ad1"
+  ],
+  "image_replay": "The completed reduced campaign retains three representative final exports; its other 57 exports were removed after validated scans. Any retained failed-campaign archives are separate; their availability is recorded in dated evidence. No general replay promise for historical evidence or removed completed-campaign exports.",
+  "kafka_continuation": null,
+  "match_observations_by_scanner": {
+    "grype": 16590,
+    "trivy": 6150
+  },
+  "release_acceptance": "not established",
+  "runtime_claim": "Health/nonroot startup and bounded read-only GET, not business certification.",
+  "runtime_helper_sha": "c8798275065a8a0b619046707fad053f8a9b9ad1",
+  "runtime_helper_shas": [
+    "c8798275065a8a0b619046707fad053f8a9b9ad1"
+  ],
+  "runtime_helpers_by_case": {
+    "crud-h2-j17": "c8798275065a8a0b619046707fad053f8a9b9ad1",
+    "kafka-router-h2-j17": "c8798275065a8a0b619046707fad053f8a9b9ad1",
+    "passthrough-pg-j21": "c8798275065a8a0b619046707fad053f8a9b9ad1"
+  },
+  "stage_observations": 60,
+  "started_at_utc": "2026-10-20T04:30:55.017678Z",
+  "status": "complete-with-findings",
+  "storage_continuation": null
+}

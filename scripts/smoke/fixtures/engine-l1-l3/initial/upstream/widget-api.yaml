@@ -1,0 +1,68 @@
+openapi: 3.0.0
+info:
+  title: Engine Smoke Widget API
+  version: "1.0"
+paths:
+  /widgets:
+    post:
+      operationId: createWidget
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateWidgetRequest"
+      responses:
+        "201":
+          description: Created widget
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Widget"
+  /widgets/{widgetId}:
+    get:
+      operationId: getWidget
+      parameters:
+        - name: widgetId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Widget
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Widget"
+components:
+  schemas:
+    CreateWidgetRequest:
+      type: object
+      required:
+        - widgetName
+      properties:
+        widgetName:
+          type: string
+          maxLength: 50
+        description:
+          type: string
+          maxLength: 100
+    Widget:
+      type: object
+      required:
+        - widgetId
+        - widgetName
+      properties:
+        widgetId:
+          type: string
+          maxLength: 36
+        widgetName:
+          type: string
+          maxLength: 50
+        status:
+          type: string
+          maxLength: 20
+        description:
+          type: string
+          maxLength: 100

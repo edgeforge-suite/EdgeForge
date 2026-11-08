@@ -1,0 +1,8 @@
+entity: Record
+rules:
+  - field: state
+    type: allowed-values
+    values: [NEW, ACTIVE, CLOSED]
+  - field: state
+    type: default
+    value: NEW

@@ -1,0 +1,45 @@
+openapi: 3.0.3
+info:
+  title: SCT Inst Clearing API
+  version: "1.0"
+paths:
+  /instant-payments:
+    post:
+      operationId: submitInstantPayment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/InstantPaymentRequest"
+      responses:
+        "200":
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/InstantPaymentResponse"
+components:
+  schemas:
+    InstantPaymentRequest:
+      type: object
+      properties:
+        settlementAmount:
+          type: string
+        settlementCurrency:
+          type: string
+        debtorAccount:
+          type: string
+        creditorAccount:
+          type: string
+        creditorFullName:
+          type: string
+        paymentReference:
+          type: string
+    InstantPaymentResponse:
+      type: object
+      properties:
+        txId:
+          type: string
+        status:
+          type: string

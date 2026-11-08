@@ -1,0 +1,21 @@
+table: settlement_stage
+entity: InternationalPayment
+field_mappings:
+  - source: InternationalPayment.InternationalPaymentId
+    target: international_payment_id
+  - source: InternationalPayment.ConsentId
+    target: consent_id
+  - source: InternationalPayment.InstructionIdentification
+    target: instruction_identification
+  - source: InternationalPayment.EndToEndIdentification
+    target: end_to_end_identification
+  - source: InternationalPayment.CurrencyOfTransfer
+    target: currency_of_transfer
+  - source: InternationalPayment.instructedAmount
+    target: instructed_amount
+  - source: InternationalPayment.creditorName
+    target: creditor_name
+  - source: InternationalPayment.Status
+    target: payment_status
+  - source: InternationalPayment.StatusUpdateDateTime
+    target: status_update_ts

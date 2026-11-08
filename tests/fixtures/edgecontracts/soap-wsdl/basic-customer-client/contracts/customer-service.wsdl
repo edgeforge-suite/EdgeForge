@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:tns="urn:edgeforge:examples:customer-soap:v1"
+    targetNamespace="urn:edgeforge:examples:customer-soap:v1">
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:edgeforge:examples:customer-soap:v1"
+               xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               xmlns:tns="urn:edgeforge:examples:customer-soap:v1"
+               elementFormDefault="qualified">
+      <xs:element name="GetCustomerRequest" type="xs:string"/>
+      <xs:element name="GetCustomerResponse" type="xs:string"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCustomerRequestMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerRequest"/>
+  </wsdl:message>
+  <wsdl:message name="GetCustomerResponseMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="CustomerPortType">
+    <wsdl:operation name="getCustomer">
+      <wsdl:input message="tns:GetCustomerRequestMessage"/>
+      <wsdl:output message="tns:GetCustomerResponseMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CustomerSoapBinding" type="tns:CustomerPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getCustomer">
+      <soap:operation soapAction="urn:getCustomer"/>
+      <wsdl:input><soap:body use="literal"/></wsdl:input>
+      <wsdl:output><soap:body use="literal"/></wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CustomerService">
+    <wsdl:port name="CustomerServicePort" binding="tns:CustomerSoapBinding">
+      <soap:address location="https://example.invalid/customer"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,10 @@
+transforms:
+  - source: paymentId
+    target: entryId
+  - source: accountId
+    target: accountRef
+  - source: amount
+    target: amountMinorUnits
+    type_coercion: major_to_minor_units
+  - target: channel
+    constant: "KAFKA_HUB"

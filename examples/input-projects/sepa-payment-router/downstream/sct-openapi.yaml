@@ -1,0 +1,45 @@
+openapi: 3.0.3
+info:
+  title: SCT Clearing API
+  version: "1.0"
+paths:
+  /credit-transfers:
+    post:
+      operationId: submitCreditTransfer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreditTransferRequest"
+      responses:
+        "200":
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CreditTransferResponse"
+components:
+  schemas:
+    CreditTransferRequest:
+      type: object
+      properties:
+        transferAmount:
+          type: string
+        transferCurrency:
+          type: string
+        senderIban:
+          type: string
+        receiverIban:
+          type: string
+        receiverName:
+          type: string
+        reference:
+          type: string
+    CreditTransferResponse:
+      type: object
+      properties:
+        paymentId:
+          type: string
+        status:
+          type: string

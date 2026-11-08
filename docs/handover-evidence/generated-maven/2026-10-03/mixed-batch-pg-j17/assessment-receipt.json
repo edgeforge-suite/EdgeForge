@@ -1,0 +1,82 @@
+{
+  "assessment": {
+    "advisory_database_snapshot": "not supplied",
+    "advisory_service": "https://api.osv.dev",
+    "assessment_inventory_sha256": "22bf22108df6c2750dbb83db4e6f4275661e1279284df67ddbb2033710f3937a",
+    "assessment_time_utc": "2026-10-03T23:51:34.303822+00:00",
+    "exit_code": 1,
+    "findings": 10,
+    "findings_identity_sha256": "5efe3cb77e4ff4f3f9e54fe1f98d4c0ae471e3042e5b86c4072e043c91fcf368",
+    "inventory_coverage": "complete",
+    "normalized_inventory_sha256": "f60f3dfe91ecf32378b44b4b12fcf1baaaa2d72bfef5caf34a2ec2427e128bfe",
+    "normalized_machine_evidence_sha256": "0fe69ed3371005f0762dbfb45b0dc1496af0e6ce6b4c6d5dd00e8b3a2a26aa57",
+    "pom_sha256": "2636ab861b3b895bfb06707bba8efde65380c4d9bd12d77cb59415321212f684",
+    "raw_scanner_stdout_sha256": "a9824815df0e97292f91865163ac79ebf42e0dcd64bf77477f18b3fe0786f755",
+    "resolved_artifacts": 136,
+    "sbom_timestamp_utc": "2026-10-03T23:51:38Z",
+    "scanned_maven_packages": 136,
+    "scanner_exit_code": 1,
+    "source_after_sha256": "4bd00fa6041a4c77932758dd67e0c452c51f1fd70f6760bb70ce0b53e4c3f770",
+    "source_before_sha256": "4bd00fa6041a4c77932758dd67e0c452c51f1fd70f6760bb70ce0b53e4c3f770",
+    "status": "complete",
+    "tools": {
+      "cyclonedx_maven_plugin": "2.9.1",
+      "java": "17.0.18",
+      "java_vendor": "Homebrew",
+      "maven": "3.9.12",
+      "maven_dependency_plugin": "3.8.1",
+      "scanner": [
+        "osv-scanner version: 2.3.8",
+        "osv-scalibr version: 0.4.5",
+        "commit: 408fcd6f8707999a29e7ba45e15809764cf24f67",
+        "built at: 2026-05-08T04:54:35Z"
+      ],
+      "scanner_sha256": "a8cd6507b06239f463a7642430cfd2d154882f150f6e30cdc0653e28dfc34216"
+    }
+  },
+  "case": "mixed-batch-pg-j17",
+  "full_graph_evidence_retained": false,
+  "graph_sha256": "29509035aa0dcf82daebafdff6f5d1765506f25a5eac959dbda8ce591946bdc7",
+  "normalization_version": "1.0",
+  "repeat": {
+    "advisory_database_snapshot": "not supplied",
+    "advisory_service": "https://api.osv.dev",
+    "assessment_inventory_sha256": "22bf22108df6c2750dbb83db4e6f4275661e1279284df67ddbb2033710f3937a",
+    "assessment_time_utc": "2026-10-03T23:51:39.086028+00:00",
+    "exit_code": 1,
+    "findings": 10,
+    "findings_identity_sha256": "5efe3cb77e4ff4f3f9e54fe1f98d4c0ae471e3042e5b86c4072e043c91fcf368",
+    "inventory_coverage": "complete",
+    "normalized_inventory_sha256": "f60f3dfe91ecf32378b44b4b12fcf1baaaa2d72bfef5caf34a2ec2427e128bfe",
+    "normalized_machine_evidence_sha256": "0d344a11d93765b7cad651a03a792b550694ea6d967e31b1208db5dbaeaf7c55",
+    "pom_sha256": "2636ab861b3b895bfb06707bba8efde65380c4d9bd12d77cb59415321212f684",
+    "raw_scanner_stdout_sha256": "a285f17ba3628ab22910d527caf5dde03c64ae9db2e31272501181e7a4c37775",
+    "resolved_artifacts": 136,
+    "sbom_timestamp_utc": "2026-10-03T23:51:42Z",
+    "scanned_maven_packages": 136,
+    "scanner_exit_code": 1,
+    "source_after_sha256": "4bd00fa6041a4c77932758dd67e0c452c51f1fd70f6760bb70ce0b53e4c3f770",
+    "source_before_sha256": "4bd00fa6041a4c77932758dd67e0c452c51f1fd70f6760bb70ce0b53e4c3f770",
+    "status": "complete",
+    "tools": {
+      "cyclonedx_maven_plugin": "2.9.1",
+      "java": "17.0.18",
+      "java_vendor": "Homebrew",
+      "maven": "3.9.12",
+      "maven_dependency_plugin": "3.8.1",
+      "scanner": [
+        "osv-scanner version: 2.3.8",
+        "osv-scalibr version: 0.4.5",
+        "commit: 408fcd6f8707999a29e7ba45e15809764cf24f67",
+        "built at: 2026-05-08T04:54:35Z"
+      ],
+      "scanner_sha256": "a8cd6507b06239f463a7642430cfd2d154882f150f6e30cdc0653e28dfc34216"
+    }
+  },
+  "repeat_completed": true,
+  "repeat_findings_identity_matched": true,
+  "repeat_inventory_matched": true,
+  "repeat_normalized_machine_evidence_matched": false,
+  "representative_case": "m5a-pg-j17",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,150 @@
+[
+  {
+    "path": ".dockerignore",
+    "sha256": "e54b71e43054a1525233df2f40c4472bf6cb04d30bf2d02c41693766f54ce384"
+  },
+  {
+    "path": ".gitignore",
+    "sha256": "efdfd184cf4e2d4be6d085c2f5f7e90464b6ff7fc48e0128656d8c57c4f980e6"
+  },
+  {
+    "path": "Dockerfile",
+    "sha256": "47e01dddc0dbeca50e781415b8f434bb703e77bed151cfecd21e02e3956b37a1"
+  },
+  {
+    "path": "README.md",
+    "sha256": "1e5f496da6f1b4bb7386004f8686bf2fe132876fabeb23e518ad6d700bb0ac1e"
+  },
+  {
+    "path": "agent-context.md",
+    "sha256": "fc020fa76230275d8e08d8f07cbd407cf0af6e5a44e632461dbf5e1a29096125"
+  },
+  {
+    "path": "db/generation-provenance.json",
+    "sha256": "3898722f625c465d1907d46f3ea0328e8d911402ae510f23d99d8b7d2c2225cc"
+  },
+  {
+    "path": "db/schema-baseline.json",
+    "sha256": "49b8b00f7e8fef34f00ebba05650f6163203ef4cca3defe01c4de1156722ddf1"
+  },
+  {
+    "path": "pom.xml",
+    "sha256": "2a4ec5084f9b78edde20d9bc697a015adc50b9ac99e50a8d7ac8bea83826f226"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/SoapCanonicalCustomerApplication.java",
+    "sha256": "5be1d761a17bd5bbed16984c08a865d6fcd56a643a55a988c5913541f4b79c0c"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/adapter/inbound/CreateCustomerRequest.java",
+    "sha256": "06a9c0670e80fe96e3ca6b203f8a5c94e487c008dff4f1ff3de5c6003d2db403"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/adapter/inbound/CreateCustomerResponse.java",
+    "sha256": "2610a5fc78f80b57b6d45c116069b8d1f5abd8cdc7b21c89ee7974ef82987ee0"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/adapter/inbound/CustomerController.java",
+    "sha256": "306e884d798cbff7fdadae6685e989acf04e07843585ad75ce8fcf2f17b2da8b"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/adapter/inbound/CustomerResponse.java",
+    "sha256": "f50760d7954b55d15dea64305642003d1624ec5a9cb142693b6df1bf2df3b817"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/adapter/inbound/CustomerUpdateRequest.java",
+    "sha256": "044514b7ec66211e1a84ae7773299b17a12e9c3287c894ca0c6849dd37c28ae9"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/adapter/inbound/GetCustomerRequest.java",
+    "sha256": "735be3ebc2fce74fdff34632946b189228e75da81d1bf747c697d6342ed8590f"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/adapter/inbound/GetCustomerResponse.java",
+    "sha256": "357db5d7a35fbc4ae1a74fab399b20358c15d36ebcb00fb5f60246a98c6f7e20"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/adapter/soap/CustomerSoapServiceCanonicalSoapHandler.java",
+    "sha256": "d2bbda218dbcdf1e75a17b9ec8d76db4dd0689aad7bbd0d7b995e68be05659fd"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/adapter/soap/CustomerSoapServiceSoapEndpoint.java",
+    "sha256": "ff8874a754ce61490ae13f876cce28b9764d84df9895f31d0d39d19fb58f69d6"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/adapter/soap/CustomerSoapServiceSoapHandler.java",
+    "sha256": "c5b4612ac215def8b2e6473f967fe6662f419a675d35edfba2f9c5aa5c00b410"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/adapter/soap/SoapEndpointConfig.java",
+    "sha256": "06505ff46e8aca74798ab7b271224873a7c8383985344c4138fb3fffd7b88f8b"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/config/AuditConfig.java",
+    "sha256": "90a37cca82446847dbd6550111821ac03e60d6fe8fb15c853a1fa79e87efb128"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/config/DatasourceCredentialConfig.java",
+    "sha256": "0b536894d613c12a4dc1fc1871474f0dc77f5c668f384962d90ae5867f6f95c8"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/config/SecurityHeadersFilter.java",
+    "sha256": "360399276476643c7008a062b7d236514cd6870fa13785b03e0af8e5742021ff"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/domain/Customer.java",
+    "sha256": "acf760599853bd526ac9e52955db39636fcf03c75e45934ab4f6ff8a501ad4a7"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/exception/DuplicateResourceException.java",
+    "sha256": "11895c816cfd4095e536df8f046036feafb0aa9b097da9d553296a0c61fdd570"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/exception/ErrorResponse.java",
+    "sha256": "3d2abeddf150565ec25d37bc211b03396e0d6c3b6e46dde416aded25a270c7e1"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/exception/GlobalExceptionHandler.java",
+    "sha256": "1751d0cc6138b25ee149124cf94dae3d0647872511addc4296f1ceb999972d1d"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/exception/ResourceNotFoundException.java",
+    "sha256": "880cbd733c0ef448c12886a9ed7452fb2ddca51822a579496afe24c3b588aa40"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/exception/SoapOperationMappingException.java",
+    "sha256": "ff161048ffe646c62c74b4cbb3484bfc7690e2dbfccbb8659794ba8def69f8fc"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/repository/CustomerRepository.java",
+    "sha256": "043763d1bc204f0b613496ea0368162174ecdf2787b40b6381d38794fe75ba1b"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/service/CustomerService.java",
+    "sha256": "9f09f391a480e0af741cab6dbafd6f71afd1c911264ee565d2e6f8afb5beb232"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/soap_canonical_customer/service/CustomerServiceBase.java",
+    "sha256": "67a9e7cb55658636d6cc339c0c992de4ef51d5e4af80cc20d94c07459f064479"
+  },
+  {
+    "path": "src/main/resources/application.yaml",
+    "sha256": "5f6ce384bcb095ffd36ab3fbdd1dd9b19fb5884b4f852499cc80a82ce56fd0bd"
+  },
+  {
+    "path": "src/main/resources/db/migration/V1__create_customer_table.sql",
+    "sha256": "cab95b146e0f833b991550dc06b4303621e8904112d6b52eee34fd5cbc0ec162"
+  },
+  {
+    "path": "src/main/resources/soap-contracts/customer-soap-service/contracts/customer-service-schema-1.xsd",
+    "sha256": "bf4873a8a889e276846082059d1d6633f4f8a0a9d9f83d5af8f7e3d7aec9a334"
+  },
+  {
+    "path": "src/main/resources/soap-contracts/customer-soap-service/contracts/customer-service.wsdl",
+    "sha256": "b3da9d0bdedca494edca9633d57451551385c95619f8a6683858e11e0fdeca29"
+  },
+  {
+    "path": "src/test/java/com/appbuilder/soap_canonical_customer/SoapCanonicalCustomerApplicationTest.java",
+    "sha256": "53abc3df91d842714a06d1d4358125a265b362b0c002f8404a2713dd4411cd4d"
+  }
+]

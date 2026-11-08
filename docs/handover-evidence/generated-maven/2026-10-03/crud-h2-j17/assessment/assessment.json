@@ -1,0 +1,95 @@
+{
+  "advisory_database_snapshot": "not supplied",
+  "advisory_service": "https://api.osv.dev",
+  "affected_packages": 3,
+  "assessment_time_utc": "2026-10-03T23:44:42.769748+00:00",
+  "exit_code": 1,
+  "findings": 10,
+  "inventory_coverage": "complete",
+  "inventory_sha256": "5d8820238045da900696c26b70f003980b7e6f5bf10d8e8963c98dac40a2d299",
+  "maven_warnings": [
+    "[WARNING] Unknown keyword meta:enum - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword",
+    "[WARNING] Unknown keyword deprecated - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword"
+  ],
+  "pom_sha256": "adf53204f9329fb1341b51b12b9e17003021ede70abdd2f581e6fca29f45e269",
+  "provenance": {
+    "archetype": "crud",
+    "engine_sha": "109f6385345047013836f1e32b2d4230b9e8ad2b",
+    "generation_input": {
+      "app_archetype": "crud",
+      "app_name": "Generated App CI Smoke",
+      "bounded_context": "ci_smoke",
+      "rules": [
+        "rules/ci-smoke-rules.yaml"
+      ],
+      "schema_version": "2.0",
+      "target_profile": "springboot-legacy-compatible",
+      "upstream_interfaces": [
+        {
+          "mapping": "upstream/record-mapping.yaml",
+          "name": "record-api",
+          "operations": [
+            {
+              "name": "createRecord",
+              "request_sample": "upstream/sample-create-record-request.json",
+              "response_sample": "upstream/sample-create-record-response.json"
+            }
+          ],
+          "spec": "contracts/ci-smoke-openapi.yaml",
+          "system": "CiSmokeSource",
+          "type": "rest-json",
+          "version": "1.0"
+        },
+        {
+          "mapping": "upstream/entry-mapping.yaml",
+          "name": "entry-api",
+          "operations": [
+            {
+              "name": "createEntry",
+              "request_sample": "upstream/sample-create-entry-request.json",
+              "response_sample": "upstream/sample-create-entry-response.json"
+            }
+          ],
+          "spec": "contracts/ci-smoke-openapi.yaml",
+          "system": "CiSmokeSource",
+          "type": "rest-json",
+          "version": "1.0"
+        }
+      ]
+    },
+    "generation_run_id": "maven-assessment-crud-h2-j17",
+    "input_manifest": "examples/input-projects/generated-app-ci-smoke/app-definition.yaml",
+    "input_package_sha256": "d4b08d26ff5d406fe237322077c517dbac7ee801f0236fe29f0454a32fc57655",
+    "target_profile": "springboot-legacy-compatible"
+  },
+  "raw_scanner_stdout_sha256": "8a9ea456572fd8e260230112f6ea08bd056f361e7195f3091dee36b7ff9b861b",
+  "release_acceptance": "not established",
+  "resolved_artifacts": 127,
+  "scanned_maven_packages": 127,
+  "scanner_exit_code": 1,
+  "scopes": [
+    "compile",
+    "provided",
+    "runtime",
+    "system",
+    "test"
+  ],
+  "source_after_sha256": "6a0e60318ff47ad15358e30460dfba309559a6a94fdc6e9e9523e0fdc356b74c",
+  "source_before_sha256": "6a0e60318ff47ad15358e30460dfba309559a6a94fdc6e9e9523e0fdc356b74c",
+  "source_unchanged": true,
+  "status": "complete",
+  "tools": {
+    "cyclonedx_maven_plugin": "2.9.1",
+    "java": "17.0.18",
+    "java_vendor": "Homebrew",
+    "maven": "3.9.12",
+    "maven_dependency_plugin": "3.8.1",
+    "scanner": [
+      "osv-scanner version: 2.3.8",
+      "osv-scalibr version: 0.4.5",
+      "commit: 408fcd6f8707999a29e7ba45e15809764cf24f67",
+      "built at: 2026-05-08T04:54:35Z"
+    ],
+    "scanner_sha256": "a8cd6507b06239f463a7642430cfd2d154882f150f6e30cdc0653e28dfc34216"
+  }
+}

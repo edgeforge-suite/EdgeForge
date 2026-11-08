@@ -1,0 +1,134 @@
+[
+  {
+    "path": ".dockerignore",
+    "sha256": "648b6f4f9996a4332154c9138d35b342093736cf205b70d5666c840f705fcfaa"
+  },
+  {
+    "path": ".gitignore",
+    "sha256": "45fe742302436504918e274a1a1609d254c7cb6101a29aae3fc96dca61da01f0"
+  },
+  {
+    "path": "Dockerfile",
+    "sha256": "7c533b16a61c59fcfa3fd19d1f8dcb4e900246794883d0bc16e168f7303ee320"
+  },
+  {
+    "path": "README.md",
+    "sha256": "1e0b1c3c0bf23f5a6735ac899600996abbcefa4bdac32b1b123a75e35607b2b8"
+  },
+  {
+    "path": "agent-context.md",
+    "sha256": "65f32982e82e923a58a3d16155b770c7e1e4a2c0d1e5cd6291fa20a1fc094b18"
+  },
+  {
+    "path": "db/generation-provenance.json",
+    "sha256": "ab0277dca3fb2e8438532494adc5f863770afc982868fa2f0c5fe179ae14ffe2"
+  },
+  {
+    "path": "db/schema-baseline.json",
+    "sha256": "b81fdfc68b6ddb8fef59d8f2b29f4046bc06940c33d0dbc91fbe66f7008dce3f"
+  },
+  {
+    "path": "pom.xml",
+    "sha256": "dfc2a4a61f79ad535d16519cb03643dc96c4834194c5156284a6efe8b96cb4b9"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/m5a_run_semantics/M5aRunSemanticsApplication.java",
+    "sha256": "c5d85cb6bf7c9a7388c6a430802d10ad7b97d08fca880de67768b7593d517e86"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/m5a_run_semantics/adapter/inbound/BatchTriggerController.java",
+    "sha256": "4f6300b5600c429c09661378eefc938c1c03ef0defb0046a394f649982dd81a8"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/m5a_run_semantics/adapter/inbound/WidgetController.java",
+    "sha256": "5ddd1ad1febe40db446542601c172af3a6039cf396952496ef78a37a3dc04cf2"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/m5a_run_semantics/adapter/inbound/WidgetCreateRequest.java",
+    "sha256": "6a18e1270c7901e38cba900074c07f165520d54c829f46e616b3aa4428acf02d"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/m5a_run_semantics/adapter/inbound/WidgetResponse.java",
+    "sha256": "f259c55af17fade6d697d5396babd1a903171923744ca381ddcbc97028d778bf"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/m5a_run_semantics/adapter/inbound/WidgetUpdateRequest.java",
+    "sha256": "088582c3a77f3f305214287d972de9289c7b774a006c5a0b34e86a468a6059cc"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/m5a_run_semantics/adapter/outbound/WidgetStagingWriter.java",
+    "sha256": "a88b5cfbb2a259a54de888158137f5c463f39742f60c0db185c3d0650c7f1aaa"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/m5a_run_semantics/batch/WidgetEodBatchJob.java",
+    "sha256": "eac677dda9c040bcac5fed667d07d970df6d48cae91438379182a33747a32f29"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/m5a_run_semantics/config/AuditConfig.java",
+    "sha256": "13d91b16e3e405a320f199834a3b3c03bfa11aa9eea67260c38a8f1658454195"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/m5a_run_semantics/config/DatasourceCredentialConfig.java",
+    "sha256": "af70d40f17508a894a995dbdf9cdc08bf34eb655999add841997ece431533560"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/m5a_run_semantics/config/SecurityHeadersFilter.java",
+    "sha256": "ea552b209535b943094fc21999fdf85c69a2009f25fb818fd5e75488558cace3"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/m5a_run_semantics/domain/Widget.java",
+    "sha256": "26860baf2f56ab67f330e6ba542222afaefc683b602a74e535529c469903a5e9"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/m5a_run_semantics/exception/DuplicateResourceException.java",
+    "sha256": "6d4034281a0ccb692809c43aa8438a23e8bfee888a81c6b74c991eaea2fb80bf"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/m5a_run_semantics/exception/ErrorResponse.java",
+    "sha256": "5ad0bb417bcd62eaeefb32c939a44aab4d9ef158c43070551485da1337546522"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/m5a_run_semantics/exception/GlobalExceptionHandler.java",
+    "sha256": "386d41c3c6ce621ed79a36d9f45bff8224aea1e466932d26d0f99a79a8d4ad2f"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/m5a_run_semantics/exception/ResourceNotFoundException.java",
+    "sha256": "7a16248fc5a03a3ec06077a69d994e1d9ce8621201ce0d347e948b2685e19f17"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/m5a_run_semantics/repository/WidgetRepository.java",
+    "sha256": "bff23d9646c8975f972a4dc2d6b1f26ad9cc57193c1333ca798703f53a3b0a69"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/m5a_run_semantics/service/WidgetService.java",
+    "sha256": "01cda60bc82db70b0a0c01c8f543a82cd9578ea517b026a698331ad63ced4b8b"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/m5a_run_semantics/service/WidgetServiceBase.java",
+    "sha256": "79e097eb37ed7feaa055cf48c65a94d27536638c9045234818a3fe4dc65e8df0"
+  },
+  {
+    "path": "src/main/resources/application.yaml",
+    "sha256": "debdd9fb25764336ff242bb15a2d5b6619de77cfb69f74eee596638252669d43"
+  },
+  {
+    "path": "src/main/resources/db/migration/V1__create_widget_table.sql",
+    "sha256": "c41c59beda7db28358f443551339f6a4ebf52892f8469406a288d169d6ff9049"
+  },
+  {
+    "path": "src/main/resources/db/migration/V2__create_widget_staging_table.sql",
+    "sha256": "edebe46e9d873e019045e56811179009f5f8db2f3d1e90e7b55a5ee06fad0b42"
+  },
+  {
+    "path": "src/main/resources/db/migration/V3__create_pkg_batch_metadata.sql",
+    "sha256": "d085af2fdc1e7f89ed61f63cce0cbe0a78e3af9e9edc678584c7c04bfac995af"
+  },
+  {
+    "path": "src/main/resources/db/migration/V4__add_m5a_staging_001_unique.sql",
+    "sha256": "885aa4a04c9aa4e7b73605ccfe87bb356f78af3050276afdfadcb81c7c46e257"
+  },
+  {
+    "path": "src/test/java/com/appbuilder/m5a_run_semantics/M5aRunSemanticsApplicationTest.java",
+    "sha256": "bf4e322300a1db8a0e99f1574b9c052a6ec8fa8a598226029fdfc3083edd7577"
+  }
+]

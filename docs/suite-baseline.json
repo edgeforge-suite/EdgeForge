@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "suite_baseline": "v4.1.0",
+  "purpose": "Lean suite baseline SSOT for enterprise handover cleanup.",
+  "notes": [
+    "Core repos are Engine, Studio, and KS-KA.",
+    "TestBench and shared-specs are optional import repos; pins are recorded for traceability only.",
+    "License ownership remains pending adopter legal decision tracked as roadmap G1."
+  ],
+  "repos": [
+    {
+      "name": "EdgeForge Engine",
+      "tag": "v4.1.0",
+      "sha": "8f758f486d5959f59c8a4c2b56b44e499bb2b5ea",
+      "package_version": "4.1.0",
+      "evidence_status": "L5 hermetic acceptance green; handover evidence present",
+      "owner": "Engine"
+    },
+    {
+      "name": "EdgeForge Studio",
+      "tag": "v4.1.0",
+      "sha": "6537a75328531a948983a940970501bd6be0cbd3",
+      "package_version": "not_declared",
+      "evidence_status": "L5 hermetic acceptance green for regen-preview UX",
+      "owner": "Studio"
+    },
+    {
+      "name": "EdgeForge KS-KA",
+      "tag": "v4.0.0",
+      "sha": "11aed4431815b2a06ce22a5cb388f0413a9e24d7",
+      "package_version": "1.0.0",
+      "evidence_status": "L5 isolation green; unchanged at suite v4.1.0",
+      "owner": "KS-KA"
+    },
+    {
+      "name": "EdgeForge TestBench",
+      "tag": "main",
+      "sha": "ee0409679bb3b0695efd540d6c0a6ff98e19e7dd",
+      "package_version": "1.0.0",
+      "evidence_status": "optional import repo; not required for core v4.1.0 baseline",
+      "owner": "TestBench"
+    },
+    {
+      "name": "edgeforge-shared-specs",
+      "tag": "main",
+      "sha": "26643a7170595940fe7ca53ed394a565b611a192",
+      "package_version": "not_declared",
+      "evidence_status": "optional import repo; distribution model pending adopter decision G6",
+      "owner": "shared-specs"
+    }
+  ]
+}

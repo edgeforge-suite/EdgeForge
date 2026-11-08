@@ -1,0 +1,27 @@
+app_name: SEPA Payment Router
+bounded_context: payments
+schema_version: "2.0"
+app_archetype: passthrough-router
+target_profile: springboot-legacy-compatible
+
+upstream_interfaces:
+  - name: internal-payment-api
+    type: rest-json
+    spec: upstream/internal-payment-openapi.yaml
+
+downstream_interfaces:
+  - name: sct-inst-api
+    system: SCT_INST
+    type: rest-json
+    spec: downstream/sct-inst-openapi.yaml
+  - name: sct-api
+    system: SCT
+    type: rest-json
+    spec: downstream/sct-openapi.yaml
+  - name: sdd-api
+    system: SDD
+    type: rest-json
+    spec: downstream/sdd-openapi.yaml
+
+rules:
+  - rules/sepa-routing.yaml

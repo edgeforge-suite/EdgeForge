@@ -1,0 +1,36 @@
+{
+  "baseline_generated_source_count": 0,
+  "checks": [
+    {
+      "detail": "no authoring-source package paths are present",
+      "name": "repository-boundary"
+    },
+    {
+      "detail": "no suite runtime imports are present",
+      "name": "java-imports"
+    },
+    {
+      "detail": "no generator-owned/local Maven dependency; project=com.appbuilder:kafka-preview-proof",
+      "name": "maven-boundary"
+    },
+    {
+      "detail": "not emitted for this archetype",
+      "name": "schema-baseline"
+    },
+    {
+      "detail": ".gitignore and .dockerignore are present",
+      "name": "repository-hygiene"
+    },
+    {
+      "detail": "no absolute author-machine path is embedded",
+      "name": "author-paths"
+    },
+    {
+      "detail": "not present yet; packaged boundary check deferred",
+      "name": "packaged-jar"
+    }
+  ],
+  "package": "kafka-mixed-h2-j17",
+  "packaged_jar": null,
+  "status": "passed"
+}

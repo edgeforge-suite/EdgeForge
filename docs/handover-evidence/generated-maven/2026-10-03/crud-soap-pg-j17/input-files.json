@@ -1,0 +1,30 @@
+[
+  {
+    "path": "app-definition.yaml",
+    "sha256": "ae67ffdfcadb6865b890bf9d89dce1bab0fd6b783f77392d296ffe1617f3c49e"
+  },
+  {
+    "path": "contracts/customer-service.wsdl",
+    "sha256": "b491b47aee290e3ca801e4c4fd07e8fd78acb6a87479454e3d670fce7823d2da"
+  },
+  {
+    "path": "mappings/customer-soap-operation-mapping.yaml",
+    "sha256": "4a227d0eb8ad8e794c3cbca28fae84a06bcf0ea5fe4c68f93145af3f88ebdab9"
+  },
+  {
+    "path": "upstream/create-customer-request.json",
+    "sha256": "41f3c59745718714f48a6f51df0dbc8a9cd51e395a62451500559acc9c4fd240"
+  },
+  {
+    "path": "upstream/customer-api-spec.yaml",
+    "sha256": "ba1ea6162092a8660febaf69c4b3263587240562af8af4761564eda8a75667bd"
+  },
+  {
+    "path": "upstream/customer-mapping.yaml",
+    "sha256": "61cf61aa514eb5c849b730e5992e19ac52ff248edb31d486da6c9a0ba1971087"
+  },
+  {
+    "path": "upstream/customer-response.json",
+    "sha256": "3734474333d21bebc4b4b9a28dcf4b37412fb882866df6ab67b8c86f5803e01c"
+  }
+]

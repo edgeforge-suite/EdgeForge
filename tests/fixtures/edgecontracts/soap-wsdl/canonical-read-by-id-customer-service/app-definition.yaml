@@ -1,0 +1,23 @@
+app_name: SOAP Canonical Customer Service
+bounded_context: soap_canonical_customer
+schema_version: "2.0"
+upstream_interfaces:
+  - name: customer-api
+    system: CRM
+    type: rest-json
+    spec: upstream/customer-api-spec.yaml
+    mapping: upstream/customer-mapping.yaml
+    operations:
+      - name: createCustomer
+        request_sample: upstream/create-customer-request.json
+        response_sample: upstream/customer-response.json
+      - name: getCustomer
+        response_sample: upstream/customer-response.json
+  - name: customer-soap-service
+    system: CORE
+    type: soap-wsdl
+    wsdl_path: contracts/customer-service.wsdl
+    service: CustomerService
+    port: CustomerServicePort
+    mapping: mappings/customer-soap-operation-mapping.yaml
+target_profile: springboot-legacy-compatible

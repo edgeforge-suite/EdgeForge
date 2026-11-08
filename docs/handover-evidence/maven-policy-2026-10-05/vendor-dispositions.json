@@ -1,0 +1,1171 @@
+{
+  "advisories": [
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "at.yawk.lz4:lz4-java",
+          "reported_affected_range": "<= 1.11.3",
+          "reported_patched_versions": "1.11.4",
+          "resolved_versions": [
+            "1.11.4"
+          ]
+        }
+      ],
+      "cve_id": null,
+      "id": "GHSA-mcr4-qmvw-px4g",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2026-09-25T18:11:24Z",
+      "source": "vendor-sources/lz4-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-09-25T18:11:24Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "at.yawk.lz4:lz4-java",
+          "reported_affected_range": "<= 1.11.3",
+          "reported_patched_versions": "1.11.4",
+          "resolved_versions": [
+            "1.11.4"
+          ]
+        }
+      ],
+      "cve_id": null,
+      "id": "GHSA-343h-94h5-c4wr",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2026-09-25T18:11:23Z",
+      "source": "vendor-sources/lz4-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-09-25T18:14:31Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "at.yawk.lz4:lz4-java",
+          "reported_affected_range": "<= 1.11.3",
+          "reported_patched_versions": "1.11.4",
+          "resolved_versions": [
+            "1.11.4"
+          ]
+        }
+      ],
+      "cve_id": null,
+      "id": "GHSA-gm45-99xc-r7wv",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2026-09-25T18:11:21Z",
+      "source": "vendor-sources/lz4-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-09-25T18:13:26Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "at.yawk.lz4:lz4-java",
+          "reported_affected_range": "<= 1.11.1",
+          "reported_patched_versions": "1.11.2",
+          "resolved_versions": [
+            "1.11.4"
+          ]
+        }
+      ],
+      "cve_id": null,
+      "id": "GHSA-4v53-57pg-c464",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2026-08-06T18:24:35Z",
+      "source": "vendor-sources/lz4-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-08-06T18:24:35Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "at.yawk.lz4:lz4-java",
+          "reported_affected_range": "<= 1.11.1",
+          "reported_patched_versions": "1.11.2",
+          "resolved_versions": [
+            "1.11.4"
+          ]
+        }
+      ],
+      "cve_id": null,
+      "id": "GHSA-6cx8-rjf8-pr8g",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2026-08-06T18:24:22Z",
+      "source": "vendor-sources/lz4-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-08-06T18:24:22Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "at.yawk.lz4:lz4-java",
+          "reported_affected_range": "<= 1.11.0",
+          "reported_patched_versions": "1.11.1",
+          "resolved_versions": [
+            "1.11.4"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2026-59949",
+      "id": "GHSA-xx22-p4ch-683r",
+      "in_historical_18": true,
+      "owner": "Engine maintainer",
+      "published_at": "2026-07-06T09:51:02Z",
+      "source": "vendor-sources/lz4-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-07-07T19:45:08Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "at.yawk.lz4:lz4-java",
+          "reported_affected_range": "<= 1.10.0",
+          "reported_patched_versions": "1.10.1",
+          "resolved_versions": [
+            "1.11.4"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2025-66566",
+      "id": "GHSA-cmp6-m4wj-q63q",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2025-12-05T08:53:09Z",
+      "source": "vendor-sources/lz4-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2025-12-05T14:10:07Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-core",
+          "reported_affected_range": ">= 2.8.0, <= 2.18.10",
+          "reported_patched_versions": "2.18.11",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-core",
+          "reported_affected_range": ">= 2.19.0, <= 2.21.6",
+          "reported_patched_versions": "2.21.7",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-core",
+          "reported_affected_range": ">= 2.22.0, <= 2.22.2",
+          "reported_patched_versions": "2.22.3",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-core",
+          "reported_affected_range": ">= 3.0.0, <= 3.1.6",
+          "reported_patched_versions": "3.1.7",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-core",
+          "reported_affected_range": ">= 3.2.0, <= 3.2.2",
+          "reported_patched_versions": "3.2.3",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2026-89425",
+      "id": "GHSA-7hhh-6rmp-j9qf",
+      "in_historical_18": true,
+      "owner": "Engine maintainer",
+      "published_at": "2026-09-22T04:08:54Z",
+      "source": "vendor-sources/jackson-core-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-09-22T04:08:54Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-core",
+          "reported_affected_range": ">= 2.17.0, <= 2.18.10",
+          "reported_patched_versions": "2.18.11",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-core",
+          "reported_affected_range": ">= 2.19.0, <= 2.21.6",
+          "reported_patched_versions": "2.21.7",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-core",
+          "reported_affected_range": ">= 2.22.0, <= 2.22.2",
+          "reported_patched_versions": "2.22.3",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-core",
+          "reported_affected_range": ">= 3.0.0, <= 3.1.6",
+          "reported_patched_versions": "3.1.7",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-core",
+          "reported_affected_range": ">= 3.2.0, <= 3.2.1",
+          "reported_patched_versions": "3.2.2",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2026-89407",
+      "id": "GHSA-p6pp-m3f8-5c89",
+      "in_historical_18": true,
+      "owner": "Engine maintainer",
+      "published_at": "2026-09-22T04:07:10Z",
+      "source": "vendor-sources/jackson-core-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-10-01T18:45:54Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-core",
+          "reported_affected_range": ">= 2.16.0, <= 2.18.9",
+          "reported_patched_versions": "2.18.10",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-core",
+          "reported_affected_range": ">= 2.19.0, <= 2.21.5",
+          "reported_patched_versions": "2.21.6",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-core",
+          "reported_affected_range": ">= 2.22.0, <= 2.22.1",
+          "reported_patched_versions": "2.22.2",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-core",
+          "reported_affected_range": ">= 3.0.0, <= 3.1.5",
+          "reported_patched_versions": "3.1.6",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-core",
+          "reported_affected_range": ">= 3.2.0, <= 3.2.1",
+          "reported_patched_versions": "3.2.2",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2026-68498",
+      "id": "GHSA-649p-m576-vr99",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2026-09-12T03:18:14Z",
+      "source": "vendor-sources/jackson-core-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-09-12T03:18:14Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-core",
+          "reported_affected_range": "< 2.18.8",
+          "reported_patched_versions": "2.18.8",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-core",
+          "reported_affected_range": ">= 2.19.0, < 2.21.4",
+          "reported_patched_versions": "2.21.4",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-core",
+          "reported_affected_range": ">=3.0.0, < 3.1.4",
+          "reported_patched_versions": "3.1.4",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        }
+      ],
+      "cve_id": null,
+      "id": "GHSA-r7wm-3cxj-wff9",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2026-07-10T23:27:54Z",
+      "source": "vendor-sources/jackson-core-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-07-11T08:23:52Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "tools.jackson.core:jackson-core",
+          "reported_affected_range": ">= 3.0.0, < 3.1.1",
+          "reported_patched_versions": "3.1.1",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-core",
+          "reported_affected_range": ">=2.16.0, < 2.18.7",
+          "reported_patched_versions": "2.18.7",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-core",
+          "reported_affected_range": ">= 2.19.0, < 2.21.2",
+          "reported_patched_versions": "2.21.2",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        }
+      ],
+      "cve_id": null,
+      "id": "GHSA-2m67-wjpj-xhg9",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2026-04-01T21:50:00Z",
+      "source": "vendor-sources/jackson-core-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-07-22T13:59:06Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "tools.jackson.core:jackson-core",
+          "reported_affected_range": "3.0.0",
+          "reported_patched_versions": "3.1.0",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2026-29062",
+      "id": "GHSA-6v53-7c9g-w56r",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2026-03-03T21:55:30Z",
+      "source": "vendor-sources/jackson-core-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-03-03T21:55:30Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "tools.jackson.core:jackson-core",
+          "reported_affected_range": "3.0.0 - 3.0.4",
+          "reported_patched_versions": "3.1.0",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-core",
+          "reported_affected_range": "2.0.0 - 2.18.5",
+          "reported_patched_versions": "2.18.6",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-core",
+          "reported_affected_range": "2.19.0 - 2.21.0",
+          "reported_patched_versions": "2.21.1",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        }
+      ],
+      "cve_id": null,
+      "id": "GHSA-72hv-8253-57qq",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2026-02-26T19:14:26Z",
+      "source": "vendor-sources/jackson-core-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-03-05T00:38:54Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-core",
+          "reported_affected_range": "<2.15.0",
+          "reported_patched_versions": "2.15.0",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2025-52999",
+      "id": "GHSA-h46c-h94j-95f3",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2025-06-25T16:43:06Z",
+      "source": "vendor-sources/jackson-core-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2025-06-25T16:43:06Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-core",
+          "reported_affected_range": ">=2.0.0, <2.13.0",
+          "reported_patched_versions": "2.13.0",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2025-49128",
+      "id": "GHSA-wf8f-6423-gfxg",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2025-06-06T20:47:54Z",
+      "source": "vendor-sources/jackson-core-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2025-06-06T20:47:54Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.0.0, <= 2.18.10",
+          "reported_patched_versions": "2.18.11",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.19.0, <= 2.21.6",
+          "reported_patched_versions": "2.21.7",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.22.0, <= 2.22.2",
+          "reported_patched_versions": "2.22.3",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 3.0.0, <= 3.1.6",
+          "reported_patched_versions": "3.1.7",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 3.2.0, <= 3.2.2",
+          "reported_patched_versions": "3.2.3",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2026-91776",
+      "id": "GHSA-wv8q-qhhj-9h54",
+      "in_historical_18": true,
+      "owner": "Engine maintainer",
+      "published_at": "2026-09-22T04:10:15Z",
+      "source": "vendor-sources/jackson-databind-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-09-23T02:15:08Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.5.0, <= 2.18.10",
+          "reported_patched_versions": "2.18.11",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.19.0, <= 2.21.6",
+          "reported_patched_versions": "2.21.7",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.22.0, <= 2.22.2",
+          "reported_patched_versions": "2.22.3",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 3.0.0, <= 3.1.6",
+          "reported_patched_versions": "3.1.7",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 3.2.0, <= 3.2.2",
+          "reported_patched_versions": "3.2.3",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2026-91777",
+      "id": "GHSA-cxp5-3px4-pw24",
+      "in_historical_18": true,
+      "owner": "Engine maintainer",
+      "published_at": "2026-09-22T04:10:50Z",
+      "source": "vendor-sources/jackson-databind-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-09-23T02:21:28Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "tools.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 3.0.0, < 3.1.6",
+          "reported_patched_versions": "3.1.6",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 3.2.0, < 3.2.2",
+          "reported_patched_versions": "3.2.2",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.11.0, < 2.18.10",
+          "reported_patched_versions": "2.18.10",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.19.0, < 2.21.6",
+          "reported_patched_versions": "2.21.6",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.22.0, < 2.22.2",
+          "reported_patched_versions": "2.22.2",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2026-83557",
+      "id": "GHSA-gx83-3vf8-gh7j",
+      "in_historical_18": true,
+      "owner": "Engine maintainer",
+      "published_at": "2026-09-01T03:04:35Z",
+      "source": "vendor-sources/jackson-databind-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-09-01T03:04:35Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "tools.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 3.0.0, < 3.1.6",
+          "reported_patched_versions": "3.1.6",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 3.2.0, < 3.2.2",
+          "reported_patched_versions": "3.2.2",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.8.0, < 2.18.10",
+          "reported_patched_versions": "2.18.10",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.19.0, < 2.21.6",
+          "reported_patched_versions": "2.21.6",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.22.0, < 2.22.2",
+          "reported_patched_versions": "2.22.2",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2026-19032",
+      "id": "GHSA-wjgm-6hv5-3cvf",
+      "in_historical_18": true,
+      "owner": "Engine maintainer",
+      "published_at": "2026-08-21T18:23:44Z",
+      "source": "vendor-sources/jackson-databind-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-09-01T03:15:54Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "tools.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 3.2.0, < 3.2.2",
+          "reported_patched_versions": "3.2.2",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 3.0.0, < 3.1.6",
+          "reported_patched_versions": "3.1.6",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.14.0, < 2.18.10",
+          "reported_patched_versions": "2.18.10",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.19.0, < 2.21.6",
+          "reported_patched_versions": "2.21.6",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.22.0, < 2.22.2",
+          "reported_patched_versions": "2.22.2",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2026-68497",
+      "id": "GHSA-q4xh-88c3-wmh7",
+      "in_historical_18": true,
+      "owner": "Engine maintainer",
+      "published_at": "2026-08-21T18:25:33Z",
+      "source": "vendor-sources/jackson-databind-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-08-21T18:25:33Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.0.0, < 2.18.9",
+          "reported_patched_versions": "2.18.9",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">=2.19.0, < 2.21.5",
+          "reported_patched_versions": "2.21.5",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.22.0, < 2.22.1",
+          "reported_patched_versions": "2.21.1",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-databind",
+          "reported_affected_range": ">=3.0.0, < 3.1.5",
+          "reported_patched_versions": "3.1.5",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-databind",
+          "reported_affected_range": ">=3.2.0, <3.2.1",
+          "reported_patched_versions": "3.2.1",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2026-77310",
+      "id": "GHSA-vvgp-rfg2-7rr6",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2026-08-21T18:19:10Z",
+      "source": "vendor-sources/jackson-databind-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-08-21T18:19:10Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.18.0, <= 2.18.8",
+          "reported_patched_versions": "",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.21.0, <= 2.21.4",
+          "reported_patched_versions": "",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        }
+      ],
+      "cve_id": null,
+      "id": "GHSA-mhm7-754m-9p8w",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2026-07-10T23:32:31Z",
+      "source": "vendor-sources/jackson-databind-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-07-10T23:32:31Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.21.0, <= 2.22.0",
+          "reported_patched_versions": "2.21.5",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 3.0.0, <= 3.1.4",
+          "reported_patched_versions": "3.1.5",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.18.0, <= 2.18.8",
+          "reported_patched_versions": "2.18.9",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.22.0, < 2.22.1",
+          "reported_patched_versions": "2.22.1",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-databind",
+          "reported_affected_range": ">=3.2.0, <3.2.1",
+          "reported_patched_versions": "3.2.1",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2026-59889",
+      "id": "GHSA-5gvw-p9qm-jgwh",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2026-07-10T23:46:20Z",
+      "source": "vendor-sources/jackson-databind-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-07-11T08:19:58Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.15.0, < 2.18.8",
+          "reported_patched_versions": "2.18.8",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.19.0, < 2.21.4",
+          "reported_patched_versions": "2.21.4",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 3.0.0, < 3.1.4",
+          "reported_patched_versions": "3.1.4",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2026-59888",
+      "id": "GHSA-3pjw-73gf-8qr5",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2026-07-10T23:42:01Z",
+      "source": "vendor-sources/jackson-databind-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-07-10T23:42:01Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.21.0, < 2.21.4",
+          "reported_patched_versions": "2.21.4",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 3.0.0, < 3.1.4",
+          "reported_patched_versions": "3.1.4",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2026-54518",
+      "id": "GHSA-rcqc-6cw3-h962",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2026-06-16T01:51:41Z",
+      "source": "vendor-sources/jackson-databind-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-06-18T16:08:29Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.21.0, < 2.21.4",
+          "reported_patched_versions": "2.21.4",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 3.0.0, < 3.1.4",
+          "reported_patched_versions": "3.1.4",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2026-54517",
+      "id": "GHSA-5hh8-q8hv-fr38",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2026-06-16T01:44:38Z",
+      "source": "vendor-sources/jackson-databind-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-06-18T16:09:00Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.21.0, < 2.21.4",
+          "reported_patched_versions": "2.21.4",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 3.0.0, < 3.1.4",
+          "reported_patched_versions": "3.1.4",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2026-54516",
+      "id": "GHSA-9fxm-vc8v-hj55",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2026-06-16T01:38:45Z",
+      "source": "vendor-sources/jackson-databind-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-06-18T16:09:42Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "tools.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 3.1.0, < 3.1.4",
+          "reported_patched_versions": "3.1.4",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.8.0, < 2.18.9",
+          "reported_patched_versions": "2.18.9",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.19.0, < 2.21.5",
+          "reported_patched_versions": "2.21.5",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.22.0, < 2.22.1",
+          "reported_patched_versions": "2.22.1",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2026-54515",
+      "id": "GHSA-5jmj-h7xm-6q6v",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2026-06-16T01:28:13Z",
+      "source": "vendor-sources/jackson-databind-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-06-24T14:02:58Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.0.0, < 2.18.8",
+          "reported_patched_versions": "2.18.8",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.19.0, < 2.21.4",
+          "reported_patched_versions": "2.21.4",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 3.0.0, < 3.1.4",
+          "reported_patched_versions": "3.1.4",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2026-54514",
+      "id": "GHSA-hgj6-7826-r7m5",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2026-06-16T01:18:12Z",
+      "source": "vendor-sources/jackson-databind-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-06-18T16:10:50Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.10.0, < 2.18.8",
+          "reported_patched_versions": "2.18.8",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 2.19.0, < 2.21.4",
+          "reported_patched_versions": "2.21.4",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-databind",
+          "reported_affected_range": ">= 3.0.0, < 3.1.4",
+          "reported_patched_versions": "3.1.4",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2026-54513",
+      "id": "GHSA-rmj7-2vxq-3g9f",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2026-06-16T01:13:58Z",
+      "source": "vendor-sources/jackson-databind-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-06-18T16:12:09Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": "2.10.0 - 2.18.7",
+          "reported_patched_versions": "2.18.8",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        },
+        {
+          "coordinate": "tools.jackson.core:jackson-databind",
+          "reported_affected_range": "3.0.0 - 3.1.3",
+          "reported_patched_versions": "3.1.4",
+          "resolved_versions": [
+            "3.1.7"
+          ]
+        },
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": "2.19.0 - 2.21.3",
+          "reported_patched_versions": "2.21.4",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2026-54512",
+      "id": "GHSA-j3rv-43j4-c7qm",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2026-06-16T01:10:42Z",
+      "source": "vendor-sources/jackson-databind-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-06-18T16:12:50Z"
+    },
+    {
+      "current_coordinate_observations": [
+        {
+          "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+          "reported_affected_range": "2.10.0 - 2.13.5",
+          "reported_patched_versions": "2.14.0",
+          "resolved_versions": [
+            "2.21.7"
+          ]
+        }
+      ],
+      "cve_id": "CVE-2026-50193",
+      "id": "GHSA-3wrr-7qpf-2prh",
+      "in_historical_18": false,
+      "owner": "Engine maintainer",
+      "published_at": "2026-05-28T20:06:05Z",
+      "source": "vendor-sources/jackson-databind-advisories.json.gz",
+      "status": "OPEN: vendor-source reconciliation, not blanket risk clearance",
+      "updated_at": "2026-06-05T03:09:57Z"
+    }
+  ],
+  "feed_gap": {
+    "ids": [
+      "GHSA-6cx8-rjf8-pr8g",
+      "GHSA-4v53-57pg-c464",
+      "GHSA-gm45-99xc-r7wv",
+      "GHSA-343h-94h5-c4wr",
+      "GHSA-mcr4-qmvw-px4g"
+    ],
+    "observation": "All ten direct global GitHub/OSV lookups remain 404 at dated retrieval; vendor source remains authoritative supplementary evidence. Reported fix floors 1.11.2/1.11.4 are met by selected 1.11.4, not proof of complete feed coverage.",
+    "owner": "Engine maintainer",
+    "status": "OPEN"
+  },
+  "generator_sha": "38862862a0f4e90eb4f809a0150c6d2702de2423",
+  "range_conflict": {
+    "id": "GHSA-5gvw-p9qm-jgwh",
+    "observation": "Published 2.x affected range is >= 2.21.0, <= 2.22.0 (inclusive) while reported fix floor is 2.21.5. Selected 2.21.7 source contains visibleInView guard; selected 3.1.7 exceeds the 3.1.5 floor. Wording corrected 2026-10-14 against unchanged retained source bytes; prior prose incorrectly said below 2.22.0 and 3.1.4. Retain contradiction, do not suppress or declare universal clearance.",
+    "owner": "Engine maintainer",
+    "status": "OPEN"
+  }
+}

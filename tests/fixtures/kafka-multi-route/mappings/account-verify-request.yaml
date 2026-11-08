@@ -1,0 +1,10 @@
+transforms:
+  - source: paymentId
+    target: requestId
+  - source: accountNumber
+    target: accountRef
+  - source: amount
+    target: amountMinorUnits
+    type_coercion: major_to_minor_units
+  - target: sourceSystem
+    constant: "PAYMENT_HUB"

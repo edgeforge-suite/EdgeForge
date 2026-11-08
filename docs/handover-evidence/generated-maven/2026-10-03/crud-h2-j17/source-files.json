@@ -1,0 +1,154 @@
+[
+  {
+    "path": ".dockerignore",
+    "sha256": "e2341c4c533f51d8aa1eaa6e555f2db6722b2d325971fcbfddfa1239ed386594"
+  },
+  {
+    "path": ".gitignore",
+    "sha256": "d6927f259afad053e08ff6d31a3b10333a4ce2cbd5909434aa40dd735784334e"
+  },
+  {
+    "path": "Dockerfile",
+    "sha256": "2cb8b65569448c34d84f36489dddb96b5913559d3430e06603f0b008dabe4f5e"
+  },
+  {
+    "path": "README.md",
+    "sha256": "380d67bda5cf4abafcfb60492538f951ad401ebceee31f0fb6c85639e6c17d58"
+  },
+  {
+    "path": "agent-context.md",
+    "sha256": "0b164f06d5530fe1f3d1ab8d4caf7fa6dfe3d5bc799e8acff00767da29708e43"
+  },
+  {
+    "path": "db/generation-provenance.json",
+    "sha256": "3898722f625c465d1907d46f3ea0328e8d911402ae510f23d99d8b7d2c2225cc"
+  },
+  {
+    "path": "db/schema-baseline.json",
+    "sha256": "2803791506f27a5539a4ea099414318144f59a469ff05d96a8a7edaa546a4d58"
+  },
+  {
+    "path": "pom.xml",
+    "sha256": "adf53204f9329fb1341b51b12b9e17003021ede70abdd2f581e6fca29f45e269"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/CiSmokeApplication.java",
+    "sha256": "f56cdb061688938f61c44b34e4a8524656a8f64547b993ed93050ea982e9b6f3"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/adapter/inbound/CreateEntryRequest.java",
+    "sha256": "354ca4a190672dde3e8492f087ec5fa3b710aa39b4e466d9f16445ef330f50a0"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/adapter/inbound/CreateEntryResponse.java",
+    "sha256": "70a9082339e14005338ca88b64bc4dcf99a310c654a40c59f1db7856029877f9"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/adapter/inbound/CreateRecordRequest.java",
+    "sha256": "aa461a3526897fb2736ef1e1025530da51bfa0631ab8669ddc6746daf1d945b8"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/adapter/inbound/CreateRecordResponse.java",
+    "sha256": "aedf3fe4bcfc6182e19f54a483a632f103e3e824df0f02b12cdee44110f67089"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/adapter/inbound/DemoController.java",
+    "sha256": "1cc8b724384366ac58d4565e84c5db1f89c80a6e1545d0b300db97d0f22f907e"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/adapter/inbound/EntryController.java",
+    "sha256": "f88df232e866578ac0306b794358aacfdb6957429510ba27dadbe02b9643e67e"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/adapter/inbound/EntryResponse.java",
+    "sha256": "8a39d82a71479872a8369f122280e87be267e8f7f0c5e9f7d13621b0b4e35fe9"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/adapter/inbound/EntryUpdateRequest.java",
+    "sha256": "3a7cc5a8b9d5c33fa441f6d6f84dea139dd0dc37cc5c2bb8266d1565727078c0"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/adapter/inbound/RecordController.java",
+    "sha256": "30a5579d60a00f60cae9f471185aa21bdb1f8ddedbf0258655b555ce94508f29"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/adapter/inbound/RecordResponse.java",
+    "sha256": "5557b5c7b442ac147623430033232cef67d69a91ca9dcb9636a61473b66677ee"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/adapter/inbound/RecordUpdateRequest.java",
+    "sha256": "fc81dab743b4f92dd1aa09e9d8339c2a8e8c55bddddcce9a2808df3a29003f79"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/config/SecurityHeadersFilter.java",
+    "sha256": "1481b26072a45ce27cb4e1e86ef171afc0217ce9eb2f976e4744008b4a44125b"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/domain/Entry.java",
+    "sha256": "51a02a68fd23d7d89a6932b61940fbc872b5e3020591400440f46e8f25362774"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/domain/Record.java",
+    "sha256": "c7209529419de06236c5079ff3e9b9f7b5c4069d36dd5069e365a92dd50259f5"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/exception/DuplicateResourceException.java",
+    "sha256": "0f40177367fc80db48b2975a550662b9698dcda30deffe0ca03a351d4721ce7d"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/exception/ErrorResponse.java",
+    "sha256": "51a12fecab3c29cae392516a62d176dee53e11f6f11a4efec644ea06d4bba409"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/exception/GlobalExceptionHandler.java",
+    "sha256": "53d97e4d906b3bbf7ecd00c23d2b3a8ef648d1e79a7732edb53c9b4df6520884"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/exception/ResourceNotFoundException.java",
+    "sha256": "62a21b3db6a17a610234f296244a3b893416fac3a58dd67bd5f0d9e1ef4debc0"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/repository/EntryRepository.java",
+    "sha256": "2e2bba08ef8b7f6cc4486289bb00b5085bf9b4eda85dc06ac449b5ebb927036c"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/repository/RecordRepository.java",
+    "sha256": "926ea9f85192b295a9f76dd956fcd03543a96c0c30f1e8705ae261f0c29e416c"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/service/EntryService.java",
+    "sha256": "eb71b242646732c01370a691e13c1600dbab58f5699692a207a86cc71e65e45a"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/service/EntryServiceBase.java",
+    "sha256": "69c24aff52600116b8dca7da7a8847ffbf8fe26dcfa2d46206dd759f4ddbbb7c"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/service/RecordService.java",
+    "sha256": "0096fa82b5cc130d66c67c1ce6c922c8dd3f80eb247e81b9ac831e5ea5c5e024"
+  },
+  {
+    "path": "src/main/java/com/appbuilder/ci_smoke/service/RecordServiceBase.java",
+    "sha256": "5736437d3c0a2357897ea2faf5c9c5b7a0a7fc75a86cf571050bf6183e41c276"
+  },
+  {
+    "path": "src/main/resources/application.yaml",
+    "sha256": "5812cf38d7fdc66c1fb0c69bb1ec678f45726d8d6ce2d779712dd476dcca43c3"
+  },
+  {
+    "path": "src/main/resources/db/migration/V1__create_record_table.sql",
+    "sha256": "93661eb1e047b5bf9577d79b8e70e3ae7376970d4313b4c68ef749dee00bb2d4"
+  },
+  {
+    "path": "src/main/resources/db/migration/V2__create_entry_table.sql",
+    "sha256": "fda31b9978ff1aa1e64a6d437b59078e097012ba5bca34e7788c25253a7f1534"
+  },
+  {
+    "path": "src/main/resources/static/index.html",
+    "sha256": "82c33a36a199d607f2e562773a4b1d6bddbc77b048b4b9d524e102e088ddd7f2"
+  },
+  {
+    "path": "src/test/java/com/appbuilder/ci_smoke/CiSmokeApplicationTest.java",
+    "sha256": "e25c1e0f64b1f9582feed3d2694371a2c4a77e2980aba735c10573f1c15e1bb5"
+  }
+]

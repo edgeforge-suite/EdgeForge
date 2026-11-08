@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "properties": {
+    "paymentId": {"type": "string"},
+    "accountNumber": {"type": "string"},
+    "amount": {"type": "number"}
+  }
+}

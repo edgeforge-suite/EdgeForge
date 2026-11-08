@@ -1,0 +1,66 @@
+interface: customer-api
+entity: Customer
+operations:
+  - name: createCustomer
+    request_mappings:
+      - source: customerName
+        target: Customer.customerName
+      - source: email
+        target: Customer.email
+    response_mappings:
+      - source: customerId
+        target: Customer.customerId
+      - source: customerName
+        target: Customer.customerName
+      - source: email
+        target: Customer.email
+      - source: status
+        target: Customer.status
+  - name: updateCustomer
+    request_mappings:
+      - source: email
+        target: Customer.email
+      - source: status
+        target: Customer.status
+    response_mappings:
+      - source: customerId
+        target: Customer.customerId
+      - source: customerName
+        target: Customer.customerName
+      - source: email
+        target: Customer.email
+      - source: status
+        target: Customer.status
+  - name: getCustomer
+    request_mappings: []
+    response_mappings:
+      - source: customerId
+        target: Customer.customerId
+      - source: customerName
+        target: Customer.customerName
+      - source: email
+        target: Customer.email
+      - source: status
+        target: Customer.status
+  - name: listCustomers
+    request_mappings: []
+    response_mappings:
+      - source: customerId
+        target: Customer.customerId
+      - source: customerName
+        target: Customer.customerName
+      - source: email
+        target: Customer.email
+      - source: status
+        target: Customer.status
+  - name: pageCustomers
+    request_mappings: []
+    response_mappings:
+      - source: customerId
+        target: Customer.customerId
+      - source: customerName
+        target: Customer.customerName
+      - source: email
+        target: Customer.email
+      - source: status
+        target: Customer.status

@@ -1,0 +1,20 @@
+routing_rules:
+  route_field: lineOfBusiness
+  routes:
+  - match: AUTO
+    target: AUTO_CLAIMS
+  - match: PROP
+    target: PROP_CLAIMS
+  default_target: SPEC_CLAIMS
+transforms:
+- source: claimId
+  target: claimId
+- source: policyId
+  target: policyId
+- source: amount
+  target: claimAmount
+- source: reportedAt
+  target: reportedDate
+- source: lineOfBusiness
+  target: lineOfBusiness
+  default: UNSPECIFIED

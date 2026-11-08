@@ -1,0 +1,24 @@
+{
+  "assessor_platform": "darwin/arm64",
+  "image_platform": "linux/amd64",
+  "tools": {
+    "syft": {
+      "version": "1.52.0",
+      "archive": "syft_1.52.0_darwin_arm64.tar.gz",
+      "archive_sha256": "014d561b6d13059124155f74a6c5a9a99501f5e209313638dd884f39eb418ee6",
+      "checksums": "syft_1.52.0_checksums.txt"
+    },
+    "grype": {
+      "version": "0.119.0",
+      "archive": "grype_0.119.0_darwin_arm64.tar.gz",
+      "archive_sha256": "500c9b2b6c089d21481815f57a553fabbd441ec7d1e79d95e3aaf40c3bfc7e36",
+      "checksums": "grype_0.119.0_checksums.txt"
+    },
+    "trivy": {
+      "version": "0.74.0",
+      "archive": "trivy_0.74.0_macOS-ARM64.tar.gz",
+      "archive_sha256": "1caada5e0e2091909357c7525d3aa76f4b660b13821bc143b190c7483e31cc11",
+      "checksums": "trivy_0.74.0_checksums.txt"
+    }
+  }
+}

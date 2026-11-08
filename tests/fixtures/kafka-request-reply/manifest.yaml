@@ -1,0 +1,33 @@
+app_name: PaymentVerificationGateway
+bounded_context: payment-verification
+schema_version: "2.0"
+app_archetype: kafka-integration
+target_profile: springboot-standard-enterprise
+
+kafka_config:
+  consumer_group: payment-verification-group
+  concurrency: 1
+
+async_routes:
+  - name: account-verification
+    pattern: request-reply
+    upstream_topic:
+      name: payments.verification.request.v1
+      system: PaymentHub
+      message_schema: schemas/verification-request.json
+    downstream_topic:
+      name: core.account.verify.v1
+      system: CoreBanking
+      message_schema: schemas/account-verify-request.json
+    upstream_reply_topic:
+      name: payments.verification.reply.v1
+      message_schema: schemas/verification-reply.json
+    downstream_reply_topic:
+      name: core.account.verify.reply.v1
+      message_schema: schemas/account-verify-reply.json
+    transform_mapping: mappings/request-transform.yaml
+    response_transform_mapping: mappings/response-transform.yaml
+    correlation_id:
+      source: header
+      field_name: X-Correlation-ID
+    reply_timeout_ms: 5000

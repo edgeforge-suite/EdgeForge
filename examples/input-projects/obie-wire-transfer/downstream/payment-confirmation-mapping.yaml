@@ -1,0 +1,20 @@
+entity: InternationalPayment
+field_mappings:
+  - source: InternationalPayment.InternationalPaymentId
+    target: internationalPaymentId
+  - source: InternationalPayment.ConsentId
+    target: consentId
+  - source: InternationalPayment.InstructionIdentification
+    target: instructionIdentification
+  - source: InternationalPayment.EndToEndIdentification
+    target: endToEndIdentification
+  - source: InternationalPayment.CurrencyOfTransfer
+    target: currencyOfTransfer
+  - source: InternationalPayment.instructedAmount
+    target: instructedAmount
+  - source: InternationalPayment.creditorName
+    target: creditorName
+  - source: InternationalPayment.Status
+    target: status
+  - source: InternationalPayment.StatusUpdateDateTime
+    target: statusUpdateDateTime

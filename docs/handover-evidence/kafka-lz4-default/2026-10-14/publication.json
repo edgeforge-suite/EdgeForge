@@ -1,0 +1,105 @@
+{
+  "artifacts": [
+    {
+      "file": "receipt.json",
+      "original_sha256": "993e5478a43a63b4a2cff40f58823834669e1d40fe16fc85a2737c2efa177d00",
+      "sanitized_sha256": "133d14e83c80d79908de606dbfc74c176bc8c250a2003da3eee5f0c69cb99819"
+    },
+    {
+      "file": "sources-j17.json",
+      "original_sha256": "ddba6897512082566ece67dec23d478126090bdc8e164fcab2304c51902a8c77",
+      "sanitized_sha256": "980acb9670c00e8350c4a7f2887dd8bd8d6ee8cf26d8ae9d7ebb82cc6a9f5462"
+    },
+    {
+      "file": "runtime-j17.log.gz",
+      "gzip_sha256": "80d11922e147f5b0e1762194c7d9443a9287d2dbe8c602563f46ce4bda41ba31",
+      "original_sha256": "c7a9e90ba4ef156b41114de3b5529a50397a6741a1317a0bab9f156d8220250a",
+      "sanitized_sha256": "74167252b014c50485d922fbe33dca22990c7d16919ed1d96ae09b29b99ac822",
+      "timestamps": {
+        "first": "2026-10-14T22:39:57.926Z",
+        "last": "2026-10-14T22:40:22.759Z"
+      }
+    },
+    {
+      "file": "sources-j21.json",
+      "original_sha256": "bef877ea6c9a8f51ad32aabf1ccc5256043303a6cc3069a2744b4c6feae9d5f9",
+      "sanitized_sha256": "71aae2b842322a540e8c6d95237902bc7489e630c49c5fbfeefc94f45e987b32"
+    },
+    {
+      "file": "runtime-j21.log.gz",
+      "gzip_sha256": "7e05cd7fbf2ffa958a76d1fcbca67f2a627ee3210cf23c8e0b4eacdbf5d008f7",
+      "original_sha256": "b80688a76b429ea0cdb8a7c0ab255a93145de3eb065d133cecc4eb476ce0b0d6",
+      "sanitized_sha256": "5b62a511107fb568e1a6639a514e034b56b5bc67747361eb376eafd7bca81a58",
+      "timestamps": {
+        "first": "2026-10-14T22:41:18.457Z",
+        "last": "2026-10-14T22:41:39.249Z"
+      }
+    },
+    {
+      "file": "prior-failure-01/receipt.json",
+      "original_sha256": "fbf63981e6e50fb203cae1f600290f77ec68bdca7eddd0c3a5d76f06860440b2",
+      "sanitized_sha256": "2638f0146a4575f7b385964acec43a3f0c656b33b21a155fdfeea03c21f223f4"
+    },
+    {
+      "file": "prior-failure-01/failure.log.gz",
+      "gzip_sha256": "1a37fe28197ee2171d5c9271a625d9fbce57282ee7b3028a408c14ebcca396c6",
+      "original_sha256": "f1285cbb325040005943ef68c731a839a89dc5d9e83a9049c413b4dab2d9c74a",
+      "sanitized_sha256": "8830f0a25752d6d798e7ce37710c283d561d50498a346d382ba254c90b1d062b",
+      "timestamps": null
+    },
+    {
+      "file": "prior-failure-01/runtime-j17.log.gz",
+      "gzip_sha256": "23ba661c5cc5160d7c27512221ca1e1b74a26a5de72af5d063e208f0c2c8f648",
+      "original_sha256": "34512bf041c5f317a3e9cdcad36eb2f471de40a2094a4002bcbc4625181c4e7d",
+      "sanitized_sha256": "478bcc0e8409ee3f3b02cea41eb1708c188928674d6816910076d35f6592be93",
+      "timestamps": {
+        "first": "2026-10-14T21:50:31.001Z",
+        "last": "2026-10-14T21:50:50.420Z"
+      }
+    },
+    {
+      "file": "prior-failure-02/receipt.json",
+      "original_sha256": "59f010089275af908eebdf113e519da22fcdbf586a5deefa9fc807559a947a8a",
+      "sanitized_sha256": "bf622d111b8787b4fedff170a609b5e4ec005ee92d239895819382043975ba04"
+    },
+    {
+      "file": "prior-failure-02/failure.log.gz",
+      "gzip_sha256": "05a58f41eaf838d3d014e831c881b52ff14e266bebe0a57d263ae29d0a46d8b8",
+      "original_sha256": "00ba524f3797ea51589a2210ca7ad5a4342588795449f55422fac6b166dcad4e",
+      "sanitized_sha256": "88793c4720842dcfdf379aa4097aab7dbc611b7872c7e4b9d97fa69768daca93",
+      "timestamps": null
+    },
+    {
+      "file": "prior-failure-02/runtime-j17.log.gz",
+      "gzip_sha256": "585c1d343087573eab54d1a50196f2ff279417c2517421e0aa9664e6cb3d9cfa",
+      "original_sha256": "8a833d79de62700085444c944ea7b1c2ac7da135a0eab60538d5c80fc50a5d0f",
+      "sanitized_sha256": "245c3dce5afe5937fded06d1e40c3ea878c3651529976958f68ced4fc5dc5e8e",
+      "timestamps": {
+        "first": "2026-10-14T21:57:16.088Z",
+        "last": "2026-10-14T21:57:43.327Z"
+      }
+    }
+  ],
+  "hash_semantics": "original identifies untouched private bytes; sanitized identifies exported uncompressed bytes",
+  "image_security_clearance": false,
+  "prior_failures": [
+    {
+      "receipt": "prior-failure-01/receipt.json",
+      "source_sha": "743b5d4b0cd991238ce29dd16ac48daf5dc5feab",
+      "status": "failed"
+    },
+    {
+      "receipt": "prior-failure-02/receipt.json",
+      "source_sha": "64927c87a772ab21f56a9b28e01d836337bc7a79",
+      "status": "failed"
+    }
+  ],
+  "publisher": {
+    "gzip_mtime": 0,
+    "python": "3.11.15",
+    "sha256": "c0152ec52d18682f35235ea5ef709bef7a8466bfc4ff411bc94ec08beb3503f6",
+    "zlib": "1.2.12"
+  },
+  "source_sha": "fe125b2d6c84aadacb2605f21d7bd146087afbab",
+  "status": "published"
+}

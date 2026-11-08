@@ -1,0 +1,34 @@
+app_name: Generated App CI Smoke
+bounded_context: ci_smoke
+schema_version: "2.0"
+app_archetype: crud
+
+# Canonical CI proof fixture. Deliberately minimal and domain-neutral.
+# The spec is a local, synthetic document; it describes no external system.
+upstream_interfaces:
+  - name: record-api
+    system: CiSmokeSource
+    type: rest-json
+    version: "1.0"
+    spec: contracts/ci-smoke-openapi.yaml
+    mapping: upstream/record-mapping.yaml
+    operations:
+      - name: createRecord
+        request_sample: upstream/sample-create-record-request.json
+        response_sample: upstream/sample-create-record-response.json
+
+  - name: entry-api
+    system: CiSmokeSource
+    type: rest-json
+    version: "1.0"
+    spec: contracts/ci-smoke-openapi.yaml
+    mapping: upstream/entry-mapping.yaml
+    operations:
+      - name: createEntry
+        request_sample: upstream/sample-create-entry-request.json
+        response_sample: upstream/sample-create-entry-response.json
+
+rules:
+  - rules/ci-smoke-rules.yaml
+
+target_profile: springboot-legacy-compatible

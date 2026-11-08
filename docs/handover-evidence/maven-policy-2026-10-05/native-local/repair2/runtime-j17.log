@@ -1,0 +1,16 @@
+$ docker start --attach ef-lz4-b60d82ccb73e-app-j17
+LZ4_NATIVE_PROOF java=17.0.18 uid=999 lz4=LZ4Factory:JNI compressor=net.jpountz.lz4.LZ4JNICompressor xxhash=XXHashFactory:JNI hash32=net.jpountz.xxhash.XXHash32JNI tempInitiallyEmpty=true library=/tmp/ef-lz4-native.Jk5SJXiAXo/liblz4-java-11243928468972787634.so attributes={mode=33188, uid=999, gid=999, size=151120, nlink=1, ino=914887} origin=jar:nested:/app/app.jar/!BOOT-INF/lib/lz4-java-1.11.4.jar!/ sha256=9e3f9a3deae369dc15788f07f68b84b0b6ea933356f59a0d43bc383bd17cb629 mappings=[7fffd098d000-7fffd0990000 r--p 00000000 00:43 914887                     /tmp/ef-lz4-native.Jk5SJXiAXo/liblz4-java-11243928468972787634.so, 7fffd0990000-7fffd09ad000 r-xp 00003000 00:43 914887                     /tmp/ef-lz4-native.Jk5SJXiAXo/liblz4-java-11243928468972787634.so, 7fffd09ad000-7fffd09af000 r--p 00020000 00:43 914887                     /tmp/ef-lz4-native.Jk5SJXiAXo/liblz4-java-11243928468972787634.so, 7fffd09af000-7fffd09b0000 r--p 00021000 00:43 914887                     /tmp/ef-lz4-native.Jk5SJXiAXo/liblz4-java-11243928468972787634.so, 7fffd09b0000-7fffd09b1000 rw-p 00022000 00:43 914887                     /tmp/ef-lz4-native.Jk5SJXiAXo/liblz4-java-11243928468972787634.so]
+KAFKA_LZ4_IMPLEMENTATION compressor=net.jpountz.lz4.LZ4HCJNICompressor
+KAFKA_LZ4_IMPLEMENTATION checksum=net.jpountz.xxhash.XXHash32JNI
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+LZ4_ROUNDTRIP_PROOF compression.type=lz4 input=abc.payments.posted.v1-0@0 output=xyz.ledger.entries.v1:0:0 payload={"accountRef":"A1","amountMinorUnits":1234,"channel":"KAFKA_HUB","entryId":"lz4-cf274173-e208-4875-9a86-996a88b275cd"}
+

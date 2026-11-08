@@ -1,0 +1,262 @@
+{
+  "schema_version": "1.0",
+  "goal": "EF-V5-ENGINE-AUDIT-CORRECTION-S1 revision 1",
+  "approval_date_local": "2026-10-28",
+  "retrieval_date_utc": "2026-10-29",
+  "previous_head": "e07550fb8c775d8c00bfa3ac7003fba142a3447d",
+  "last_claude_reviewed_head": "5a64094559badc29f5e09dc781221cc6b5212a33",
+  "corrected_source_sha": "c76287d220e8a9cad3d9c36e46e175b6ca5e390b",
+  "baseline": {
+    "kind": "retained failed CI log, not a new baseline query",
+    "url": "https://github.com/santosh-sh/EdgeForge/actions/runs/40633832454/job/122636117648",
+    "packages": 76,
+    "findings": 7,
+    "exit_code": 1,
+    "private_log_sha256": "c4234d01059b860af31c553cb7f7cd06b96dc862bab023f0627dc887982711bb"
+  },
+  "corrections": [
+    {
+      "package": "authlib",
+      "previous_version": "1.8.0",
+      "selected_version": "1.9.1",
+      "introducing_edge": "FastMCP 3.4.10 -> fastmcp-slim[client,server] 3.4.10 -> Authlib"
+    },
+    {
+      "package": "dnspython",
+      "previous_version": "2.8.0",
+      "selected_version": "2.9.0",
+      "introducing_edge": "FastMCP/MCP -> email-validator 2.3.0 -> dnspython"
+    }
+  ],
+  "support": {
+    "requires_python": ">=3.11",
+    "minimum_executed": "3.11.15",
+    "reason": "maintainer-approved Engine v5 floor; dnspython 2.9.0 requires Python >=3.11",
+    "other_reference_pins_changed": 0,
+    "historical_python310_receipts_unchanged": true
+  },
+  "advisories": [
+    {
+      "id": "GHSA-45c3-73f7-pv4m",
+      "source_url": "https://github.com/advisories/GHSA-45c3-73f7-pv4m",
+      "source_body_sha256": "8bcbaa571313939f8e829d733fe70384a80d72530ce6c35d7af82823165f31aa",
+      "range": "< 2.9.0",
+      "first_patched_version": "2.9.0",
+      "package": "dnspython",
+      "conclusion": "selected released correction; no risk exception"
+    },
+    {
+      "id": "GHSA-6v38-4h7w-rj9h",
+      "source_url": "https://github.com/advisories/GHSA-6v38-4h7w-rj9h",
+      "source_body_sha256": "a11fae2fd75bf5dc7f538c2fd9b50ce77879e2cf453e0b57788bd02fd115eee3",
+      "range": "<= 1.8.0",
+      "first_patched_version": "1.9.0",
+      "package": "authlib",
+      "conclusion": "selected released correction; no risk exception"
+    },
+    {
+      "id": "GHSA-7vr2-2fgp-9w7p",
+      "source_url": "https://github.com/advisories/GHSA-7vr2-2fgp-9w7p",
+      "source_body_sha256": "627f165d05a053d669317e1c59eba4dbb688a4ccb412028a5e30b241c77984fb",
+      "range": ">= 1.3.1, <= 1.8.0",
+      "first_patched_version": "1.9.0",
+      "package": "authlib",
+      "conclusion": "selected released correction; no risk exception"
+    },
+    {
+      "id": "GHSA-8m4g-j4wp-wgcg",
+      "source_url": "https://github.com/advisories/GHSA-8m4g-j4wp-wgcg",
+      "source_body_sha256": "f6e53689d621bd8edd578b3e78bae95fc10173a854d73616e72b3175cb1c6884",
+      "range": "< 1.9.1",
+      "first_patched_version": "1.9.1",
+      "package": "Authlib",
+      "conclusion": "selected released correction; no risk exception"
+    },
+    {
+      "id": "GHSA-c5mf-xmp2-59rc",
+      "source_url": "https://github.com/advisories/GHSA-c5mf-xmp2-59rc",
+      "source_body_sha256": "cee2fd0d2d408796ff90dd7bdad89548710dab925cbf9bdabd4e5a9711c1d9d7",
+      "range": "<= 1.8.0",
+      "first_patched_version": "1.9.0",
+      "package": "authlib",
+      "conclusion": "selected released correction; no risk exception"
+    },
+    {
+      "id": "GHSA-fch4-3c6x-j4gc",
+      "source_url": "https://github.com/advisories/GHSA-fch4-3c6x-j4gc",
+      "source_body_sha256": "d0173427ba87cc584da083f0fa8885bf3a265607623c898cd3bbfc4841232e29",
+      "range": "< 1.9.0",
+      "first_patched_version": "1.9.0",
+      "package": "authlib",
+      "conclusion": "selected released correction; no risk exception"
+    },
+    {
+      "id": "GHSA-x4rv-c3wx-4cr8",
+      "source_url": "https://github.com/advisories/GHSA-x4rv-c3wx-4cr8",
+      "source_body_sha256": "cfc070ec864e670656bb68e05753c70255aa9e251a7cc137f526faa7b64c3521",
+      "range": ">= 1.6.0, < 1.9.0",
+      "first_patched_version": "1.9.0",
+      "package": "authlib",
+      "conclusion": "selected released correction; no risk exception"
+    }
+  ],
+  "empty_key_source_disagreement": {
+    "id": "GHSA-8m4g-j4wp-wgcg",
+    "repository": {
+      "url": "https://github.com/authlib/authlib/security/advisories/GHSA-8m4g-j4wp-wgcg",
+      "affected": "<=1.7.2",
+      "patched": "None",
+      "source_body_sha256": "385a6f815cda522ef03b22f667d526f674b7c1465bcdd7dd0c121b8654986469"
+    },
+    "database": {
+      "affected": "<1.9.1",
+      "patched": "1.9.1",
+      "source_body_sha256": "f6e53689d621bd8edd578b3e78bae95fc10173a854d73616e72b3175cb1c6884"
+    },
+    "release_notes": {
+      "url": "https://github.com/authlib/authlib/blob/v1.9.1/docs/upgrades/changelog.rst",
+      "source_body_sha256": "86a4107b5e7f8158bfd43219e2856989d28d5b1bb159d5bd4fa80649e153237a"
+    },
+    "binding": {
+      "member": "authlib/jose/rfc7518/oct_key.py",
+      "sha256": "152aefcf048deec979cd0d1ad6a1581a7e86ade18047d8e3da74af551dc3587c",
+      "wheel_sdist_tag_identical": true
+    },
+    "proof": "raw/JWK empty HMAC material rejected for HS256/384/512; valid signatures preserved; old wheel controls fail"
+  },
+  "selected_artifacts": [
+    {
+      "package": "Authlib",
+      "version": "1.9.1",
+      "requires_python": ">=3.10",
+      "metadata_sha256": "52e788f4813108013df6944be0e886b00b2112239f742e170a8e19837f70d1d1",
+      "artifacts": [
+        {
+          "file": "authlib-1.9.1-py2.py3-none-any.whl",
+          "url": "https://files.pythonhosted.org/packages/39/44/a46089266de32a0d809023b6bf31b80a1f26a46954446a7ce695a565cbea/authlib-1.9.1-py2.py3-none-any.whl",
+          "sha256": "8b9be8b1e5174dcbf5520e984f1a22dc2edae5b6e40a61d4cedbf86b97e9e69b"
+        },
+        {
+          "file": "authlib-1.9.1.tar.gz",
+          "url": "https://files.pythonhosted.org/packages/c9/dc/087c08741a98d234c9b98beef8a28d3c309f814d14b6156422c5815bf6d6/authlib-1.9.1.tar.gz",
+          "sha256": "5c7d9848f47cac340f060f76ae0bc09b59f5c8e89cc1bb032d4370a0c55b5974"
+        }
+      ]
+    },
+    {
+      "package": "dnspython",
+      "version": "2.9.0",
+      "requires_python": ">=3.11",
+      "metadata_sha256": "89e6089acd2db053af43e5958a4a1d6627546487a771de4da330151b859875fb",
+      "artifacts": [
+        {
+          "file": "dnspython-2.9.0-py3-none-any.whl",
+          "url": "https://files.pythonhosted.org/packages/10/02/cdcc9b7c051786a103c3b09e1003a82fa0c66bcb91ffbdabcfbf7b4163b9/dnspython-2.9.0-py3-none-any.whl",
+          "sha256": "9a4aedb833c3c1b49214d04d44d3032ab7a9135f7c1d29a549b4ff78fd82fda9"
+        },
+        {
+          "file": "dnspython-2.9.0.tar.gz",
+          "url": "https://files.pythonhosted.org/packages/ef/4a/50822184bd67cc6493f0fb6a880749158fcd31ab3fa07409acfd91f9fc85/dnspython-2.9.0.tar.gz",
+          "sha256": "b44dc6b18f07a8b1c56676a19fbfdb5209415b046a9cece286baafa87ff3f7f1"
+        }
+      ]
+    }
+  ],
+  "dnspython_source_binding": {
+    "member": "dns/name.py",
+    "sha256": "747fb6cee70306a89955fd8651d6712e0803aa463593f4e8c30ed27d0a9d5902",
+    "url": "https://github.com/rthalley/dnspython/blob/v2.9.0/dns/name.py"
+  },
+  "after": {
+    "assessment_time_utc": "2026-10-29T01:09:06.352054Z",
+    "audit_dependency_count": 76,
+    "audit_exit_code": 0,
+    "dependency_count": 76,
+    "engine_source_sha": "c76287d220e8a9cad3d9c36e46e175b6ca5e390b",
+    "exclusions": [
+      "local Engine package",
+      "pip/setuptools/wheel bootstrap tools"
+    ],
+    "finding_count": 0,
+    "license_row_count": 76,
+    "lock_sha256": "95f18e55208adacc2ef8754500ac802c54250d421bb6d6281128d02a6be715a3",
+    "reference_image": "python:3.11.15-bookworm@sha256:a8f8fbe1a0edc9e4dddafa64ba73f7e04be7be5ebc23f332362e779e0a2e4e52",
+    "reference_python": {
+      "libc": "2.36",
+      "machine": "x86_64",
+      "python": "3.11.15",
+      "system": "Linux"
+    },
+    "requirements_sha256": "7fb5387c877b22d11a72b90ad8cb9a060e9b32c9cd29a3f42e179899e90a1034",
+    "sbom_component_count": 76,
+    "schema_version": "1.0",
+    "tools": {
+      "cyclonedx_bom": "7.3.0",
+      "pip_audit": "pip-audit 2.9.0",
+      "pip_licenses": "pip-licenses 5.5.5"
+    }
+  },
+  "current_evidence_sha256": {
+    "dependency-licenses.csv": "6c58dc3f4bff914ca484d74f61fd4037e847e4b8189cdbdfe18c1a5b4f8c2b03",
+    "dependency-licenses.md": "6c55fa3b10944afa9550b77845d1a4b1c60a4dbe33b0b34d0298f79b08e15a04",
+    "pip-audit.json": "2b5f34b2f2d175c1e84274f32ad7ad18427bb5c7a68927f2160ec87e07aee4e3",
+    "pip-audit.md": "d9e9d7f73480521d3ff26954bbef9e4b2d3c37e57e99f81ed08164ffe3fc6263",
+    "provenance.json": "5b5bdf1b04a225ecaeba39657976f6ac308bca597cfec4982b0e88b2c1ddf1bb",
+    "sbom.cdx.json": "464a3628219502fbcca5592a55559920538c2654705c0216ee866564ebbe6de2"
+  },
+  "historical_snapshot_sha256": {
+    "dependency-licenses.csv": "1c1e5da5f11df458c69c54ad53f5ebe04912b95bb65f8aa58ee1b812dab8fbc5",
+    "dependency-licenses.md": "ea003f6ce99245ea4d98bbbb74bfc601bd2df678d10e49ca8dcb75f121f39b06",
+    "pip-audit.json": "a1f3cdd50c03142fa70075c4fff3b065bca8a67e8b1a653ed9afdf97309b7762",
+    "pip-audit.md": "cde1385d0efd12c3c53853f07406269342fcf850bef8f7958e8bbe66095651f9",
+    "provenance.json": "24847e1366cf2d05ee213cc4fa3504072323125a26382ed5d93d9d655d68d7a2",
+    "requirements-lock.txt": "bc94889073b421a8b878663cf9c902a508b655b31198f1fd47806f3902917b63",
+    "requirements.txt": "2a7ebc62d580da97b63bf69c562357113daa54d4f3739d532c0c819611313351",
+    "sbom.cdx.json": "5c006fbbb24baeb1c7ebee90d8c04afbc6a01059acdca71034a93a5e944a9eee"
+  },
+  "proof": {
+    "reference": "CPython 3.11.15 / Debian 12 x86_64, linux/amd64; emulated on Apple Silicon",
+    "constrained_install_and_pip_check": "pass",
+    "focused_tests": 84,
+    "focused_skips": 0,
+    "evidence_consistency_tests": 20,
+    "outside_checkout_packaging_test": "1 passed",
+    "wheel_and_sdist_legal_metadata": "pass",
+    "expected_old_wheel_failures": 4,
+    "oauth_httpx_mock_clients": [
+      "sync",
+      "async"
+    ],
+    "email_syntax_without_dns": "pass",
+    "mcp_tools_listed": 7,
+    "mcp_catalog_calls": [
+      "list_target_profiles",
+      "describe_target_profile"
+    ],
+    "source_generation": "one installed-wheel DDA generation, schema/static harness passed; network disabled",
+    "appbuilder_tree_unchanged": "8348efd17fa6578af56008fc8639c9ba2a0fcf39",
+    "full_suite": "automatic GitHub CI only; not run locally",
+    "manual_maven_image_runtime_l5": "not run"
+  },
+  "validation_observations": [
+    {
+      "head": "75f38b59d60faf5ee500ccbc41f32de31cdaaeb9",
+      "run": "https://github.com/santosh-sh/EdgeForge/actions/runs/40799182988",
+      "result": "1 failed, 4581 passed, 32 skipped, 29 subtests passed; audit not reached",
+      "cause": "new exact-catalog MCP test inherited custom profiles registered by preceding tests",
+      "correction": "fresh-process real MCP check retains exact assertions and adds parent-state pollution control",
+      "affected_local_reproof": "24 MCP tests passed; no audit or generation inputs changed"
+    }
+  ],
+  "private_retention": "audit-correction-s1-20261028; minimal raw reports, public source receipts and scoped proof logs; no upload",
+  "limits": [
+    "point-in-time PyPI audit of the third-party reference closure; bootstrap/local Engine excluded",
+    "bounded library checks, not certification of all OAuth-server or untrusted-DNS deployments",
+    "Authlib legacy JOSE API remains deprecated; no Engine auth/transport change",
+    "old Java/image/runtime evidence keeps its actual tested identities",
+    "ownership confirmation, reporting activation, final acceptance and human publication authorization remain pending"
+  ],
+  "risk_accepted": false,
+  "m2_complete": false,
+  "publication_authorized": false
+}

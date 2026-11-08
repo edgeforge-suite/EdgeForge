@@ -1,0 +1,106 @@
+[
+  {
+    "path": "manifest.yaml",
+    "sha256": "ce02872878809070facf8137e111fb9dc2e5cae2715f07ed105d663d06d5f3b7"
+  },
+  {
+    "path": "mappings/account-verify-request.yaml",
+    "sha256": "07f972fbea8da316c812b36af1780aec45acd906b558f0c8af32e2bcb9ec42d1"
+  },
+  {
+    "path": "mappings/account-verify-response.yaml",
+    "sha256": "56dddae149dd8bf16ae820fd08d37e2cb57a3e42e1045eb82b4b5ad1cc7ef811"
+  },
+  {
+    "path": "mappings/fraud-check-request.yaml",
+    "sha256": "ecef8f51efbe15dce39ae9772b6fea22ff0fa958f189dd85018b5626d738aeff"
+  },
+  {
+    "path": "mappings/fraud-check-response.yaml",
+    "sha256": "a939bad30fcc029c0d89d945eb8695c2c07acb1e6736fccf38f6eb7dd3be637b"
+  },
+  {
+    "path": "mappings/payment-to-ledger.yaml",
+    "sha256": "dfff9abb03655e2a0c48c94ef246c0f0c7b5c58302a93f3ed284101773cb803c"
+  },
+  {
+    "path": "mappings/reversal-to-ledger.yaml",
+    "sha256": "9e698cee10d7a34d586e7318bacefdf0a22991e4345fb94ec08b368d18f8539f"
+  },
+  {
+    "path": "router/manifest.yaml",
+    "sha256": "e27c39e5be4b419c68307fef78b90e5a7cbf69ea0a66fee0a7d0366094f6655d"
+  },
+  {
+    "path": "router/schemas/d1-request.json",
+    "sha256": "82f219c281cc165b0ad94dd06f6ed617e913dabed61f5b3d0fa114ecf5ced201"
+  },
+  {
+    "path": "router/schemas/d1-response.json",
+    "sha256": "da0b6f31194eeacc4dbba3156e7046ac87df4a102609522d70c5bdb0864d3abc"
+  },
+  {
+    "path": "router/schemas/ro-request.json",
+    "sha256": "c6f97ced8cfee67a9b99060e68116d4bb4aa9ba2a3add79cd6fd617dc76af913"
+  },
+  {
+    "path": "router/schemas/ro-response.json",
+    "sha256": "a691741fec4eb23f8ff28999e72c67d3340b6bae82135c363a934d20a6c6a3ab"
+  },
+  {
+    "path": "router/transforms/d1-to-ro-response.yaml",
+    "sha256": "32dd91c058220e2453b3d0d8ab85c93f06b5069f1d23e85077829c7362786b0f"
+  },
+  {
+    "path": "router/transforms/ro-to-d1-request.yaml",
+    "sha256": "62971a6c762a5cdcc2d74c99c778b012d194b54a032b6d323695e22684624073"
+  },
+  {
+    "path": "schemas/account-verify-core-reply.json",
+    "sha256": "ba94929aa733447333c8cbc56dd5e6cf16da07d10ac5c374849d59119f060efe"
+  },
+  {
+    "path": "schemas/account-verify-core-request.json",
+    "sha256": "ba0ee1b40c1c621ba60552a4327e2ba757c18cb3861b720bca56eeaac0e88d11"
+  },
+  {
+    "path": "schemas/account-verify-hub-reply.json",
+    "sha256": "b36cea20736470124559425a316c2c4f64963c87c1c7a07f72a7dc00363973d9"
+  },
+  {
+    "path": "schemas/account-verify-hub-request.json",
+    "sha256": "11c0d3bd877b921f1dd35927b3b0f56ae6daaf5d6cc929ccf1f2786ab747d2d5"
+  },
+  {
+    "path": "schemas/fraud-check-hub-reply.json",
+    "sha256": "20f9c541d4d047790856a381b9be036e96aee3b2090c676cdf81a76ab10e6582"
+  },
+  {
+    "path": "schemas/fraud-check-hub-request.json",
+    "sha256": "3ca69baf5f6bea78c95066cf20746e0d02aa168bc83676f0e1481ce072d28289"
+  },
+  {
+    "path": "schemas/fraud-check-service-reply.json",
+    "sha256": "b49da0848cabd451d2619fa5b6df5cdbb3b5b888fe40dea5a9ab57a4bfe152b7"
+  },
+  {
+    "path": "schemas/fraud-check-service-request.json",
+    "sha256": "1664204cb39d2b872211a9720cfd35dd25c86422bec5be49fe46c3ae12f817f9"
+  },
+  {
+    "path": "schemas/ledger-entry-message.json",
+    "sha256": "255eb512948142b4b0258bb51e0aeee81c90d4a15617cdee26eb1f90c9bc60be"
+  },
+  {
+    "path": "schemas/ledger-reversal-message.json",
+    "sha256": "c96c500f7f75031f8e53617dd9e4131ee9e9ee93bb2d2eed833c57145457efee"
+  },
+  {
+    "path": "schemas/payment-posted-event.json",
+    "sha256": "1d03ef27d1934f2e0522f5e9a26319f9607f0e125a26ae73748107ffdfda0743"
+  },
+  {
+    "path": "schemas/payment-reversed-event.json",
+    "sha256": "d3b915c2f2b47bcf6a1062faf4a1da3e1749d4968ce100b5ca8e51b1d09a0f89"
+  }
+]

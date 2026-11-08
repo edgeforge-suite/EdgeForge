@@ -1,0 +1,16 @@
+app_name: M5a Run Semantics Contract Fixture
+bounded_context: m5a_run_semantics
+schema_version: "2.0"
+app_archetype: crud
+data_handoffs:
+  - name: widget-staging
+    system: SYNTHETIC_HANDOFF
+    type: staging-table
+    version: "1.0"
+    spec: widget-staging.sql
+    mapping: widget-staging-mapping.yaml
+    run_semantics:
+      run_id: caller_supplied
+      restart: resume
+      dedup_key: [widget_id, payload_key]
+target_profile: springboot-legacy-compatible

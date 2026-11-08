@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "properties": {
+    "settlementId": { "type": "string" },
+    "accountReference": { "type": "string" },
+    "settlementAmount": { "type": "number" },
+    "settlementCurrency": { "type": "string" }
+  },
+  "required": ["accountReference", "settlementAmount", "settlementCurrency"]
+}

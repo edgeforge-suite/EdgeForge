@@ -1,0 +1,261 @@
+{
+  "after": {
+    "assessment_time_utc": "2026-10-25T02:09:11.727726Z",
+    "audit_dependency_count": 76,
+    "audit_exit_code": 0,
+    "dependency_count": 76,
+    "detailed_report_sha256": "a1f3cdd50c03142fa70075c4fff3b065bca8a67e8b1a653ed9afdf97309b7762",
+    "engine_source_sha": "aecb3f15956cc805139d488a08380f60aa657391",
+    "exclusions": [
+      "local Engine package",
+      "pip/setuptools/wheel bootstrap tools"
+    ],
+    "finding_count": 0,
+    "license_row_count": 76,
+    "lock_sha256": "bc94889073b421a8b878663cf9c902a508b655b31198f1fd47806f3902917b63",
+    "public_provenance": "python-current/provenance.json",
+    "public_report": "python-current/pip-audit.json",
+    "reference_image": "python:3.11.15-bookworm@sha256:a8f8fbe1a0edc9e4dddafa64ba73f7e04be7be5ebc23f332362e779e0a2e4e52",
+    "reference_python": {
+      "libc": "2.36",
+      "machine": "x86_64",
+      "python": "3.11.15",
+      "system": "Linux"
+    },
+    "requirements_sha256": "2a7ebc62d580da97b63bf69c562357113daa54d4f3739d532c0c819611313351",
+    "sbom_component_count": 76,
+    "schema_version": "1.0",
+    "tools": {
+      "cyclonedx_bom": "7.3.0",
+      "pip_audit": "pip-audit 2.9.0",
+      "pip_licenses": "pip-licenses 5.5.5"
+    }
+  },
+  "assessment_date_utc": "2026-10-25",
+  "audit_diagnostics": "Validated findings emit deterministic package/installed_version/advisory_id JSON lines on stderr; stdout aggregate and exits0/1/2 unchanged",
+  "authoritative_sources": [
+    {
+      "body_sha256": "0950f80b211eea39ef27507fb214afc91436298489901aa91326844240a0db13",
+      "private_retention_reference": "primary-sources/fastmcp-3.2.3.json",
+      "retrieved_at_utc": "2026-10-25T02:01:19.940697+00:00",
+      "url": "https://pypi.org/pypi/fastmcp/3.2.3/json"
+    },
+    {
+      "body_sha256": "b782ff4a784f3fdd6c1056db8a1636f4e2f8a8b41ed8d33417fde394d463732d",
+      "private_retention_reference": "primary-sources/fastmcp-3.4.10.json",
+      "retrieved_at_utc": "2026-10-25T02:01:20.047174+00:00",
+      "url": "https://pypi.org/pypi/fastmcp/3.4.10/json"
+    },
+    {
+      "body_sha256": "583f0d01042000c121928094f89e574a4285e1cab428c8758e44b9b37df5fcc7",
+      "private_retention_reference": "primary-sources/fastmcp-slim-3.4.10.json",
+      "retrieved_at_utc": "2026-10-25T02:01:20.155862+00:00",
+      "url": "https://pypi.org/pypi/fastmcp-slim/3.4.10/json"
+    },
+    {
+      "body_sha256": "a8ec386d97f91a4babec75cc9c4217b850fea7ed2d240fbac3a490115dd9c517",
+      "private_retention_reference": "primary-sources/opentelemetry-api-1.44.0.json",
+      "retrieved_at_utc": "2026-10-25T02:01:20.260234+00:00",
+      "url": "https://pypi.org/pypi/opentelemetry-api/1.44.0/json"
+    },
+    {
+      "body_sha256": "da574eb54158846f06ac0a51034378feb22c47be67856f001da7337f3a116d2c",
+      "private_retention_reference": "primary-sources/opentelemetry-api-1.45.1.json",
+      "retrieved_at_utc": "2026-10-25T02:01:20.314079+00:00",
+      "url": "https://pypi.org/pypi/opentelemetry-api/1.45.1/json"
+    },
+    {
+      "body_sha256": "2e23ecbc39ac58cb2fd843f4b76c941c48de1a756ca61ca14b62299580a086ed",
+      "private_retention_reference": "primary-sources/fastmcp-advisory.json",
+      "retrieved_at_utc": "2026-10-25T02:01:20.655651+00:00",
+      "url": "https://api.github.com/repos/PrefectHQ/fastmcp/security-advisories/GHSA-7xgj-8392-5q4r"
+    },
+    {
+      "body_sha256": "66969c3d8a3686bcf87d0df320570b769ef244f0a15990e476930f58bc272715",
+      "private_retention_reference": "primary-sources/otel-advisory.json",
+      "retrieved_at_utc": "2026-10-25T02:01:21.046217+00:00",
+      "url": "https://api.github.com/repos/open-telemetry/opentelemetry-python/security-advisories/GHSA-xcq7-p3pf-p88h"
+    },
+    {
+      "body_sha256": "5c294d788dadb5a369689fe393431d551435563db4070bfd6a0c63a627ab85f6",
+      "private_retention_reference": "candidate-install/griffelib-2.0.0-pypi.json",
+      "retrieved_at_utc": "2026-10-25T02:04:36.333997+00:00",
+      "url": "https://pypi.org/pypi/griffelib/2.0.0/json"
+    }
+  ],
+  "baseline_source_sha": "47150f90907dabd9460848bdf2a42fdb83f4b15c",
+  "before": {
+    "audit_dependency_count": 74,
+    "audit_exit_code": 1,
+    "detailed_report_sha256": "f9a5f70172bf1af8bedeae63d277ee321bba53a43210360a0df047aa6ee88616",
+    "finding_count": 2,
+    "findings": [
+      {
+        "aliases": [],
+        "fix_versions": [
+          "3.4.10",
+          "4.1.2"
+        ],
+        "id": "GHSA-7xgj-8392-5q4r",
+        "package": "fastmcp",
+        "version": "3.2.3"
+      },
+      {
+        "aliases": [
+          "CVE-2026-114603"
+        ],
+        "fix_versions": [
+          "1.45.1"
+        ],
+        "id": "GHSA-xcq7-p3pf-p88h",
+        "package": "opentelemetry-api",
+        "version": "1.44.0"
+      }
+    ],
+    "lock_sha256": "302d4806b24e99fabdf49057a0cebadf142b271e42b2beefdd71ec3b3d1a625c",
+    "private_retention_reference": "diagnostic-audit-1/pip-audit.json"
+  },
+  "corrected_source_sha": "aecb3f15956cc805139d488a08380f60aa657391",
+  "corrections": [
+    {
+      "advisory": "GHSA-7xgj-8392-5q4r",
+      "affected_range": ">=3.0.0,<3.4.10",
+      "package": "fastmcp",
+      "patched_3x": "3.4.10",
+      "previous_version": "3.2.3",
+      "rationale": "Select fixed existing-major release, not the alternative major4 release. Thin distribution requires fastmcp-slim[client,server]==3.4.10 and griffelib>=2.0.0; choose the compatible minimum griffelib2.0.0.",
+      "role": "Engine local MCP server dependency; no direct use in application generation",
+      "selected_version": "3.4.10"
+    },
+    {
+      "advisory": "GHSA-xcq7-p3pf-p88h",
+      "affected_range": "<=1.45.0",
+      "aliases": [
+        "CVE-2026-114603"
+      ],
+      "package": "opentelemetry-api",
+      "patched_version": "1.45.1",
+      "previous_version": "1.44.0",
+      "rationale": "Compatible fixed1.x release satisfies inherited >=1.20.0 edge; no new direct requirement.",
+      "role": "FastMCP telemetry transitive; no direct application-generation use",
+      "selected_version": "1.45.1"
+    }
+  ],
+  "current_evidence_sha256": {
+    "dependency-licenses.csv": "1c1e5da5f11df458c69c54ad53f5ebe04912b95bb65f8aa58ee1b812dab8fbc5",
+    "dependency-licenses.md": "ea003f6ce99245ea4d98bbbb74bfc601bd2df678d10e49ca8dcb75f121f39b06",
+    "pip-audit.json": "a1f3cdd50c03142fa70075c4fff3b065bca8a67e8b1a653ed9afdf97309b7762",
+    "pip-audit.md": "cde1385d0efd12c3c53853f07406269342fcf850bef8f7958e8bbe66095651f9",
+    "provenance.json": "24847e1366cf2d05ee213cc4fa3504072323125a26382ed5d93d9d655d68d7a2",
+    "sbom.cdx.json": "5c006fbbb24baeb1c7ebee90d8c04afbc6a01059acdca71034a93a5e944a9eee"
+  },
+  "dependency_delta": {
+    "added": {
+      "fastmcp-slim": "3.4.10",
+      "griffelib": "2.0.0"
+    },
+    "all_other_selected_versions_unchanged": true,
+    "changed": {
+      "fastmcp": {
+        "after": "3.4.10",
+        "before": "3.2.3"
+      },
+      "opentelemetry-api": {
+        "after": "1.45.1",
+        "before": "1.44.0"
+      }
+    },
+    "removed": []
+  },
+  "goal": "EF-V5-M2-ENGINE-CLEAN-PLUGIN-FIX-S1 revision 2",
+  "historical_ci": {
+    "findings": 2,
+    "identities": "not retained in CI log; exact identity equality cannot be established",
+    "packages": 74,
+    "run": "https://github.com/santosh-sh/EdgeForge/actions/runs/40148001865"
+  },
+  "historical_snapshot_sha256": {
+    "dependency-licenses.csv": "8dee9e9e774f7c6707810b7b5646943cecc97afc04e91ca4f6773d1a1a7cb5f3",
+    "dependency-licenses.md": "7e2481778bd8fc0e3bddc419a64f63ec2b0a4742b9171f217e491b1ceb7095e6",
+    "pip-audit.json": "34754641e1f1140962958d9f05a16bcd58d6a79a7bd54e3da8f296294d84575a",
+    "pip-audit.md": "649af88265a7a8a95f315415ffe4c6e1c3e18ef9f466b45b77852b030958cf8c",
+    "provenance.json": "dbd1572487904395a9e4109a6342604d88386a5248ca5bdb25064ee1b55c58a9",
+    "sbom.cdx.json": "8a239ec7e8306ee262705f7d14a3d261617dbaa9f3c51c88c1cc591d6af8bbc3"
+  },
+  "m2_complete": false,
+  "minimum_python_proof": {
+    "image": "python@sha256:0a06143d04e5207c0561a9803a007af1d3e7941634fd1a7f801079dca3644bf5",
+    "in_process_roundtrips": [
+      "list_archetypes",
+      "list_target_profiles"
+    ],
+    "limits": "Consumer compatibility only; not a full3.10 suite, performance/exploitability proof or audit of every platform-specific graph",
+    "mcp_registered_tools": [
+      "describe_target_profile",
+      "generate_app",
+      "get_manifest_schema",
+      "list_archetypes",
+      "list_target_profiles",
+      "translate_project",
+      "validate_manifest"
+    ],
+    "pip_check_exit_code": 0,
+    "python": "3.10.21",
+    "report_sha256": "dc3643495ed8d5eb326e7d1ab4d5a19a983883167232ac3dd0cdb27f72f04190",
+    "target_versions": {
+      "fastmcp": "3.4.10",
+      "fastmcp-slim": "3.4.10",
+      "griffelib": "2.0.0",
+      "opentelemetry-api": "1.45.1"
+    },
+    "tests": {
+      "errors": 0,
+      "failures": 0,
+      "skipped": 1,
+      "tests": 60
+    },
+    "tracecontext_valid_and_oversized_rejection": true
+  },
+  "private_retention": {
+    "collection": "clean-plugin-python-r2-20261025",
+    "references": "Collection-relative only; full primary bodies and diagnostic reports remain private; no upload"
+  },
+  "proof_carryforward": {
+    "after_python_env": "clean 3.4.10/1.45.1 candidate",
+    "after_sha256": "00bfcd0253dabc5ae56c7c85fe8007c329faa4151c427d5c5127d11b1b592071",
+    "before_python_env": "retained 3.2.3/1.44.0 reference",
+    "before_sha256": "00bfcd0253dabc5ae56c7c85fe8007c329faa4151c427d5c5127d11b1b592071",
+    "cases": 30,
+    "generated_files": 1044,
+    "generator_sources_unchanged": [
+      "appbuilder/",
+      "templates/"
+    ],
+    "manual_expensive_proof_repeated": false,
+    "network": "Docker --network none",
+    "preserved_archive_sha256": "b03bf4b270ecf304cd1a8795ed396f93d59267cf610e42d5e193db4f62519ac5",
+    "reused": "Four clean verify executions/28 tests, four builder assessments, original realm/package/runtime proof and initial scoped review; retained at original identities, not relabeled as later execution",
+    "reviewed_pre_amendment_head": "47150f90907dabd9460848bdf2a42fdb83f4b15c",
+    "source": "unchanged generator implementation",
+    "source_at_actual_image_assessment": "b7c48b58341f823c3a87ab02456cd1c10743a32e",
+    "status": "byte-identical"
+  },
+  "reference_environment": {
+    "image": "python:3.11.15-bookworm@sha256:a8f8fbe1a0edc9e4dddafa64ba73f7e04be7be5ebc23f332362e779e0a2e4e52",
+    "python": {
+      "libc": "2.36",
+      "machine": "x86_64",
+      "python": "3.11.15",
+      "system": "Linux"
+    },
+    "scanning_service": "PyPI only; public third-party names/versions",
+    "tools": {
+      "cyclonedx_bom": "7.3.0",
+      "pip_audit": "pip-audit 2.9.0",
+      "pip_licenses": "pip-licenses 5.5.5"
+    }
+  },
+  "risk_accepted": false,
+  "schema_version": "1.0",
+  "scope": "Bounded Engine Python audit correction and applicability overlay; not M2 or release clearance"
+}

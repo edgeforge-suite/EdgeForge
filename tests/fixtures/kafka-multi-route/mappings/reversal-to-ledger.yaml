@@ -1,0 +1,10 @@
+transforms:
+  - source: reversalId
+    target: entryId
+  - source: originalPaymentId
+    target: sourcePaymentId
+  - source: amountMinorUnits
+    target: amount
+    type_coercion: minor_to_major_units
+  - source: reasonCode
+    target: reversalReason

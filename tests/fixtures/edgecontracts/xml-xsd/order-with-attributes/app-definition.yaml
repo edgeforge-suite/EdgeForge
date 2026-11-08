@@ -1,0 +1,11 @@
+app_name: XML Order Contract
+bounded_context: orders
+schema_version: "2.0"
+downstream_interfaces:
+  - name: order-xml-output
+    system: DOWNSTREAM
+    type: xml-xsd
+    xsd_path: contracts/order.xsd
+    root_element: ord:OrderMessage
+    namespace: "urn:edgeforge:examples:order:v1"
+target_profile: springboot-legacy-compatible

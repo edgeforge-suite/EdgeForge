@@ -1,0 +1,9 @@
+entity: AuthorizationRecord
+direction: outbound
+field_mappings:
+- source: AuthorizationRecord.authorizationId
+  target: authorizationId
+- source: AuthorizationRecord.status
+  target: status
+- source: AuthorizationRecord.serviceUnits
+  target: serviceUnits

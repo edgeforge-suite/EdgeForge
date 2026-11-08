@@ -1,0 +1,8 @@
+transforms:
+  - source: requestId
+    target: paymentId
+  - source: verified
+    target: approved
+  - source: reason
+    target: declineReason
+    default: ""

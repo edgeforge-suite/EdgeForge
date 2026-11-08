@@ -1,0 +1,33 @@
+{
+  "archetype": "crud",
+  "engine_sha": "109f6385345047013836f1e32b2d4230b9e8ad2b",
+  "generation_input": {
+    "app_archetype": "crud",
+    "app_name": "M5a Run Semantics Contract Fixture",
+    "bounded_context": "m5a_run_semantics",
+    "data_handoffs": [
+      {
+        "mapping": "widget-staging-mapping.yaml",
+        "name": "widget-staging",
+        "run_semantics": {
+          "dedup_key": [
+            "widget_id",
+            "payload_key"
+          ],
+          "restart": "resume",
+          "run_id": "caller_supplied"
+        },
+        "spec": "widget-staging.sql",
+        "system": "SYNTHETIC_HANDOFF",
+        "type": "staging-table",
+        "version": "1.0"
+      }
+    ],
+    "schema_version": "2.0",
+    "target_profile": "springboot-legacy-compatible"
+  },
+  "generation_run_id": "maven-assessment-m5a-h2-j17",
+  "input_manifest": "tests/fixtures/manifest-v2-cut/v2-run-semantics-app-definition.yaml",
+  "input_package_sha256": "a8187cff4a8fdbc64483488d5d64be97348670f30ae1d9d5d5007fa0a4d6bc51",
+  "target_profile": "springboot-legacy-compatible"
+}

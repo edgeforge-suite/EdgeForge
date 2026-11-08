@@ -1,0 +1,45 @@
+openapi: 3.0.3
+info:
+  title: App C Payments API
+  version: "1.0"
+paths:
+  /payments:
+    post:
+      operationId: sendPaymentToAppC
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/OutboundPaymentRequest"
+      responses:
+        "200":
+          description: Payment accepted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OutboundPaymentResponse"
+components:
+  schemas:
+    OutboundPaymentRequest:
+      type: object
+      required:
+        - paymentAmount
+        - currencyCode
+        - originatorName
+        - beneficiaryName
+      properties:
+        paymentAmount:
+          type: number
+          format: double
+        currencyCode:
+          type: string
+        originatorName:
+          type: string
+        beneficiaryName:
+          type: string
+    OutboundPaymentResponse:
+      type: object
+      properties:
+        status:
+          type: string

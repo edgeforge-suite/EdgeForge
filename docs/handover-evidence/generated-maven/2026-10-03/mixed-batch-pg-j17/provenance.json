@@ -1,0 +1,58 @@
+{
+  "archetype": "crud",
+  "engine_sha": "109f6385345047013836f1e32b2d4230b9e8ad2b",
+  "generation_input": {
+    "app_archetype": "crud",
+    "app_name": "M5a Run Semantics Contract Fixture",
+    "bounded_context": "m5a_run_semantics",
+    "data_handoffs": [
+      {
+        "mapping": "widget-staging-mapping.yaml",
+        "name": "widget-staging",
+        "run_semantics": {
+          "dedup_key": [
+            "widget_id",
+            "payload_key"
+          ],
+          "restart": "resume",
+          "run_id": "caller_supplied"
+        },
+        "spec": "widget-staging.sql",
+        "system": "SYNTHETIC_HANDOFF",
+        "type": "staging-table",
+        "version": "1.0"
+      }
+    ],
+    "downstream_interfaces": [
+      {
+        "mapping": "file-lane/downstream/account-csv-mapping.yaml",
+        "name": "account-csv-file",
+        "spec": "file-lane/downstream/account-csv-layout.yaml",
+        "system": "ETL",
+        "type": "file-csv"
+      }
+    ],
+    "schema_version": "2.0",
+    "target_profile": "springboot-enterprise-postgres-java17",
+    "upstream_interfaces": [
+      {
+        "mapping": "file-lane/upstream/account-mapping.yaml",
+        "name": "account-api",
+        "operations": [
+          {
+            "name": "createAccount",
+            "request_sample": "file-lane/upstream/create-account-request.json",
+            "response_sample": "file-lane/upstream/create-account-response.json"
+          }
+        ],
+        "spec": "file-lane/upstream/account-api-spec.yaml",
+        "system": "CORE",
+        "type": "rest-json"
+      }
+    ]
+  },
+  "generation_run_id": "maven-assessment-mixed-batch-pg-j17",
+  "input_manifest": "tests/fixtures/manifest-v2-cut/v2-run-semantics-app-definition.yaml",
+  "input_package_sha256": "e208d9eb0291af7bcd3fbee8f28493e890eb05c1c9a0925392ec97ea4160e11e",
+  "target_profile": "springboot-enterprise-postgres-java17"
+}

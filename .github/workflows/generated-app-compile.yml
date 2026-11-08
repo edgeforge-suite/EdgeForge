@@ -1,0 +1,381 @@
+name: Generated App Compile Check
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/generated-app-compile.yml"
+      - "scripts/smoke/generated_app_independence.py"
+      - "scripts/smoke/boot41_preview_proof.py"
+      - "scripts/smoke/boot41_batch*.py"
+      - "scripts/smoke/boot41_kafka*.py"
+      - "tests/fixtures/boot41-kafka/**"
+      - "tests/fixtures/boot41-promotion/**"
+      - "tests/unit/test_boot41_promotion.py"
+      - "tests/unit/test_boot41_kafka_preview.py"
+      - "tests/fixtures/boot41-batch/**"
+      - "tests/unit/test_boot41_batch_preview.py"
+      - "appbuilder/contracts/**"
+      - "appbuilder/core/**"
+      - "appbuilder/generation/**"
+      - "appbuilder/manifest/**"
+      - "appbuilder/metadata/**"
+      - "appbuilder/schema/**"
+      - "appbuilder/target_profiles/**"
+      - "GeneratedApps/**"
+      - "examples/input-projects/**"
+      - "tests/integration/test_test_console_exposure_runtime.py"
+      - "tests/integration/test_kafka_actuator_exposure_runtime.py"
+      - "tests/integration/test_generated_crud_pagination_runtime.py"
+      - "tests/integration/test_generated_passthrough_validation_runtime.py"
+      - "tests/integration/test_generated_security_headers_runtime.py"
+      - "tests/unit/test_generated_app_independence.py"
+      - "tests/unit/test_boot41_preview.py"
+      - "docs/generated-app-standards/generated-app-quality-gate-v1.md"
+      - "requirements.txt"
+      - "requirements-lock.txt"
+      - "pyproject.toml"
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/generated-app-compile.yml"
+      - "scripts/smoke/generated_app_independence.py"
+      - "scripts/smoke/boot41_preview_proof.py"
+      - "scripts/smoke/boot41_batch*.py"
+      - "scripts/smoke/boot41_kafka*.py"
+      - "tests/fixtures/boot41-kafka/**"
+      - "tests/fixtures/boot41-promotion/**"
+      - "tests/unit/test_boot41_promotion.py"
+      - "tests/unit/test_boot41_kafka_preview.py"
+      - "tests/fixtures/boot41-batch/**"
+      - "tests/unit/test_boot41_batch_preview.py"
+      - "appbuilder/contracts/**"
+      - "appbuilder/core/**"
+      - "appbuilder/generation/**"
+      - "appbuilder/manifest/**"
+      - "appbuilder/metadata/**"
+      - "appbuilder/schema/**"
+      - "appbuilder/target_profiles/**"
+      - "GeneratedApps/**"
+      - "examples/input-projects/**"
+      - "tests/integration/test_test_console_exposure_runtime.py"
+      - "tests/integration/test_kafka_actuator_exposure_runtime.py"
+      - "tests/integration/test_generated_crud_pagination_runtime.py"
+      - "tests/integration/test_generated_passthrough_validation_runtime.py"
+      - "tests/integration/test_generated_security_headers_runtime.py"
+      - "tests/unit/test_generated_app_independence.py"
+      - "tests/unit/test_boot41_preview.py"
+      - "docs/generated-app-standards/generated-app-quality-gate-v1.md"
+      - "requirements.txt"
+      - "requirements-lock.txt"
+      - "pyproject.toml"
+
+jobs:
+  compile-representative-generated-app:
+    name: Compile representative generated app
+    runs-on: ubuntu-latest
+    services:
+      batch-preview-postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: batch_preview
+          POSTGRES_PASSWORD: synthetic-batch-preview
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready --health-interval 5s
+          --health-timeout 5s --health-retries 10
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
+      - name: Record actual proof checkout
+        run: |
+          git rev-parse HEAD HEAD^{tree}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Engine dependencies
+        run: python -m pip install -c requirements-lock.txt -r requirements.txt
+
+      - name: Generate and isolate representative CRUD app
+        shell: bash
+        run: |
+          set -euo pipefail
+          authoring_root="$RUNNER_TEMP/edgeforge-authoring"
+          isolated_root="$RUNNER_TEMP/edgeforge-isolated"
+          generated_source="$authoring_root/generated-app"
+          isolated_package="$isolated_root/generated-app"
+          mkdir -p "$authoring_root" "$isolated_root"
+          python -m appbuilder.cli generate \
+            --manifest examples/input-projects/generated-app-ci-smoke/app-definition.yaml \
+            --output "$generated_source" \
+            --validate-schema
+          cp -a "$generated_source" "$isolated_package"
+          test "$(find "$isolated_root" -mindepth 1 -maxdepth 1 -type d | wc -l)" -eq 1
+          test -d "$isolated_package"
+          test ! -e "$isolated_root/examples"
+          test ! -e "$isolated_root/app-definition.yaml"
+          echo "CRUD_PACKAGE=$isolated_package" >> "$GITHUB_ENV"
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: "21"
+          distribution: temurin
+
+      - name: Verify isolated CRUD source boundary
+        run: |
+          python scripts/smoke/generated_app_independence.py \
+            --package "$CRUD_PACKAGE" \
+            --require-schema-baseline
+
+      - name: Build and test isolated CRUD app
+        working-directory: ${{ env.CRUD_PACKAGE }}
+        run: mvn -q clean verify
+
+      - name: Verify isolated CRUD packaged boundary
+        run: |
+          python scripts/smoke/generated_app_independence.py \
+            --package "$CRUD_PACKAGE" \
+            --require-schema-baseline \
+            --require-packaged-jar
+
+      - name: Start isolated CRUD JAR and require healthy status
+        shell: bash
+        run: |
+          set -euo pipefail
+          log_file="$RUNNER_TEMP/edgeforge-generated-app.log"
+          jar_path="$(find "$CRUD_PACKAGE/target" -maxdepth 1 -type f \
+            -name '*.jar' ! -name '*.original' | head -n 1)"
+          test -n "$jar_path"
+          port="$(python -c 'import socket; s=socket.socket(); s.bind(("127.0.0.1", 0)); print(s.getsockname()[1]); s.close()')"
+          (
+            cd "$CRUD_PACKAGE"
+            SERVER_PORT="$port" java -jar "$jar_path" >"$log_file" 2>&1
+          ) &
+          app_pid=$!
+          cleanup() {
+            status=$?
+            kill "$app_pid" 2>/dev/null || true
+            wait "$app_pid" 2>/dev/null || true
+            if [ "$status" -ne 0 ]; then
+              echo "----- generated health response -----"
+              cat "$RUNNER_TEMP/edgeforge-generated-health.json" 2>/dev/null || true
+              echo "----- generated app log -----"
+              cat "$log_file"
+            fi
+            exit "$status"
+          }
+          trap cleanup EXIT
+
+          health_file="$RUNNER_TEMP/edgeforge-generated-health.json"
+          healthy=0
+          for _ in $(seq 1 90); do
+            if ! kill -0 "$app_pid" 2>/dev/null; then
+              echo "generated app exited before becoming healthy" >&2
+              exit 1
+            fi
+            if curl --fail --silent --show-error \
+              "http://127.0.0.1:$port/actuator/health" >"$health_file"; then
+              if python scripts/smoke/generated_app_health.py "$health_file"; then
+                healthy=1
+                break
+              fi
+            fi
+            sleep 1
+          done
+          test "$healthy" -eq 1
+          cat "$health_file"
+
+      - name: Build isolated CRUD container and require non-root user
+        shell: bash
+        run: |
+          set -euo pipefail
+          image="edgeforge-generated-app-standalone:${GITHUB_RUN_ID}"
+          cleanup() {
+            docker image rm --force "$image" >/dev/null 2>&1 || true
+          }
+          trap cleanup EXIT
+          docker build --tag "$image" "$CRUD_PACKAGE"
+          runtime_user="$(docker image inspect --format '{{.Config.User}}' "$image")"
+          test -n "$runtime_user"
+          case "$runtime_user" in
+            root|0|0:0)
+              echo "generated image runtime user is not non-root: $runtime_user" >&2
+              exit 1
+              ;;
+          esac
+          echo "generated image runtime user: $runtime_user"
+          runtime_uid="$(docker run --rm --entrypoint id "$image" -u)"
+          case "$runtime_uid" in
+            ""|*[!0-9]*|0)
+              echo "generated image effective runtime UID is not non-root: $runtime_uid" >&2
+              exit 1
+              ;;
+          esac
+          echo "generated image effective runtime UID: $runtime_uid"
+
+      - name: Isolated package checks for passthrough and Kafka archetypes
+        shell: bash
+        run: |
+          set -euo pipefail
+          archetype_root="$RUNNER_TEMP/edgeforge-isolated-archetypes"
+          mkdir -p "$archetype_root"
+
+          verify_archetype() {
+            name="$1"
+            manifest="$2"
+            authoring_output="$RUNNER_TEMP/edgeforge-authoring-$name/generated-app"
+            isolated_package="$archetype_root/$name"
+            mkdir -p "$(dirname "$authoring_output")"
+            python -m appbuilder.cli generate \
+              --manifest "$manifest" \
+              --output "$authoring_output" \
+              --validate-schema
+            cp -a "$authoring_output" "$isolated_package"
+            python scripts/smoke/generated_app_independence.py \
+              --package "$isolated_package"
+            (
+              cd "$isolated_package"
+              mvn -q clean verify
+            )
+            python scripts/smoke/generated_app_independence.py \
+              --package "$isolated_package" \
+              --require-packaged-jar
+          }
+
+          verify_archetype \
+            passthrough \
+            examples/input-projects/country-router/app-definition.yaml
+          verify_archetype \
+            kafka \
+            tests/fixtures/kafka-integration/manifest.yaml
+
+      - name: Prove legacy console transition is not packaged or served
+        env:
+          EDGEFORGE_RUN_GENERATED_RUNTIME_TESTS: "1"
+        run: python -m pytest tests/integration/test_test_console_exposure_runtime.py -q
+
+      - name: Prove Kafka actuator default and explicit opt-in
+        env:
+          EDGEFORGE_RUN_GENERATED_RUNTIME_TESTS: "1"
+        run: python -m pytest tests/integration/test_kafka_actuator_exposure_runtime.py -q
+
+      - name: Prove generated CRUD pagination bounds
+        env:
+          EDGEFORGE_RUN_GENERATED_RUNTIME_TESTS: "1"
+        run: python -m pytest tests/integration/test_generated_crud_pagination_runtime.py -q
+
+      - name: Prove generated passthrough request validation
+        env:
+          EDGEFORGE_RUN_GENERATED_RUNTIME_TESTS: "1"
+        run: python -m pytest tests/integration/test_generated_passthrough_validation_runtime.py -q
+
+      - name: Prove universal generated security headers
+        env:
+          EDGEFORGE_RUN_GENERATED_RUNTIME_TESTS: "1"
+        run: python -m pytest tests/integration/test_generated_security_headers_runtime.py -q
+
+      - name: Set up Java 17 for promoted ordinary jobless profiles
+        uses: actions/setup-java@v4
+        with:
+          java-version: "17"
+          distribution: temurin
+
+      - name: Prove ordinary Boot 4.1 H2 builds and wire compatibility
+        run: python -m scripts.smoke.boot41_preview_proof --mode h2 --java17-home "$JAVA_HOME" --work-dir "$RUNNER_TEMP/boot41-jobless-proof"
+
+      - name: Retain ordinary jobless receipt and runtime logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: boot41-jobless-proof
+          path: |
+            ${{ runner.temp }}/boot41-jobless-proof/receipt.json
+            ${{ runner.temp }}/boot41-jobless-proof/*.log
+
+      - name: Compile Batch API domain-name collision regressions
+        run: |
+          python -m scripts.smoke.boot41_batch_name_collision_proof \
+            --java17-home "$JAVA_HOME" --work-dir "$RUNNER_TEMP/boot41-batch-name-proof"
+
+      - name: Retain Batch domain-name compilation receipt and logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: boot41-batch-name-proof
+          path: |
+            ${{ runner.temp }}/boot41-batch-name-proof/receipt.json
+            ${{ runner.temp }}/boot41-batch-name-proof/*.log
+
+      - name: Retain Java 17 home for Batch preview proof
+        run: echo "BATCH_JAVA17_HOME=$JAVA_HOME" >> "$GITHUB_ENV"
+
+      - name: Set up Java 21 for Batch preview proof
+        uses: actions/setup-java@v4
+        with:
+          java-version: "21"
+          distribution: temurin
+
+      - name: Install PostgreSQL client for disposable Batch proof
+        run: sudo apt-get update && sudo apt-get install -y postgresql-client
+
+      - name: Prove ordinary Boot 4.1 JDBC Batch early crashes and durable history
+        env:
+          EDGEFORGE_BOOT41_PGHOST: 127.0.0.1
+          EDGEFORGE_BOOT41_PGPORT: "5432"
+          EDGEFORGE_BOOT41_PGUSER: batch_preview
+          EDGEFORGE_BOOT41_PGPASSWORD: synthetic-batch-preview
+        run: |
+          python -m scripts.smoke.boot41_batch_preview_proof --mode full \
+            --java17-home "$BATCH_JAVA17_HOME" --java21-home "$JAVA_HOME" \
+            --work-dir "$RUNNER_TEMP/boot41-batch-proof"
+
+      - name: Retain Batch proof receipt and logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: boot41-batch-proof
+          path: |
+            ${{ runner.temp }}/boot41-batch-proof/receipt.json
+            ${{ runner.temp }}/boot41-batch-proof/*.log
+
+      - name: Verify current dependency policy and deterministic generation
+        run: python -m scripts.smoke.boot41_kafka_preservation --work-dir "$RUNNER_TEMP/boot41-default-proof"
+
+      - name: Prove Boot 4.1 Kafka broker contracts
+        run: |
+          python -m scripts.smoke.boot41_kafka_preview_proof \
+            --java17-home "$BATCH_JAVA17_HOME" --java21-home "$JAVA_HOME" \
+            --work-dir "$RUNNER_TEMP/boot41-kafka-proof"
+
+      - name: Prove native LZ4 Kafka roundtrip in generated non-root Java 17 and 21 containers
+        run: |
+          python -m scripts.smoke.boot41_kafka_lz4_container_proof \
+            --work-dir "$RUNNER_TEMP/boot41-lz4-proof"
+
+      - name: Retain native LZ4 container receipts and logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: boot41-lz4-proof
+          path: |
+            ${{ runner.temp }}/boot41-lz4-proof/receipt.json
+            ${{ runner.temp }}/boot41-lz4-proof/*.log
+
+      - name: Retain Kafka proof receipts and logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: boot41-kafka-proof
+          path: |
+            ${{ runner.temp }}/boot41-default-proof/receipt.json
+            ${{ runner.temp }}/boot41-kafka-proof/receipt.json
+            ${{ runner.temp }}/boot41-kafka-proof/*.log

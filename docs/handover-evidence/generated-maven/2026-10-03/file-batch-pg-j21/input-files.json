@@ -1,0 +1,30 @@
+[
+  {
+    "path": "app-definition.yaml",
+    "sha256": "25e235606d45a033e533b3ed4b0370b24f74d84526f1f316c9ddd8e9deb692a9"
+  },
+  {
+    "path": "downstream/account-csv-layout.yaml",
+    "sha256": "cdc88467bcc1b3b013c82e845d489c30af04f5a9fb6a69780079340aedc2dd0c"
+  },
+  {
+    "path": "downstream/account-csv-mapping.yaml",
+    "sha256": "b4744f1675e3663846e48679de57c735f6205d6832cb7309ec85ded5dc7f3615"
+  },
+  {
+    "path": "upstream/account-api-spec.yaml",
+    "sha256": "013049afa7e796704b31a6d01f3189b916135143c187fd257b90076c21785175"
+  },
+  {
+    "path": "upstream/account-mapping.yaml",
+    "sha256": "e3b80a2003a250034859bb29209f0577b2620b7494702d833a23cbe6475af17c"
+  },
+  {
+    "path": "upstream/create-account-request.json",
+    "sha256": "cbe844cc3c8d9896deb687cc2a312f8e1e01b4a254fa97e5c28466abfa7ae778"
+  },
+  {
+    "path": "upstream/create-account-response.json",
+    "sha256": "081d0fbac64942a48cf4f8029b4294c7053b3b9782fdc98273962b0b9a2ede45"
+  }
+]

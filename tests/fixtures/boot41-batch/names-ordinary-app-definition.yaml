@@ -1,0 +1,26 @@
+app_name: Batch Domain Name Collision Proof
+bounded_context: batch_name_collision
+schema_version: "2.0"
+app_archetype: crud
+upstream_interfaces:
+  - name: widget-api
+    system: SYNTHETIC_SOURCE
+    type: rest-json
+    spec: widget-api.json
+    mapping: job-launcher-api-mapping.yaml
+    operations:
+      - name: createWidget
+        request_sample: widget-request.json
+        response_sample: widget-response.json
+data_handoffs:
+  - name: job-launcher-staging
+    system: SYNTHETIC_HANDOFF
+    type: staging-table
+    spec: job-launcher-staging.sql
+    mapping: job-launcher-staging-mapping.yaml
+  - name: job-explorer-staging
+    system: SYNTHETIC_HANDOFF
+    type: staging-table
+    spec: job-explorer-staging.sql
+    mapping: job-explorer-staging-mapping.yaml
+target_profile: springboot-legacy-compatible

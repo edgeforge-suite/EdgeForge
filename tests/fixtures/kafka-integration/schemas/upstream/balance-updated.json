@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "accountId": { "type": "string" },
+    "availableBalance": { "type": "number" },
+    "currency": { "type": "string" }
+  },
+  "required": ["accountId", "availableBalance", "currency"]
+}

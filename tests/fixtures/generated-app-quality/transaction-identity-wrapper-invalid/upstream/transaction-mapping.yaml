@@ -1,0 +1,14 @@
+interface: transaction-api
+entity: TransactionHistory
+operations:
+  - name: createTransactionHistory
+    request_mappings: []
+    response_mappings:
+      - source: accountId
+        target: TransactionHistory.accountId
+      - source: transactionId
+        target: TransactionHistory.transactionId
+      - source: postingId
+        target: TransactionHistory.postingId
+      - source: amount
+        target: TransactionHistory.amount

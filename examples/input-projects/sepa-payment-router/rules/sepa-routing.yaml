@@ -1,0 +1,23 @@
+routing_rules:
+  route_field: paymentType
+  routes:
+    - match: "INSTANT"
+      target: SCT_INST
+    - match: "CREDIT"
+      target: SCT
+  default_target: SDD
+
+transforms:
+  - source: amount
+    target: settlementAmount
+  - source: currency
+    target: settlementCurrency
+  - source: debtorIban
+    target: debtorAccount
+  - source: creditorIban
+    target: creditorAccount
+  - source: creditorName
+    target: creditorFullName
+  - source: remittanceInfo
+    target: paymentReference
+    default: "UNSTRUCTURED"

@@ -1,0 +1,360 @@
+{
+  "archive": {
+    "bytes": 1790494720,
+    "content_manifest_sha256": "eeb7b71d2367aa17b5a2dd1c67485b025c9df68e79fba27ad71664598c70fbbe",
+    "files": 1332,
+    "member_content_verification": "all members independently hashed and compared; unsafe/duplicate members rejected",
+    "name": "clean-plugin-plexus-2026-10-24-private.tar",
+    "sha256": "b03bf4b270ecf304cd1a8795ed396f93d59267cf610e42d5e193db4f62519ac5"
+  },
+  "bindings": [
+    {
+      "bytes": 1856,
+      "path": "assessment-tools-fresh-20261024/databases.json",
+      "sha256": "ff21e92f5d2c047295aeefcdf7e830b763dcdd018ec10f39c0e335ccdbc80e2b"
+    },
+    {
+      "bytes": 1856,
+      "path": "assessment-tools/databases.json",
+      "sha256": "b988c37be9e02de1d137654af72fd5cdb9528d8e62de27ff3188e73e0530f1b9"
+    },
+    {
+      "bytes": 367740928,
+      "path": "cases/crud-h2-j17/generated-build-stage-bundle/image.tar",
+      "sha256": "91cc69e1b050ee26c1042e0a3e1ad2f5dc99a2946227f1aa9bcd5650a8f64504"
+    },
+    {
+      "bytes": 1657,
+      "path": "cases/crud-h2-j17/generated-build-stage-bundle/provenance.json",
+      "sha256": "60351cb7634551c03f15edf9627d80ce7599f22b3fac4b9746626e2460778f2d"
+    },
+    {
+      "bytes": 37661,
+      "path": "cases/crud-h2-j17/generated-build-stage-bundle/resolved-inventory.json",
+      "sha256": "f991fa10694be8742a89a8f7fb91c3aaa3d6bc9c9aac41561e9878f90e4af691"
+    },
+    {
+      "bytes": 97068,
+      "path": "cases/crud-h2-j17/generated-build-stage/assessment.json",
+      "sha256": "3e4cc7f53d75528ed0887024388a35f7b91c66225baf57c0af5ecb78ee94f1cc"
+    },
+    {
+      "bytes": 1856,
+      "path": "cases/crud-h2-j17/generated-build-stage/databases.json",
+      "sha256": "ff21e92f5d2c047295aeefcdf7e830b763dcdd018ec10f39c0e335ccdbc80e2b"
+    },
+    {
+      "bytes": 1657,
+      "path": "cases/crud-h2-j17/generated-build-stage/provenance.json",
+      "sha256": "60351cb7634551c03f15edf9627d80ce7599f22b3fac4b9746626e2460778f2d"
+    },
+    {
+      "bytes": 7150,
+      "path": "cases/crud-h2-j17/image-sidecar-fresh-db-r1/plexus-physical-copies.json",
+      "sha256": "7552c6b082da4a9eda402f077233684a77c7750fc1477ae33c9e2cccbc39dd85"
+    },
+    {
+      "bytes": 89477,
+      "path": "cases/crud-h2-j17/image-sidecar-fresh-db-r1/sidecar-receipt.json",
+      "sha256": "a377554a28f3363fff8c47c11255f177fbe7b5e23a289ce0882444c5775573eb"
+    },
+    {
+      "bytes": 90222,
+      "path": "cases/crud-h2-j17/image-sidecar/sidecar-receipt.json",
+      "sha256": "1ee936b280a8baf677a3deb65a7bdea59df8f9cbbdeff1b0cb212a5783cccf20"
+    },
+    {
+      "bytes": 5134,
+      "path": "cases/crud-h2-j17/proof/actual-realms.json",
+      "sha256": "4266466193b062ef5379231d21ac26fd83407daa1878a09006c66b83fe9da7bf"
+    },
+    {
+      "bytes": 793677,
+      "path": "cases/crud-h2-j17/proof/effective-pom.xml",
+      "sha256": "d01a11e638283c8b52646e141103ce1e72dce59e669bf317c7d0a8f9807f6e28"
+    },
+    {
+      "bytes": 9116,
+      "path": "cases/crud-h2-j17/proof/packaged-libraries.json",
+      "sha256": "019a1840ce3be4a912bdbbf398db469e4bb5d96b01064a52b28bbd9cd4412d7d"
+    },
+    {
+      "bytes": 27555,
+      "path": "cases/crud-h2-j17/proof/resolved-inventory.json",
+      "sha256": "9f544f2105a19f01816413877e5555f2ad875738e3ad4fb0c588b05705f0c5e0"
+    },
+    {
+      "bytes": 1243,
+      "path": "cases/crud-h2-j17/proof/result.json",
+      "sha256": "0eee5098219958c83d0e307469584cbaa2813cb76ea9781f24d3372013896d2e"
+    },
+    {
+      "bytes": 3,
+      "path": "cases/crud-h2-j17/proof/supplied-tests.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "bytes": 377543680,
+      "path": "cases/crud-pg-j21/generated-build-stage-bundle/image.tar",
+      "sha256": "9d5159fe5842dba54c244a1001714f6af35fb094aa41c87b0e6acae21ed5313f"
+    },
+    {
+      "bytes": 1659,
+      "path": "cases/crud-pg-j21/generated-build-stage-bundle/provenance.json",
+      "sha256": "f2e6d6887ec6d17e4c62db2e304b531bdfaabff7ef4f33aa3385a0f780bec30d"
+    },
+    {
+      "bytes": 38268,
+      "path": "cases/crud-pg-j21/generated-build-stage-bundle/resolved-inventory.json",
+      "sha256": "a72dfc47b1e4a74380e703b7740392eb9944b246dea93ef5ead780d189ec01ea"
+    },
+    {
+      "bytes": 97713,
+      "path": "cases/crud-pg-j21/generated-build-stage/assessment.json",
+      "sha256": "193403b8faadeb2de3b12afb213503a9215241290b1803add63611572600c8a0"
+    },
+    {
+      "bytes": 1856,
+      "path": "cases/crud-pg-j21/generated-build-stage/databases.json",
+      "sha256": "ff21e92f5d2c047295aeefcdf7e830b763dcdd018ec10f39c0e335ccdbc80e2b"
+    },
+    {
+      "bytes": 1659,
+      "path": "cases/crud-pg-j21/generated-build-stage/provenance.json",
+      "sha256": "f2e6d6887ec6d17e4c62db2e304b531bdfaabff7ef4f33aa3385a0f780bec30d"
+    },
+    {
+      "bytes": 7150,
+      "path": "cases/crud-pg-j21/image-sidecar-fresh-db-r1/plexus-physical-copies.json",
+      "sha256": "7552c6b082da4a9eda402f077233684a77c7750fc1477ae33c9e2cccbc39dd85"
+    },
+    {
+      "bytes": 90724,
+      "path": "cases/crud-pg-j21/image-sidecar-fresh-db-r1/sidecar-receipt.json",
+      "sha256": "66d3927adf99bf37ff0dd4337938d9dd369d2e3ae9ba32c6f5996a74ed8426ed"
+    },
+    {
+      "bytes": 5134,
+      "path": "cases/crud-pg-j21/proof/actual-realms.json",
+      "sha256": "27037fd6619a7fdecf6a4b6a2f8a30c6cb52df6635cbda0f0f1e5804df52b56b"
+    },
+    {
+      "bytes": 794073,
+      "path": "cases/crud-pg-j21/proof/effective-pom.xml",
+      "sha256": "37d67e8ba8b5d8e3836dda2b1bbafcec4dfbf4bb4f8cdceea145682bc11d74b5"
+    },
+    {
+      "bytes": 9358,
+      "path": "cases/crud-pg-j21/proof/packaged-libraries.json",
+      "sha256": "490b0e10d38189194299e32e29285a010e263b2f32b466f2e5889afc34025363"
+    },
+    {
+      "bytes": 27998,
+      "path": "cases/crud-pg-j21/proof/resolved-inventory.json",
+      "sha256": "ae2db587299c25e2b0f12a4621b128013d11be87e53e3535632736ae9f345ddc"
+    },
+    {
+      "bytes": 1245,
+      "path": "cases/crud-pg-j21/proof/result.json",
+      "sha256": "c0d283768725eed59879d429ce9f37ab311f0922e82a328dacc520175d7b9ffa"
+    },
+    {
+      "bytes": 3,
+      "path": "cases/crud-pg-j21/proof/supplied-tests.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "bytes": 455612928,
+      "path": "cases/kafka-pg-j17/generated-build-stage-bundle/image.tar",
+      "sha256": "2e6d602c9962dc983d7b3df0a6c8990c3419524052483594c97eb878b10fd507"
+    },
+    {
+      "bytes": 1685,
+      "path": "cases/kafka-pg-j17/generated-build-stage-bundle/provenance.json",
+      "sha256": "78c6a674143e639d946b8ce157960c1648af55afd1f1a5e9581c51b2b2af21eb"
+    },
+    {
+      "bytes": 40594,
+      "path": "cases/kafka-pg-j17/generated-build-stage-bundle/resolved-inventory.json",
+      "sha256": "7832dbad518a4adf1c7cb3ae55514177d9a4f250cd653541e3ed31d86ab2a5d3"
+    },
+    {
+      "bytes": 101639,
+      "path": "cases/kafka-pg-j17/generated-build-stage/assessment.json",
+      "sha256": "ac5b3d7d4dd56519a4d15e5a61216e282590b929d4c2eb3ef4471fa9819fea6c"
+    },
+    {
+      "bytes": 1856,
+      "path": "cases/kafka-pg-j17/generated-build-stage/databases.json",
+      "sha256": "ff21e92f5d2c047295aeefcdf7e830b763dcdd018ec10f39c0e335ccdbc80e2b"
+    },
+    {
+      "bytes": 1685,
+      "path": "cases/kafka-pg-j17/generated-build-stage/provenance.json",
+      "sha256": "78c6a674143e639d946b8ce157960c1648af55afd1f1a5e9581c51b2b2af21eb"
+    },
+    {
+      "bytes": 7150,
+      "path": "cases/kafka-pg-j17/image-sidecar-fresh-db-r1/plexus-physical-copies.json",
+      "sha256": "7552c6b082da4a9eda402f077233684a77c7750fc1477ae33c9e2cccbc39dd85"
+    },
+    {
+      "bytes": 93772,
+      "path": "cases/kafka-pg-j17/image-sidecar-fresh-db-r1/sidecar-receipt.json",
+      "sha256": "71afc7977e2f51409284191883bbd56632c6668424cff5fbc10621dd2ca93e03"
+    },
+    {
+      "bytes": 13536,
+      "path": "cases/kafka-pg-j17/proof-supplied-sources/src/test/java/proof/KafkaGeneratedContractTest.java",
+      "sha256": "31ba576f5d79a87b1ea81b5a4ec76f9d9f41b1acdde17343207a4ddf55268bf3"
+    },
+    {
+      "bytes": 5134,
+      "path": "cases/kafka-pg-j17/proof/actual-realms.json",
+      "sha256": "b2d5af7f37bf1e2ed2e26d7082cc19c4a0142e61eb84691ac6f68a0a6cde3d83"
+    },
+    {
+      "bytes": 793902,
+      "path": "cases/kafka-pg-j17/proof/effective-pom.xml",
+      "sha256": "3e52c3f521e06863f55fe337e4ddc1d79a1160a6af41d16f6470bc6963155b47"
+    },
+    {
+      "bytes": 6817,
+      "path": "cases/kafka-pg-j17/proof/packaged-libraries.json",
+      "sha256": "c84911789b5c5c48a38bfae3f32a3355a178211989beefdf36ea6f36c3379a80"
+    },
+    {
+      "bytes": 29689,
+      "path": "cases/kafka-pg-j17/proof/resolved-inventory.json",
+      "sha256": "0746801b1d6bb4e2d715a7a78ee9c5548c932d6c87d3f2ae7bce14e103a3b310"
+    },
+    {
+      "bytes": 1386,
+      "path": "cases/kafka-pg-j17/proof/result.json",
+      "sha256": "9e5a526ade26206fd7e23d519ee5b401925c5c33f76fd915a993d8cad12aa102"
+    },
+    {
+      "bytes": 128,
+      "path": "cases/kafka-pg-j17/proof/supplied-tests.json",
+      "sha256": "43b6471991783cb54b6d3b0c2c87f9959b499f16d656da4291c6ff0e475b0ac5"
+    },
+    {
+      "bytes": 467900928,
+      "path": "cases/kafka-pg-j21/generated-build-stage-bundle/image.tar",
+      "sha256": "a69e3318d03de14bc7ae2bfdc1096e107714bbcbbbf2ca3a8f8473b941a613d3"
+    },
+    {
+      "bytes": 1678,
+      "path": "cases/kafka-pg-j21/generated-build-stage-bundle/provenance.json",
+      "sha256": "daa589f51f610437862e8e94bde7631140661ba0874bdda5394242f27ebeca2e"
+    },
+    {
+      "bytes": 40594,
+      "path": "cases/kafka-pg-j21/generated-build-stage-bundle/resolved-inventory.json",
+      "sha256": "7832dbad518a4adf1c7cb3ae55514177d9a4f250cd653541e3ed31d86ab2a5d3"
+    },
+    {
+      "bytes": 101475,
+      "path": "cases/kafka-pg-j21/generated-build-stage/assessment.json",
+      "sha256": "07ec9959857bc3116ca1ce3a5ae8a4b1290d1a9fadb36d8f637f58212a2b7522"
+    },
+    {
+      "bytes": 1856,
+      "path": "cases/kafka-pg-j21/generated-build-stage/databases.json",
+      "sha256": "ff21e92f5d2c047295aeefcdf7e830b763dcdd018ec10f39c0e335ccdbc80e2b"
+    },
+    {
+      "bytes": 1678,
+      "path": "cases/kafka-pg-j21/generated-build-stage/provenance.json",
+      "sha256": "daa589f51f610437862e8e94bde7631140661ba0874bdda5394242f27ebeca2e"
+    },
+    {
+      "bytes": 7150,
+      "path": "cases/kafka-pg-j21/image-sidecar-fresh-db-r1/plexus-physical-copies.json",
+      "sha256": "7552c6b082da4a9eda402f077233684a77c7750fc1477ae33c9e2cccbc39dd85"
+    },
+    {
+      "bytes": 93691,
+      "path": "cases/kafka-pg-j21/image-sidecar-fresh-db-r1/sidecar-receipt.json",
+      "sha256": "d61ba0597b7eb24c356c00cd15dfa04207bf26ea3cb09f77bb2dcd28373af43e"
+    },
+    {
+      "bytes": 13536,
+      "path": "cases/kafka-pg-j21/proof-supplied-sources/src/test/java/proof/KafkaGeneratedContractTest.java",
+      "sha256": "31ba576f5d79a87b1ea81b5a4ec76f9d9f41b1acdde17343207a4ddf55268bf3"
+    },
+    {
+      "bytes": 5134,
+      "path": "cases/kafka-pg-j21/proof/actual-realms.json",
+      "sha256": "3b80f2f38f1b8e7049bce9eddd1f1ea81cf6fbc8965be1c9f9a2d54c759a80cd"
+    },
+    {
+      "bytes": 793902,
+      "path": "cases/kafka-pg-j21/proof/effective-pom.xml",
+      "sha256": "51e5baae1a92559ebe7e70a8af64ea6be20168abd925a8044de0ed056be7196d"
+    },
+    {
+      "bytes": 6817,
+      "path": "cases/kafka-pg-j21/proof/packaged-libraries.json",
+      "sha256": "c84911789b5c5c48a38bfae3f32a3355a178211989beefdf36ea6f36c3379a80"
+    },
+    {
+      "bytes": 29689,
+      "path": "cases/kafka-pg-j21/proof/resolved-inventory.json",
+      "sha256": "0746801b1d6bb4e2d715a7a78ee9c5548c932d6c87d3f2ae7bce14e103a3b310"
+    },
+    {
+      "bytes": 1379,
+      "path": "cases/kafka-pg-j21/proof/result.json",
+      "sha256": "abe44737751cee5f40ea3d18d1308dfee94d20775c7d83e277b36a02358bff2a"
+    },
+    {
+      "bytes": 128,
+      "path": "cases/kafka-pg-j21/proof/supplied-tests.json",
+      "sha256": "43b6471991783cb54b6d3b0c2c87f9959b499f16d656da4291c6ff0e475b0ac5"
+    },
+    {
+      "bytes": 10887,
+      "path": "compatibility-cycle2.json",
+      "sha256": "21224643a4d5228d8554a43b6c3904ea24d49c6f8f73ac49609b0318bf5bbbc0"
+    },
+    {
+      "bytes": 366,
+      "path": "entry-20261021/qualification/result.json",
+      "sha256": "8b9f7fbc882cc8946d9464d3cdff299ae5873476c9b5423e8c04eb1aa8fd1978"
+    },
+    {
+      "bytes": 2555,
+      "path": "entry-20261021/source-receipts.json",
+      "sha256": "548c64dd9097553e5ab91062fe8e3890048928aa7c5d0b3014066f8e7ee69748"
+    },
+    {
+      "bytes": 752948,
+      "path": "full-suite/results.xml",
+      "sha256": "59b44ab3d58f40dcc7fd56a089807e700c13dc9044edabc3f406fb5a8b9e5002"
+    },
+    {
+      "bytes": 46387200,
+      "path": "full-suite/source.tar",
+      "sha256": "93f1f02d637bc6e2e5b631f8d7ea87b968883bd66a1fbee51b715a5c5e1bd4b0"
+    },
+    {
+      "bytes": 38268,
+      "path": "pinned-reference-recovery-20261025/failed-crud-pg-j21-generated-build-stage-bundle/resolved-inventory.json",
+      "sha256": "a72dfc47b1e4a74380e703b7740392eb9944b246dea93ef5ead780d189ec01ea"
+    },
+    {
+      "bytes": 9096,
+      "path": "pinned-reference-recovery-20261025/failed-crud-pg-j21-image-sidecar-fresh-db-r1/sidecar-receipt.json",
+      "sha256": "c75fb5029e3eb5b57666a385a1b5100949f27a87dd6d0bc0b59efcb80193540e"
+    },
+    {
+      "bytes": 852,
+      "path": "primary-parent-sources/receipts.json",
+      "sha256": "f32d6d85255f42ef18edf6f595e30ba968a3af4c117ff91f78a651d76a0afa56"
+    }
+  ],
+  "generator_sha": "b7c48b58341f823c3a87ab02456cd1c10743a32e",
+  "retention": "Maintainer-held task-private archive; not uploaded. Database/tool payloads retained separately; archive alone is not a fresh scan environment.",
+  "schema_version": "1.0"
+}

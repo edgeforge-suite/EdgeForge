@@ -1,0 +1,8 @@
+entity: Loan
+rules:
+  - field: status
+    type: default
+    value: PENDING
+  - field: loanType
+    type: allowed-values
+    values: [PERSONAL, MORTGAGE, AUTO, BUSINESS]

@@ -1,0 +1,15 @@
+entity: Account
+direction: inbound
+field_mappings:
+  - source: account_id
+    target: Account.accountId
+  - source: account_number
+    target: Account.accountNumber
+  - source: available_balance
+    target: Account.availableBalance
+  - source: opened_date
+    target: Account.openedDate
+  - source: active
+    target: Account.active
+  - source: nickname
+    target: Account.nickname

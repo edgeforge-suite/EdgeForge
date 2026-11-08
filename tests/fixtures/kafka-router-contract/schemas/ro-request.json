@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["paymentId", "amount", "country", "status"],
+  "properties": {
+    "paymentId": { "type": "string" },
+    "amount": { "type": "number" },
+    "country": { "type": "string", "enum": ["UK", "US"] },
+    "status": { "type": "string", "enum": ["APPROVED", "DECLINED"] }
+  }
+}

@@ -1,0 +1,49 @@
+interface: transaction-api
+entity: TransactionHistory
+operations:
+  - name: createTransactionHistory
+    request_mappings:
+      - source: accountId
+        target: TransactionHistory.accountId
+      - source: transactionId
+        target: TransactionHistory.transactionId
+      - source: amount
+        target: TransactionHistory.amount
+      - source: description
+        target: TransactionHistory.description
+    response_mappings:
+      - source: transactionRowId
+        target: TransactionHistory.transactionRowId
+      - source: accountId
+        target: TransactionHistory.accountId
+      - source: transactionId
+        target: TransactionHistory.transactionId
+      - source: amount
+        target: TransactionHistory.amount
+      - source: description
+        target: TransactionHistory.description
+      - source: status
+        target: TransactionHistory.status
+  - name: listTransactionsByAccount
+    request_mappings: []
+    response_mappings:
+      - source: transactions
+        target: TransactionHistory.transactions
+      - source: currentPage
+        target: TransactionHistory.currentPage
+      - source: pageSize
+        target: TransactionHistory.pageSize
+      - source: totalElements
+        target: TransactionHistory.totalElements
+      - source: totalPages
+        target: TransactionHistory.totalPages
+      - source: accountId
+        target: TransactionHistory.accountId
+      - source: transactionRowId
+        target: TransactionHistory.transactionRowId
+      - source: transactionId
+        target: TransactionHistory.transactionId
+      - source: amount
+        target: TransactionHistory.amount
+      - source: status
+        target: TransactionHistory.status

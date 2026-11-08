@@ -1,0 +1,50 @@
+[
+  {
+    "path": "file-lane/app-definition.yaml",
+    "sha256": "81ac152f5e0b1cdd816c09581028d6aabe21fe7fdfc081d8b1e13674fd8c5c43"
+  },
+  {
+    "path": "file-lane/downstream/account-csv-layout.yaml",
+    "sha256": "cdc88467bcc1b3b013c82e845d489c30af04f5a9fb6a69780079340aedc2dd0c"
+  },
+  {
+    "path": "file-lane/downstream/account-csv-mapping.yaml",
+    "sha256": "b4744f1675e3663846e48679de57c735f6205d6832cb7309ec85ded5dc7f3615"
+  },
+  {
+    "path": "file-lane/upstream/account-api-spec.yaml",
+    "sha256": "013049afa7e796704b31a6d01f3189b916135143c187fd257b90076c21785175"
+  },
+  {
+    "path": "file-lane/upstream/account-mapping.yaml",
+    "sha256": "e3b80a2003a250034859bb29209f0577b2620b7494702d833a23cbe6475af17c"
+  },
+  {
+    "path": "file-lane/upstream/create-account-request.json",
+    "sha256": "cbe844cc3c8d9896deb687cc2a312f8e1e01b4a254fa97e5c28466abfa7ae778"
+  },
+  {
+    "path": "file-lane/upstream/create-account-response.json",
+    "sha256": "081d0fbac64942a48cf4f8029b4294c7053b3b9782fdc98273962b0b9a2ede45"
+  },
+  {
+    "path": "v1-rejected-app-definition.yaml",
+    "sha256": "d31690a918ea342fd5d4318f86d63e6082852e0b1479b10f803484652bc16eed"
+  },
+  {
+    "path": "v2-run-semantics-app-definition.yaml",
+    "sha256": "f0374c251d4e487d6c66779fc9c673b3ac7a42ecaaa6d8889316f789d3cb322e"
+  },
+  {
+    "path": "widget-openapi.json",
+    "sha256": "d90fd06440c771a730e81ddbbeec5c7b004b66ae72f85d08b286edbac9b54f16"
+  },
+  {
+    "path": "widget-staging-mapping.yaml",
+    "sha256": "bbe0afcbd7c85a4abae070143323f9cfcccd9ea164e2167831f92ad5213cace6"
+  },
+  {
+    "path": "widget-staging.sql",
+    "sha256": "4ae434b13bf617af35e9e00892cacda3a93c21f04abd5b022a33d55ae50fc342"
+  }
+]

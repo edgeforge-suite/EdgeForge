@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "required": ["transactionId", "amount", "decisionCode"],
+  "properties": {
+    "transactionId": { "type": "string" },
+    "amount": { "type": "number" },
+    "decisionCode": { "type": "string" }
+  }
+}

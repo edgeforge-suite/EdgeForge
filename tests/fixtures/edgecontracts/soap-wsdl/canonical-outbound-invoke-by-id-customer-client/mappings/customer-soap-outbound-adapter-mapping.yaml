@@ -1,0 +1,9 @@
+# Outbound SOAP adapter_only mapping — EdgeForge proof fixture.
+#
+# Used to verify that adapter-only outbound SOAP client scaffolding continues
+# to generate correctly alongside the future invoke_by_id implementation.
+# This mapping is accepted by the Engine today.
+#
+operation_mappings:
+  - operation: syncCustomer
+    mode: adapter_only

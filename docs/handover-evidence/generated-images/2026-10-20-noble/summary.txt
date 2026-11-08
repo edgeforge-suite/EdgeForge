@@ -1,0 +1,4 @@
+30 cases / 60 stage observations: complete-with-findings
+622 distinct finding records; all OPEN pending applicability/policy review.
+Scanner match counts overlap and must not be summed as unique vulnerabilities.
+No release clearance or business certification.

@@ -1,0 +1,22 @@
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ----------------< com.appbuilder:ordinary_batch_proof >-----------------
+[INFO] Building Ordinary Batch Preview Proof 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- dependency:3.8.1:tree (default-cli) @ ordinary_batch_proof ---
+[INFO] Wrote dependency tree to: <evidence>/maven-tree.json
+[INFO]
+[INFO] --- cyclonedx:2.9.1:makeBom (default-cli) @ ordinary_batch_proof ---
+[INFO] CycloneDX: Resolving Dependencies
+[INFO] CycloneDX: Creating BOM version 1.6 with 136 component(s)
+[INFO] CycloneDX: Writing and validating BOM (JSON): <evidence>/bom.json
+[WARNING] Unknown keyword meta:enum - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword
+[WARNING] Unknown keyword deprecated - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.309 s
+[INFO] Finished at: 2026-10-05T01:08:12-05:00
+[INFO] ------------------------------------------------------------------------

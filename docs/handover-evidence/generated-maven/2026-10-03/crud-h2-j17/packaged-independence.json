@@ -1,0 +1,36 @@
+{
+  "baseline_generated_source_count": 16,
+  "checks": [
+    {
+      "detail": "no authoring-source package paths are present",
+      "name": "repository-boundary"
+    },
+    {
+      "detail": "no suite runtime imports are present",
+      "name": "java-imports"
+    },
+    {
+      "detail": "no generator-owned/local Maven dependency; project=com.appbuilder:ci_smoke",
+      "name": "maven-boundary"
+    },
+    {
+      "detail": "16 generated source paths exist and carry generated ownership",
+      "name": "schema-baseline"
+    },
+    {
+      "detail": ".gitignore and .dockerignore are present",
+      "name": "repository-hygiene"
+    },
+    {
+      "detail": "no absolute author-machine path is embedded",
+      "name": "author-paths"
+    },
+    {
+      "detail": "target/ci_smoke-0.0.1-SNAPSHOT.jar has no generator-owned library or author path",
+      "name": "packaged-jar"
+    }
+  ],
+  "package": "crud-h2-j17",
+  "packaged_jar": "target/ci_smoke-0.0.1-SNAPSHOT.jar",
+  "status": "passed"
+}

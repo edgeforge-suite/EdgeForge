@@ -1,0 +1,42 @@
+{
+  "cases": [
+    {
+      "java": "17",
+      "profile": "springboot-legacy-compatible",
+      "platform": "linux/amd64",
+      "image_id": "sha256:e6386df01ac0d6f9256654124b45a06faf6d557763d56ada3392c225ded497d0",
+      "user": "edgeforge",
+      "dockerfile": "generated, unchanged",
+      "lz4": "1.11.4",
+      "native_and_roundtrip": "passed",
+      "runtime_log": "runtime-j17.log",
+      "source_sha256": "7df9ff895e45dc0b9d99307cec2e2accee886f365ed363334f1b424cb18073ae",
+      "pom_sha256": "0dd74bd720037ca442ab86307361bc8a4d007e9c178d5e4620d2edea4115f5d2",
+      "dockerfile_sha256": "fc0f74ed01d43c8370ab4bab7222a2853fb0de2126adcb456b8c498d50d19630",
+      "native_loading": "explicit Native.load; nested-loader Java fallback not credited"
+    },
+    {
+      "java": "21",
+      "profile": "springboot-standard-enterprise",
+      "platform": "linux/amd64",
+      "image_id": "sha256:0236853adfac946fa03bfe771730802c72cb40b88ac715a4aff6b6da58e0f6c4",
+      "user": "edgeforge",
+      "dockerfile": "generated, unchanged",
+      "lz4": "1.11.4",
+      "native_and_roundtrip": "passed",
+      "runtime_log": "runtime-j21.log",
+      "source_sha256": "10e63c774b437d863c905fbc17f2c00e4f0525ff5362a1236f357764c4aa7711",
+      "pom_sha256": "bab464e18a64b105f77a78ef03cf2deea995e675d5f26955fe1f884dc96c66d7",
+      "dockerfile_sha256": "578f4cd83d03abaf2a6f4c937b8f0a8c716b6744f3947f04a9887a84150ee882",
+      "native_loading": "explicit Native.load; nested-loader Java fallback not credited"
+    }
+  ],
+  "complete": true,
+  "source_sha": "ab41a02fc854f89681e0473d9914e9e16528c3c2",
+  "source_dirty": true,
+  "proof_source_hashes": {
+    "scripts/smoke/boot41_kafka_lz4_container_proof.py": "1079e190ff5f74ab2baeabf00e183d5cba354cf32ec01a6f72323e63e28b0b16",
+    "tests/fixtures/boot41-kafka/Lz4ContainerProof.java": "503392fb24a2ad43a7019240a8b2d5c86752a42635e936e1f0f4e9a67011e46c"
+  },
+  "image_security_clearance": false
+}

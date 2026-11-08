@@ -1,0 +1,16 @@
+interface: record-api
+entity: Record
+operations:
+  - name: createRecord
+    request_mappings:
+      - source: label
+        target: Record.label
+      - source: state
+        target: Record.state
+    response_mappings:
+      - source: recordId
+        target: Record.recordId
+      - source: label
+        target: Record.label
+      - source: state
+        target: Record.state

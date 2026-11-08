@@ -1,0 +1,24 @@
+app_name: CRUD DTO List Contract Quality
+bounded_context: crmdto
+schema_version: "2.0"
+upstream_interfaces:
+  - name: customer-api
+    system: CRM
+    type: rest-json
+    spec: upstream/customer-api-spec.yaml
+    mapping: upstream/customer-mapping.yaml
+    operations:
+      - name: createCustomer
+        request_sample: upstream/create-customer-request.json
+        response_sample: upstream/customer-response.json
+      - name: updateCustomer
+        request_sample: upstream/update-customer-request.json
+        response_sample: upstream/customer-response.json
+      - name: getCustomer
+        response_sample: upstream/customer-response.json
+      - name: listCustomers
+        response_sample: upstream/customer-list-response.json
+      - name: pageCustomers
+        response_sample: upstream/customer-list-response.json
+        pageable: true
+target_profile: springboot-legacy-compatible

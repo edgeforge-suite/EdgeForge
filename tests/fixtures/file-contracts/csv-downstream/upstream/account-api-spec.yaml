@@ -1,0 +1,53 @@
+openapi: 3.0.0
+info:
+  title: CSV downstream fixture
+  version: "1.0"
+paths:
+  /accounts:
+    post:
+      operationId: createAccount
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - accountNumber
+                - openedDate
+                - availableBalance
+              properties:
+                accountNumber:
+                  type: string
+                openedDate:
+                  type: string
+                  format: date
+                availableBalance:
+                  type: number
+                active:
+                  type: boolean
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - accountId
+                  - accountNumber
+                  - openedDate
+                  - availableBalance
+                  - active
+                properties:
+                  accountId:
+                    type: string
+                  accountNumber:
+                    type: string
+                  openedDate:
+                    type: string
+                    format: date
+                  availableBalance:
+                    type: number
+                  active:
+                    type: boolean

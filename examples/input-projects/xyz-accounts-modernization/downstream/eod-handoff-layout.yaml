@@ -1,0 +1,11 @@
+name: account-eod-handoff
+fields:
+  - name: account_id
+    start: 1
+    length: 12
+  - name: customer_id
+    start: 13
+    length: 12
+  - name: status
+    start: 25
+    length: 10

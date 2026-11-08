@@ -1,0 +1,10 @@
+entity: Account
+rules:
+  - field: accountType
+    type: allowed-values
+    values: [CHQ, SAV, CUR, LON]
+  - field: currency
+    type: iso-4217
+  - field: status
+    type: default
+    value: PENDING

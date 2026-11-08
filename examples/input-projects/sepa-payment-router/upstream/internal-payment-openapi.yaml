@@ -1,0 +1,55 @@
+openapi: 3.0.3
+info:
+  title: Internal Payment API
+  version: "1.0"
+paths:
+  /payments/sepa:
+    post:
+      operationId: routeSepaPayment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SepaPaymentRequest"
+      responses:
+        "200":
+          description: Payment routed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SepaPaymentResponse"
+components:
+  schemas:
+    SepaPaymentRequest:
+      type: object
+      required:
+        - paymentType
+        - amount
+        - currency
+        - debtorIban
+        - creditorIban
+        - creditorName
+      properties:
+        paymentType:
+          type: string
+          description: "INSTANT, CREDIT, or DEBIT"
+        amount:
+          type: number
+        currency:
+          type: string
+        debtorIban:
+          type: string
+        creditorIban:
+          type: string
+        creditorName:
+          type: string
+        remittanceInfo:
+          type: string
+    SepaPaymentResponse:
+      type: object
+      properties:
+        paymentId:
+          type: string
+        status:
+          type: string

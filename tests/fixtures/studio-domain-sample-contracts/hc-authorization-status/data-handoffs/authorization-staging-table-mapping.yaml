@@ -1,0 +1,9 @@
+table: authorization_staging
+entity: AuthorizationRecord
+field_mappings:
+- source: AuthorizationRecord.authorizationId
+  target: authorization_id
+- source: AuthorizationRecord.memberId
+  target: member_id
+- source: AuthorizationRecord.serviceUnits
+  target: service_units

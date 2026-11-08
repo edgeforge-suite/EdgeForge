@@ -1,0 +1,43 @@
+{
+  "archetype": "crud",
+  "engine_sha": "38862862a0f4e90eb4f809a0150c6d2702de2423",
+  "generation_input": {
+    "app_name": "SOAP Canonical Customer Service",
+    "bounded_context": "soap_canonical_customer",
+    "schema_version": "2.0",
+    "target_profile": "springboot-enterprise-postgres-java17",
+    "upstream_interfaces": [
+      {
+        "mapping": "upstream/customer-mapping.yaml",
+        "name": "customer-api",
+        "operations": [
+          {
+            "name": "createCustomer",
+            "request_sample": "upstream/create-customer-request.json",
+            "response_sample": "upstream/customer-response.json"
+          },
+          {
+            "name": "getCustomer",
+            "response_sample": "upstream/customer-response.json"
+          }
+        ],
+        "spec": "upstream/customer-api-spec.yaml",
+        "system": "CRM",
+        "type": "rest-json"
+      },
+      {
+        "mapping": "mappings/customer-soap-operation-mapping.yaml",
+        "name": "customer-soap-service",
+        "port": "CustomerServicePort",
+        "service": "CustomerService",
+        "system": "CORE",
+        "type": "soap-wsdl",
+        "wsdl_path": "contracts/customer-service.wsdl"
+      }
+    ]
+  },
+  "generation_run_id": "maven-assessment-crud-soap-pg-j17",
+  "input_manifest": "tests/fixtures/edgecontracts/soap-wsdl/canonical-read-by-id-customer-service/app-definition.yaml",
+  "input_package_sha256": "1307a881c948631e17828a752844ffe8de0f123f7da63ed8071bdc40fcb4709b",
+  "target_profile": "springboot-enterprise-postgres-java17"
+}

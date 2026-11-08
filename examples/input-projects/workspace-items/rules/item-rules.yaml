@@ -1,0 +1,11 @@
+entity: Item
+rules:
+  - {field: label, type: min-length, value: '2'}
+  - {field: label, type: max-length, value: '60'}
+  - {field: priority, type: range, min: 1, max: 5}
+  - field: workspaceId
+    type: cross-entity-exists
+    target-entity: Workspace
+  - field: priority
+    type: default
+    value: 3

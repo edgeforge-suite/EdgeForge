@@ -1,0 +1,59 @@
+openapi: "3.0.0"
+info:
+  title: Loan Origination API
+  version: "1.0"
+paths:
+  /loans:
+    post:
+      operationId: openLoan
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [borrowerId, principalAmount, interestRate, termMonths, loanType]
+              properties:
+                borrowerId:
+                  type: string
+                  maxLength: 20
+                principalAmount:
+                  type: number
+                  format: decimal
+                interestRate:
+                  type: number
+                  format: decimal
+                termMonths:
+                  type: integer
+                loanType:
+                  type: string
+                  enum: [PERSONAL, MORTGAGE, AUTO, BUSINESS]
+                purpose:
+                  type: string
+                  maxLength: 200
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  loanId:
+                    type: string
+                  borrowerId:
+                    type: string
+                  status:
+                    type: string
+                  principalAmount:
+                    type: number
+                    format: decimal
+                  interestRate:
+                    type: number
+                    format: decimal
+                  termMonths:
+                    type: integer
+                  loanType:
+                    type: string
+                  createdAt:
+                    type: string
+                    format: date-time

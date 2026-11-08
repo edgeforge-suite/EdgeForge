@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:edgeforge:examples:account:v1"
+           xmlns:tns="urn:edgeforge:examples:account:v1"
+           elementFormDefault="qualified">
+  <xs:element name="AccountMessage" type="tns:AccountMessageType"/>
+  <xs:complexType name="AccountMessageType">
+    <xs:sequence>
+      <xs:element name="accountId" type="xs:string"/>
+      <xs:element name="accountNumber" type="xs:string"/>
+      <xs:element name="availableBalance" type="xs:decimal"/>
+      <xs:element name="openedDate" type="xs:date"/>
+      <xs:element name="active" type="xs:boolean"/>
+    </xs:sequence>
+    <xs:attribute name="sourceSystem" type="xs:string" use="required"/>
+  </xs:complexType>
+</xs:schema>

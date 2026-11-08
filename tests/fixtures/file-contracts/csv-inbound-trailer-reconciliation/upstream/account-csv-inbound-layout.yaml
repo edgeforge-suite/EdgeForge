@@ -1,0 +1,56 @@
+format: csv
+encoding: ISO-8859-1
+delimiter: "|"
+quote_char: "\""
+escape_char: "\\"
+has_header_row: false
+line_separator: "\n"
+record_types:
+  header:
+    indicator:
+      column: 1
+      value: H
+    fields:
+      - name: file_date
+        column: 2
+        type: date
+        format: yyyy-MM-dd
+        required: true
+  data:
+    indicator:
+      column: 1
+      value: D
+    fields:
+      - name: account_id
+        column: 2
+        type: string
+        required: true
+      - name: account_number
+        column: 3
+        type: string
+        required: true
+      - name: available_balance
+        column: 4
+        type: decimal
+        required: true
+      - name: opened_date
+        column: 5
+        type: date
+        format: yyyy-MM-dd
+        required: true
+  trailer:
+    indicator:
+      column: 1
+      value: T
+    fields:
+      - name: record_count
+        column: 2
+        type: integer
+        required: true
+        value_source: data_record_count
+      - name: total_balance_minor
+        column: 3
+        type: integer
+        required: true
+        value_source: sum(Account.availableBalance)
+        type_coercion: minor_units

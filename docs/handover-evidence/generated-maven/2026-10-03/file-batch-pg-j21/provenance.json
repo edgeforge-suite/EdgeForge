@@ -1,0 +1,39 @@
+{
+  "archetype": "crud",
+  "engine_sha": "109f6385345047013836f1e32b2d4230b9e8ad2b",
+  "generation_input": {
+    "app_name": "CSV Downstream File App",
+    "bounded_context": "accounts",
+    "downstream_interfaces": [
+      {
+        "mapping": "downstream/account-csv-mapping.yaml",
+        "name": "account-csv-file",
+        "spec": "downstream/account-csv-layout.yaml",
+        "system": "ETL",
+        "type": "file-csv"
+      }
+    ],
+    "schema_version": "2.0",
+    "target_profile": "springboot-standard-enterprise",
+    "upstream_interfaces": [
+      {
+        "mapping": "upstream/account-mapping.yaml",
+        "name": "account-api",
+        "operations": [
+          {
+            "name": "createAccount",
+            "request_sample": "upstream/create-account-request.json",
+            "response_sample": "upstream/create-account-response.json"
+          }
+        ],
+        "spec": "upstream/account-api-spec.yaml",
+        "system": "CORE",
+        "type": "rest-json"
+      }
+    ]
+  },
+  "generation_run_id": "maven-assessment-file-batch-pg-j21",
+  "input_manifest": "tests/fixtures/file-contracts/csv-downstream/app-definition.yaml",
+  "input_package_sha256": "9cca27ac9f77c59475632b57ce586f3b3a1649116e6454bfba4dc18c3384adcf",
+  "target_profile": "springboot-standard-enterprise"
+}

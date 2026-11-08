@@ -1,0 +1,19 @@
+fields:
+  - name: account_id
+    length: 36
+    required: true
+  - name: transaction_id
+    length: 36
+    required: true
+  - name: amount
+    length: 12
+    required: true
+  - name: status
+    length: 12
+    required: true
+  - name: current_page
+    length: 4
+    required: false
+  - name: total_elements
+    length: 10
+    required: false

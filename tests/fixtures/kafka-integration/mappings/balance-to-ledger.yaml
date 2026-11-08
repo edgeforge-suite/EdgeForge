@@ -1,0 +1,7 @@
+transforms:
+  - source: accountId
+    target: ledgerAccountId
+  - source: availableBalance
+    target: balanceAmount
+  - source: currency
+    target: currencyCode

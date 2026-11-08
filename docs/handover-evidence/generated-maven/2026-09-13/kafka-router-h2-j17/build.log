@@ -1,0 +1,38 @@
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -------------------< com.appbuilder:payment-router >--------------------
+[INFO] Building Payment Router 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- clean:3.3.2:clean (default-clean) @ payment-router ---
+[INFO]
+[INFO] --- resources:3.3.1:resources (default-resources) @ payment-router ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 4 resources from src/main/resources to target/classes
+[INFO]
+[INFO] --- compiler:3.13.0:compile (default-compile) @ payment-router ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 16 source files with javac [debug parameters release 17] to target/classes
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ payment-router ---
+[INFO] skip non existing resourceDirectory /private<temporary>/isolated/app/src/test/resources
+[INFO]
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ payment-router ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- surefire:3.2.5:test (default-test) @ payment-router ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- jar:3.4.2:jar (default-jar) @ payment-router ---
+[INFO] Building jar: /private<temporary>/isolated/app/target/payment-router-0.0.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- spring-boot:3.3.5:repackage (repackage) @ payment-router ---
+[INFO] Replacing main artifact /private<temporary>/isolated/app/target/payment-router-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /private<temporary>/isolated/app/target/payment-router-0.0.1-SNAPSHOT.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.920 s
+[INFO] Finished at: 2026-09-13T17:53:12-05:00
+[INFO] ------------------------------------------------------------------------

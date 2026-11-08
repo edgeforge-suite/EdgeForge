@@ -1,0 +1,39 @@
+{
+  "archetype": "crud",
+  "engine_sha": "109f6385345047013836f1e32b2d4230b9e8ad2b",
+  "generation_input": {
+    "app_name": "CSV Downstream File App",
+    "bounded_context": "accounts",
+    "downstream_interfaces": [
+      {
+        "mapping": "downstream/account-csv-mapping.yaml",
+        "name": "account-csv-file",
+        "spec": "downstream/account-csv-layout.yaml",
+        "system": "ETL",
+        "type": "file-csv"
+      }
+    ],
+    "schema_version": "2.0",
+    "target_profile": "springboot-enterprise-postgres-java17",
+    "upstream_interfaces": [
+      {
+        "mapping": "upstream/account-mapping.yaml",
+        "name": "account-api",
+        "operations": [
+          {
+            "name": "createAccount",
+            "request_sample": "upstream/create-account-request.json",
+            "response_sample": "upstream/create-account-response.json"
+          }
+        ],
+        "spec": "upstream/account-api-spec.yaml",
+        "system": "CORE",
+        "type": "rest-json"
+      }
+    ]
+  },
+  "generation_run_id": "maven-assessment-file-batch-pg-j17",
+  "input_manifest": "tests/fixtures/file-contracts/csv-downstream/app-definition.yaml",
+  "input_package_sha256": "17d69c54b9c82bc5e2c520b193de52cf98052a49739b0a168f4c71f6d1dfd9e9",
+  "target_profile": "springboot-enterprise-postgres-java17"
+}

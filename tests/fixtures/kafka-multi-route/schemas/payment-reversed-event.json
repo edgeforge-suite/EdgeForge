@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "reversalId": {"type": "string"},
+    "originalPaymentId": {"type": "string"},
+    "amountMinorUnits": {"type": "integer"},
+    "reasonCode": {"type": "string"}
+  }
+}

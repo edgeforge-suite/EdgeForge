@@ -1,0 +1,87 @@
+{
+  "advisory_database_snapshot": "not supplied",
+  "advisory_service": "https://api.osv.dev",
+  "affected_packages": 21,
+  "assessment_time_utc": "2026-09-13T22:51:06.081368+00:00",
+  "exit_code": 1,
+  "findings": 79,
+  "inventory_coverage": "complete",
+  "inventory_sha256": "557511a23e159d56c0f71b4e169dba93cea71e46714e60e75ec373aa989b203a",
+  "maven_warnings": [
+    "[WARNING] Unknown keyword meta:enum - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword",
+    "[WARNING] Unknown keyword deprecated - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword"
+  ],
+  "pom_sha256": "83a64363196f5bcdac2d705fc73185212936faf4387f601b4689ef6ec90f5195",
+  "provenance": {
+    "archetype": "crud",
+    "engine_sha": "582c853f2566ac5cdf45ad239c1827a5aa47f12e",
+    "generation_input": {
+      "app_name": "SOAP Canonical Customer Service",
+      "bounded_context": "soap_canonical_customer",
+      "schema_version": "2.0",
+      "target_profile": "springboot-legacy-compatible",
+      "upstream_interfaces": [
+        {
+          "mapping": "upstream/customer-mapping.yaml",
+          "name": "customer-api",
+          "operations": [
+            {
+              "name": "createCustomer",
+              "request_sample": "upstream/create-customer-request.json",
+              "response_sample": "upstream/customer-response.json"
+            },
+            {
+              "name": "getCustomer",
+              "response_sample": "upstream/customer-response.json"
+            }
+          ],
+          "spec": "upstream/customer-api-spec.yaml",
+          "system": "CRM",
+          "type": "rest-json"
+        },
+        {
+          "mapping": "mappings/customer-soap-operation-mapping.yaml",
+          "name": "customer-soap-service",
+          "port": "CustomerServicePort",
+          "service": "CustomerService",
+          "system": "CORE",
+          "type": "soap-wsdl",
+          "wsdl_path": "contracts/customer-service.wsdl"
+        }
+      ]
+    },
+    "generation_run_id": "maven-assessment-crud-soap-h2-j17",
+    "input_manifest": "tests/fixtures/edgecontracts/soap-wsdl/canonical-read-by-id-customer-service/app-definition.yaml",
+    "input_package_sha256": "4bc12d33e4430ca9a7ab6d8f5d1288d4440ece12460e333ab3504fda147aee67",
+    "target_profile": "springboot-legacy-compatible"
+  },
+  "release_acceptance": "not established",
+  "resolved_artifacts": 114,
+  "scanned_maven_packages": 114,
+  "scanner_exit_code": 1,
+  "scopes": [
+    "compile",
+    "provided",
+    "runtime",
+    "system",
+    "test"
+  ],
+  "source_after_sha256": "e9989743213f22e10633b2c66a6231fe78976fad70dbbc16d737ebb2ed8a0233",
+  "source_before_sha256": "e9989743213f22e10633b2c66a6231fe78976fad70dbbc16d737ebb2ed8a0233",
+  "source_unchanged": true,
+  "status": "complete",
+  "tools": {
+    "cyclonedx_maven_plugin": "2.9.1",
+    "java": "17.0.18",
+    "java_vendor": "Homebrew",
+    "maven": "3.9.12",
+    "maven_dependency_plugin": "3.8.1",
+    "scanner": [
+      "osv-scanner version: 2.3.8",
+      "osv-scalibr version: 0.4.5",
+      "commit: 408fcd6f8707999a29e7ba45e15809764cf24f67",
+      "built at: 2026-05-08T04:54:35Z"
+    ],
+    "scanner_sha256": "a8cd6507b06239f463a7642430cfd2d154882f150f6e30cdc0653e28dfc34216"
+  }
+}

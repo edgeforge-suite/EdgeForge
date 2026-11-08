@@ -1,0 +1,78 @@
+{
+  "advisory_database_snapshot": "not supplied",
+  "advisory_service": "https://api.osv.dev",
+  "affected_packages": 3,
+  "assessment_time_utc": "2026-10-03T23:50:44.547248+00:00",
+  "exit_code": 1,
+  "findings": 10,
+  "inventory_coverage": "complete",
+  "inventory_sha256": "22bf22108df6c2750dbb83db4e6f4275661e1279284df67ddbb2033710f3937a",
+  "maven_warnings": [
+    "[WARNING] Unknown keyword meta:enum - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword",
+    "[WARNING] Unknown keyword deprecated - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword"
+  ],
+  "pom_sha256": "fe18444ba091c82e98455b6a5e060fadbb4c35b7c90ceb2585b8d8633c12d7e7",
+  "provenance": {
+    "archetype": "crud",
+    "engine_sha": "109f6385345047013836f1e32b2d4230b9e8ad2b",
+    "generation_input": {
+      "app_archetype": "crud",
+      "app_name": "M5a Run Semantics Contract Fixture",
+      "bounded_context": "m5a_run_semantics",
+      "data_handoffs": [
+        {
+          "mapping": "widget-staging-mapping.yaml",
+          "name": "widget-staging",
+          "run_semantics": {
+            "dedup_key": [
+              "widget_id",
+              "payload_key"
+            ],
+            "restart": "resume",
+            "run_id": "caller_supplied"
+          },
+          "spec": "widget-staging.sql",
+          "system": "SYNTHETIC_HANDOFF",
+          "type": "staging-table",
+          "version": "1.0"
+        }
+      ],
+      "schema_version": "2.0",
+      "target_profile": "springboot-enterprise-postgres-java17"
+    },
+    "generation_run_id": "maven-assessment-m5a-pg-j17",
+    "input_manifest": "tests/fixtures/manifest-v2-cut/v2-run-semantics-app-definition.yaml",
+    "input_package_sha256": "f5c02c03dccf70064ebe0194cd46b43d669248373f9bb39e67ab2b236a5404b3",
+    "target_profile": "springboot-enterprise-postgres-java17"
+  },
+  "raw_scanner_stdout_sha256": "f446b5ee553e0122c425b9c61a92209d4d4e95b46d96bba0b1809275ee649dc4",
+  "release_acceptance": "not established",
+  "resolved_artifacts": 136,
+  "scanned_maven_packages": 136,
+  "scanner_exit_code": 1,
+  "scopes": [
+    "compile",
+    "provided",
+    "runtime",
+    "system",
+    "test"
+  ],
+  "source_after_sha256": "d60e4ae60fcab6f48fac1be44aaf12eda096f773cf98b60d56d38bc79e33c402",
+  "source_before_sha256": "d60e4ae60fcab6f48fac1be44aaf12eda096f773cf98b60d56d38bc79e33c402",
+  "source_unchanged": true,
+  "status": "complete",
+  "tools": {
+    "cyclonedx_maven_plugin": "2.9.1",
+    "java": "17.0.18",
+    "java_vendor": "Homebrew",
+    "maven": "3.9.12",
+    "maven_dependency_plugin": "3.8.1",
+    "scanner": [
+      "osv-scanner version: 2.3.8",
+      "osv-scalibr version: 0.4.5",
+      "commit: 408fcd6f8707999a29e7ba45e15809764cf24f67",
+      "built at: 2026-05-08T04:54:35Z"
+    ],
+    "scanner_sha256": "a8cd6507b06239f463a7642430cfd2d154882f150f6e30cdc0653e28dfc34216"
+  }
+}

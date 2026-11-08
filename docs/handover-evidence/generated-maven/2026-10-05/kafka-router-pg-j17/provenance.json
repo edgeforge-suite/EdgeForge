@@ -1,0 +1,121 @@
+{
+  "archetype": "kafka-integration",
+  "engine_sha": "38862862a0f4e90eb4f809a0150c6d2702de2423",
+  "generation_input": {
+    "app_archetype": "kafka-integration",
+    "app_name": "Payment Router",
+    "async_routes": [
+      {
+        "name": "payment_router",
+        "pattern": "router",
+        "router_config": {
+          "correlation_store": {
+            "eviction_interval_ms": 60000,
+            "timeout_ms": 30000,
+            "type": "in_memory"
+          },
+          "duplicate_correlation_policy": "reject-new",
+          "inbound_schema": {
+            "failure_behavior": "nack",
+            "file": "schemas/ro-request.json",
+            "validation_policy": "strict"
+          },
+          "nack_routing": {
+            "default_error_topic": "payment-router-error",
+            "fixed_topic": "payment-router-nack",
+            "mode": "fixed"
+          },
+          "outbound_schema": {
+            "failure_behavior": "nack",
+            "file": "schemas/ro-response.json",
+            "validation_policy": "strict"
+          },
+          "payload_logging": {
+            "policy": "none"
+          },
+          "routing_rules": {
+            "default_target": null,
+            "routing_fields": [
+              {
+                "json_path": "$.country",
+                "name": "country"
+              }
+            ],
+            "rules": [
+              {
+                "conditions": [
+                  {
+                    "field": "country",
+                    "operator": "eq",
+                    "value": "UK"
+                  }
+                ],
+                "id": "uk_payments",
+                "target": "d1_processor"
+              }
+            ]
+          },
+          "targets": [
+            {
+              "id": "d1_processor",
+              "request_schema": {
+                "failure_behavior": "nack",
+                "file": "schemas/d1-request.json",
+                "validation_policy": "strict"
+              },
+              "request_topic": "d1-payment-request",
+              "request_transform": {
+                "file": "transforms/ro-to-d1-request.yaml"
+              },
+              "response_schema": {
+                "failure_behavior": "nack",
+                "file": "schemas/d1-response.json",
+                "validation_policy": "strict"
+              },
+              "response_topic": "d1-payment-response",
+              "response_transform": {
+                "file": "transforms/d1-to-ro-response.yaml"
+              },
+              "retry": {
+                "backoff_ms": 1000,
+                "dlq_topic": "d1-payment-request-dlq",
+                "max_attempts": 3
+              },
+              "timeout_ms": 30000
+            }
+          ],
+          "timeout": {
+            "behavior_with_known_reply": "nack",
+            "behavior_without_reply": "error_topic"
+          },
+          "upstream_topics": [
+            {
+              "consumer_group": "payment-router-u1",
+              "id": "u1_intake",
+              "name": "u1-payment-request",
+              "reply_destination_extraction": {
+                "header_key": "X-Reply-To",
+                "mode": "header"
+              },
+              "source_system_extraction": {
+                "header_key": "X-Source-System",
+                "mode": "header"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bounded_context": "payments",
+    "kafka_config": {
+      "concurrency": 1,
+      "consumer_group": "payment-router-group"
+    },
+    "schema_version": "2.0",
+    "target_profile": "springboot-enterprise-postgres-java17"
+  },
+  "generation_run_id": "maven-assessment-kafka-router-pg-j17",
+  "input_manifest": "tests/fixtures/kafka-router-contract/manifest.yaml",
+  "input_package_sha256": "3beb7780c6377ae82d9957e88bf87815e51fbc44e2abccd36bd3e2b836179cb6",
+  "target_profile": "springboot-enterprise-postgres-java17"
+}

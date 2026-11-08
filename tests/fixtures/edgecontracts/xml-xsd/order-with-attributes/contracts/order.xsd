@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:edgeforge:examples:order:v1"
+           xmlns:tns="urn:edgeforge:examples:order:v1"
+           elementFormDefault="qualified">
+  <xs:include schemaLocation="common-types.xsd"/>
+  <xs:element name="OrderMessage" type="tns:OrderMessageType"/>
+  <xs:complexType name="OrderMessageType">
+    <xs:sequence>
+      <xs:element name="orderId" type="xs:string"/>
+      <xs:element name="amount" type="xs:decimal"/>
+      <xs:element name="currency" type="tns:CurrencyCode"/>
+    </xs:sequence>
+    <xs:attribute name="priority" type="xs:string"/>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,85 @@
+# EdgeForge Engine packaging metadata.
+#
+# Product name = EdgeForge; the Python distribution/module is `appbuilder`.
+#
+# This packaging is ADDITIVE. `pip install -r requirements.txt` remains the
+# supported local install across Python 3.11+; CI's Python 3.11 reference
+# additionally constrains it with `requirements-lock.txt`. The
+# runtime `dependencies` plus the `dev` extra below together MIRROR
+# requirements.txt exactly (runtime pins as `dependencies`, the `pytest` pin as
+# `dev`) — keep them in sync (no version drift). `python -m appbuilder.cli` and
+# `python -m appbuilder.mcp_server` keep working unchanged.
+
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "appbuilder"
+# Version tracks the EdgeForge suite baseline tag (currently v4.1.1).
+version = "4.1.1"
+description = "EdgeForge Engine — contract-preserving modernization engine that generates standalone Spring Boot apps from reviewed manifests (product = EdgeForge; module/CLI = appbuilder)."
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [
+    { name = "Santosh Hommaradi" },
+]
+maintainers = [
+    { name = "Santosh Hommaradi" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Code Generators",
+]
+
+# The runtime subset of requirements.txt (same exact pins); the pytest pin
+# lives in the `dev` extra below.
+dependencies = [
+    "PyYAML==6.0.3",
+    "Jinja2==3.1.6",
+    "pydantic==2.11.7",
+    "jsonschema==4.26.0",
+    "fastmcp==3.4.10",
+]
+
+[project.optional-dependencies]
+# Dev/test tooling — mirrors the pytest pin in requirements.txt.
+dev = [
+    "pytest==9.0.3",
+]
+
+[project.urls]
+Repository = "https://github.com/edgeforge-suite/EdgeForge"
+Documentation = "https://github.com/edgeforge-suite/EdgeForge/tree/main/docs"
+Issues = "https://github.com/edgeforge-suite/EdgeForge/issues"
+
+# Constrain package discovery to the appbuilder package so the flat repo layout
+# (tests/, examples/, templates/, GeneratedApps/, docs/) is not mistaken for
+# distributable packages.
+[tool.setuptools]
+script-files = ["packaging/appbuilder"]
+
+[tool.setuptools.package-dir]
+"" = "."
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["appbuilder", "appbuilder.*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+appbuilder = ["schema/*.json"]
+
+[tool.ruff]
+line-length = 100
+# Conservative syntax baseline, not the package's supported interpreter floor.
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]

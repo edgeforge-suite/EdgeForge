@@ -1,0 +1,11 @@
+app_name: SOAP Outbound Customer Client
+bounded_context: soap_outbound_customer
+schema_version: "2.0"
+downstream_interfaces:
+  - name: customer-soap-client
+    system: CORE
+    type: soap-wsdl
+    wsdl_path: contracts/customer-service.wsdl
+    service: CustomerService
+    port: CustomerServicePort
+target_profile: springboot-legacy-compatible

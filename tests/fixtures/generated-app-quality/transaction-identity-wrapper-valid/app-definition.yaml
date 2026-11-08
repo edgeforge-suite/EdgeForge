@@ -1,0 +1,26 @@
+app_name: Transaction Identity Wrapper Quality
+bounded_context: bankingquality
+schema_version: "2.0"
+identity_overrides:
+  - entity: TransactionHistory
+    persistence_id: transactionRowId
+upstream_interfaces:
+  - name: transaction-api
+    system: CORE
+    type: rest-json
+    spec: upstream/transaction-api-spec.yaml
+    mapping: upstream/transaction-mapping.yaml
+    operations:
+      - name: createTransactionHistory
+        request_sample: upstream/create-transaction-request.json
+        response_sample: upstream/create-transaction-response.json
+      - name: listTransactionsByAccount
+        response_sample: upstream/list-transactions-response.json
+        pageable: true
+downstream_interfaces:
+  - name: transaction-eod-file
+    system: EOD
+    type: file-fixed-width
+    spec: downstream/transaction-eod-layout.yaml
+    mapping: downstream/transaction-eod-mapping.yaml
+target_profile: springboot-legacy-compatible

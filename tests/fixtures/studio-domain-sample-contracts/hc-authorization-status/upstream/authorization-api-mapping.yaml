@@ -1,0 +1,26 @@
+interface: authorization-api
+entity: AuthorizationRecord
+operations:
+- name: createAuthorization
+  request_mappings:
+  - source: authorizationId
+    target: AuthorizationRecord.authorizationId
+  - source: memberId
+    target: AuthorizationRecord.memberId
+  - source: status
+    target: AuthorizationRecord.status
+  - source: serviceUnits
+    target: AuthorizationRecord.serviceUnits
+  - source: submittedAt
+    target: AuthorizationRecord.submittedAt
+  response_mappings:
+  - source: authorizationId
+    target: AuthorizationRecord.authorizationId
+  - source: memberId
+    target: AuthorizationRecord.memberId
+  - source: status
+    target: AuthorizationRecord.status
+  - source: serviceUnits
+    target: AuthorizationRecord.serviceUnits
+  - source: submittedAt
+    target: AuthorizationRecord.submittedAt

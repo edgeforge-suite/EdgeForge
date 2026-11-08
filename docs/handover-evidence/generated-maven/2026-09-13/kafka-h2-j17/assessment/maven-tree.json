@@ -1,0 +1,1328 @@
+{
+  "artifactId": "payment-mediation-adapter",
+  "children": [
+    {
+      "artifactId": "spring-boot-starter-web",
+      "children": [
+        {
+          "artifactId": "spring-boot-starter",
+          "children": [
+            {
+              "artifactId": "spring-boot",
+              "classifier": "",
+              "groupId": "org.springframework.boot",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "3.3.5"
+            },
+            {
+              "artifactId": "spring-boot-autoconfigure",
+              "classifier": "",
+              "groupId": "org.springframework.boot",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "3.3.5"
+            },
+            {
+              "artifactId": "spring-boot-starter-logging",
+              "children": [
+                {
+                  "artifactId": "log4j-to-slf4j",
+                  "children": [
+                    {
+                      "artifactId": "log4j-api",
+                      "classifier": "",
+                      "groupId": "org.apache.logging.log4j",
+                      "optional": "false",
+                      "scope": "compile",
+                      "type": "jar",
+                      "version": "2.23.1"
+                    }
+                  ],
+                  "classifier": "",
+                  "groupId": "org.apache.logging.log4j",
+                  "optional": "false",
+                  "scope": "compile",
+                  "type": "jar",
+                  "version": "2.23.1"
+                },
+                {
+                  "artifactId": "jul-to-slf4j",
+                  "classifier": "",
+                  "groupId": "org.slf4j",
+                  "optional": "false",
+                  "scope": "compile",
+                  "type": "jar",
+                  "version": "2.0.16"
+                }
+              ],
+              "classifier": "",
+              "groupId": "org.springframework.boot",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "3.3.5"
+            },
+            {
+              "artifactId": "jakarta.annotation-api",
+              "classifier": "",
+              "groupId": "jakarta.annotation",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "2.1.1"
+            },
+            {
+              "artifactId": "snakeyaml",
+              "classifier": "",
+              "groupId": "org.yaml",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "2.2"
+            }
+          ],
+          "classifier": "",
+          "groupId": "org.springframework.boot",
+          "optional": "false",
+          "scope": "compile",
+          "type": "jar",
+          "version": "3.3.5"
+        },
+        {
+          "artifactId": "spring-boot-starter-json",
+          "children": [
+            {
+              "artifactId": "jackson-databind",
+              "children": [
+                {
+                  "artifactId": "jackson-annotations",
+                  "classifier": "",
+                  "groupId": "com.fasterxml.jackson.core",
+                  "optional": "false",
+                  "scope": "compile",
+                  "type": "jar",
+                  "version": "2.17.2"
+                },
+                {
+                  "artifactId": "jackson-core",
+                  "classifier": "",
+                  "groupId": "com.fasterxml.jackson.core",
+                  "optional": "false",
+                  "scope": "compile",
+                  "type": "jar",
+                  "version": "2.17.2"
+                }
+              ],
+              "classifier": "",
+              "groupId": "com.fasterxml.jackson.core",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "2.17.2"
+            },
+            {
+              "artifactId": "jackson-datatype-jdk8",
+              "classifier": "",
+              "groupId": "com.fasterxml.jackson.datatype",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "2.17.2"
+            },
+            {
+              "artifactId": "jackson-datatype-jsr310",
+              "classifier": "",
+              "groupId": "com.fasterxml.jackson.datatype",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "2.17.2"
+            },
+            {
+              "artifactId": "jackson-module-parameter-names",
+              "classifier": "",
+              "groupId": "com.fasterxml.jackson.module",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "2.17.2"
+            }
+          ],
+          "classifier": "",
+          "groupId": "org.springframework.boot",
+          "optional": "false",
+          "scope": "compile",
+          "type": "jar",
+          "version": "3.3.5"
+        },
+        {
+          "artifactId": "spring-boot-starter-tomcat",
+          "children": [
+            {
+              "artifactId": "tomcat-embed-core",
+              "classifier": "",
+              "groupId": "org.apache.tomcat.embed",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "10.1.31"
+            },
+            {
+              "artifactId": "tomcat-embed-el",
+              "classifier": "",
+              "groupId": "org.apache.tomcat.embed",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "10.1.31"
+            },
+            {
+              "artifactId": "tomcat-embed-websocket",
+              "classifier": "",
+              "groupId": "org.apache.tomcat.embed",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "10.1.31"
+            }
+          ],
+          "classifier": "",
+          "groupId": "org.springframework.boot",
+          "optional": "false",
+          "scope": "compile",
+          "type": "jar",
+          "version": "3.3.5"
+        },
+        {
+          "artifactId": "spring-web",
+          "children": [
+            {
+              "artifactId": "spring-beans",
+              "classifier": "",
+              "groupId": "org.springframework",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "6.1.14"
+            }
+          ],
+          "classifier": "",
+          "groupId": "org.springframework",
+          "optional": "false",
+          "scope": "compile",
+          "type": "jar",
+          "version": "6.1.14"
+        },
+        {
+          "artifactId": "spring-webmvc",
+          "children": [
+            {
+              "artifactId": "spring-aop",
+              "classifier": "",
+              "groupId": "org.springframework",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "6.1.14"
+            },
+            {
+              "artifactId": "spring-expression",
+              "classifier": "",
+              "groupId": "org.springframework",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "6.1.14"
+            }
+          ],
+          "classifier": "",
+          "groupId": "org.springframework",
+          "optional": "false",
+          "scope": "compile",
+          "type": "jar",
+          "version": "6.1.14"
+        }
+      ],
+      "classifier": "",
+      "groupId": "org.springframework.boot",
+      "optional": "false",
+      "scope": "compile",
+      "type": "jar",
+      "version": "3.3.5"
+    },
+    {
+      "artifactId": "spring-kafka",
+      "children": [
+        {
+          "artifactId": "spring-context",
+          "classifier": "",
+          "groupId": "org.springframework",
+          "optional": "false",
+          "scope": "compile",
+          "type": "jar",
+          "version": "6.1.14"
+        },
+        {
+          "artifactId": "spring-messaging",
+          "classifier": "",
+          "groupId": "org.springframework",
+          "optional": "false",
+          "scope": "compile",
+          "type": "jar",
+          "version": "6.1.14"
+        },
+        {
+          "artifactId": "spring-tx",
+          "classifier": "",
+          "groupId": "org.springframework",
+          "optional": "false",
+          "scope": "compile",
+          "type": "jar",
+          "version": "6.1.14"
+        },
+        {
+          "artifactId": "spring-retry",
+          "classifier": "",
+          "groupId": "org.springframework.retry",
+          "optional": "false",
+          "scope": "compile",
+          "type": "jar",
+          "version": "2.0.10"
+        },
+        {
+          "artifactId": "kafka-clients",
+          "children": [
+            {
+              "artifactId": "zstd-jni",
+              "classifier": "",
+              "groupId": "com.github.luben",
+              "optional": "false",
+              "scope": "runtime",
+              "type": "jar",
+              "version": "1.5.6-3"
+            },
+            {
+              "artifactId": "lz4-java",
+              "classifier": "",
+              "groupId": "org.lz4",
+              "optional": "false",
+              "scope": "runtime",
+              "type": "jar",
+              "version": "1.8.0"
+            },
+            {
+              "artifactId": "snappy-java",
+              "classifier": "",
+              "groupId": "org.xerial.snappy",
+              "optional": "false",
+              "scope": "runtime",
+              "type": "jar",
+              "version": "1.1.10.5"
+            },
+            {
+              "artifactId": "slf4j-api",
+              "classifier": "",
+              "groupId": "org.slf4j",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "2.0.16"
+            }
+          ],
+          "classifier": "",
+          "groupId": "org.apache.kafka",
+          "optional": "false",
+          "scope": "compile",
+          "type": "jar",
+          "version": "3.7.1"
+        },
+        {
+          "artifactId": "micrometer-observation",
+          "children": [
+            {
+              "artifactId": "micrometer-commons",
+              "classifier": "",
+              "groupId": "io.micrometer",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "1.13.6"
+            }
+          ],
+          "classifier": "",
+          "groupId": "io.micrometer",
+          "optional": "false",
+          "scope": "compile",
+          "type": "jar",
+          "version": "1.13.6"
+        }
+      ],
+      "classifier": "",
+      "groupId": "org.springframework.kafka",
+      "optional": "false",
+      "scope": "compile",
+      "type": "jar",
+      "version": "3.2.4"
+    },
+    {
+      "artifactId": "spring-boot-starter-actuator",
+      "children": [
+        {
+          "artifactId": "spring-boot-actuator-autoconfigure",
+          "children": [
+            {
+              "artifactId": "spring-boot-actuator",
+              "classifier": "",
+              "groupId": "org.springframework.boot",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "3.3.5"
+            }
+          ],
+          "classifier": "",
+          "groupId": "org.springframework.boot",
+          "optional": "false",
+          "scope": "compile",
+          "type": "jar",
+          "version": "3.3.5"
+        },
+        {
+          "artifactId": "micrometer-jakarta9",
+          "classifier": "",
+          "groupId": "io.micrometer",
+          "optional": "false",
+          "scope": "compile",
+          "type": "jar",
+          "version": "1.13.6"
+        }
+      ],
+      "classifier": "",
+      "groupId": "org.springframework.boot",
+      "optional": "false",
+      "scope": "compile",
+      "type": "jar",
+      "version": "3.3.5"
+    },
+    {
+      "artifactId": "micrometer-registry-prometheus",
+      "children": [
+        {
+          "artifactId": "micrometer-core",
+          "children": [
+            {
+              "artifactId": "HdrHistogram",
+              "classifier": "",
+              "groupId": "org.hdrhistogram",
+              "optional": "false",
+              "scope": "runtime",
+              "type": "jar",
+              "version": "2.2.2"
+            },
+            {
+              "artifactId": "LatencyUtils",
+              "classifier": "",
+              "groupId": "org.latencyutils",
+              "optional": "false",
+              "scope": "runtime",
+              "type": "jar",
+              "version": "2.0.3"
+            }
+          ],
+          "classifier": "",
+          "groupId": "io.micrometer",
+          "optional": "false",
+          "scope": "compile",
+          "type": "jar",
+          "version": "1.13.6"
+        },
+        {
+          "artifactId": "prometheus-metrics-core",
+          "children": [
+            {
+              "artifactId": "prometheus-metrics-model",
+              "classifier": "",
+              "groupId": "io.prometheus",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "1.2.1"
+            },
+            {
+              "artifactId": "prometheus-metrics-config",
+              "classifier": "",
+              "groupId": "io.prometheus",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "1.2.1"
+            }
+          ],
+          "classifier": "",
+          "groupId": "io.prometheus",
+          "optional": "false",
+          "scope": "compile",
+          "type": "jar",
+          "version": "1.2.1"
+        },
+        {
+          "artifactId": "prometheus-metrics-tracer-common",
+          "classifier": "",
+          "groupId": "io.prometheus",
+          "optional": "false",
+          "scope": "compile",
+          "type": "jar",
+          "version": "1.2.1"
+        },
+        {
+          "artifactId": "prometheus-metrics-exposition-formats",
+          "children": [
+            {
+              "artifactId": "prometheus-metrics-shaded-protobuf",
+              "classifier": "",
+              "groupId": "io.prometheus",
+              "optional": "false",
+              "scope": "runtime",
+              "type": "jar",
+              "version": "1.2.1"
+            }
+          ],
+          "classifier": "",
+          "groupId": "io.prometheus",
+          "optional": "false",
+          "scope": "runtime",
+          "type": "jar",
+          "version": "1.2.1"
+        }
+      ],
+      "classifier": "",
+      "groupId": "io.micrometer",
+      "optional": "false",
+      "scope": "compile",
+      "type": "jar",
+      "version": "1.13.6"
+    },
+    {
+      "artifactId": "spring-boot-starter-test",
+      "children": [
+        {
+          "artifactId": "spring-boot-test",
+          "classifier": "",
+          "groupId": "org.springframework.boot",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "3.3.5"
+        },
+        {
+          "artifactId": "spring-boot-test-autoconfigure",
+          "classifier": "",
+          "groupId": "org.springframework.boot",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "3.3.5"
+        },
+        {
+          "artifactId": "json-path",
+          "classifier": "",
+          "groupId": "com.jayway.jsonpath",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "2.9.0"
+        },
+        {
+          "artifactId": "jakarta.xml.bind-api",
+          "children": [
+            {
+              "artifactId": "jakarta.activation-api",
+              "classifier": "",
+              "groupId": "jakarta.activation",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "2.1.3"
+            }
+          ],
+          "classifier": "",
+          "groupId": "jakarta.xml.bind",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "4.0.2"
+        },
+        {
+          "artifactId": "json-smart",
+          "children": [
+            {
+              "artifactId": "accessors-smart",
+              "children": [
+                {
+                  "artifactId": "asm",
+                  "classifier": "",
+                  "groupId": "org.ow2.asm",
+                  "optional": "false",
+                  "scope": "test",
+                  "type": "jar",
+                  "version": "9.6"
+                }
+              ],
+              "classifier": "",
+              "groupId": "net.minidev",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "2.5.1"
+            }
+          ],
+          "classifier": "",
+          "groupId": "net.minidev",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "2.5.1"
+        },
+        {
+          "artifactId": "assertj-core",
+          "children": [
+            {
+              "artifactId": "byte-buddy",
+              "classifier": "",
+              "groupId": "net.bytebuddy",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "1.14.19"
+            }
+          ],
+          "classifier": "",
+          "groupId": "org.assertj",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "3.25.3"
+        },
+        {
+          "artifactId": "awaitility",
+          "classifier": "",
+          "groupId": "org.awaitility",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "4.2.2"
+        },
+        {
+          "artifactId": "hamcrest",
+          "classifier": "",
+          "groupId": "org.hamcrest",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "2.2"
+        },
+        {
+          "artifactId": "junit-jupiter",
+          "children": [
+            {
+              "artifactId": "junit-jupiter-params",
+              "classifier": "",
+              "groupId": "org.junit.jupiter",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "5.10.5"
+            },
+            {
+              "artifactId": "junit-jupiter-engine",
+              "classifier": "",
+              "groupId": "org.junit.jupiter",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "5.10.5"
+            }
+          ],
+          "classifier": "",
+          "groupId": "org.junit.jupiter",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "5.10.5"
+        },
+        {
+          "artifactId": "mockito-core",
+          "children": [
+            {
+              "artifactId": "byte-buddy-agent",
+              "classifier": "",
+              "groupId": "net.bytebuddy",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "1.14.19"
+            },
+            {
+              "artifactId": "objenesis",
+              "classifier": "",
+              "groupId": "org.objenesis",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "3.3"
+            }
+          ],
+          "classifier": "",
+          "groupId": "org.mockito",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "5.11.0"
+        },
+        {
+          "artifactId": "mockito-junit-jupiter",
+          "classifier": "",
+          "groupId": "org.mockito",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "5.11.0"
+        },
+        {
+          "artifactId": "jsonassert",
+          "children": [
+            {
+              "artifactId": "android-json",
+              "classifier": "",
+              "groupId": "com.vaadin.external.google",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "0.0.20131108.vaadin1"
+            }
+          ],
+          "classifier": "",
+          "groupId": "org.skyscreamer",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "1.5.3"
+        },
+        {
+          "artifactId": "spring-core",
+          "children": [
+            {
+              "artifactId": "spring-jcl",
+              "classifier": "",
+              "groupId": "org.springframework",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "6.1.14"
+            }
+          ],
+          "classifier": "",
+          "groupId": "org.springframework",
+          "optional": "false",
+          "scope": "compile",
+          "type": "jar",
+          "version": "6.1.14"
+        },
+        {
+          "artifactId": "spring-test",
+          "classifier": "",
+          "groupId": "org.springframework",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "6.1.14"
+        },
+        {
+          "artifactId": "xmlunit-core",
+          "classifier": "",
+          "groupId": "org.xmlunit",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "2.9.1"
+        }
+      ],
+      "classifier": "",
+      "groupId": "org.springframework.boot",
+      "optional": "false",
+      "scope": "test",
+      "type": "jar",
+      "version": "3.3.5"
+    },
+    {
+      "artifactId": "spring-kafka-test",
+      "children": [
+        {
+          "artifactId": "zookeeper",
+          "children": [
+            {
+              "artifactId": "zookeeper-jute",
+              "classifier": "",
+              "groupId": "org.apache.zookeeper",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "3.8.4"
+            },
+            {
+              "artifactId": "audience-annotations",
+              "classifier": "",
+              "groupId": "org.apache.yetus",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "0.12.0"
+            },
+            {
+              "artifactId": "netty-handler",
+              "children": [
+                {
+                  "artifactId": "netty-common",
+                  "classifier": "",
+                  "groupId": "io.netty",
+                  "optional": "false",
+                  "scope": "test",
+                  "type": "jar",
+                  "version": "4.1.114.Final"
+                },
+                {
+                  "artifactId": "netty-resolver",
+                  "classifier": "",
+                  "groupId": "io.netty",
+                  "optional": "false",
+                  "scope": "test",
+                  "type": "jar",
+                  "version": "4.1.114.Final"
+                },
+                {
+                  "artifactId": "netty-buffer",
+                  "classifier": "",
+                  "groupId": "io.netty",
+                  "optional": "false",
+                  "scope": "test",
+                  "type": "jar",
+                  "version": "4.1.114.Final"
+                },
+                {
+                  "artifactId": "netty-transport",
+                  "classifier": "",
+                  "groupId": "io.netty",
+                  "optional": "false",
+                  "scope": "test",
+                  "type": "jar",
+                  "version": "4.1.114.Final"
+                },
+                {
+                  "artifactId": "netty-transport-native-unix-common",
+                  "classifier": "",
+                  "groupId": "io.netty",
+                  "optional": "false",
+                  "scope": "test",
+                  "type": "jar",
+                  "version": "4.1.114.Final"
+                },
+                {
+                  "artifactId": "netty-codec",
+                  "classifier": "",
+                  "groupId": "io.netty",
+                  "optional": "false",
+                  "scope": "test",
+                  "type": "jar",
+                  "version": "4.1.114.Final"
+                }
+              ],
+              "classifier": "",
+              "groupId": "io.netty",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "4.1.114.Final"
+            },
+            {
+              "artifactId": "netty-transport-native-epoll",
+              "children": [
+                {
+                  "artifactId": "netty-transport-classes-epoll",
+                  "classifier": "",
+                  "groupId": "io.netty",
+                  "optional": "false",
+                  "scope": "test",
+                  "type": "jar",
+                  "version": "4.1.114.Final"
+                }
+              ],
+              "classifier": "",
+              "groupId": "io.netty",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "4.1.114.Final"
+            },
+            {
+              "artifactId": "logback-core",
+              "classifier": "",
+              "groupId": "ch.qos.logback",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "1.5.11"
+            },
+            {
+              "artifactId": "logback-classic",
+              "classifier": "",
+              "groupId": "ch.qos.logback",
+              "optional": "false",
+              "scope": "compile",
+              "type": "jar",
+              "version": "1.5.11"
+            },
+            {
+              "artifactId": "commons-io",
+              "classifier": "",
+              "groupId": "commons-io",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "2.11.0"
+            }
+          ],
+          "classifier": "",
+          "groupId": "org.apache.zookeeper",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "3.8.4"
+        },
+        {
+          "artifactId": "kafka-clients",
+          "classifier": "test",
+          "groupId": "org.apache.kafka",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "3.7.1"
+        },
+        {
+          "artifactId": "kafka-metadata",
+          "children": [
+            {
+              "artifactId": "kafka-raft",
+              "classifier": "",
+              "groupId": "org.apache.kafka",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "3.7.1"
+            },
+            {
+              "artifactId": "metrics-core",
+              "classifier": "",
+              "groupId": "com.yammer.metrics",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "2.2.0"
+            }
+          ],
+          "classifier": "",
+          "groupId": "org.apache.kafka",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "3.7.1"
+        },
+        {
+          "artifactId": "kafka-server-common",
+          "children": [
+            {
+              "artifactId": "jopt-simple",
+              "classifier": "",
+              "groupId": "net.sf.jopt-simple",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "5.0.4"
+            },
+            {
+              "artifactId": "pcollections",
+              "classifier": "",
+              "groupId": "org.pcollections",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "4.0.1"
+            }
+          ],
+          "classifier": "",
+          "groupId": "org.apache.kafka",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "3.7.1"
+        },
+        {
+          "artifactId": "kafka-server-common",
+          "classifier": "test",
+          "groupId": "org.apache.kafka",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "3.7.1"
+        },
+        {
+          "artifactId": "kafka-streams-test-utils",
+          "children": [
+            {
+              "artifactId": "kafka-streams",
+              "children": [
+                {
+                  "artifactId": "rocksdbjni",
+                  "classifier": "",
+                  "groupId": "org.rocksdb",
+                  "optional": "false",
+                  "scope": "test",
+                  "type": "jar",
+                  "version": "7.9.2"
+                }
+              ],
+              "classifier": "",
+              "groupId": "org.apache.kafka",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "3.7.1"
+            }
+          ],
+          "classifier": "",
+          "groupId": "org.apache.kafka",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "3.7.1"
+        },
+        {
+          "artifactId": "kafka_2.13",
+          "children": [
+            {
+              "artifactId": "scala-library",
+              "classifier": "",
+              "groupId": "org.scala-lang",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "2.13.12"
+            },
+            {
+              "artifactId": "kafka-group-coordinator",
+              "classifier": "",
+              "groupId": "org.apache.kafka",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "3.7.1"
+            },
+            {
+              "artifactId": "kafka-storage-api",
+              "classifier": "",
+              "groupId": "org.apache.kafka",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "3.7.1"
+            },
+            {
+              "artifactId": "kafka-tools-api",
+              "classifier": "",
+              "groupId": "org.apache.kafka",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "3.7.1"
+            },
+            {
+              "artifactId": "kafka-storage",
+              "children": [
+                {
+                  "artifactId": "caffeine",
+                  "children": [
+                    {
+                      "artifactId": "checker-qual",
+                      "classifier": "",
+                      "groupId": "org.checkerframework",
+                      "optional": "false",
+                      "scope": "test",
+                      "type": "jar",
+                      "version": "3.37.0"
+                    },
+                    {
+                      "artifactId": "error_prone_annotations",
+                      "classifier": "",
+                      "groupId": "com.google.errorprone",
+                      "optional": "false",
+                      "scope": "test",
+                      "type": "jar",
+                      "version": "2.21.1"
+                    }
+                  ],
+                  "classifier": "",
+                  "groupId": "com.github.ben-manes.caffeine",
+                  "optional": "false",
+                  "scope": "test",
+                  "type": "jar",
+                  "version": "3.1.8"
+                }
+              ],
+              "classifier": "",
+              "groupId": "org.apache.kafka",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "3.7.1"
+            },
+            {
+              "artifactId": "kafka-server",
+              "classifier": "",
+              "groupId": "org.apache.kafka",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "3.7.1"
+            },
+            {
+              "artifactId": "argparse4j",
+              "classifier": "",
+              "groupId": "net.sourceforge.argparse4j",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "0.7.0"
+            },
+            {
+              "artifactId": "commons-validator",
+              "children": [
+                {
+                  "artifactId": "commons-beanutils",
+                  "classifier": "",
+                  "groupId": "commons-beanutils",
+                  "optional": "false",
+                  "scope": "test",
+                  "type": "jar",
+                  "version": "1.9.4"
+                },
+                {
+                  "artifactId": "commons-digester",
+                  "classifier": "",
+                  "groupId": "commons-digester",
+                  "optional": "false",
+                  "scope": "test",
+                  "type": "jar",
+                  "version": "2.1"
+                },
+                {
+                  "artifactId": "commons-collections",
+                  "classifier": "",
+                  "groupId": "commons-collections",
+                  "optional": "false",
+                  "scope": "test",
+                  "type": "jar",
+                  "version": "3.2.2"
+                }
+              ],
+              "classifier": "",
+              "groupId": "commons-validator",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "1.7"
+            },
+            {
+              "artifactId": "jackson-module-scala_2.13",
+              "children": [
+                {
+                  "artifactId": "paranamer",
+                  "classifier": "",
+                  "groupId": "com.thoughtworks.paranamer",
+                  "optional": "false",
+                  "scope": "test",
+                  "type": "jar",
+                  "version": "2.8"
+                }
+              ],
+              "classifier": "",
+              "groupId": "com.fasterxml.jackson.module",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "2.17.2"
+            },
+            {
+              "artifactId": "jackson-dataformat-csv",
+              "classifier": "",
+              "groupId": "com.fasterxml.jackson.dataformat",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "2.17.2"
+            },
+            {
+              "artifactId": "jose4j",
+              "classifier": "",
+              "groupId": "org.bitbucket.b_c",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "0.9.4"
+            },
+            {
+              "artifactId": "scala-collection-compat_2.13",
+              "classifier": "",
+              "groupId": "org.scala-lang.modules",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "2.10.0"
+            },
+            {
+              "artifactId": "scala-java8-compat_2.13",
+              "classifier": "",
+              "groupId": "org.scala-lang.modules",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "1.0.2"
+            },
+            {
+              "artifactId": "scala-reflect",
+              "classifier": "",
+              "groupId": "org.scala-lang",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "2.13.12"
+            },
+            {
+              "artifactId": "scala-logging_2.13",
+              "classifier": "",
+              "groupId": "com.typesafe.scala-logging",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "3.9.4"
+            },
+            {
+              "artifactId": "metrics-core",
+              "classifier": "",
+              "groupId": "io.dropwizard.metrics",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "4.1.12.1"
+            },
+            {
+              "artifactId": "commons-cli",
+              "classifier": "",
+              "groupId": "commons-cli",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "1.4"
+            }
+          ],
+          "classifier": "",
+          "groupId": "org.apache.kafka",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "3.7.1"
+        },
+        {
+          "artifactId": "kafka_2.13",
+          "classifier": "test",
+          "groupId": "org.apache.kafka",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "3.7.1"
+        },
+        {
+          "artifactId": "junit-jupiter-api",
+          "children": [
+            {
+              "artifactId": "opentest4j",
+              "classifier": "",
+              "groupId": "org.opentest4j",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "1.3.0"
+            },
+            {
+              "artifactId": "junit-platform-commons",
+              "classifier": "",
+              "groupId": "org.junit.platform",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "1.10.5"
+            },
+            {
+              "artifactId": "apiguardian-api",
+              "classifier": "",
+              "groupId": "org.apiguardian",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "1.1.2"
+            }
+          ],
+          "classifier": "",
+          "groupId": "org.junit.jupiter",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "5.10.5"
+        },
+        {
+          "artifactId": "junit-platform-launcher",
+          "children": [
+            {
+              "artifactId": "junit-platform-engine",
+              "classifier": "",
+              "groupId": "org.junit.platform",
+              "optional": "false",
+              "scope": "test",
+              "type": "jar",
+              "version": "1.10.5"
+            }
+          ],
+          "classifier": "",
+          "groupId": "org.junit.platform",
+          "optional": "false",
+          "scope": "test",
+          "type": "jar",
+          "version": "1.10.5"
+        }
+      ],
+      "classifier": "",
+      "groupId": "org.springframework.kafka",
+      "optional": "false",
+      "scope": "test",
+      "type": "jar",
+      "version": "3.2.4"
+    }
+  ],
+  "classifier": "",
+  "groupId": "com.appbuilder",
+  "optional": "false",
+  "scope": "",
+  "type": "jar",
+  "version": "0.0.1-SNAPSHOT"
+}

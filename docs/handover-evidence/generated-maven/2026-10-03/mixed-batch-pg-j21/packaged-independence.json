@@ -1,0 +1,36 @@
+{
+  "baseline_generated_source_count": 19,
+  "checks": [
+    {
+      "detail": "no authoring-source package paths are present",
+      "name": "repository-boundary"
+    },
+    {
+      "detail": "no suite runtime imports are present",
+      "name": "java-imports"
+    },
+    {
+      "detail": "no generator-owned/local Maven dependency; project=com.appbuilder:m5a_run_semantics",
+      "name": "maven-boundary"
+    },
+    {
+      "detail": "19 generated source paths exist and carry generated ownership",
+      "name": "schema-baseline"
+    },
+    {
+      "detail": ".gitignore and .dockerignore are present",
+      "name": "repository-hygiene"
+    },
+    {
+      "detail": "no absolute author-machine path is embedded",
+      "name": "author-paths"
+    },
+    {
+      "detail": "target/m5a_run_semantics-0.0.1-SNAPSHOT.jar has no generator-owned library or author path",
+      "name": "packaged-jar"
+    }
+  ],
+  "package": "mixed-batch-pg-j21",
+  "packaged_jar": "target/m5a_run_semantics-0.0.1-SNAPSHOT.jar",
+  "status": "passed"
+}

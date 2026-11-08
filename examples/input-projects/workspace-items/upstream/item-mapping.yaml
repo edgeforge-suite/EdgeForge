@@ -1,0 +1,13 @@
+interface: item-api
+entity: Item
+operations:
+  - name: createItem
+    request_mappings:
+      - {source: workspaceId, target: Item.workspaceId}
+      - {source: label, target: Item.label}
+      - {source: priority, target: Item.priority}
+    response_mappings:
+      - {source: itemId, target: Item.itemId}
+      - {source: workspaceId, target: Item.workspaceId}
+      - {source: label, target: Item.label}
+      - {source: priority, target: Item.priority}

@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "caseId": {"type": "string"},
+    "customerId": {"type": "string"},
+    "amount": {"type": "number"},
+    "merchantCategory": {"type": "string"}
+  }
+}

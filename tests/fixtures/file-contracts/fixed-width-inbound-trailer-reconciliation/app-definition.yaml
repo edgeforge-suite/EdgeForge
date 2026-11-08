@@ -1,0 +1,16 @@
+app_name: Fixed Width Inbound Trailer Reconciliation
+bounded_context: accounts
+schema_version: "2.0"
+upstream_interfaces:
+  - name: account-inbound-file
+    system: CORE
+    type: file-fixed-width
+    version: "1.0"
+    spec: upstream/account-inbound-layout.yaml
+    mapping: upstream/account-inbound-mapping.yaml
+    samples:
+      - upstream/sample-account-inbound.txt
+      - upstream/sample-account-inbound-wrong-count.txt
+      - upstream/sample-account-inbound-wrong-sum.txt
+      - upstream/sample-account-inbound-missing-trailer.txt
+target_profile: springboot-legacy-compatible

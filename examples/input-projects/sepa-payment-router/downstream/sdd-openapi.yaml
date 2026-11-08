@@ -1,0 +1,47 @@
+openapi: 3.0.3
+info:
+  title: SDD Clearing API
+  version: "1.0"
+paths:
+  /direct-debits:
+    post:
+      operationId: submitDirectDebit
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DirectDebitRequest"
+      responses:
+        "200":
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DirectDebitResponse"
+components:
+  schemas:
+    DirectDebitRequest:
+      type: object
+      properties:
+        amount:
+          type: string
+        currency:
+          type: string
+        mandateId:
+          type: string
+        debtorAccount:
+          type: string
+        creditorAccount:
+          type: string
+        creditorName:
+          type: string
+        mandateReference:
+          type: string
+    DirectDebitResponse:
+      type: object
+      properties:
+        ddId:
+          type: string
+        status:
+          type: string

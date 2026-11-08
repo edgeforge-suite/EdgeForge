@@ -1,0 +1,78 @@
+{
+  "advisory_database_snapshot": "not supplied",
+  "advisory_service": "https://api.osv.dev",
+  "affected_packages": 0,
+  "assessment_time_utc": "2026-10-05T06:09:16.737678+00:00",
+  "exit_code": 0,
+  "findings": 0,
+  "inventory_coverage": "complete",
+  "inventory_sha256": "916048d400920aa355c7ce4f472e37eb644ad575ef59b06ce50e65d529502bdb",
+  "maven_warnings": [
+    "[WARNING] Unknown keyword meta:enum - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword",
+    "[WARNING] Unknown keyword deprecated - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword"
+  ],
+  "pom_sha256": "7d1efaf0301a29e0466d3ee9e3c7d3eee4677e3074006aee138a0161399547ac",
+  "provenance": {
+    "archetype": "crud",
+    "engine_sha": "38862862a0f4e90eb4f809a0150c6d2702de2423",
+    "generation_input": {
+      "app_archetype": "crud",
+      "app_name": "M5a Run Semantics Contract Fixture",
+      "bounded_context": "m5a_run_semantics",
+      "data_handoffs": [
+        {
+          "mapping": "widget-staging-mapping.yaml",
+          "name": "widget-staging",
+          "run_semantics": {
+            "dedup_key": [
+              "widget_id",
+              "payload_key"
+            ],
+            "restart": "resume",
+            "run_id": "caller_supplied"
+          },
+          "spec": "widget-staging.sql",
+          "system": "SYNTHETIC_HANDOFF",
+          "type": "staging-table",
+          "version": "1.0"
+        }
+      ],
+      "schema_version": "2.0",
+      "target_profile": "springboot-legacy-compatible"
+    },
+    "generation_run_id": "maven-assessment-m5a-h2-j17",
+    "input_manifest": "tests/fixtures/manifest-v2-cut/v2-run-semantics-app-definition.yaml",
+    "input_package_sha256": "a8187cff4a8fdbc64483488d5d64be97348670f30ae1d9d5d5007fa0a4d6bc51",
+    "target_profile": "springboot-legacy-compatible"
+  },
+  "raw_scanner_stdout_sha256": "d20a93ecb2b149a6d15b69cbbfe595882675f366dac2f5463dfa6fdd6005b368",
+  "release_acceptance": "not established",
+  "resolved_artifacts": 134,
+  "scanned_maven_packages": 134,
+  "scanner_exit_code": 0,
+  "scopes": [
+    "compile",
+    "provided",
+    "runtime",
+    "system",
+    "test"
+  ],
+  "source_after_sha256": "81ae7a38fd29259e1fb08efa41ecedb4efa3540be2240c038b561d6e2f444dce",
+  "source_before_sha256": "81ae7a38fd29259e1fb08efa41ecedb4efa3540be2240c038b561d6e2f444dce",
+  "source_unchanged": true,
+  "status": "complete",
+  "tools": {
+    "cyclonedx_maven_plugin": "2.9.1",
+    "java": "17.0.18",
+    "java_vendor": "Homebrew",
+    "maven": "3.9.12",
+    "maven_dependency_plugin": "3.8.1",
+    "scanner": [
+      "osv-scanner version: 2.3.8",
+      "osv-scalibr version: 0.4.5",
+      "commit: 408fcd6f8707999a29e7ba45e15809764cf24f67",
+      "built at: 2026-05-08T04:54:35Z"
+    ],
+    "scanner_sha256": "a8cd6507b06239f463a7642430cfd2d154882f150f6e30cdc0653e28dfc34216"
+  }
+}

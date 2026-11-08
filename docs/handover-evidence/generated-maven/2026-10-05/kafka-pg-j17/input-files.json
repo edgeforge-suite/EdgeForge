@@ -1,0 +1,34 @@
+[
+  {
+    "path": "manifest.yaml",
+    "sha256": "9518ed3a2feaae24c6fc1da752b2795fab7e4c2582f69afdcdaf51ee1e098032"
+  },
+  {
+    "path": "mappings/balance-to-ledger.yaml",
+    "sha256": "8ad1c2587929aa35249ebc094fc4a76a4d197590d31d7cbc7075d4c3cf21c5e7"
+  },
+  {
+    "path": "mappings/payment-to-settlement.yaml",
+    "sha256": "99f9d76ec59ab7792fedf775bd3e649a9963526af0b38ead11d67eb562de6d40"
+  },
+  {
+    "path": "samples/payment-initiated.json",
+    "sha256": "94ebc7bb5a8cf65a65ec8fdb9e6d0e17dad35589725048f49189231154aabe99"
+  },
+  {
+    "path": "schemas/downstream/ledger-update.json",
+    "sha256": "2c1fca5fd485b5fe1aef53c4ff8692b8aff25e56b0901146d24fed1de7e9fb7a"
+  },
+  {
+    "path": "schemas/downstream/settlement-request.json",
+    "sha256": "5a8d187361c2daa62e1bd887175a2ea2f24564cf384c0651af73370f6423a5d6"
+  },
+  {
+    "path": "schemas/upstream/balance-updated.json",
+    "sha256": "c75a203f4eaf874f5653e52415b9810114358db9e5c373b510a1663670a02be4"
+  },
+  {
+    "path": "schemas/upstream/payment-initiated.json",
+    "sha256": "385d52afe73601b29a93ef42be9bca34dcff56350db8e27ede24f63e757db379"
+  }
+]

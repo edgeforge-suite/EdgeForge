@@ -1,0 +1,106 @@
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ----------------< com.appbuilder:ordinary_batch_proof >-----------------
+[INFO] Building Ordinary Batch Preview Proof 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- clean:3.5.0:clean (default-clean) @ ordinary_batch_proof ---
+[INFO]
+[INFO] --- resources:3.5.0:resources (default-resources) @ ordinary_batch_proof ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 4 resources from src/main/resources to target/classes
+[INFO]
+[INFO] --- compiler:3.15.0:compile (default-compile) @ ordinary_batch_proof ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 19 source files with javac [debug parameters release 17] to target/classes
+[WARNING] /private<temporary>/isolated/app/src/main/java/com/appbuilder/ordinary_batch_proof/batch/WidgetEodBatchJob.java:[70,13] <I,O>chunk(int,org.springframework.transaction.PlatformTransactionManager) in org.springframework.batch.core.step.builder.StepBuilder has been deprecated and marked for removal
+[INFO]
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ ordinary_batch_proof ---
+[INFO] skip non existing resourceDirectory /private<temporary>/isolated/app/src/test/resources
+[INFO]
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ ordinary_batch_proof ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target/test-classes
+[INFO]
+[INFO] --- surefire:3.5.6:test (default-test) @ ordinary_batch_proof ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO]
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.appbuilder.ordinary_batch_proof.OrdinaryBatchProofApplicationTest
+18:48:44.501 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.appbuilder.ordinary_batch_proof.OrdinaryBatchProofApplicationTest]: OrdinaryBatchProofApplicationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:48:44.553 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.appbuilder.ordinary_batch_proof.OrdinaryBatchProofApplication for test class com.appbuilder.ordinary_batch_proof.OrdinaryBatchProofApplicationTest
+18:48:44.590 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.appbuilder.ordinary_batch_proof.OrdinaryBatchProofApplicationTest]: OrdinaryBatchProofApplicationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:48:44.591 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.appbuilder.ordinary_batch_proof.OrdinaryBatchProofApplication for test class com.appbuilder.ordinary_batch_proof.OrdinaryBatchProofApplicationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-03T18:48:44.775-05:00  INFO 91405 --- [           main] c.a.o.OrdinaryBatchProofApplicationTest  : Starting OrdinaryBatchProofApplicationTest using Java 17.0.18 with PID 91405 (started by santoshhommaradi in /private<temporary>/isolated/app)
+2026-10-03T18:48:44.776-05:00  INFO 91405 --- [           main] c.a.o.OrdinaryBatchProofApplicationTest  : No active profile set, falling back to 1 default profile: "default"
+2026-10-03T18:48:45.248-05:00  INFO 91405 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-03T18:48:45.283-05:00  INFO 91405 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 1 JPA repository interface.
+2026-10-03T18:48:45.705-05:00  INFO 91405 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-03T18:48:45.823-05:00  INFO 91405 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ordinary_batch_proof user=SA
+2026-10-03T18:48:45.825-05:00  INFO 91405 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-03T18:48:45.836-05:00  INFO 91405 --- [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:ordinary_batch_proof (H2 2.4)
+2026-10-03T18:48:45.868-05:00  WARN 91405 --- [           main] o.f.c.internal.database.base.Database    : Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026-10-03T18:48:45.886-05:00  INFO 91405 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-10-03T18:48:45.890-05:00  INFO 91405 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.014s)
+2026-10-03T18:48:45.901-05:00  INFO 91405 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-10-03T18:48:45.927-05:00  INFO 91405 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-10-03T18:48:45.932-05:00  INFO 91405 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create widget table"
+2026-10-03T18:48:45.944-05:00  INFO 91405 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - create widget staging table"
+2026-10-03T18:48:45.950-05:00  INFO 91405 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "3 - create pkg batch metadata"
+2026-10-03T18:48:45.972-05:00  INFO 91405 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema "PUBLIC", now at version v3 (execution time 00:00.019s)
+2026-10-03T18:48:46.035-05:00  INFO 91405 --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-03T18:48:46.071-05:00  INFO 91405 --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-03T18:48:46.337-05:00  INFO 91405 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-03T18:48:46.380-05:00  INFO 91405 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:ordinary_batch_proof]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: ORDINARY_BATCH_PROOF/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-03T18:48:46.908-05:00  INFO 91405 --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-03T18:48:46.925-05:00  INFO 91405 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-03T18:48:47.014-05:00  INFO 91405 --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-03T18:48:47.133-05:00  INFO 91405 --- [           main] o.s.b.c.step.item.ChunkOrientedTasklet   : DEPRECATION NOTE: The legacy implementation of the chunk-oriented processing model is deprecated as of Spring Batch 6.0 and will be removed in version 7.0.
+2026-10-03T18:48:47.211-05:00  WARN 91405 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-03T18:48:47.228-05:00  INFO 91405 --- [           main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-10-03T18:48:47.476-05:00  INFO 91405 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-03T18:48:47.512-05:00  INFO 91405 --- [           main] c.a.o.OrdinaryBatchProofApplicationTest  : Started OrdinaryBatchProofApplicationTest in 2.891 seconds (process running for 3.546)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.389 s -- in com.appbuilder.ordinary_batch_proof.OrdinaryBatchProofApplicationTest
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO]
+[INFO] --- jar:3.5.1:jar (default-jar) @ ordinary_batch_proof ---
+[INFO] Building jar: /private<temporary>/isolated/app/target/ordinary_batch_proof-0.0.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- spring-boot:4.1.1:repackage (repackage) @ ordinary_batch_proof ---
+[INFO] Replacing main artifact /private<temporary>/isolated/app/target/ordinary_batch_proof-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /private<temporary>/isolated/app/target/ordinary_batch_proof-0.0.1-SNAPSHOT.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.998 s
+[INFO] Finished at: 2026-10-03T18:48:48-05:00
+[INFO] ------------------------------------------------------------------------
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended

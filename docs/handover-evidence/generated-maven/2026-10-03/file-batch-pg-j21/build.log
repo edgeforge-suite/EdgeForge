@@ -1,0 +1,40 @@
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ----------------------< com.appbuilder:accounts >-----------------------
+[INFO] Building CSV Downstream File App 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- clean:3.5.0:clean (default-clean) @ accounts ---
+[INFO]
+[INFO] --- resources:3.5.0:resources (default-resources) @ accounts ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO]
+[INFO] --- compiler:3.15.0:compile (default-compile) @ accounts ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 20 source files with javac [debug parameters release 21] to target/classes
+[WARNING] /private<temporary>/isolated/app/src/main/java/com/appbuilder/accounts/batch/AccountEodBatchJob.java:[77,13] <I,O>chunk(int,org.springframework.transaction.PlatformTransactionManager) in org.springframework.batch.core.step.builder.StepBuilder has been deprecated and marked for removal
+[INFO]
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ accounts ---
+[INFO] skip non existing resourceDirectory /private<temporary>/isolated/app/src/test/resources
+[INFO]
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ accounts ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target/test-classes
+[INFO]
+[INFO] --- surefire:3.5.6:test (default-test) @ accounts ---
+[INFO] Tests are skipped.
+[INFO]
+[INFO] --- jar:3.5.1:jar (default-jar) @ accounts ---
+[INFO] Building jar: /private<temporary>/isolated/app/target/accounts-0.0.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- spring-boot:4.1.1:repackage (repackage) @ accounts ---
+[INFO] Replacing main artifact /private<temporary>/isolated/app/target/accounts-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /private<temporary>/isolated/app/target/accounts-0.0.1-SNAPSHOT.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.822 s
+[INFO] Finished at: 2026-10-03T18:50:08-05:00
+[INFO] ------------------------------------------------------------------------

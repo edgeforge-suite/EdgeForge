@@ -1,0 +1,11 @@
+entity: Account
+field_mappings:
+  - source: Account.accountNumber
+    target: account_number
+  - source: Account.availableBalance
+    target: available_balance_minor
+    type_coercion: major_to_minor_units
+  - source: Account.availableBalance
+    target: available_balance
+  - source: Account.openedDate
+    target: opened_date

@@ -1,0 +1,10 @@
+entity: InternationalPayment
+rules:
+  - field: Status
+    type: allowed-values
+    values:
+      - AcceptedSettlementInProcess
+      - AcceptedSettlementCompleted
+      - Rejected
+  - field: CurrencyOfTransfer
+    type: iso-4217

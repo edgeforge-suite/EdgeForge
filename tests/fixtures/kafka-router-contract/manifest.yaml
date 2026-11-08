@@ -1,0 +1,79 @@
+app_name: Payment Router
+bounded_context: payments
+schema_version: "2.0"
+app_archetype: kafka-integration
+target_profile: springboot-legacy-compatible
+
+kafka_config:
+  consumer_group: payment-router-group
+  concurrency: 1
+
+async_routes:
+  - name: payment_router
+    pattern: router
+    router_config:
+      upstream_topics:
+        - id: u1_intake
+          name: u1-payment-request
+          consumer_group: payment-router-u1
+          source_system_extraction:
+            mode: header
+            header_key: X-Source-System
+          reply_destination_extraction:
+            mode: header
+            header_key: X-Reply-To
+      inbound_schema:
+        file: schemas/ro-request.json
+        validation_policy: strict
+        failure_behavior: nack
+      routing_rules:
+        routing_fields:
+          - name: country
+            json_path: $.country
+        rules:
+          - id: uk_payments
+            conditions:
+              - field: country
+                operator: eq
+                value: UK
+            target: d1_processor
+        default_target: null
+      duplicate_correlation_policy: reject-new
+      targets:
+        - id: d1_processor
+          request_topic: d1-payment-request
+          response_topic: d1-payment-response
+          request_schema:
+            file: schemas/d1-request.json
+            validation_policy: strict
+            failure_behavior: nack
+          response_schema:
+            file: schemas/d1-response.json
+            validation_policy: strict
+            failure_behavior: nack
+          request_transform:
+            file: transforms/ro-to-d1-request.yaml
+          response_transform:
+            file: transforms/d1-to-ro-response.yaml
+          retry:
+            max_attempts: 3
+            backoff_ms: 1000
+            dlq_topic: d1-payment-request-dlq
+          timeout_ms: 30000
+      outbound_schema:
+        file: schemas/ro-response.json
+        validation_policy: strict
+        failure_behavior: nack
+      nack_routing:
+        mode: fixed
+        fixed_topic: payment-router-nack
+        default_error_topic: payment-router-error
+      timeout:
+        behavior_with_known_reply: nack
+        behavior_without_reply: error_topic
+      payload_logging:
+        policy: none
+      correlation_store:
+        type: in_memory
+        timeout_ms: 30000
+        eviction_interval_ms: 60000

@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "entryId": {"type": "string"},
+    "amountMinorUnits": {"type": "integer"},
+    "currencyCode": {"type": "string"},
+    "postingDate": {"type": "string", "format": "date"}
+  }
+}

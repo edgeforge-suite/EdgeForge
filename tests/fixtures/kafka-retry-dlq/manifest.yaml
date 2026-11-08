@@ -1,0 +1,29 @@
+schema_version: "2.0"
+app_name: PaymentProcessor
+bounded_context: payment-processing
+target_profile: springboot-standard-enterprise
+app_archetype: kafka-integration
+
+kafka_config:
+  consumer_group: payment-processor-group
+  concurrency: 2
+  retry:
+    max_attempts: 3
+    backoff_ms: 500
+    backoff_multiplier: 2.0
+  dlq:
+    enabled: true
+    topic_suffix: ".dlq"
+
+async_routes:
+  - name: payment-posted
+    pattern: fire-and-forget
+    upstream_topic:
+      name: abc.payments.posted.v1
+      system: PaymentHub
+      message_schema: schemas/payment-posted.json
+    downstream_topic:
+      name: xyz.ledger.entries.v1
+      system: LedgerService
+      message_schema: schemas/ledger-entry.json
+    transform_mapping: mappings/payment-to-ledger.yaml

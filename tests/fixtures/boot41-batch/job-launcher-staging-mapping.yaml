@@ -1,0 +1,7 @@
+table: job_launcher_staging
+entity: JobLauncher
+field_mappings:
+  - source: JobLauncher.widgetId
+    target: widget_id
+  - source: JobLauncher.payloadKey
+    target: payload_key

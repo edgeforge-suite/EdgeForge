@@ -1,0 +1,27 @@
+{
+  "cases": [
+    {
+      "java": "17",
+      "profile": "springboot-legacy-compatible",
+      "platform": "linux/amd64",
+      "image_id": "sha256:554fef727186e796d408545b3d99ba34efe69c3cbef9c86d5a9f0a4c26ea6f6b",
+      "user": "edgeforge",
+      "dockerfile": "generated, unchanged",
+      "lz4": "1.11.4",
+      "native_and_roundtrip": "passed",
+      "runtime_log": "runtime-j17.log",
+      "source_sha256": "1936bf6bf44d59b9b6098aad384acc43eda99d769dc86ebf3e347c490ccae742",
+      "pom_sha256": "0dd74bd720037ca442ab86307361bc8a4d007e9c178d5e4620d2edea4115f5d2",
+      "dockerfile_sha256": "fc0f74ed01d43c8370ab4bab7222a2853fb0de2126adcb456b8c498d50d19630",
+      "native_loading": "explicit Native.load; nested-loader Java fallback not credited"
+    }
+  ],
+  "complete": false,
+  "source_sha": "ab41a02fc854f89681e0473d9914e9e16528c3c2",
+  "source_dirty": true,
+  "proof_source_hashes": {
+    "scripts/smoke/boot41_kafka_lz4_container_proof.py": "750deba56058dd7d8d7a039b918c6b8ed3acfb5d7d4a860b8a0cfd859f4395ec",
+    "tests/fixtures/boot41-kafka/Lz4ContainerProof.java": "488331d5fde63e25e69224b6a5f9b355499d0a4c15339cc63b43fc2727d434f1"
+  },
+  "image_security_clearance": false
+}

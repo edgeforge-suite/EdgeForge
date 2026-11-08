@@ -1,0 +1,10 @@
+{
+  "loanId": "LN-2024-00001",
+  "borrowerId": "BRW-001",
+  "status": "PENDING",
+  "principalAmount": 25000.0,
+  "interestRate": 5.75,
+  "termMonths": 60,
+  "loanType": "PERSONAL",
+  "createdAt": "2024-03-01T09:00:00Z"
+}

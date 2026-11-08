@@ -1,0 +1,56 @@
+{
+  "archetype": "kafka-integration",
+  "engine_sha": "582c853f2566ac5cdf45ad239c1827a5aa47f12e",
+  "generation_input": {
+    "app_archetype": "kafka-integration",
+    "app_name": "payment-mediation-adapter",
+    "async_routes": [
+      {
+        "downstream_topic": {
+          "message_schema": "schemas/downstream/settlement-request.json",
+          "name": "xyz.settlement.request.v1",
+          "system": "XYZ_SETTLEMENT"
+        },
+        "name": "payment-initiated",
+        "partition_key": {
+          "source": "accountId",
+          "strategy": "field_value"
+        },
+        "pattern": "fire-and-forget",
+        "transform_mapping": "mappings/payment-to-settlement.yaml",
+        "upstream_topic": {
+          "message_schema": "schemas/upstream/payment-initiated.json",
+          "name": "abc.payments.initiated.v1",
+          "sample": "samples/payment-initiated.json",
+          "system": "ABC_CORE"
+        }
+      },
+      {
+        "downstream_topic": {
+          "message_schema": "schemas/downstream/ledger-update.json",
+          "name": "xyz.ledger.update.v1",
+          "system": "XYZ_LEDGER"
+        },
+        "name": "balance-updated",
+        "pattern": "fire-and-forget",
+        "transform_mapping": "mappings/balance-to-ledger.yaml",
+        "upstream_topic": {
+          "message_schema": "schemas/upstream/balance-updated.json",
+          "name": "abc.balance.updated.v1",
+          "system": "ABC_CORE"
+        }
+      }
+    ],
+    "bounded_context": "payment_mediation",
+    "kafka_config": {
+      "concurrency": 1,
+      "consumer_group": "payment-mediation-group"
+    },
+    "schema_version": "2.0",
+    "target_profile": "springboot-enterprise-postgres-java17"
+  },
+  "generation_run_id": "maven-assessment-kafka-pg-j17",
+  "input_manifest": "tests/fixtures/kafka-integration/manifest.yaml",
+  "input_package_sha256": "adfbcaab05379c11f80b33cf10200826729de57801006f28c0576de571301748",
+  "target_profile": "springboot-enterprise-postgres-java17"
+}

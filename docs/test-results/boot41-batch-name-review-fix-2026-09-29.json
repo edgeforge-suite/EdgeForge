@@ -1,0 +1,72 @@
+{
+  "builds": [
+    {
+      "case": "ordinary",
+      "entities": [
+        "JobExplorer",
+        "JobLauncher"
+      ],
+      "maven": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 1
+      },
+      "profile": "springboot-legacy-compatible",
+      "source_and_jar_independent": true,
+      "source_digest": "538451d23937c23822756e1e4d0b53700a381b71d2d9d9511784493391698435"
+    },
+    {
+      "case": "ordinary",
+      "entities": [
+        "JobExplorer",
+        "JobLauncher"
+      ],
+      "maven": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 1
+      },
+      "profile": "springboot-legacy-compatible-boot41-preview",
+      "source_and_jar_independent": true,
+      "source_digest": "8e5d9fef4bd197f33743eb5188f6bd6ebc764eaab21856a5d13a6fd60dec1f34"
+    },
+    {
+      "case": "m5a",
+      "entities": [
+        "JobExplorer",
+        "JobLauncher"
+      ],
+      "maven": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 1
+      },
+      "profile": "springboot-legacy-compatible",
+      "source_and_jar_independent": true,
+      "source_digest": "d0fc9583c847a80667411d63804fed272b65dd320237c97c09c44daf103e7d79"
+    },
+    {
+      "case": "m5a",
+      "entities": [
+        "JobExplorer",
+        "JobLauncher"
+      ],
+      "maven": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 1
+      },
+      "profile": "springboot-legacy-compatible-boot41-preview",
+      "source_and_jar_independent": true,
+      "source_digest": "955b5a194aa80a9562dc15b5945ee9a6c6c1481f7776b67ebd95f608a19e7905"
+    }
+  ],
+  "observed_at": "2026-09-29T02:34:19.529151+00:00",
+  "release_acceptance": "not-established",
+  "source_dirty": false,
+  "source_sha": "a99ee99cfc944a56d925e5e215de4723a9bdfc10"
+}

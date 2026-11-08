@@ -1,0 +1,1018 @@
+{
+  "archive": {
+    "bytes": 99409920,
+    "command": "package_generated_image_evidence.py filesystem PAX; explicit CLI inputs recorded privately",
+    "directories": 95,
+    "files": 2007,
+    "git_version": "Git archive not used; Python tarfile.PAX_FORMAT; uid/gid/mtime=0, files=0644, dirs=0755",
+    "sha256": "cc26d48d75539646e545d8f70f83026cf929a5d1cfe63838c9e170d48c60683d",
+    "tar_umask": "0002"
+  },
+  "archive_only_files": 1841,
+  "bundle_tree": "b3bd190aa303d9113255df4b8afb8debab209629",
+  "core": [
+    {
+      "bytes": 8572,
+      "git_blob": "c7700808a2be5ec7f3b500c313863be269a1aabf",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/README.md",
+      "sha256": "1938d7b43fe163b044a09eb8dd714fa482560417bd5070812197bda1de2bbb5d"
+    },
+    {
+      "bytes": 2432,
+      "git_blob": "3489a0074fb9f171dd4787681ad5930b94317dd3",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/campaign.json.gz",
+      "sha256": "07e9b022215a889dd27a08f69ff9bbe62a81313cd1143eaed4e20232c288dc90"
+    },
+    {
+      "bytes": 1794,
+      "git_blob": "1a6705628a0481d9034dd2a53280bf248e8150f8",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/coverage-declared.json.gz",
+      "sha256": "f2fa2f2b8fdafc8933121437eb980a4b8eb1cdf83eedeecac78992868757a73b"
+    },
+    {
+      "bytes": 24281,
+      "git_blob": "86a9f91fa982ba81da1a1dcfa2a281ee2bc54b7a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-h2-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "584324de89ddb5f4b85191a465129eb1e67edda58be0113d95057fbe6eb6c2de"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-h2-j17/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5766,
+      "git_blob": "845f43062384bd5006ee3346e406fb69b5f011d1",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-h2-j17/generated-final-image/assessment.json.gz",
+      "sha256": "ee0b51e9b58457e6f6e3b0a8ce3ed109c68f1bf40ebe3192dc836bf5f0dd1251"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-h2-j17/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 501,
+      "git_blob": "5c84f64d476e998976834947628359a3c28d6fd3",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-h2-j17/runtime-create.receipt.json.gz",
+      "sha256": "bac27d1d24e861e12291399928d8ace7b0c78eef0098f44a00ce04968761d744"
+    },
+    {
+      "bytes": 398,
+      "git_blob": "5bbac4ff270829ce4d7d8eec960286cb1a682833",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-h2-j17/runtime-created-state.receipt.json.gz",
+      "sha256": "38027466062cdd5908155f89e6fedf0de6a2e0a1b9e2e35f52b336e3a6ecf70a"
+    },
+    {
+      "bytes": 1928,
+      "git_blob": "af587e3887b456db953e77c04b15f7664e74984b",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-h2-j17/runtime-created-state.stdout.gz",
+      "sha256": "b6cd0e689d03e638bf07a87f421f01cb2355ba0977a63cc77ec87627577721a3"
+    },
+    {
+      "bytes": 1051,
+      "git_blob": "f19183d44092f6cd55c47840461c317548cc351c",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-h2-j17/runtime-identity.json.gz",
+      "sha256": "46b3265adece1313ed9fbe09fd2b679d08cf903062a46c8c7f3d93f3bd964921"
+    },
+    {
+      "bytes": 1228,
+      "git_blob": "d3955e2d749c14b295cd500f734b10acfdc96705",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-h2-j17/runtime-image-inspect.stdout.gz",
+      "sha256": "1a4b5f848b3149f3f66463b0145e6d9cf0819ef4a5a0b90e4a58b1ba92b9d271"
+    },
+    {
+      "bytes": 653,
+      "git_blob": "9cd14ada94479f6f13148a9fd97a8e4798532f37",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-h2-j17/runtime-manifest.json.gz",
+      "sha256": "4b18b11995db255b44f7114be79ad888254bad8e801094613b4a7b0966802598"
+    },
+    {
+      "bytes": 394,
+      "git_blob": "00ab7793ad5231146f6a23ecb7adb60f7aba4757",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-h2-j17/runtime-start.receipt.json.gz",
+      "sha256": "204260ed1831b23beaf091792aa64d68d8af1f3588b7123978c18de0e9c1c46d"
+    },
+    {
+      "bytes": 533,
+      "git_blob": "15c025bfe15314be52222b16d705e0eeafe7e6f9",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-h2-j17/runtime.json.gz",
+      "sha256": "80c5ba73b72e54b35ace789e49a5efe88502d3832746408e7ec1f3982659d5c1"
+    },
+    {
+      "bytes": 24495,
+      "git_blob": "bf5d43fca4064e18ad304947aac2967badffcca8",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-pg-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "93b18ec6bda00439138c30e09ac1fe00c3c8a8427a700524c903f6f19e0615e5"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-pg-j17/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5808,
+      "git_blob": "46920376983d318281750a658306f1615463afb5",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-pg-j17/generated-final-image/assessment.json.gz",
+      "sha256": "9fbdd49b3b1962a662d521b7aa853b3eade13dd86e459b9756bcad1f273e31fa"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-pg-j17/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 24406,
+      "git_blob": "4a401171852a7c802507a598ae1e1a7176772c93",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-pg-j21/generated-build-stage/assessment.json.gz",
+      "sha256": "1f1a9a4754f7d5b39f159c8da676abf1985ef987f7eaaff38e950f5097e5cead"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-pg-j21/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5750,
+      "git_blob": "345fec2174aa54aba709e8152821167f56b4a38d",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-pg-j21/generated-final-image/assessment.json.gz",
+      "sha256": "a784c4885fd0e3546ae8d2c3ab19f99360b953145f0309b0b199ba8dc9b91211"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-pg-j21/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 25448,
+      "git_blob": "16f6230f21ab8ae12b9b4b07c7f1b0964f7105fc",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-soap-h2-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "cc97df27f7fddaddc76ef7fc56b320461ecb9ca3fdd611f93b9ad4947fef5e49"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-soap-h2-j17/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5843,
+      "git_blob": "d22c3730a0e1d3635f7546d7514c072785d25e84",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-soap-h2-j17/generated-final-image/assessment.json.gz",
+      "sha256": "a2ce2c5bfa253e4e794045eaba3185c9467187ef540704e0d63dfbf3cb553da4"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-soap-h2-j17/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 25684,
+      "git_blob": "92af62e491c06e793cc24cdd7c14279b84de7302",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-soap-pg-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "4f7ac63083a9de6003b49c8e9b810561b23d07414d67665e7235788423b1d392"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-soap-pg-j17/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5871,
+      "git_blob": "08310a2991e06c521ee2e371ddb85d3c02f1aa78",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-soap-pg-j17/generated-final-image/assessment.json.gz",
+      "sha256": "f4ceec3035f5c49eed8957565ea0142ec59bf1f804ec29b9d452fc5af9b5836d"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-soap-pg-j17/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 25587,
+      "git_blob": "4580f9ce8d51918d3f88519ea5dba92e860ce0fb",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-soap-pg-j21/generated-build-stage/assessment.json.gz",
+      "sha256": "14b8f7f251a61eccef09d32a2c3b86070d6dd3015e7c4640c741a29d0868e98f"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-soap-pg-j21/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5822,
+      "git_blob": "ec7354b779ef9ff95233df75c30e585035856e7e",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-soap-pg-j21/generated-final-image/assessment.json.gz",
+      "sha256": "8d8ecadb323dc992fb47af340b28a98d2ba00c882a2f46f67181885140f47986"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/crud-soap-pg-j21/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 24871,
+      "git_blob": "83d206ffec7bed6b0bdf3b757923a89c376ac06b",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/file-batch-h2-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "55f8c4322aed1f49c23c308c4c8a73780fe9db19a24d76395d4eba21b83e98f9"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/file-batch-h2-j17/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5819,
+      "git_blob": "967de52f4d6d450c937031320fc5406d30bde219",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/file-batch-h2-j17/generated-final-image/assessment.json.gz",
+      "sha256": "a611171c281a60be310fad2cb9b5945f73d4e97bfc732f19d000f9c103383b7b"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/file-batch-h2-j17/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 25060,
+      "git_blob": "5e01ab19ef589d95ea2c87a826c387b4d62a3e28",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/file-batch-pg-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "2ea291a8138582842274c0a94c3508afe6d0755f9696eb5082311e4717bcf98f"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/file-batch-pg-j17/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5849,
+      "git_blob": "13bebec7331af2fca9ad25fbcda740f9f1a47821",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/file-batch-pg-j17/generated-final-image/assessment.json.gz",
+      "sha256": "ad20c6963801097a40a5c78af637cd5534f755fe96f3035cb9c87568df1e80c1"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/file-batch-pg-j17/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 24984,
+      "git_blob": "3dec3058011628f2e7fec91a18421d58c7b39f4d",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/file-batch-pg-j21/generated-build-stage/assessment.json.gz",
+      "sha256": "4f47d6efdfb4e9867d08d8841d00b48ba72f0cea1fee528d56a0529844a9bd43"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/file-batch-pg-j21/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5793,
+      "git_blob": "f65cf1c723b6b7262851fba81efdcc7cc1bd8d35",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/file-batch-pg-j21/generated-final-image/assessment.json.gz",
+      "sha256": "f312584762bf98d58f7dfb50ee98d5e9a1f43ed30626ceb29fc4c90f3b4decee"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/file-batch-pg-j21/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5651,
+      "git_blob": "fb15ffceaf5dceb7a9a13025a4e88972cc2a7132",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/findings.md",
+      "sha256": "80338719d5c3b0086bb4ff9d924ae3ae5a5af574fdc2f11ad00ec80b94df51ac"
+    },
+    {
+      "bytes": 186855,
+      "git_blob": "28a9dfaf90d81ffb32af55b88711f7f20dc37fa1",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/fragment-copy-manifest.json.gz",
+      "sha256": "78b8dc72d414113a1948d45e08474d403596124367a109352dc7a77ee4e8a488"
+    },
+    {
+      "bytes": 25627,
+      "git_blob": "c4bf392301af794c0937d4caf9846b7c68a07525",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-h2-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "67a445ef509f95fceacb997dc866df082d1f6bd35c96dc2cbe47406455874ec4"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-h2-j17/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5702,
+      "git_blob": "1ba7d580cc4342068104bbc08b7588c0cce50eb4",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-h2-j17/generated-final-image/assessment.json.gz",
+      "sha256": "fe226e9711c58533289999eb0dc6658fd043f1fea916303f49a64cfa29e7faba"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-h2-j17/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 26048,
+      "git_blob": "97f879d7eba127bdedf2f64b73cb25c51b4d0682",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-mixed-h2-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "43b403f7bc5ac70dc39aa03b0a0f079f0114faef8e52e356f9167917ae1c1898"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-mixed-h2-j17/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5749,
+      "git_blob": "74beadb23ed07eab9dd61dae5f64475a99a9e2c2",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-mixed-h2-j17/generated-final-image/assessment.json.gz",
+      "sha256": "e4ee0fb28f5ebd5f8891b271d0a6d93fb20bc07a9a14e7e8dcb453419491c01f"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-mixed-h2-j17/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 26051,
+      "git_blob": "b2f73b47440e65c5ff0eb34ab7362d6e6e71e898",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-mixed-pg-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "c27840e11a8b6be39e0c7651b7e24d78a4e232d6683e320a6cc33d1687f0a023"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-mixed-pg-j17/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5747,
+      "git_blob": "fb99cd8f13aedf908254dc04065eda0238343cf7",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-mixed-pg-j17/generated-final-image/assessment.json.gz",
+      "sha256": "82dcc0e7feabbed1b720f27668e31b35c36f475d7218e6b03d68330a1de6e74a"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-mixed-pg-j17/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 25969,
+      "git_blob": "afdc8f972206f11974116c5dc3e305de8b13b181",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-mixed-pg-j21/generated-build-stage/assessment.json.gz",
+      "sha256": "6060c65d9ccc972929a2e086341d41c837e8c67e133a8e578c666bdf1a031d56"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-mixed-pg-j21/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5696,
+      "git_blob": "22bb2ebcdd9b06a0f77f4d823286ceb441037663",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-mixed-pg-j21/generated-final-image/assessment.json.gz",
+      "sha256": "37e042cb98256d7a0dfc3a0bb9b897bc6f396a2c3fd940f4e9563e63f1462c04"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-mixed-pg-j21/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 25637,
+      "git_blob": "ea623e189c041dbea3b1441a4d075b6c95d074f1",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-pg-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "536bb0c37da0dbd3e42a9a6e4b60ab8a2894e6f02b7dbe2093e1a4f4a63e97fd"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-pg-j17/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5701,
+      "git_blob": "b68e2f12390013f2cce2d6f666c192945e92cb07",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-pg-j17/generated-final-image/assessment.json.gz",
+      "sha256": "bb752f12dc92b5c2d6a123abff1fad12f1240ad73002722457b9100d92ddb025"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-pg-j17/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 25545,
+      "git_blob": "74e208570ae3ec3223ae2fa17b849a5ed18d10c0",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-pg-j21/generated-build-stage/assessment.json.gz",
+      "sha256": "a42cd4c2d7a791666bf29be596254ec8878b1e7724c722ff41a3af64711ce592"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-pg-j21/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5661,
+      "git_blob": "42aab5d14cb096d65fe5bde1c15ef9e7ff5f1100",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-pg-j21/generated-final-image/assessment.json.gz",
+      "sha256": "2bc072f7352790ab2a89a78d00c78286890b9fa5eeaa3d43eae61fd259dfb1a5"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-pg-j21/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 26041,
+      "git_blob": "ea5ebd3f67ee88f53cce169c07b8e569ed657862",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-router-h2-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "c2175390a9b746d7e40b7131ab072858a98c91d1849cb06759c14040e5487812"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-router-h2-j17/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5737,
+      "git_blob": "de210632ccb8bdc462aae6a97c304ece3c284734",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-router-h2-j17/generated-final-image/assessment.json.gz",
+      "sha256": "b846d9e3142f469f19b6e69a5e35710920007f8cb54c294e491326066e6a5f80"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-router-h2-j17/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 562,
+      "git_blob": "fe30d02d52d90135a799cfb5d0f3f3a8e6494a8b",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-router-h2-j17/runtime-create.receipt.json.gz",
+      "sha256": "8b59143507d682945e2279c94cee8e5b734059f5f000bec6d33bd397e069774f"
+    },
+    {
+      "bytes": 403,
+      "git_blob": "9b31ab8c0b2f395f296837dd8dbb512ae259e2f1",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-router-h2-j17/runtime-created-state.receipt.json.gz",
+      "sha256": "84f79a972174349d159cd83d95ad1086f9ec07b48b7774e8399c54b0dd35a553"
+    },
+    {
+      "bytes": 1980,
+      "git_blob": "f4c3b79cfb29cc4ea7f3b20eafca1739324b4a94",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-router-h2-j17/runtime-created-state.stdout.gz",
+      "sha256": "6d462ab8eaaad37e7c539c935cf8d0494b0351703aa2c40b487b9e9a6f92e28c"
+    },
+    {
+      "bytes": 1052,
+      "git_blob": "797cb29dee29f703b0464a81c5fb915c46fa2a2a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-router-h2-j17/runtime-identity.json.gz",
+      "sha256": "6c59ece9b468429481a3260e56f9dcc30230ad9dd455f1842ccdf0c48ad090d9"
+    },
+    {
+      "bytes": 1235,
+      "git_blob": "1e2755a1a16c242615ec0b299ac6a87dcc1ab24a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-router-h2-j17/runtime-image-inspect.stdout.gz",
+      "sha256": "a4061720af9144a6fabc3e19f9f98cb8306ae87d15e4a1e0ec4078c9144f1731"
+    },
+    {
+      "bytes": 651,
+      "git_blob": "061750cd93e12e9b1e17f3dd24a01f3773774a83",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-router-h2-j17/runtime-manifest.json.gz",
+      "sha256": "e1aa47ae861a81b5ae244aa9ac15879209c23de64c02cc359a83af250324c6fa"
+    },
+    {
+      "bytes": 402,
+      "git_blob": "28beebef3b34cb46a8e9ad272446c95026fed039",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-router-h2-j17/runtime-start.receipt.json.gz",
+      "sha256": "b7e9ec8b6a0cb651633a0e829f75d11d523819ddcf869bab59bbad6cd47355cf"
+    },
+    {
+      "bytes": 440,
+      "git_blob": "ee8d4608c909205b704ac93d57aa695418b4b9fe",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-router-h2-j17/runtime.json.gz",
+      "sha256": "10a7d413120fe0769f960b6ea1582244e77facf94d17cb964c609f3073abb06e"
+    },
+    {
+      "bytes": 26042,
+      "git_blob": "979973ce4b68b4b8dcef6be164aa9c9fde6f8aa5",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-router-pg-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "37bd00a216b7a22759f35f7de0ac7266ede33ce8c50f4c7c72ae826b897f84e2"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-router-pg-j17/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5745,
+      "git_blob": "1407db4e3592a625ab8a69d141d2024339e0ffcb",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-router-pg-j17/generated-final-image/assessment.json.gz",
+      "sha256": "64d60da96e83bfb412d42488af48b0034f0696b7293dca6fb703cedef4a89efd"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-router-pg-j17/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 25960,
+      "git_blob": "4c69e6d9bb4b01231abf131002008f81a9f018d6",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-router-pg-j21/generated-build-stage/assessment.json.gz",
+      "sha256": "0de64d3c07ea1148cead2a22848c1965991d0485a84db7891ba40ffaf9b5c889"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-router-pg-j21/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5694,
+      "git_blob": "4064d6299fbf22c0909744618f4d201449e12d84",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-router-pg-j21/generated-final-image/assessment.json.gz",
+      "sha256": "5170bbd470657d4d49fbabc4280fa0a0bbd9c7af4da8bc66e52e1fe33246d0f8"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/kafka-router-pg-j21/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 24866,
+      "git_blob": "5a4dbc88afbad8719b53adf3df8f3374d1ebc279",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/m5a-h2-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "5178a909617c740ff6c059c37b90f9746c874a50b6eff2363feee6c9eb83fc32"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/m5a-h2-j17/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5813,
+      "git_blob": "0df9c032b3254189b709594538b9ebdddd04172a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/m5a-h2-j17/generated-final-image/assessment.json.gz",
+      "sha256": "0755dc93b62571ae4d786008fe557c669e72584facf77efd833f32c11b9a28e1"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/m5a-h2-j17/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 25058,
+      "git_blob": "fb250396fab3b3741bc720d667e6138ffe796fad",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/m5a-pg-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "8dee14ed549346f239feb8b8e9bcb5fee991d312ba16bd4a0f31979ea38bb32a"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/m5a-pg-j17/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5843,
+      "git_blob": "68bb16e11637634b3e0dc77df0558d6ee873d390",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/m5a-pg-j17/generated-final-image/assessment.json.gz",
+      "sha256": "b15c7571d682e3dc9f26c217e44f8a3dc4bd7de2cc793cd2485166945697625f"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/m5a-pg-j17/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 24969,
+      "git_blob": "acd7fa0e1dc49a340c81c553cd9333957a3a24f9",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/m5a-pg-j21/generated-build-stage/assessment.json.gz",
+      "sha256": "ea764db8b9c34a9db7e6ffa204b1ed3672ff725badf94a9f1c5ad5384a51771a"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/m5a-pg-j21/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5792,
+      "git_blob": "2e3b2fcc0e8739095e52e95435a29e6018bf1caf",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/m5a-pg-j21/generated-final-image/assessment.json.gz",
+      "sha256": "9e0db36aea05e7a1c22b2d8887d730c9b28db3ea371bfd949d339dce3693c5b7"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/m5a-pg-j21/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 889972,
+      "git_blob": "df68b2aba21af3b31f627ec99c4bce42f52e2b64",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/maven-reconciliation.json",
+      "sha256": "d65919684930c3fd10056d2bb99c16ed7c5aeaa7f66dd35f1c2b62719e5b0904"
+    },
+    {
+      "bytes": 24868,
+      "git_blob": "f0f3fa3b476e40ea6bc2771ebac538eb062b07c7",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/mixed-batch-h2-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "6db9cc446a72ce4762a42debcce22202d8b0b3e69ccbcac4c23d9a1d530560a6"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/mixed-batch-h2-j17/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5815,
+      "git_blob": "00a2fcbb5292eab3cc54dc6a00c8c284af34d066",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/mixed-batch-h2-j17/generated-final-image/assessment.json.gz",
+      "sha256": "a6f36e7b739d7553c3a863d071e639d2f48246048efa7aab42aa4572f28314b8"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/mixed-batch-h2-j17/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 25054,
+      "git_blob": "d3b24eb21b1602bb03639b7d9d986ccb0058d950",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/mixed-batch-pg-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "f88b8af3edab97ba08405e8b5ae90c1ffe9310c1d5096362645b400c0162846b"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/mixed-batch-pg-j17/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5850,
+      "git_blob": "e0d9f6cd88f3562e4b93a35f272a5b56606b7403",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/mixed-batch-pg-j17/generated-final-image/assessment.json.gz",
+      "sha256": "1e501dd2c79bb65dbc802e2b1dd4d8dc2e53e7abfe5ccebb1d99469e042db35b"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/mixed-batch-pg-j17/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 24973,
+      "git_blob": "b5e7dac464fad8f773293126bfe5529e9a029db6",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/mixed-batch-pg-j21/generated-build-stage/assessment.json.gz",
+      "sha256": "06c96f60b6967877110f39e437d2e8e08d505e7aabdd08c4edee6283ec2fd146"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/mixed-batch-pg-j21/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5797,
+      "git_blob": "c6b339b915fb0ac19b6178d0c01212a85d86127d",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/mixed-batch-pg-j21/generated-final-image/assessment.json.gz",
+      "sha256": "6e2a48bbc899bac9a9f3e0933368d46b37d4a49ec9a54cc15bb76d3b003d6043"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/mixed-batch-pg-j21/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 22214,
+      "git_blob": "03c312aac4b0fb587cd2e1c2db5c4763e1f4443a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/open-findings.json.gz",
+      "sha256": "4bea5000c756221b61e421227b9e37bb6150eceffce015f53173e07cf11e8179"
+    },
+    {
+      "bytes": 24879,
+      "git_blob": "0f77b11a0ef43035b9c827589104977ffa8c3e23",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/ordinary-batch-h2-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "d84ae62b81e3ef044b62927c824a087188705b9e2c26877366cc262e7d61f1cd"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/ordinary-batch-h2-j17/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5827,
+      "git_blob": "64e7e882ab995102c4134e0c68f40065437ec70a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/ordinary-batch-h2-j17/generated-final-image/assessment.json.gz",
+      "sha256": "4fa292095410ca229837a9f119f6a90f474107d57967017fbc124efa0d90e24a"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/ordinary-batch-h2-j17/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 25068,
+      "git_blob": "546deb340923448d367751193c7cb8b1f2d93747",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/ordinary-batch-pg-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "edecff548f09b6c6bb32f720762f021408bd16a8b3598be2669a97a1516828b1"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/ordinary-batch-pg-j17/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5846,
+      "git_blob": "ac591e2020124837a064f013d2d2dd1c26403c97",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/ordinary-batch-pg-j17/generated-final-image/assessment.json.gz",
+      "sha256": "9714c8661c2f230b1e54d341843948e16835cb50533ca9dba6d2c0babdfa9008"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/ordinary-batch-pg-j17/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 24971,
+      "git_blob": "7e12f67afe695f89b26298155ad2ddc1e53459da",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/ordinary-batch-pg-j21/generated-build-stage/assessment.json.gz",
+      "sha256": "26b2da5c2aec16173ceae7a6a5586f4b1619ba20433d10682c2116cb0d4c7f58"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/ordinary-batch-pg-j21/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5799,
+      "git_blob": "01a1c8b177b1d83e64d263b96152a3e332471269",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/ordinary-batch-pg-j21/generated-final-image/assessment.json.gz",
+      "sha256": "87c56ebb1ac9aaaf89dfbcc63f0217b1836d62c33e50f31483cd48864cf52e9d"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/ordinary-batch-pg-j21/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5046,
+      "git_blob": "78c44f6ce1253ca07afcf8c48d12e3d0654d8b0d",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/packaged-inventories.json.gz",
+      "sha256": "4a5d35da7eda28bd1dd302fd0444e74d9781deb760a1a503c0e3f1783fa3520b"
+    },
+    {
+      "bytes": 21304,
+      "git_blob": "ebccb7ec86f04696b5325af99c3acf48dc8dfdb9",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/passthrough-h2-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "13a9fd4d1cbc3fdba039f9e8fc9203f97e5ac77e707086d6b7cea1b872f10a70"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/passthrough-h2-j17/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5538,
+      "git_blob": "078eb778d8a6cad196df5c0f6d578f50e2552bc6",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/passthrough-h2-j17/generated-final-image/assessment.json.gz",
+      "sha256": "42204ace18aadcf79403e8116158992e1f819a8144cd0f23e91dc4ae11ecfaca"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/passthrough-h2-j17/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 21304,
+      "git_blob": "38ba50508ba0f0cc8614e55adeda460db974e609",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/passthrough-pg-j17/generated-build-stage/assessment.json.gz",
+      "sha256": "62f22bda6874e1a596ce250d1834017bc039e08d49c96d49a0017a8bf7867fd6"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/passthrough-pg-j17/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5533,
+      "git_blob": "4645899d12c00fa1360dcdb1f86c7ef5b703dec0",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/passthrough-pg-j17/generated-final-image/assessment.json.gz",
+      "sha256": "6ff693f9440848d501c1bd859c295ba7acd6388aece9cc35180f739318ef9e0f"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/passthrough-pg-j17/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 21211,
+      "git_blob": "93455fd405716fa4336e23bfebf5f863db5c9aa3",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/passthrough-pg-j21/generated-build-stage/assessment.json.gz",
+      "sha256": "787ee5f19079f553804f1e8aeda8aa137337f5974689d2ed95d124b47c900f99"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/passthrough-pg-j21/generated-build-stage/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 5477,
+      "git_blob": "067d1dc7af6af9b9c44436f2fb4ba59d5eb7212f",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/passthrough-pg-j21/generated-final-image/assessment.json.gz",
+      "sha256": "f8681ca291cc6e5930504e2ff1238d9253f5840730e8cc0f4cd6b7babda76fb0"
+    },
+    {
+      "bytes": 760,
+      "git_blob": "dcfc26e430083e027c30b5ffe664841c125bcc9a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/passthrough-pg-j21/generated-final-image/databases.json.gz",
+      "sha256": "dfb982c7f290b4b02c0ef01b065331fa4b9519b4b57959043ab253ed6171fe44"
+    },
+    {
+      "bytes": 502,
+      "git_blob": "e4a3ed96af3fca84e78837cc84d7356b6aa8c21f",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/passthrough-pg-j21/runtime-create.receipt.json.gz",
+      "sha256": "ba69b1157d8dce66f530f3e5e49c04260795af7cf81c869734656fa7d03107bf"
+    },
+    {
+      "bytes": 403,
+      "git_blob": "83fd4ab7bce1149adce522a03b9385ae8d3fdddf",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/passthrough-pg-j21/runtime-created-state.receipt.json.gz",
+      "sha256": "c9b1cf9eba8fc32cc8e2e536e44797ecadc90360b9821436a5a89064376b5ab7"
+    },
+    {
+      "bytes": 1930,
+      "git_blob": "c0d0a7ee4ce67366d4699579bb90775c17f22953",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/passthrough-pg-j21/runtime-created-state.stdout.gz",
+      "sha256": "e16bc6c5b7cfb83494db7a26d644c91837a11b73d13cc582e3dd95845e6c0130"
+    },
+    {
+      "bytes": 1058,
+      "git_blob": "bbcaf944ac5a58295f800b81f17b3c292a704c0c",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/passthrough-pg-j21/runtime-identity.json.gz",
+      "sha256": "a2a906c033447a80b40a7bb9a59dd2a7c3dc49aa4ab6d0dca37b6db2c0a46867"
+    },
+    {
+      "bytes": 1233,
+      "git_blob": "5b8fda5203a67ef620c1e3f0e58f887700d4b07f",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/passthrough-pg-j21/runtime-image-inspect.stdout.gz",
+      "sha256": "5a1fcaf953b3b6e68e53c0e376aa36b0280efe29cad196248574cbf8a93df295"
+    },
+    {
+      "bytes": 654,
+      "git_blob": "af2797618f0caf0f997d845de10e68badf67c537",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/passthrough-pg-j21/runtime-manifest.json.gz",
+      "sha256": "6e5ef5d9dd2e82ffee28a0342d189bd2e1ba6ec3de13587deb922b74b77f32cc"
+    },
+    {
+      "bytes": 400,
+      "git_blob": "4704a5d04f9bacec52194ce623250bd84adfd8ed",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/passthrough-pg-j21/runtime-start.receipt.json.gz",
+      "sha256": "2c97a5c345e520956a1762f52e7b032fdd2d22e1e0f51c5b6a61a8f33f24fbbd"
+    },
+    {
+      "bytes": 440,
+      "git_blob": "b7524791d20a0e13a43489cdaa41026c6b4d8a0a",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/passthrough-pg-j21/runtime.json.gz",
+      "sha256": "b0bbdbf2f534882f72dd638befab5d86ea27cf62206e6d2c9ca6d200adcb2374"
+    },
+    {
+      "bytes": 979,
+      "git_blob": "ada5f106328539e2ffdf67b8695a044fecf22784",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/plan-regression.json.gz",
+      "sha256": "0c4be82e4cee3150fb4fb1650d1a606d1e1173557afa280e7fc7195c459f31de"
+    },
+    {
+      "bytes": 22313,
+      "git_blob": "b56df1ddfc38d76d49639349d8d498097d16f775",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/proof-summary.json.gz",
+      "sha256": "91865056b9e121a1636ba7b727bc833402cddb81cc47b763003db5a104c1edcc"
+    },
+    {
+      "bytes": 1756,
+      "git_blob": "190e0939a86740ad210cd3cd9e31e08827dad03f",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/publication-replay.json.gz",
+      "sha256": "0dc6ce69317eac1f89b8db652a748235c0f0900df0bb1c87a9010f6aafe89d70"
+    },
+    {
+      "bytes": 953497,
+      "git_blob": "1ae57be677d4b28c2229720bae3279b1507da6a6",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/publication.json",
+      "sha256": "046285e5564232d3490db7ba9b5305a520e79b6d07e9c7e0896eecc7a1b20dc8"
+    },
+    {
+      "bytes": 178918,
+      "git_blob": "ee215b54b9207f0477ad42e263b7484836db26c8",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/publisher-index-original.json.gz",
+      "sha256": "93ea5f55fd8651dfd76e07b37e5a50e815de64ce5dc0c61de3b31328170a2d01"
+    },
+    {
+      "bytes": 1393,
+      "git_blob": "bc3b4d12790c30956aea8a5c91e33019148ff25b",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/qualification.json.gz",
+      "sha256": "fa7a245e054eff6b07467cd2d51f897d73bd00d870b46792c340fd0df1bcc808"
+    },
+    {
+      "bytes": 19619,
+      "git_blob": "1bc15c53a6f8dcedb172ce32288876848d041626",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/reconciliation-receipt.json.gz",
+      "sha256": "b8e637cd16628fd8e338c3583cacb7e4273f598aeb26ef2fa3bd60b891c93235"
+    },
+    {
+      "bytes": 1258,
+      "git_blob": "43db0abeebc5e6d23a3e74653db2b85290ce6862",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/reconciliation-replay-context.json.gz",
+      "sha256": "f7b881cfea032abc64a401a327c8bf0c50c7f89f3ea1a532405dcd370c9d9ece"
+    },
+    {
+      "bytes": 3311032,
+      "git_blob": "299c05d821e0699f927315dd3420eef3967cae2c",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/residual-accounting.json.gz",
+      "sha256": "52e22711b464825c7f812332d19270ebd5658342aa22f9c552cc353d2fb3a1e1"
+    },
+    {
+      "bytes": 40643,
+      "git_blob": "8c27b9369c789c7ed0394ad38888e6ee7d9d0fb7",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/residual-applicability-adoption.json.gz",
+      "sha256": "4752d3692a72c470678ee1aa9ed6d11b0b7293bb379b93c792ae24b9bf7b8f32"
+    },
+    {
+      "bytes": 153552,
+      "git_blob": "4487a2a72a4267266a37293aa99d1c16749d36cb",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/residual-vendor-current.json.gz",
+      "sha256": "e807d5aecba33b1d0ff7a53f2de9c4df984fa3c37e2fa5f8a3b19b4249f5da12"
+    },
+    {
+      "bytes": 793,
+      "git_blob": "5bba4ec86d72d8ab72e0031a8388c3e25ea86ff6",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/retention-revision.json.gz",
+      "sha256": "8e59067d3e6cb34d2065ed36770fe91a270094d64f8c102dfbc3d5391791bcc7"
+    },
+    {
+      "bytes": 1848,
+      "git_blob": "92ef2f193554d3b51b1e72d79c4ffaa415b33a8f",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/summary.json",
+      "sha256": "73bd96160da29aa32e6fe5f0fda3cc73207a83d2f13074059834d15f21fb0f1c"
+    },
+    {
+      "bytes": 260,
+      "git_blob": "b5f394fcd2b0d0c158475bde722b5836f6265675",
+      "path": "docs/handover-evidence/generated-images/2026-10-20-noble/summary.txt",
+      "sha256": "7dd9b8cfb68bd79617ce7c21bd7f3ed98fe82ca5fa2a5b51a632afbda140b8e2"
+    }
+  ],
+  "core_rule": [
+    "reviewed_commit is legacy SOURCE binding only; no independent review approval or full-bundle Git commit claimed.",
+    "Six plain files; every indexed top-level gzip; every case/stage assessment and database gzip; all emitted case/runtime gzip files.",
+    "Full bundle tree is computed from the complete non-executable data filesystem using Git blob/tree encodings; no Git objects written."
+  ],
+  "reviewed_commit": "c8798275065a8a0b619046707fad053f8a9b9ad1",
+  "schema_version": "1.0"
+}

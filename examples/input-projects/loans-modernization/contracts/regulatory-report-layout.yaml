@@ -1,0 +1,23 @@
+contract_name: regulatory-report
+contract_type: file-fixed-width
+fields:
+  - name: loanId
+    type: STRING
+    length: 20
+    required: true
+  - name: borrowerId
+    type: STRING
+    length: 20
+    required: true
+  - name: principalAmount
+    type: DECIMAL
+    length: 14
+    required: true
+  - name: loanType
+    type: STRING
+    length: 10
+    required: true
+  - name: reportDate
+    type: DATE
+    length: 10
+    required: true

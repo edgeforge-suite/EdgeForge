@@ -1,0 +1,235 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://edgeforge.dev/schema/change-plan-v1.schema.json",
+  "title": "EdgeForge Change Plan v1",
+  "description": "Read-only regenerate/maintain dry-run plan produced by EdgeForge Engine.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "change_plan_schema_version",
+    "engine_version",
+    "manifest_hash",
+    "baseline_hash",
+    "target_profile",
+    "generated_app_id",
+    "package_state_hash",
+    "mode",
+    "classification",
+    "deltas",
+    "db_migration_deltas",
+    "edge_contract_impact",
+    "required_manual_actions",
+    "warnings",
+    "plan_id",
+    "plan_hash"
+  ],
+  "properties": {
+    "change_plan_schema_version": {
+      "type": "string",
+      "pattern": "^1\\.[0-9]+$"
+    },
+    "engine_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "manifest_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "baseline_hash": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "target_profile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_app_id": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["app_name", "bounded_context", "package_name"],
+      "properties": {
+        "app_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "bounded_context": {
+          "type": "string",
+          "minLength": 1
+        },
+        "package_name": {
+          "type": "string"
+        }
+      }
+    },
+    "package_state_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["regenerate", "legacy", "manifest-only"]
+    },
+    "classification": {
+      "type": "string",
+      "enum": ["none", "additive", "unsafe", "destructive"]
+    },
+    "deltas": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/delta"
+      }
+    },
+    "db_migration_deltas": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/delta"
+      }
+    },
+    "edge_contract_impact": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/edgeContractImpact"
+      }
+    },
+    "required_manual_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "plan_id": {
+      "type": "string",
+      "pattern": "^change-plan-[0-9a-f]{16}$"
+    },
+    "plan_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "$defs": {
+    "delta": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "kind",
+        "change",
+        "classification",
+        "entity",
+        "field",
+        "db_migration_delta",
+        "message",
+        "details"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": ["entity", "field", "foreign_key", "internal_schema", "profile", "staging_table"]
+        },
+        "change": {
+          "type": "string",
+          "enum": ["added", "removed", "modified"]
+        },
+        "classification": {
+          "type": "string",
+          "enum": ["additive", "unsafe", "destructive"]
+        },
+        "entity": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "field": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "db_migration_delta": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        },
+        "details": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+    "edgeContractImpact": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "entity",
+        "field",
+        "change",
+        "contract_name",
+        "direction",
+        "operation_name",
+        "source_path",
+        "target_path",
+        "impact"
+      ],
+      "properties": {
+        "entity": {
+          "type": "string"
+        },
+        "field": {
+          "type": "string"
+        },
+        "change": {
+          "type": "string"
+        },
+        "contract_name": {
+          "type": "string"
+        },
+        "direction": {
+          "type": "string"
+        },
+        "operation_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_path": {
+          "type": "string"
+        },
+        "target_path": {
+          "type": "string"
+        },
+        "impact": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

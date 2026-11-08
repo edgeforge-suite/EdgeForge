@@ -1,0 +1,87 @@
+openapi: 3.0.1
+info:
+  title: CI Smoke Source API
+  description: Synthetic local contract for the canonical generated-app CI fixture.
+  version: "1.0"
+paths:
+  /api/v1/records:
+    post:
+      operationId: createRecord
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateRecordRequest'
+      responses:
+        "201":
+          description: Created record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RecordResponse'
+  /api/v1/entries:
+    post:
+      operationId: createEntry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateEntryRequest'
+      responses:
+        "201":
+          description: Created entry
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EntryResponse'
+components:
+  schemas:
+    CreateRecordRequest:
+      type: object
+      required: [label]
+      properties:
+        label:
+          type: string
+          description: Human-readable record label
+          example: First record
+        state:
+          type: string
+          pattern: "^(NEW|ACTIVE|CLOSED)$"
+          description: Lifecycle state
+          example: NEW
+    RecordResponse:
+      type: object
+      required: [recordId, label]
+      properties:
+        recordId:
+          type: string
+          description: Server-assigned record identifier
+          example: REC-0000001
+        label:
+          type: string
+          example: First record
+        state:
+          type: string
+          pattern: "^(NEW|ACTIVE|CLOSED)$"
+          example: NEW
+    CreateEntryRequest:
+      type: object
+      required: [note]
+      properties:
+        note:
+          type: string
+          description: Free-text entry note
+          example: First entry
+    EntryResponse:
+      type: object
+      required: [entryId, note]
+      properties:
+        entryId:
+          type: string
+          description: Server-assigned entry identifier
+          example: ENT-0000001
+        note:
+          type: string
+          example: First entry

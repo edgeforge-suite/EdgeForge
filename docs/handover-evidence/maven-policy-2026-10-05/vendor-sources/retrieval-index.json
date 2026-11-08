@@ -1,0 +1,142 @@
+[
+  {
+    "approved_r2_sha256": "2218b50c8a811e2f609d256cc18fa9a5c1ecabca78a58f10ea7977e8a8392684",
+    "artifact": "GHSA-343h-94h5-c4wr-global.json.gz",
+    "bytes_uncompressed": 158,
+    "http_status": 404,
+    "retrieved_at_utc": "2026-10-05T06:05:22.329640+00:00",
+    "same_bytes_as_approved_r2": true,
+    "sha256_uncompressed": "2218b50c8a811e2f609d256cc18fa9a5c1ecabca78a58f10ea7977e8a8392684",
+    "url": "https://api.github.com/advisories/GHSA-343h-94h5-c4wr"
+  },
+  {
+    "approved_r2_sha256": "eff9d6063693b72bd0cbba8a64cbc29e0d38b4fb05e86450909fe741c83f9253",
+    "artifact": "GHSA-343h-94h5-c4wr-osv.json.gz",
+    "bytes_uncompressed": 46,
+    "http_status": 404,
+    "retrieved_at_utc": "2026-10-05T06:05:22.598328+00:00",
+    "same_bytes_as_approved_r2": true,
+    "sha256_uncompressed": "eff9d6063693b72bd0cbba8a64cbc29e0d38b4fb05e86450909fe741c83f9253",
+    "url": "https://api.osv.dev/v1/vulns/GHSA-343h-94h5-c4wr"
+  },
+  {
+    "approved_r2_sha256": "2218b50c8a811e2f609d256cc18fa9a5c1ecabca78a58f10ea7977e8a8392684",
+    "artifact": "GHSA-4v53-57pg-c464-global.json.gz",
+    "bytes_uncompressed": 158,
+    "http_status": 404,
+    "retrieved_at_utc": "2026-10-05T06:05:22.827381+00:00",
+    "same_bytes_as_approved_r2": true,
+    "sha256_uncompressed": "2218b50c8a811e2f609d256cc18fa9a5c1ecabca78a58f10ea7977e8a8392684",
+    "url": "https://api.github.com/advisories/GHSA-4v53-57pg-c464"
+  },
+  {
+    "approved_r2_sha256": "eff9d6063693b72bd0cbba8a64cbc29e0d38b4fb05e86450909fe741c83f9253",
+    "artifact": "GHSA-4v53-57pg-c464-osv.json.gz",
+    "bytes_uncompressed": 46,
+    "http_status": 404,
+    "retrieved_at_utc": "2026-10-05T06:05:23.098395+00:00",
+    "same_bytes_as_approved_r2": true,
+    "sha256_uncompressed": "eff9d6063693b72bd0cbba8a64cbc29e0d38b4fb05e86450909fe741c83f9253",
+    "url": "https://api.osv.dev/v1/vulns/GHSA-4v53-57pg-c464"
+  },
+  {
+    "approved_r2_sha256": "2218b50c8a811e2f609d256cc18fa9a5c1ecabca78a58f10ea7977e8a8392684",
+    "artifact": "GHSA-6cx8-rjf8-pr8g-global.json.gz",
+    "bytes_uncompressed": 158,
+    "http_status": 404,
+    "retrieved_at_utc": "2026-10-05T06:05:23.313120+00:00",
+    "same_bytes_as_approved_r2": true,
+    "sha256_uncompressed": "2218b50c8a811e2f609d256cc18fa9a5c1ecabca78a58f10ea7977e8a8392684",
+    "url": "https://api.github.com/advisories/GHSA-6cx8-rjf8-pr8g"
+  },
+  {
+    "approved_r2_sha256": "eff9d6063693b72bd0cbba8a64cbc29e0d38b4fb05e86450909fe741c83f9253",
+    "artifact": "GHSA-6cx8-rjf8-pr8g-osv.json.gz",
+    "bytes_uncompressed": 46,
+    "http_status": 404,
+    "retrieved_at_utc": "2026-10-05T06:05:23.602382+00:00",
+    "same_bytes_as_approved_r2": true,
+    "sha256_uncompressed": "eff9d6063693b72bd0cbba8a64cbc29e0d38b4fb05e86450909fe741c83f9253",
+    "url": "https://api.osv.dev/v1/vulns/GHSA-6cx8-rjf8-pr8g"
+  },
+  {
+    "approved_r2_sha256": "2218b50c8a811e2f609d256cc18fa9a5c1ecabca78a58f10ea7977e8a8392684",
+    "artifact": "GHSA-gm45-99xc-r7wv-global.json.gz",
+    "bytes_uncompressed": 158,
+    "http_status": 404,
+    "retrieved_at_utc": "2026-10-05T06:05:23.874393+00:00",
+    "same_bytes_as_approved_r2": true,
+    "sha256_uncompressed": "2218b50c8a811e2f609d256cc18fa9a5c1ecabca78a58f10ea7977e8a8392684",
+    "url": "https://api.github.com/advisories/GHSA-gm45-99xc-r7wv"
+  },
+  {
+    "approved_r2_sha256": "eff9d6063693b72bd0cbba8a64cbc29e0d38b4fb05e86450909fe741c83f9253",
+    "artifact": "GHSA-gm45-99xc-r7wv-osv.json.gz",
+    "bytes_uncompressed": 46,
+    "http_status": 404,
+    "retrieved_at_utc": "2026-10-05T06:05:24.111805+00:00",
+    "same_bytes_as_approved_r2": true,
+    "sha256_uncompressed": "eff9d6063693b72bd0cbba8a64cbc29e0d38b4fb05e86450909fe741c83f9253",
+    "url": "https://api.osv.dev/v1/vulns/GHSA-gm45-99xc-r7wv"
+  },
+  {
+    "approved_r2_sha256": "2218b50c8a811e2f609d256cc18fa9a5c1ecabca78a58f10ea7977e8a8392684",
+    "artifact": "GHSA-mcr4-qmvw-px4g-global.json.gz",
+    "bytes_uncompressed": 158,
+    "http_status": 404,
+    "retrieved_at_utc": "2026-10-05T06:05:24.351487+00:00",
+    "same_bytes_as_approved_r2": true,
+    "sha256_uncompressed": "2218b50c8a811e2f609d256cc18fa9a5c1ecabca78a58f10ea7977e8a8392684",
+    "url": "https://api.github.com/advisories/GHSA-mcr4-qmvw-px4g"
+  },
+  {
+    "approved_r2_sha256": "eff9d6063693b72bd0cbba8a64cbc29e0d38b4fb05e86450909fe741c83f9253",
+    "artifact": "GHSA-mcr4-qmvw-px4g-osv.json.gz",
+    "bytes_uncompressed": 46,
+    "http_status": 404,
+    "retrieved_at_utc": "2026-10-05T06:05:24.550721+00:00",
+    "same_bytes_as_approved_r2": true,
+    "sha256_uncompressed": "eff9d6063693b72bd0cbba8a64cbc29e0d38b4fb05e86450909fe741c83f9253",
+    "url": "https://api.osv.dev/v1/vulns/GHSA-mcr4-qmvw-px4g"
+  },
+  {
+    "approved_r2_sha256": "8f623346378d9418970fb085ecf12fbac44268fbb09da0804a96cb333a4c9e0f",
+    "artifact": "jackson-core-advisories.json.gz",
+    "bytes_uncompressed": 97528,
+    "http_status": 200,
+    "retrieved_at_utc": "2026-10-05T06:05:24.776078+00:00",
+    "same_bytes_as_approved_r2": true,
+    "sha256_uncompressed": "8f623346378d9418970fb085ecf12fbac44268fbb09da0804a96cb333a4c9e0f",
+    "url": "https://api.github.com/repos/FasterXML/jackson-core/security-advisories?per_page=100"
+  },
+  {
+    "approved_r2_sha256": "f1775652c8b34967a0a4e65527acb48392692877716cfe98244b5495f408b3fe",
+    "artifact": "jackson-databind-advisories.json.gz",
+    "bytes_uncompressed": 135736,
+    "http_status": 200,
+    "retrieved_at_utc": "2026-10-05T06:05:25.241656+00:00",
+    "same_bytes_as_approved_r2": true,
+    "sha256_uncompressed": "f1775652c8b34967a0a4e65527acb48392692877716cfe98244b5495f408b3fe",
+    "url": "https://api.github.com/repos/FasterXML/jackson-databind/security-advisories?per_page=100"
+  },
+  {
+    "approved_r2_sha256": "f48d5c1919e297200f8a2e220d7a54af7d0d3288a45973a3d7ba542f2d91a457",
+    "artifact": "lz4-advisories.json.gz",
+    "bytes_uncompressed": 38150,
+    "http_status": 200,
+    "retrieved_at_utc": "2026-10-05T06:05:25.778545+00:00",
+    "same_bytes_as_approved_r2": true,
+    "sha256_uncompressed": "f48d5c1919e297200f8a2e220d7a54af7d0d3288a45973a3d7ba542f2d91a457",
+    "url": "https://api.github.com/repos/yawkat/lz4-java/security-advisories?per_page=100"
+  },
+  {
+    "approved_r2_sha256": "93ff775cdaf84b70037e380f3b7f834430da1efa25cda3490c82d3b103b78b16",
+    "artifact": "tomcat-security-11.html.gz",
+    "bytes_uncompressed": 84760,
+    "http_status": 200,
+    "retrieved_at_utc": "2026-10-05T06:05:26.134633+00:00",
+    "same_bytes_as_approved_r2": true,
+    "sha256_uncompressed": "93ff775cdaf84b70037e380f3b7f834430da1efa25cda3490c82d3b103b78b16",
+    "url": "https://tomcat.apache.org/security-11.html"
+  }
+]

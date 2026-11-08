@@ -1,0 +1,27 @@
+{
+  "assurance": "Repository-only hashes establish internal consistency; source identity, private raw evidence and exact-head review add separate assurance.",
+  "files": [
+    {
+      "bytes": 4863,
+      "path": "README.md",
+      "sha256": "7b8e2b003a62a699cf282d3fb15b49f95fb31c200def55bd343b0eb6dcd05bdd"
+    },
+    {
+      "bytes": 13753,
+      "path": "archive-bindings.json",
+      "sha256": "2253c45ebdfa3a2547a9273065d96390a3442d940e957b3857a2b1a5bb756203"
+    },
+    {
+      "bytes": 21441,
+      "path": "summary.json",
+      "sha256": "5b51e5ad62eb5369f3f4853848ffa8a25567c92180d4fdd6361388eb805db79a"
+    },
+    {
+      "bytes": 10317,
+      "path": "targeted-copy-ledger.json",
+      "sha256": "9126f1ae820ab8f7183c70db7fec272636a372c44e16f2a9e0b90dcbef27db87"
+    }
+  ],
+  "generator_sha": "b7c48b58341f823c3a87ab02456cd1c10743a32e",
+  "schema_version": "1.0"
+}

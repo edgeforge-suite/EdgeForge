@@ -1,0 +1,74 @@
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ----------------------< com.appbuilder:payments >-----------------------
+[INFO] Building CountryRouter 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- clean:3.5.0:clean (default-clean) @ payments ---
+[INFO]
+[INFO] --- resources:3.5.0:resources (default-resources) @ payments ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO]
+[INFO] --- compiler:3.15.0:compile (default-compile) @ payments ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 14 source files with javac [debug parameters release 21] to target/classes
+[INFO]
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ payments ---
+[INFO] skip non existing resourceDirectory /private<temporary>/isolated/app/src/test/resources
+[INFO]
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ payments ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target/test-classes
+[INFO]
+[INFO] --- surefire:3.5.6:test (default-test) @ payments ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO]
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.appbuilder.payments.PaymentsApplicationTest
+01:06:11.375 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.appbuilder.payments.PaymentsApplicationTest]: PaymentsApplicationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01:06:11.417 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.appbuilder.payments.CountryRouterApplication for test class com.appbuilder.payments.PaymentsApplicationTest
+01:06:11.450 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.appbuilder.payments.PaymentsApplicationTest]: PaymentsApplicationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01:06:11.451 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.appbuilder.payments.CountryRouterApplication for test class com.appbuilder.payments.PaymentsApplicationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-05T01:06:11.603-05:00  INFO 75440 --- [           main] c.a.payments.PaymentsApplicationTest     : Starting PaymentsApplicationTest using Java 21.0.12.1 with PID 75440 (started by santoshhommaradi in /private<temporary>/isolated/app)
+2026-10-05T01:06:11.604-05:00  INFO 75440 --- [           main] c.a.payments.PaymentsApplicationTest     : No active profile set, falling back to 1 default profile: "default"
+2026-10-05T01:06:12.284-05:00  INFO 75440 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-05T01:06:12.309-05:00  INFO 75440 --- [           main] c.a.payments.PaymentsApplicationTest     : Started PaymentsApplicationTest in 0.836 seconds (process running for 1.302)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.436 s -- in com.appbuilder.payments.PaymentsApplicationTest
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO]
+[INFO] --- jar:3.5.1:jar (default-jar) @ payments ---
+[INFO] Building jar: /private<temporary>/isolated/app/target/payments-0.0.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- spring-boot:4.1.1:repackage (repackage) @ payments ---
+[INFO] Replacing main artifact /private<temporary>/isolated/app/target/payments-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /private<temporary>/isolated/app/target/payments-0.0.1-SNAPSHOT.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.364 s
+[INFO] Finished at: 2026-10-05T01:06:13-05:00
+[INFO] ------------------------------------------------------------------------
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (<home>/.m2/repository/net/bytebuddy/byte-buddy-agent/1.18.11/byte-buddy-agent-1.18.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release

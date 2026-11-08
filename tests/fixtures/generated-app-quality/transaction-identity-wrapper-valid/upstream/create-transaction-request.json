@@ -1,0 +1,6 @@
+{
+  "accountId": "acct-100",
+  "transactionId": "txn-100",
+  "amount": 125.75,
+  "description": "Card purchase"
+}

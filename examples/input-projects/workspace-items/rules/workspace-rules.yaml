@@ -1,0 +1,10 @@
+entity: Workspace
+rules:
+  - {field: title, type: min-length, value: '3'}
+  - {field: title, type: max-length, value: '40'}
+  - field: state
+    type: allowed-values
+    values: [OPEN, ARCHIVED]
+  - field: state
+    type: default
+    value: OPEN

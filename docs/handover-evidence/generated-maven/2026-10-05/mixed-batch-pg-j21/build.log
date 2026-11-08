@@ -1,0 +1,41 @@
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------< com.appbuilder:m5a_run_semantics >------------------
+[INFO] Building M5a Run Semantics Contract Fixture 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- clean:3.5.0:clean (default-clean) @ m5a_run_semantics ---
+[INFO]
+[INFO] --- resources:3.5.0:resources (default-resources) @ m5a_run_semantics ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 5 resources from src/main/resources to target/classes
+[INFO]
+[INFO] --- compiler:3.15.0:compile (default-compile) @ m5a_run_semantics ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 30 source files with javac [debug parameters release 21] to target/classes
+[WARNING] /private<temporary>/isolated/app/src/main/java/com/appbuilder/m5a_run_semantics/batch/AccountEodBatchJob.java:[77,13] <I,O>chunk(int,org.springframework.transaction.PlatformTransactionManager) in org.springframework.batch.core.step.builder.StepBuilder has been deprecated and marked for removal
+[WARNING] /private<temporary>/isolated/app/src/main/java/com/appbuilder/m5a_run_semantics/batch/WidgetEodBatchJob.java:[96,13] <I,O>chunk(int,org.springframework.transaction.PlatformTransactionManager) in org.springframework.batch.core.step.builder.StepBuilder has been deprecated and marked for removal
+[INFO]
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ m5a_run_semantics ---
+[INFO] skip non existing resourceDirectory /private<temporary>/isolated/app/src/test/resources
+[INFO]
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ m5a_run_semantics ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target/test-classes
+[INFO]
+[INFO] --- surefire:3.5.6:test (default-test) @ m5a_run_semantics ---
+[INFO] Tests are skipped.
+[INFO]
+[INFO] --- jar:3.5.1:jar (default-jar) @ m5a_run_semantics ---
+[INFO] Building jar: /private<temporary>/isolated/app/target/m5a_run_semantics-0.0.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- spring-boot:4.1.1:repackage (repackage) @ m5a_run_semantics ---
+[INFO] Replacing main artifact /private<temporary>/isolated/app/target/m5a_run_semantics-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /private<temporary>/isolated/app/target/m5a_run_semantics-0.0.1-SNAPSHOT.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.857 s
+[INFO] Finished at: 2026-10-05T01:10:20-05:00
+[INFO] ------------------------------------------------------------------------

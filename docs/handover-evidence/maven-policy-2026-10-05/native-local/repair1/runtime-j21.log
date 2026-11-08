@@ -1,0 +1,12 @@
+$ docker start --attach ef-lz4-e04bbb0e6c18-app-j21
+Exception in thread "main" java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:106)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64)
+	at org.springframework.boot.loader.launch.PropertiesLauncher.main(PropertiesLauncher.java:577)
+Caused by: java.lang.AssertionError: Exactly one newly extracted JNI library required
+	at proof.Lz4ContainerProof.require(Lz4ContainerProof.java:18)
+	at proof.Lz4ContainerProof.main(Lz4ContainerProof.java:54)
+	... 5 more
+

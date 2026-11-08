@@ -1,0 +1,12 @@
+app_name: CSV Inbound File App
+bounded_context: accounts
+schema_version: "2.0"
+upstream_interfaces:
+  - name: account-csv-file
+    system: CORE
+    type: file-csv
+    spec: upstream/account-csv-layout.yaml
+    mapping: upstream/account-csv-mapping.yaml
+    samples:
+      - upstream/sample-account-inbound.csv
+target_profile: springboot-legacy-compatible

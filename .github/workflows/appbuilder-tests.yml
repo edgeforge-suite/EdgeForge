@@ -1,0 +1,64 @@
+name: AppBuilder Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Python test suite
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect docs-only change
+        id: changes
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          HEAD_SHA: ${{ github.sha }}
+          BEFORE_SHA: ${{ github.event.before }}
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          REF_NAME: ${{ github.ref_name }}
+        run: scripts/ci/detect-docs-only.sh
+
+      - name: Skip tests for docs-only change
+        if: steps.changes.outputs.docs_only == 'true'
+        run: echo "Skipping Python test suite for docs-only / Markdown-only change."
+
+      - name: Set up Python
+        if: steps.changes.outputs.docs_only != 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        if: steps.changes.outputs.docs_only != 'true'
+        run: |
+          python -m pip install -c requirements-lock.txt -r requirements.txt
+          python -m pip check
+
+      - name: Run full test suite
+        if: steps.changes.outputs.docs_only != 'true'
+        run: python -m pytest -v --tb=short
+
+      - name: Install isolated audit tool
+        if: steps.changes.outputs.docs_only != 'true'
+        run: |
+          python -m venv "$RUNNER_TEMP/python-audit-tools"
+          "$RUNNER_TEMP/python-audit-tools/bin/python" -m pip install pip-audit==2.9.0
+
+      - name: Audit exact Python dependency closure
+        if: steps.changes.outputs.docs_only != 'true'
+        run: |
+          python scripts/python_dependency_audit.py \
+            --lock requirements-lock.txt \
+            --scanner "$RUNNER_TEMP/python-audit-tools/bin/pip-audit"

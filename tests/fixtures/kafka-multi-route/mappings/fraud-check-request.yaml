@@ -1,0 +1,9 @@
+transforms:
+  - source: caseId
+    target: investigationId
+  - source: customerId
+    target: customerRef
+  - source: amount
+    target: transactionAmount
+  - target: channel
+    constant: "PAYMENT_HUB"

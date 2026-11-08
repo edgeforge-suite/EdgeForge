@@ -1,0 +1,20 @@
+entity: Loan
+field_mappings:
+  - source: Loan.loanId
+    target: loan_id
+  - source: Loan.borrowerId
+    target: borrower_id
+  - source: Loan.principalAmount
+    target: principal_amount
+  - source: Loan.interestRate
+    target: interest_rate
+  - source: Loan.termMonths
+    target: term_months
+  - source: Loan.loanType
+    target: loan_type
+  - source: Loan.status
+    target: status
+  - source: Loan.purpose
+    target: purpose
+  - source: Loan.createdAt
+    target: created_at

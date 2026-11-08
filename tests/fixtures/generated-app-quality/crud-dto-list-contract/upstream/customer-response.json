@@ -1,0 +1,6 @@
+{
+  "customerId": "cust-001",
+  "customerName": "Ada Lovelace",
+  "email": "ada@example.com",
+  "status": "ACTIVE"
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:edgeforge:examples:order:v1"
+           xmlns:tns="urn:edgeforge:examples:order:v1">
+  <xs:simpleType name="CurrencyCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="USD"/>
+      <xs:enumeration value="EUR"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

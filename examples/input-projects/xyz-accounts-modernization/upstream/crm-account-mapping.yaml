@@ -1,0 +1,18 @@
+interface: crm-account-api
+entity: Account
+operations:
+  - name: createAccount
+    request_mappings:
+      - source: customerId
+        target: Account.customerId
+      - source: accountType
+        target: Account.accountType
+      - source: currency
+        target: Account.currency
+    response_mappings:
+      - source: accountId
+        target: Account.accountId
+      - source: status
+        target: Account.status
+      - source: createdDate
+        target: Account.createdDate

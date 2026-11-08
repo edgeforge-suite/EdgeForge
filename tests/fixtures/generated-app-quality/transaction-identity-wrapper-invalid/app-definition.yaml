@@ -1,0 +1,13 @@
+app_name: Invalid Transaction Identity
+bounded_context: bankingqualityinvalid
+schema_version: "2.0"
+upstream_interfaces:
+  - name: transaction-api
+    system: CORE
+    type: rest-json
+    spec: upstream/transaction-api-spec.yaml
+    mapping: upstream/transaction-mapping.yaml
+    operations:
+      - name: createTransactionHistory
+        response_sample: upstream/create-transaction-response.json
+target_profile: springboot-legacy-compatible

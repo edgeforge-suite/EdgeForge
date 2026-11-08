@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "caseId": {"type": "string"},
+    "approved": {"type": "boolean"},
+    "decision": {"type": "string"},
+    "reviewTier": {"type": "integer"}
+  }
+}

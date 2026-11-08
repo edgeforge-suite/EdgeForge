@@ -1,0 +1,8 @@
+entity: Account
+rules:
+- field: status
+  type: allowed-values
+  values:
+  - OPEN
+  - CLOSED
+  - FROZEN

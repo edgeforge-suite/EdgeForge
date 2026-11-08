@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "scope": "Engine Python dependency correction only; not broader M2 closure or release approval",
+  "assessment_date_utc": "2026-10-20",
+  "baseline_source_sha": "ca53afb40ac9ba67d74f9d27c2d52e63b909970c",
+  "corrected_source_sha": "232d7d6ccc9458970ee6b7efa8a7189d84b9cdd3",
+  "correction": {
+    "package": "certifi",
+    "advisory": "GHSA-6q48-6c7w-9gw2",
+    "previous_version": "2026.7.22",
+    "selected_version": "2026.10.19",
+    "official_advisory_patched_version": "2026.10.18",
+    "pypi_scanner_recommended_version": "2026.10.19",
+    "rationale": "The advisory records removal of roots with compromised intermediate CA keys in .18. PyPI describes .19 restoring unaffected roots and recommends .19. Select the available non-yanked .19 to satisfy the live scanner recommendation; do not call it the universal earliest fix.",
+    "changed_declarations": ["requirements-lock.txt"],
+    "direct_requirements_changed": false,
+    "audit_policy_or_tool_pins_changed": false,
+    "suppressions_or_risk_acceptance": false
+  },
+  "authoritative_sources": [
+    {
+      "url": "https://github.com/certifi/python-certifi/security/advisories/GHSA-6q48-6c7w-9gw2",
+      "retrieved_body_url": "https://api.github.com/repos/certifi/python-certifi/security-advisories/GHSA-6q48-6c7w-9gw2",
+      "retrieval_date_utc": "2026-10-20",
+      "body_sha256": "dd3e02fe5a4be5b2c0980f7d44590436b8703d7673840d78c92b9786fe01e7ac",
+      "private_retention_reference": "python-builder/original/advisory-upstream.json"
+    },
+    {
+      "url": "https://pypi.org/pypi/certifi/2026.7.22/json",
+      "retrieval_date_utc": "2026-10-20",
+      "body_sha256": "933e319729ee7621256aa2d4990f39c55a2f146d40d1ff5ad096bdd2ebfb457d",
+      "private_retention_reference": "python-builder/original/certifi-2026.7.22-pypi.json"
+    },
+    {
+      "url": "https://pypi.org/pypi/certifi/2026.10.19/json",
+      "retrieval_date_utc": "2026-10-20",
+      "body_sha256": "5b6ba21c20c09f5e4ca52bf8251de25fafbdb56909c60e3ba44d4f2b6ef5d319",
+      "private_retention_reference": "python-builder/certifi-2026.10.19-pypi.json"
+    }
+  ],
+  "reference_environment": {
+    "image": "python:3.11.15-bookworm@sha256:a8f8fbe1a0edc9e4dddafa64ba73f7e04be7be5ebc23f332362e779e0a2e4e52",
+    "platform": "linux/amd64",
+    "scanner": "pip-audit 2.9.0",
+    "tool_isolation": "Separate evidence-tools virtual environment",
+    "audit_flags": ["--no-deps", "--disable-pip", "--strict", "--vulnerability-service", "pypi"],
+    "exclusions": ["local Engine package", "pip/setuptools/wheel bootstrap tools"]
+  },
+  "before": {
+    "lock_sha256": "7db8399f83be3cc4e067c7cabfefa9ca3b788c487a64d54910df9b5a3830de8e",
+    "installed_dependency_count_excluding_bootstrap": 74,
+    "inventory_matches_lock": true,
+    "inventory_sha256": "471b241654fcc5810e787067085f06718f584548e0d1e397e51dea45c25eb283",
+    "pip_check_exit_code": 0,
+    "audit_dependency_count": 74,
+    "finding_count": 1,
+    "audit_exit_code": 1,
+    "detailed_report_sha256": "7046a0e8e9f70a98f8b6a90501e12246ae293376def5fd48b832ac7625b9dea7",
+    "private_retention_references": ["python-builder/original/pip-audit.json", "python-builder/original/inventory.json", "python-builder/original/reference.log"]
+  },
+  "after": {
+    "assessment_time_utc": "2026-10-20T21:07:11.244048Z",
+    "requirements_sha256": "823a1fd2cf5b65263b1e0efa7c09cb85a9e0e4562888bfb660a955dd75b33e4e",
+    "lock_sha256": "302d4806b24e99fabdf49057a0cebadf142b271e42b2beefdd71ec3b3d1a625c",
+    "installed_dependency_count_excluding_bootstrap": 74,
+    "inventory_matches_lock": true,
+    "inventory_sha256": "5adf159ef430b74069387b09fdc66893f5b11ecf4e58a9ee3bfb236eec7c294e",
+    "pip_check_exit_code": 0,
+    "audit_dependency_count": 74,
+    "sbom_component_count": 74,
+    "license_row_count": 74,
+    "finding_count": 0,
+    "audit_exit_code": 0,
+    "detailed_report_sha256": "34754641e1f1140962958d9f05a16bcd58d6a79a7bd54e3da8f296294d84575a",
+    "public_report": "python-current/pip-audit.json",
+    "public_provenance": "python-current/provenance.json",
+    "private_retention_references": ["python-builder/corrected/pip-audit.json", "python-builder/corrected/inventory.json", "python-builder/corrected/pip-check.txt", "python-builder/corrected/reference.log", "python-builder/final-evidence.log"]
+  },
+  "minimum_python_proof": {
+    "python": "3.10.21",
+    "image": "python@sha256:0a06143d04e5207c0561a9803a007af1d3e7941634fd1a7f801079dca3644bf5",
+    "packages": {"certifi": "2026.10.19", "httpx": "0.28.1"},
+    "pip_check_exit_code": 0,
+    "ca_bundle_load": "passed; 120 roots loaded into SSL context",
+    "affected_root_absent": true,
+    "http_client_initialization": "passed; client closed without making a request",
+    "limits": "Affected-package and consumer initialization only; no TLS handshake, full Python 3.10 suite, or application runtime campaign",
+    "log_sha256": "3cc6abcae3d0e784dc2723db9f7cbfebb58d936b845edd6840b7e02fa8b572a7",
+    "private_retention_references": ["python-builder/python310/compatibility.log", "python-builder/python310/inventory.json"]
+  },
+  "historical_evidence": "python-current/history/2026-09-23 retains all six original snapshot files byte-for-byte and matching original declarations; its zero-finding scan is not the October before-result",
+  "private_retention": {
+    "collection": "audit-disposition-s1-20261020",
+    "references": "Collection-relative artifact names; no host paths or full advisory bodies published",
+    "archive_persistence": "Parent-managed; this receipt does not attest archive persistence"
+  }
+}

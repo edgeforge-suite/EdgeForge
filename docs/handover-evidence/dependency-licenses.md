@@ -1,0 +1,107 @@
+# Dependency License Inventory — EdgeForge Engine (resolved Python deps)
+
+> **Import-gate G4 evidence.** A factual third-party-license inventory of
+> EdgeForge's resolved Python dependency closure, generated from
+> `requirements.txt` into a clean scan environment.
+>
+> **Generated:** 2026-06-28, with **pip-licenses 5.5.5**.
+> Historical snapshot; the former mixed evidence script is disabled, and
+> `make sbom` writes the separate `python-current/` assessment.
+>
+> **This is third-party dependency licensing, not EdgeForge's own license** —
+> the latter is an external adopter/legal decision (roadmap G1), not resolved here.
+
+## Notable licenses — summary
+
+**Flagged licenses are present in the resolved Python dependency closure:** `caio` (UNKNOWN, transitive), `certifi` (Mozilla Public License 2.0 (MPL 2.0), transitive). Disposition: listed for adopter/security review; no automatic dependency change is made by this evidence-only PR.
+
+This summary is computed from the resolved dependency licenses below, not a
+default assumption.
+
+## Resolved dependencies
+
+Direct dependencies come from `requirements.txt`; transitive dependencies are
+resolved by pip in a clean scan virtualenv. Machine-readable copy:
+[`dependency-licenses.csv`](dependency-licenses.csv).
+
+| Package | Version | License | Scope |
+|---|---|---|---|
+| `aiofile` | 3.11.1 | Apache-2.0 | transitive |
+| `annotated-types` | 0.7.0 | MIT License | transitive |
+| `anyio` | 4.14.1 | MIT | transitive |
+| `attrs` | 26.1.0 | MIT | transitive |
+| `Authlib` | 1.7.2 | BSD License | transitive |
+| `backports.tarfile` | 1.2.0 | MIT License | transitive |
+| `beartype` | 0.22.9 | MIT License | transitive |
+| `cachetools` | 7.1.4 | MIT | transitive |
+| `caio` | 0.9.25 | UNKNOWN | transitive |
+| `certifi` | 2026.6.17 | Mozilla Public License 2.0 (MPL 2.0) | transitive |
+| `cffi` | 2.0.0 | MIT | transitive |
+| `click` | 8.4.2 | BSD-3-Clause | transitive |
+| `cryptography` | 49.0.0 | Apache-2.0 OR BSD-3-Clause | transitive |
+| `cyclopts` | 4.19.0 | Apache-2.0 | transitive |
+| `dnspython` | 2.8.0 | ISC License (ISCL) | transitive |
+| `docstring_parser` | 0.18.0 | MIT License | transitive |
+| `email-validator` | 2.3.0 | The Unlicense (Unlicense) | transitive |
+| `exceptiongroup` | 1.3.1 | MIT License | transitive |
+| `fastmcp` | 3.2.3 | Apache-2.0 | direct |
+| `h11` | 0.16.0 | MIT License | transitive |
+| `httpcore` | 1.0.9 | BSD-3-Clause | transitive |
+| `httpx` | 0.28.1 | BSD License | transitive |
+| `httpx-sse` | 0.4.3 | MIT | transitive |
+| `idna` | 3.18 | BSD-3-Clause | transitive |
+| `importlib_metadata` | 9.0.0 | Apache-2.0 | transitive |
+| `iniconfig` | 2.3.0 | MIT | transitive |
+| `jaraco.classes` | 3.4.0 | MIT License | transitive |
+| `jaraco.context` | 6.1.2 | MIT | transitive |
+| `jaraco.functools` | 4.5.0 | MIT | transitive |
+| `Jinja2` | 3.1.6 | BSD License | direct |
+| `joserfc` | 1.7.1 | BSD License | transitive |
+| `jsonref` | 1.1.0 | MIT | transitive |
+| `jsonschema` | 4.26.0 | MIT | direct |
+| `jsonschema-path` | 0.5.0 | Apache Software License | transitive |
+| `jsonschema-specifications` | 2025.9.1 | MIT | transitive |
+| `keyring` | 25.7.0 | MIT | transitive |
+| `markdown-it-py` | 4.2.0 | MIT License | transitive |
+| `MarkupSafe` | 3.0.3 | BSD-3-Clause | transitive |
+| `mcp` | 1.28.1 | MIT License | transitive |
+| `mdurl` | 0.1.2 | MIT License | transitive |
+| `more-itertools` | 11.1.0 | MIT | transitive |
+| `openapi-pydantic` | 0.5.1 | MIT License | transitive |
+| `opentelemetry-api` | 1.43.0 | Apache-2.0 | transitive |
+| `packaging` | 26.2 | Apache-2.0 OR BSD-2-Clause | transitive |
+| `pathable` | 0.6.0 | Apache Software License | transitive |
+| `platformdirs` | 4.10.0 | MIT | transitive |
+| `pluggy` | 1.6.0 | MIT License | transitive |
+| `py-key-value-aio` | 0.4.5 | Apache-2.0 | transitive |
+| `pycparser` | 3.0 | BSD-3-Clause | transitive |
+| `pydantic` | 2.11.7 | MIT | direct |
+| `pydantic-settings` | 2.14.2 | MIT | transitive |
+| `pydantic_core` | 2.33.2 | MIT License | transitive |
+| `Pygments` | 2.20.0 | BSD-2-Clause | transitive |
+| `PyJWT` | 2.13.0 | MIT | transitive |
+| `pyperclip` | 1.11.0 | BSD License | transitive |
+| `pytest` | 8.4.2 | MIT License | direct |
+| `python-dotenv` | 1.2.2 | BSD-3-Clause | transitive |
+| `python-multipart` | 0.0.32 | Apache-2.0 | transitive |
+| `PyYAML` | 6.0.3 | MIT License | direct |
+| `referencing` | 0.37.0 | MIT | transitive |
+| `rich` | 15.0.0 | MIT License | transitive |
+| `rich-rst` | 2.0.2 | MIT | transitive |
+| `rpds-py` | 2026.5.1 | MIT | transitive |
+| `sse-starlette` | 3.4.5 | BSD-3-Clause | transitive |
+| `starlette` | 1.3.1 | BSD-3-Clause | transitive |
+| `typing-inspection` | 0.4.2 | MIT | transitive |
+| `typing_extensions` | 4.15.0 | PSF-2.0 | transitive |
+| `uncalled-for` | 0.3.2 | MIT License | transitive |
+| `uvicorn` | 0.49.0 | BSD-3-Clause | transitive |
+| `watchfiles` | 1.2.0 | MIT License | transitive |
+| `websockets` | 16.0 | BSD-3-Clause | transitive |
+| `zipp` | 4.1.0 | MIT | transitive |
+
+## Scope note
+
+This inventory covers the Python dependency closure resolved from
+`requirements.txt`. Generated applications are standalone Maven projects and
+their dependency/license evidence is recorded separately in
+[`generated-app-dependencies.md`](generated-app-dependencies.md).

@@ -1,0 +1,7 @@
+{
+  "complete": false,
+  "error": "AssertionError: Proof command failed (1); see runtime-j17.log",
+  "source_dirty": false,
+  "source_sha": "743b5d4b0cd991238ce29dd16ac48daf5dc5feab",
+  "status": "failed"
+}

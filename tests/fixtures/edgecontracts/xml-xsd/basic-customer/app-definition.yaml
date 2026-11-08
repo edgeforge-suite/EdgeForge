@@ -1,0 +1,13 @@
+app_name: XML Customer Contract
+bounded_context: customers
+schema_version: "2.0"
+upstream_interfaces:
+  - name: customer-xml-input
+    system: CORE
+    type: xml-xsd
+    xsd_path: contracts/customer.xsd
+    root_element: CustomerMessage
+    namespace: "urn:edgeforge:examples:customer:v1"
+    namespace_alias: cust
+    sample: samples/customer.xml
+target_profile: springboot-legacy-compatible

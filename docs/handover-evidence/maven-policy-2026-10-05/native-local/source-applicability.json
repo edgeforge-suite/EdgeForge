@@ -1,0 +1,13 @@
+{
+  "committed_proof_source_hashes": {
+    "scripts/smoke/boot41_kafka_lz4_container_proof.py": "1079e190ff5f74ab2baeabf00e183d5cba354cf32ec01a6f72323e63e28b0b16",
+    "tests/fixtures/boot41-kafka/Lz4ContainerProof.java": "503392fb24a2ad43a7019240a8b2d5c86752a42635e936e1f0f4e9a67011e46c"
+  },
+  "final_head_ci_required": true,
+  "generator_sha": "38862862a0f4e90eb4f809a0150c6d2702de2423",
+  "infrastructure_recoveries_used": 0,
+  "material_repairs_used": 2,
+  "native_loading": "Explicit Native.load followed by actual LZ4/XXHash and Kafka compression/checksum JNI assertions; no ordinary default JNI selection claim, no Java fallback credit.",
+  "receipt_source_dirty_preserved": true,
+  "receipt_source_sha_preserved": "ab41a02fc854f89681e0473d9914e9e16528c3c2"
+}

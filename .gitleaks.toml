@@ -1,0 +1,42 @@
+# gitleaks configuration for the EdgeForge Engine repo.
+#
+# Extends gitleaks' default ruleset (all built-in secret rules stay active) and
+# adds narrowly scoped allowlists for CONFIRMED FALSE POSITIVES.
+#
+# Discipline: only confirmed non-credential matches are allowlisted, each with a
+# justification. No real or real-looking secret is ever silenced. If the scanner
+# flags something that is not obviously synthetic/documentation, STOP and triage
+# it — do not add it here.
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Confirmed documentation false positives (no credentials)"
+# The generic-api-key rule reads the markdown phrase "key | unique/idempotency"
+# (a `key` column header followed by the words "unique/idempotency") as an API
+# key value. It is prose describing a future "unique / idempotency key" control,
+# not a secret. Occurrences:
+#   - current tree: docs/archive/target-state-features-v1.md
+#   - historical commit only (surfaced by the one-time full-history audit; no
+#     longer in the tree): docs/generated-app-standards/generated-app-engine-roadmap.md
+regexes = [
+  '''unique/idempotency''',
+]
+
+[[rules]]
+id = "generic-api-key"
+
+[[rules.allowlists]]
+description = "Approved synthetic Kafka correlation values in retained proof and its fixture"
+# These are public message correlation values, not credentials. Preserve the
+# observed evidence bytes. Both the exact file and exact extracted value must
+# match; other values, files, and secret rules remain subject to scanning.
+condition = "AND"
+regexTarget = "secret"
+paths = [
+  '''^(?:docs/handover-evidence/kafka-lz4-default/2026-10-14/receipt\.json|tests/unit/test_default_lz4_evidence\.py)$''',
+]
+regexes = [
+  '''^(?:default-lz4-2a708828-e3ad-4560-922c-c53f7fc15cd9|default-lz4-89e6e6bf-548e-4cc4-a31f-ac89e63ad6f9|default-lz4-test-correlation)$''',
+]

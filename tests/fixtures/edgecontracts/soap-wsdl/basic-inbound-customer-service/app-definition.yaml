@@ -1,0 +1,12 @@
+app_name: SOAP Inbound Customer Service
+bounded_context: soap_inbound_customer
+schema_version: "2.0"
+upstream_interfaces:
+  - name: customer-soap-service
+    system: CORE
+    type: soap-wsdl
+    wsdl_path: contracts/customer-service.wsdl
+    service: CustomerService
+    port: CustomerServicePort
+    mapping: mappings/customer-soap-operation-mapping.yaml
+target_profile: springboot-legacy-compatible

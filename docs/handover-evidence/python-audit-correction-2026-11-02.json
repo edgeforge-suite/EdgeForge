@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.0",
+  "goal": "EF-V5-PUBLIC-CONTENT-ENGINE-S1 revision 3",
+  "approval_date_local": "2026-11-01",
+  "retrieval_date_utc": "2026-11-02",
+  "previous_head": "e6b59f80c8e1fd8cc62e62c974c83da96225d86f",
+  "corrected_source_sha": "c85998355dcc5ee23944bfa055e4001ebde96c97",
+  "baseline": {
+    "kind": "retained failed CI audit, not a repeated baseline scan",
+    "url": "https://github.com/santosh-sh/EdgeForge/actions/runs/41379367547/job/125066566695",
+    "audit_time_utc": "2026-11-02T02:52:41Z",
+    "packages": 76,
+    "findings": 1,
+    "exit_code": 1,
+    "private_log_sha256": "9078551239932b89f7abef546716c8597e7458f3ece5adcc6e837b22d98931c6"
+  },
+  "correction": {
+    "package": "joserfc",
+    "previous_version": "1.7.5",
+    "selected_version": "1.7.6",
+    "introducing_edge": "FastMCP 3.4.10 -> fastmcp-slim[client,server] 3.4.10 -> Authlib 1.9.1 -> joserfc>=1.6.8",
+    "introducing_edges": [
+      "FastMCP 3.4.10 -> fastmcp-slim[client,server] 3.4.10 -> Authlib 1.9.1 -> joserfc>=1.6.8",
+      "FastMCP 3.4.10 -> fastmcp-slim[server] 3.4.10 -> joserfc>=1.1.0"
+    ],
+    "edge_clarification": "2026-11-02 Claude repair clarification from retained installed package metadata: both routes introduce joserfc and are satisfied by 1.7.6. This adds the previously omitted direct server-extra route; it is not a new assessment or a change to the recorded source, audit time or evidence hashes.",
+    "other_reference_pins_changed": 0,
+    "other_pins_unchanged": 75,
+    "direct_requirements_changed": false
+  },
+  "advisory": {
+    "id": "GHSA-9pg5-8c7x-5hfx",
+    "reviewed_range": "< 1.7.6",
+    "reviewed_patch": "1.7.6",
+    "repository_range_claim": "<= 1.7.4",
+    "repository_patch_claim": "1.7.5",
+    "discrepancy": "Both source claims retained. Installed 1.7.5 reaches split before size rejection; selected published/tagged 1.7.6 checks length first and passes the canary. No universal prior-exploitability conclusion.",
+    "reviewed_url": "https://github.com/advisories/GHSA-9pg5-8c7x-5hfx",
+    "repository_url": "https://github.com/authlib/joserfc/security/advisories/GHSA-9pg5-8c7x-5hfx"
+  },
+  "qualification": {
+    "candidates_evaluated": [
+      "1.7.6"
+    ],
+    "artifact_requires_python": ">=3.10",
+    "artifact_requires_dist": [
+      "cryptography>=45.0.1",
+      "pycryptodome; extra == \"drafts\""
+    ],
+    "engine_requires_python": ">=3.11",
+    "executed_reference_python": "3.11.15",
+    "existing_cryptography": "50.0.1",
+    "tag_commit": "c54d9cce33e5de65b7684478193f6633279cf90e",
+    "relevant_source_sha256": "d5cd0b5c205d10699d8471adce52b0f6102623c9717ba6e263dbeb8e5ccd4fb5",
+    "source_equality": {
+      "joserfc-1.7.6.tar.gz": {
+        "matching_python_files": 55,
+        "byte_equal": true
+      },
+      "tag-c54d9cc.tar.gz": {
+        "matching_python_files": 55,
+        "byte_equal": true
+      }
+    },
+    "candidate_pypi_advisories_at_retrieval": [],
+    "installed_artifact": "checksum-verified published wheel; clean constrained requirements install afterward",
+    "early_guard_control": "38-byte bytes subclass raises on split with 24-byte configured total limit; 1.7.5 fails, 1.7.6 rejects first. Valid HMAC signatures still verify; wrong keys fail. No memory-exhaustion benchmark."
+  },
+  "sources": [
+    {
+      "artifact": "pypi-joserfc-1.7.6.json",
+      "url": "https://pypi.org/pypi/joserfc/1.7.6/json",
+      "sha256": "ff1cd417148c6ed9f9caeaa43314220c7c3525cea85a51df92141fd3b9c1b87b",
+      "bytes": 5200,
+      "retrieved_at_utc": "2026-11-02T04:25:19.487271+00:00"
+    },
+    {
+      "artifact": "reviewed-advisory.json",
+      "url": "https://api.github.com/advisories/GHSA-9pg5-8c7x-5hfx",
+      "sha256": "f3a7a0979529d0f9fa570fb6d1cd6e6651307b9296a74dd36b10cd471515413a",
+      "bytes": 5375,
+      "retrieved_at_utc": "2026-11-02T04:25:21.903972+00:00"
+    },
+    {
+      "artifact": "repository-advisory.json",
+      "url": "https://api.github.com/repos/authlib/joserfc/security-advisories/GHSA-9pg5-8c7x-5hfx",
+      "sha256": "a638c7bf58285b7c0c900368104a4066665df609ab13b0689761ec057db5c1af",
+      "bytes": 6203,
+      "retrieved_at_utc": "2026-11-02T04:25:23.961192+00:00"
+    },
+    {
+      "artifact": "release-1.7.6.json",
+      "url": "https://api.github.com/repos/authlib/joserfc/releases/tags/1.7.6",
+      "sha256": "b8b7fc4277ca383a1e347992322af0b4fa1f86d5b81283b670970c859f97f244",
+      "bytes": 3221,
+      "retrieved_at_utc": "2026-11-02T04:25:25.538306+00:00"
+    },
+    {
+      "artifact": "tag-1.7.6.json",
+      "url": "https://api.github.com/repos/authlib/joserfc/git/ref/tags/1.7.6",
+      "sha256": "a6aea6daa774676b692fde646cf97f63563e76ee3b5086947f046350c19a40d2",
+      "bytes": 367,
+      "retrieved_at_utc": "2026-11-02T04:25:27.269737+00:00"
+    },
+    {
+      "artifact": "tag-c54d9cc.tar.gz",
+      "url": "https://api.github.com/repos/authlib/joserfc/tarball/c54d9cce33e5de65b7684478193f6633279cf90e",
+      "sha256": "e1de3b575c262c1c26f7ab5e5654c357723ebeabfd3ccd4bf650e17668a3abb5",
+      "bytes": 235486,
+      "retrieved_at_utc": "2026-11-02T04:26:12.213176+00:00"
+    },
+    {
+      "artifact": "joserfc-1.7.6-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/98/40/63886ba742c6fd9e6dd222e20b8d54012fbc933465350c7747c4ed5b31e4/joserfc-1.7.6-py3-none-any.whl",
+      "sha256": "e2d72e3fa937ed8ddd42ad8c1cc337a43e7ffd02efa572a2aa15e2764a05b506",
+      "bytes": 71588,
+      "retrieved_at_utc": "2026-11-02T04:26:08.671517+00:00"
+    },
+    {
+      "artifact": "joserfc-1.7.6.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/cd/db/ec5b5fe07a7bda62cd2c2d619daf160eb7442b979c7cd61bbe0262108de9/joserfc-1.7.6.tar.gz",
+      "sha256": "fb1cf6d2977318bef976c2ed2ef2167cc5f8ade8fc96f034e38f7abd656907c4",
+      "bytes": 236091,
+      "retrieved_at_utc": "2026-11-02T04:26:10.013229+00:00"
+    }
+  ],
+  "after": {
+    "assessment_time_utc": "2026-11-02T04:32:27.996978Z",
+    "audit_dependency_count": 76,
+    "audit_exit_code": 0,
+    "dependency_count": 76,
+    "engine_source_sha": "c85998355dcc5ee23944bfa055e4001ebde96c97",
+    "exclusions": [
+      "local Engine package",
+      "pip/setuptools/wheel bootstrap tools"
+    ],
+    "finding_count": 0,
+    "license_row_count": 76,
+    "lock_sha256": "21273ec4a9f0135a53c31798f389d9f219566f2f18d5f4ba68c66bc1fc2b3f8b",
+    "reference_image": "python:3.11.15-bookworm@sha256:a8f8fbe1a0edc9e4dddafa64ba73f7e04be7be5ebc23f332362e779e0a2e4e52",
+    "reference_python": {
+      "libc": "2.36",
+      "machine": "x86_64",
+      "python": "3.11.15",
+      "system": "Linux"
+    },
+    "requirements_sha256": "7fb5387c877b22d11a72b90ad8cb9a060e9b32c9cd29a3f42e179899e90a1034",
+    "sbom_component_count": 76,
+    "schema_version": "1.0",
+    "tools": {
+      "cyclonedx_bom": "7.3.0",
+      "pip_audit": "pip-audit 2.9.0",
+      "pip_licenses": "pip-licenses 5.5.5"
+    }
+  },
+  "current_evidence_sha256": {
+    "dependency-licenses.csv": "5ec46b2a7e97a7b9740e33ab4e5eef23be890112672f099f2d30587cc0248c93",
+    "dependency-licenses.md": "68b634def9ebff41a90d3a7ac0bb47b6e246c508ce50f97c4353d74eb0cd6798",
+    "pip-audit.json": "362277ba5bc3175eb3a082cabef07265ab9beda5dc1c1d262825d0f027d96dc2",
+    "pip-audit.md": "32c7c239bc90178cc93e77381608e76aecb283eedb81b73a6ab53c43583f37ab",
+    "provenance.json": "c7984796f81008b6d25b1b6a644c3d1678d2bfeb3b8f8d34e5417b6af01de90b",
+    "sbom.cdx.json": "9e076d68b4e7490e591d450fa013dcab102d9064ec3ca3c1225c2ed7945412ee"
+  },
+  "historical_snapshot_sha256": {
+    "dependency-licenses.csv": "6c58dc3f4bff914ca484d74f61fd4037e847e4b8189cdbdfe18c1a5b4f8c2b03",
+    "dependency-licenses.md": "6c55fa3b10944afa9550b77845d1a4b1c60a4dbe33b0b34d0298f79b08e15a04",
+    "pip-audit.json": "2b5f34b2f2d175c1e84274f32ad7ad18427bb5c7a68927f2160ec87e07aee4e3",
+    "pip-audit.md": "d9e9d7f73480521d3ff26954bbef9e4b2d3c37e57e99f81ed08164ffe3fc6263",
+    "provenance.json": "5b5bdf1b04a225ecaeba39657976f6ac308bca597cfec4982b0e88b2c1ddf1bb",
+    "requirements-lock.txt": "95f18e55208adacc2ef8754500ac802c54250d421bb6d6281128d02a6be715a3",
+    "requirements.txt": "7fb5387c877b22d11a72b90ad8cb9a060e9b32c9cd29a3f42e179899e90a1034",
+    "sbom.cdx.json": "464a3628219502fbcca5592a55559920538c2654705c0216ee866564ebbe6de2"
+  },
+  "compatibility": {
+    "pip_check": "passed",
+    "installed_inventory_matches_lock": true,
+    "focused_tests_passed": 78,
+    "skipped": 0,
+    "scope": "bounded dependency controls, all seven MCP tools with catalog calls, fixed-clock CLI/MCP generation equality; not OAuth/session certification"
+  },
+  "proof_carryforward": {
+    "comparison_base": "e6b59f80c8e1fd8cc62e62c974c83da96225d86f",
+    "product_and_example_bytes_unchanged": true,
+    "before_tree_listing_sha256": "d015ff99e21589cb99306d49ff474734e4bedcd7217ee89f54667278b1a26ee2",
+    "after_tree_listing_sha256": "d015ff99e21589cb99306d49ff474734e4bedcd7217ee89f54667278b1a26ee2",
+    "manual_proof_repeated": false,
+    "retained": "Revision 2 Java/H2, SQL, HTTP and content proof retain their original identities. Later assessment/evidence/CI commits are not relabeled as their generator."
+  },
+  "private_retention": "public-content-engine-s1-20261101/joserfc-r3 (archive-relative); full advisory bodies/artifacts/receipts remain private",
+  "limits": "One point-in-time Python reference assessment, not all-platform safety, release approval, a rerun of old runtime/image proof or final Claude review.",
+  "risk_accepted": false,
+  "m2_complete": false
+}

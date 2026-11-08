@@ -1,0 +1,11 @@
+table: account_staging_tbl
+entity: Account
+field_mappings:
+  - source: Account.accountId
+    target: account_id
+  - source: Account.accountNumber
+    target: account_number
+  - source: Account.openedDate
+    target: opened_date
+  - source: Account.availableBalance
+    target: available_balance

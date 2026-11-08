@@ -1,0 +1,22 @@
+{
+  "Data": {
+    "ConsentId": "CONSENT-20260401-001",
+    "Initiation": {
+      "InstructionIdentification": "WIRE-20260401-001",
+      "EndToEndIdentification": "E2E-20260401-001",
+      "CurrencyOfTransfer": "GBP",
+      "InstructedAmount": {
+        "Amount": "1250.00",
+        "Currency": "GBP"
+      },
+      "CreditorAccount": {
+        "SchemeName": "UK.OBIE.IBAN",
+        "Identification": "GB12BARC20040112345678",
+        "Name": "ACME SUPPLIER LTD"
+      }
+    }
+  },
+  "Risk": {
+    "PaymentContextCode": "PartyToParty"
+  }
+}

@@ -1,0 +1,38 @@
+app_name: payment-mediation-adapter
+bounded_context: payment_mediation
+schema_version: "2.0"
+app_archetype: kafka-integration
+target_profile: springboot-legacy-compatible
+
+kafka_config:
+  consumer_group: payment-mediation-group
+  concurrency: 1
+
+async_routes:
+  - name: payment-initiated
+    pattern: fire-and-forget
+    upstream_topic:
+      name: abc.payments.initiated.v1
+      system: ABC_CORE
+      message_schema: schemas/upstream/payment-initiated.json
+      sample: samples/payment-initiated.json
+    downstream_topic:
+      name: xyz.settlement.request.v1
+      system: XYZ_SETTLEMENT
+      message_schema: schemas/downstream/settlement-request.json
+    transform_mapping: mappings/payment-to-settlement.yaml
+    partition_key:
+      strategy: field_value
+      source: accountId
+
+  - name: balance-updated
+    pattern: fire-and-forget
+    upstream_topic:
+      name: abc.balance.updated.v1
+      system: ABC_CORE
+      message_schema: schemas/upstream/balance-updated.json
+    downstream_topic:
+      name: xyz.ledger.update.v1
+      system: XYZ_LEDGER
+      message_schema: schemas/downstream/ledger-update.json
+    transform_mapping: mappings/balance-to-ledger.yaml

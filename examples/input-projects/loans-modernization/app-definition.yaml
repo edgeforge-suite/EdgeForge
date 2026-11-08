@@ -1,0 +1,35 @@
+app_name: loans-modernization
+bounded_context: loans
+schema_version: "2.0"
+app_archetype: crud
+target_profile: springboot-standard-enterprise
+
+upstream_interfaces:
+  - name: origination-api
+    system: LoanOriginationSystem
+    version: "1.0"
+    type: rest-json
+    spec: contracts/origination-api-openapi.yaml
+    operations:
+      - name: openLoan
+        request_sample: samples/openLoan-request.json
+        response_sample: samples/openLoan-response.json
+
+downstream_interfaces:
+  - name: regulatory-report
+    system: ComplianceTeam
+    version: "1.0"
+    type: file-fixed-width
+    spec: contracts/regulatory-report-layout.yaml
+    mapping: contracts/regulatory-report-mapping.yaml
+
+data_handoffs:
+  - name: loan-staging-table
+    system: ETL
+    version: "1.0"
+    type: staging-table
+    spec: contracts/loan-staging-table.sql
+    mapping: contracts/loan-staging-table-mapping.yaml
+
+rules:
+  - rules/loan-rules.yaml

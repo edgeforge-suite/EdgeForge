@@ -1,0 +1,24 @@
+app_name: CountryRouter
+bounded_context: payments
+schema_version: "2.0"
+app_archetype: passthrough-router
+upstream_interfaces:
+  - name: inbound-payments-api
+    type: rest-json
+    spec: upstream/payments-openapi.yaml
+downstream_interfaces:
+  - name: app-a-api
+    system: APP_A
+    type: rest-json
+    spec: downstream/app-a-openapi.yaml
+  - name: app-b-api
+    system: APP_B
+    type: rest-json
+    spec: downstream/app-b-openapi.yaml
+  - name: app-c-api
+    system: APP_C
+    type: rest-json
+    spec: downstream/app-c-openapi.yaml
+rules:
+  - rules/payment-routing.yaml
+target_profile: springboot-legacy-compatible

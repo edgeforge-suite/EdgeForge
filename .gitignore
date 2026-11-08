@@ -1,0 +1,29 @@
+.DS_Store
+.claude/session-notes.md
+.claude/settings.local.json
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+target/
+*.log
+
+# --- Private local planning assets — never commit or include in a public tree ---
+# Kept on the maintainer's machine; a stray `git add -A` must never pull these in
+# Existing specific globs remain protection rules, not publication approval.
+/Docs & PPTs/
+/docs/slides/
+/EdgeForge_WHY_Executive.*
+/edgeforge-executive-architecture.*
+ForgeFlex*
+*Patent_Disclosure*
+/CLEANUP-PLAN.md
+
+# Git worktrees created under .claude (e.g. by Claude Code) — not part of the repo
+.claude/worktrees/

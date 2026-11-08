@@ -1,0 +1,6 @@
+transforms:
+  - source: processorStatus
+    target: status
+    value_map:
+      ACCEPTED: APPROVED
+      REJECTED: DECLINED

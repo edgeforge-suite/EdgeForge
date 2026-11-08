@@ -1,0 +1,32 @@
+app_name: Synthetic Account Servicing
+bounded_context: account-servicing
+schema_version: '2.0'
+app_archetype: crud
+target_profile: springboot-standard-enterprise
+identity_overrides:
+- entity: Account
+  persistence_id: accountId
+upstream_interfaces:
+- name: account-api
+  type: rest-json
+  version: '1.0'
+  spec: contracts/account-api-spec.json
+  mapping: upstream/account-api-mapping.yaml
+  operations:
+  - name: createAccount
+    request_sample: upstream/sample-createaccount-request.json
+    response_sample: upstream/sample-createaccount-response.json
+downstream_interfaces:
+- name: account-eod
+  type: file-fixed-width
+  version: '1.0'
+  spec: downstream/account-eod-layout.yaml
+  mapping: downstream/account-eod-mapping.yaml
+data_handoffs:
+- name: account-staging-table
+  type: staging-table
+  version: '1.0'
+  spec: data-handoffs/account-staging-table.sql
+  mapping: data-handoffs/account-staging-table-mapping.yaml
+rules:
+- rules/account-business-rules.yaml

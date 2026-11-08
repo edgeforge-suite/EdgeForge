@@ -1,0 +1,30 @@
+interface: account-api
+entity: Account
+operations:
+- name: createAccount
+  request_mappings:
+  - source: accountId
+    target: Account.accountId
+  - source: customerId
+    target: Account.customerId
+  - source: status
+    target: Account.status
+  - source: balance
+    target: Account.balance
+  - source: currencyCode
+    target: Account.currencyCode
+  - source: openedAt
+    target: Account.openedAt
+  response_mappings:
+  - source: accountId
+    target: Account.accountId
+  - source: customerId
+    target: Account.customerId
+  - source: status
+    target: Account.status
+  - source: balance
+    target: Account.balance
+  - source: currencyCode
+    target: Account.currencyCode
+  - source: openedAt
+    target: Account.openedAt

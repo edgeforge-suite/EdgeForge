@@ -1,0 +1,103 @@
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ----------------------< com.appbuilder:ci_smoke >-----------------------
+[INFO] Building Generated App CI Smoke 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- clean:3.5.0:clean (default-clean) @ ci_smoke ---
+[INFO]
+[INFO] --- resources:3.5.0:resources (default-resources) @ ci_smoke ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO]
+[INFO] --- compiler:3.15.0:compile (default-compile) @ ci_smoke ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 25 source files with javac [debug parameters release 17] to target/classes
+[INFO]
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ ci_smoke ---
+[INFO] skip non existing resourceDirectory /private<temporary>/isolated/app/src/test/resources
+[INFO]
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ ci_smoke ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target/test-classes
+[INFO]
+[INFO] --- surefire:3.5.6:test (default-test) @ ci_smoke ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO]
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.appbuilder.ci_smoke.CiSmokeApplicationTest
+01:04:24.149 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.appbuilder.ci_smoke.CiSmokeApplicationTest]: CiSmokeApplicationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01:04:24.215 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.appbuilder.ci_smoke.CiSmokeApplication for test class com.appbuilder.ci_smoke.CiSmokeApplicationTest
+01:04:24.270 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.appbuilder.ci_smoke.CiSmokeApplicationTest]: CiSmokeApplicationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01:04:24.271 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.appbuilder.ci_smoke.CiSmokeApplication for test class com.appbuilder.ci_smoke.CiSmokeApplicationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-05T01:04:24.460-05:00  INFO 74180 --- [           main] c.a.ci_smoke.CiSmokeApplicationTest      : Starting CiSmokeApplicationTest using Java 17.0.18 with PID 74180 (started by santoshhommaradi in /private<temporary>/isolated/app)
+2026-10-05T01:04:24.461-05:00  INFO 74180 --- [           main] c.a.ci_smoke.CiSmokeApplicationTest      : No active profile set, falling back to 1 default profile: "default"
+2026-10-05T01:04:24.884-05:00  INFO 74180 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-05T01:04:24.912-05:00  INFO 74180 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 2 JPA repository interfaces.
+2026-10-05T01:04:25.237-05:00  INFO 74180 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-05T01:04:25.350-05:00  INFO 74180 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ci_smoke user=SA
+2026-10-05T01:04:25.351-05:00  INFO 74180 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-05T01:04:25.357-05:00  INFO 74180 --- [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:ci_smoke (H2 2.4)
+2026-10-05T01:04:25.385-05:00  WARN 74180 --- [           main] o.f.c.internal.database.base.Database    : Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026-10-05T01:04:25.398-05:00  INFO 74180 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-10-05T01:04:25.400-05:00  INFO 74180 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.008s)
+2026-10-05T01:04:25.404-05:00  INFO 74180 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-10-05T01:04:25.424-05:00  INFO 74180 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-10-05T01:04:25.428-05:00  INFO 74180 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create record table"
+2026-10-05T01:04:25.436-05:00  INFO 74180 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - create entry table"
+2026-10-05T01:04:25.440-05:00  INFO 74180 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.001s)
+2026-10-05T01:04:25.500-05:00  INFO 74180 --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-05T01:04:25.583-05:00  INFO 74180 --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-05T01:04:25.831-05:00  INFO 74180 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-05T01:04:25.880-05:00  INFO 74180 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:ci_smoke]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CI_SMOKE/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-05T01:04:26.325-05:00  INFO 74180 --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-05T01:04:26.339-05:00  INFO 74180 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-05T01:04:26.387-05:00  INFO 74180 --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-05T01:04:26.476-05:00  WARN 74180 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-05T01:04:26.487-05:00  INFO 74180 --- [           main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-10-05T01:04:26.787-05:00  INFO 74180 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-05T01:04:26.821-05:00  INFO 74180 --- [           main] c.a.ci_smoke.CiSmokeApplicationTest      : Started CiSmokeApplicationTest in 2.514 seconds (process running for 3.096)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.066 s -- in com.appbuilder.ci_smoke.CiSmokeApplicationTest
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO]
+[INFO] --- jar:3.5.1:jar (default-jar) @ ci_smoke ---
+[INFO] Building jar: /private<temporary>/isolated/app/target/ci_smoke-0.0.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- spring-boot:4.1.1:repackage (repackage) @ ci_smoke ---
+[INFO] Replacing main artifact /private<temporary>/isolated/app/target/ci_smoke-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /private<temporary>/isolated/app/target/ci_smoke-0.0.1-SNAPSHOT.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.577 s
+[INFO] Finished at: 2026-10-05T01:04:27-05:00
+[INFO] ------------------------------------------------------------------------
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended

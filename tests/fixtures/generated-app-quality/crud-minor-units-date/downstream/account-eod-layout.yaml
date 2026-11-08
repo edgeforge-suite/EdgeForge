@@ -1,0 +1,14 @@
+encoding: ISO-8859-1
+fields:
+  - name: account_number
+    length: 12
+    required: true
+  - name: available_balance_minor
+    length: 14
+    required: true
+  - name: available_balance
+    length: 12
+    required: false
+  - name: opened_date
+    length: 10
+    required: true

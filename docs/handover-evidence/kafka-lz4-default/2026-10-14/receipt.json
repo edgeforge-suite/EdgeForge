@@ -1,0 +1,187 @@
+{
+  "approved_source_sha": "fe125b2d6c84aadacb2605f21d7bd146087afbab",
+  "broker_image": "apache/kafka:4.2.1",
+  "broker_image_id": "sha256:9916d60eca5d599550e2c320230808fda342124ba550bb4ac4ea8591803262a0",
+  "cases": [
+    {
+      "dockerfile_sha256": "e609dc094d27fad41ed3dda563663ad1063a8f4cd91650f0c399421c0af99b74",
+      "entrypoint": [
+        "java",
+        "-jar",
+        "/app/app.jar"
+      ],
+      "exit_code": 0,
+      "image_id": "sha256:e0f6805efc077d1cd6bdb4d249de1e3a658348474cc6a460b2e0b4f77637ed64",
+      "instrumented_sha256": "99aa1c0860be19e9e850e7d0ddfe919a195ab6a1e58fc7f7cb1a3457856a83ae",
+      "java": "17",
+      "observation": {
+        "arch": "amd64",
+        "classloader": "org.springframework.boot.loader.launch.LaunchedClassLoader",
+        "implementations": {
+          "checksum": "net.jpountz.xxhash.XXHash32JavaUnsafe",
+          "compressor": "net.jpountz.lz4.LZ4JavaSafeCompressor",
+          "kafka_checksum": "net.jpountz.xxhash.XXHash32JavaUnsafe",
+          "kafka_compression_level_source": "CompressionType.LZ4.defaultLevel()",
+          "kafka_compressor": "net.jpountz.lz4.LZ4JavaSafeCompressor",
+          "kafka_default_compression_level": 9,
+          "lz4_factory": "LZ4Factory:JavaSafe",
+          "native_loaded_after_observation": false,
+          "native_loaded_after_traffic": false,
+          "observation_scope": "post-roundtrip Kafka default stream; not in-flight producer internals",
+          "xxhash_factory": "XXHashFactory:JavaUnsafe"
+        },
+        "java": "17.0.18",
+        "java_command": "/app/app.jar",
+        "jvm_args": [],
+        "kafka_origin": "jar:nested:/app/app.jar/!BOOT-INF/lib/kafka-clients-4.2.1.jar!/",
+        "lz4_origin": "jar:nested:/app/app.jar/!BOOT-INF/lib/lz4-java-1.11.4.jar!/",
+        "observer": "proof-only additive component; production sources/config/POM/recipe unchanged",
+        "os": "Linux",
+        "roundtrip": {
+          "input": {
+            "accountId": "A1",
+            "amount": 12.34,
+            "paymentId": "default-lz4-2a708828-e3ad-4560-922c-c53f7fc15cd9"
+          },
+          "input_compression": "lz4",
+          "input_partition_key": "default-lz4-2a708828-e3ad-4560-922c-c53f7fc15cd9",
+          "input_position": {
+            "offset": 0,
+            "partition": 0,
+            "topic": "abc.payments.posted.v1"
+          },
+          "key": "default-lz4-2a708828-e3ad-4560-922c-c53f7fc15cd9",
+          "output": {
+            "accountRef": "A1",
+            "amountMinorUnits": 1234,
+            "channel": "KAFKA_HUB",
+            "entryId": "default-lz4-2a708828-e3ad-4560-922c-c53f7fc15cd9"
+          },
+          "output_compression": "unchanged generated default; not claimed as LZ4",
+          "output_partition_key": null,
+          "output_partition_key_strategy": "round_robin",
+          "output_position": {
+            "offset": 0,
+            "partition": 0,
+            "topic": "xyz.ledger.entries.v1"
+          }
+        },
+        "uid": 999,
+        "xxhash_origin": "jar:nested:/app/app.jar/!BOOT-INF/lib/lz4-java-1.11.4.jar!/"
+      },
+      "observer_path": "src/main/java/com/appbuilder/payment_mediation/proof/Lz4DefaultObserver.java",
+      "observer_sha256": "d52c0162dc7b0c5076671a56fc25f279410f4d77e1cf4998d9721b759699321c",
+      "platform": "linux/amd64",
+      "pom_sha256": "d646fdcc7666f792c0b70cbbcec2a78799bc7fce57d2a0509de8cffaab376b8f",
+      "process": [
+        "java",
+        "-jar",
+        "/app/app.jar"
+      ],
+      "production_sha256": "cb45ba2372e27cce3c29cbfd01c984cf0e2496e81d62408c5d04ed7298c9b711",
+      "production_unchanged": true,
+      "profile": "springboot-legacy-compatible",
+      "runtime_log": "runtime-j17.log.gz",
+      "user": "edgeforge"
+    },
+    {
+      "dockerfile_sha256": "e294ebb01cac72405123fdd8bbd186f9c9017ba176bf67897dad5267521fea06",
+      "entrypoint": [
+        "java",
+        "-jar",
+        "/app/app.jar"
+      ],
+      "exit_code": 0,
+      "image_id": "sha256:eab7ac963cacb94825f49bd285e37e6567db421e6e6d04e06583124f9bd55390",
+      "instrumented_sha256": "6b0f53a3899b8373e80ac9847654475325126bde15c8772e15b71dab4986cd33",
+      "java": "21",
+      "observation": {
+        "arch": "amd64",
+        "classloader": "org.springframework.boot.loader.launch.LaunchedClassLoader",
+        "implementations": {
+          "checksum": "net.jpountz.xxhash.XXHash32JavaUnsafe",
+          "compressor": "net.jpountz.lz4.LZ4JavaSafeCompressor",
+          "kafka_checksum": "net.jpountz.xxhash.XXHash32JavaUnsafe",
+          "kafka_compression_level_source": "CompressionType.LZ4.defaultLevel()",
+          "kafka_compressor": "net.jpountz.lz4.LZ4JavaSafeCompressor",
+          "kafka_default_compression_level": 9,
+          "lz4_factory": "LZ4Factory:JavaSafe",
+          "native_loaded_after_observation": false,
+          "native_loaded_after_traffic": false,
+          "observation_scope": "post-roundtrip Kafka default stream; not in-flight producer internals",
+          "xxhash_factory": "XXHashFactory:JavaUnsafe"
+        },
+        "java": "21.0.10",
+        "java_command": "/app/app.jar",
+        "jvm_args": [],
+        "kafka_origin": "jar:nested:/app/app.jar/!BOOT-INF/lib/kafka-clients-4.2.1.jar!/",
+        "lz4_origin": "jar:nested:/app/app.jar/!BOOT-INF/lib/lz4-java-1.11.4.jar!/",
+        "observer": "proof-only additive component; production sources/config/POM/recipe unchanged",
+        "os": "Linux",
+        "roundtrip": {
+          "input": {
+            "accountId": "A1",
+            "amount": 12.34,
+            "paymentId": "default-lz4-89e6e6bf-548e-4cc4-a31f-ac89e63ad6f9"
+          },
+          "input_compression": "lz4",
+          "input_partition_key": "default-lz4-89e6e6bf-548e-4cc4-a31f-ac89e63ad6f9",
+          "input_position": {
+            "offset": 1,
+            "partition": 0,
+            "topic": "abc.payments.posted.v1"
+          },
+          "key": "default-lz4-89e6e6bf-548e-4cc4-a31f-ac89e63ad6f9",
+          "output": {
+            "accountRef": "A1",
+            "amountMinorUnits": 1234,
+            "channel": "KAFKA_HUB",
+            "entryId": "default-lz4-89e6e6bf-548e-4cc4-a31f-ac89e63ad6f9"
+          },
+          "output_compression": "unchanged generated default; not claimed as LZ4",
+          "output_partition_key": null,
+          "output_partition_key_strategy": "round_robin",
+          "output_position": {
+            "offset": 1,
+            "partition": 0,
+            "topic": "xyz.ledger.entries.v1"
+          }
+        },
+        "uid": 999,
+        "xxhash_origin": "jar:nested:/app/app.jar/!BOOT-INF/lib/lz4-java-1.11.4.jar!/"
+      },
+      "observer_path": "src/main/java/com/appbuilder/payment_mediation/proof/Lz4DefaultObserver.java",
+      "observer_sha256": "d52c0162dc7b0c5076671a56fc25f279410f4d77e1cf4998d9721b759699321c",
+      "platform": "linux/amd64",
+      "pom_sha256": "f74cdfeb0922b6c28efd11d0f0e190184991ff8166f09bc690b174cd8886035e",
+      "process": [
+        "java",
+        "-jar",
+        "/app/app.jar"
+      ],
+      "production_sha256": "ef64dea3d10dda239300a286165559a1d95b90cf15324165d933106cda1b5ecf",
+      "production_unchanged": true,
+      "profile": "springboot-standard-enterprise",
+      "runtime_log": "runtime-j21.log.gz",
+      "user": "edgeforge"
+    }
+  ],
+  "complete": true,
+  "host_platform": {
+    "machine": "arm64",
+    "system": "Darwin"
+  },
+  "image_security_clearance": false,
+  "proof_source_hashes": {
+    "scripts/smoke/boot41_kafka_lz4_default_proof.py": "b3a592da938bde7e3d2bb5d66f77f3784fac2300ff57e780fb5d512dcb03e046",
+    "tests/fixtures/boot41-kafka/Lz4DefaultObserver.java": "215a42bbb183a937d0b0ca60a84ddcdb382da6ce19c62d880cf28faa22719b48"
+  },
+  "source_dirty": false,
+  "source_sha": "fe125b2d6c84aadacb2605f21d7bd146087afbab",
+  "status": "passed",
+  "tools": {
+    "docker_architecture": "aarch64",
+    "docker_client": "29.6.1",
+    "docker_server": "29.6.1"
+  }
+}

@@ -1,0 +1,12 @@
+interface: widget-api
+entity: Widget
+operations:
+  - name: createWidget
+    request_mappings:
+      - source: payloadKey
+        target: Widget.payloadKey
+    response_mappings:
+      - source: widgetId
+        target: Widget.widgetId
+      - source: payloadKey
+        target: Widget.payloadKey

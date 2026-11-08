@@ -1,0 +1,8 @@
+{
+  "borrowerId": "BRW-001",
+  "principalAmount": 25000.0,
+  "interestRate": 5.75,
+  "termMonths": 60,
+  "loanType": "PERSONAL",
+  "purpose": "Home improvement"
+}

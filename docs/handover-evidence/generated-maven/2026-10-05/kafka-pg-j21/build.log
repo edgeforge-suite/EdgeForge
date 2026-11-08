@@ -1,0 +1,38 @@
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------< com.appbuilder:payment-mediation-adapter >--------------
+[INFO] Building payment-mediation-adapter 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- clean:3.5.0:clean (default-clean) @ payment-mediation-adapter ---
+[INFO]
+[INFO] --- resources:3.5.0:resources (default-resources) @ payment-mediation-adapter ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO]
+[INFO] --- compiler:3.15.0:compile (default-compile) @ payment-mediation-adapter ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 14 source files with javac [debug parameters release 21] to target/classes
+[INFO]
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ payment-mediation-adapter ---
+[INFO] skip non existing resourceDirectory /private<temporary>/isolated/app/src/test/resources
+[INFO]
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ payment-mediation-adapter ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- surefire:3.5.6:test (default-test) @ payment-mediation-adapter ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- jar:3.5.1:jar (default-jar) @ payment-mediation-adapter ---
+[INFO] Building jar: /private<temporary>/isolated/app/target/payment-mediation-adapter-0.0.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- spring-boot:4.1.1:repackage (repackage) @ payment-mediation-adapter ---
+[INFO] Replacing main artifact /private<temporary>/isolated/app/target/payment-mediation-adapter-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /private<temporary>/isolated/app/target/payment-mediation-adapter-0.0.1-SNAPSHOT.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.688 s
+[INFO] Finished at: 2026-10-05T01:06:53-05:00
+[INFO] ------------------------------------------------------------------------

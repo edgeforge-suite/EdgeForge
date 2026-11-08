@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "entryId": {"type": "string"},
+    "accountRef": {"type": "string"},
+    "amountMinorUnits": {"type": "integer"},
+    "channel": {"type": "string"}
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "assessment_helpers_by_case": null,
+  "capacity_continuation": null,
+  "cases": 30,
+  "collector_sha": "cc7721682f21009c6ad918ad021631213ff327a1",
+  "composition": {
+    "assessment_execution": "40 original validated assessments plus 20 affected-only assessments; no completed scans or startups repeated",
+    "completion_semantics": "complete aggregate assessment coverage only; original campaigns did not complete; no clearance",
+    "inputs": {
+      "first": {
+        "receipt": "composition-inputs/first/campaign.json",
+        "sha256": "58eac8349d0fc888a5490e51b74b87b217fb8e5a2955580e940b509101d32194"
+      },
+      "remaining": {
+        "receipt": "composition-inputs/remaining/campaign.json",
+        "sha256": "352621e26f417119019a6f128d1abcd25e74494a73c430885251315102f842e3"
+      }
+    },
+    "kind": "cc772-public-tls-fixed-20-plus-10-v1"
+  },
+  "continuation": null,
+  "counting": "Scanner counts overlap; repeated case/stage observations are not unique vulnerabilities.",
+  "disposition": "OPEN",
+  "distinct_finding_records": 2186,
+  "ended_at_utc": "2026-10-17T20:02:32.919501Z",
+  "excluded": "Images, source/input tarballs, binaries, DB contents and raw logs remain private.",
+  "generator_sha": "cc7721682f21009c6ad918ad021631213ff327a1",
+  "generator_sha_semantics": "verified aggregate; original fragment outcomes remain unchanged",
+  "generator_shas": [
+    "cc7721682f21009c6ad918ad021631213ff327a1"
+  ],
+  "image_replay": "The completed reduced campaign retains three representative final exports; its other 57 exports were removed after validated scans. Any retained failed-campaign archives are separate; their availability is recorded in dated evidence. No general replay promise for historical evidence or removed completed-campaign exports.",
+  "kafka_continuation": null,
+  "match_observations_by_scanner": {
+    "grype": 38320,
+    "trivy": 26400
+  },
+  "release_acceptance": "not established",
+  "runtime_claim": "Health/nonroot startup and bounded read-only GET, not business certification.",
+  "runtime_helper_sha": "cc7721682f21009c6ad918ad021631213ff327a1",
+  "runtime_helper_shas": [
+    "cc7721682f21009c6ad918ad021631213ff327a1"
+  ],
+  "runtime_helpers_by_case": {
+    "crud-h2-j17": "cc7721682f21009c6ad918ad021631213ff327a1",
+    "kafka-router-h2-j17": "cc7721682f21009c6ad918ad021631213ff327a1",
+    "passthrough-pg-j21": "cc7721682f21009c6ad918ad021631213ff327a1"
+  },
+  "stage_observations": 60,
+  "started_at_utc": "2026-10-17T18:33:05.670848Z",
+  "status": "complete-with-findings",
+  "storage_continuation": null
+}

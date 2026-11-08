@@ -1,0 +1,9 @@
+transforms:
+  - source: investigationId
+    target: caseId
+  - source: clear
+    target: approved
+  - source: decisionCode
+    target: decision
+  - source: reviewLevel
+    target: reviewTier

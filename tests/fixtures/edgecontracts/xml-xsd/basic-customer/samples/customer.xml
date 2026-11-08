@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomerMessage xmlns="urn:edgeforge:examples:customer:v1" sourceSystem="CORE">
+  <customerId>C-100</customerId>
+  <balance>1250.00</balance>
+  <active>true</active>
+  <openedDate>2026-05-20</openedDate>
+  <status>ACTIVE</status>
+</CustomerMessage>

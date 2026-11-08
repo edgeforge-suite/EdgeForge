@@ -1,0 +1,253 @@
+{
+  "cases": [
+    {
+      "actual_clean_realm": {
+        "boundary": "separate clean/verify run; cache copies are not individually assigned to realms",
+        "debug_line": 2654,
+        "evidence": {
+          "archive_member": "cases/crud-h2-j17/proof/actual-realms.json",
+          "sha256": "4266466193b062ef5379231d21ac26fd83407daa1878a09006c66b83fe9da7bf"
+        },
+        "included_plexus": "4.0.3",
+        "key": "plugin>org.apache.maven.plugins:maven-clean-plugin:3.5.0"
+      },
+      "case": "crud-h2-j17",
+      "comparison": "current selected-copy evidence only; original October 20 OPEN dispositions unchanged",
+      "current_image_id": "sha256:d1a817c313ae90ba173f1e26ca77afceb077f204b61f14587d2dafa4426485b9",
+      "current_plexus_physical_copies": [
+        {
+          "bytes": 272101,
+          "embedded_versions": [
+            "3.6.1"
+          ],
+          "image_path": "/root/.m2/repository/org/codehaus/plexus/plexus-utils/3.6.1/plexus-utils-3.6.1.jar",
+          "physical_scope": "build-cache",
+          "sha256": "05a63effd67e2d6b9d610cc82e2bd7473289d34802e57a529b28110f28af5679"
+        },
+        {
+          "bytes": 193088,
+          "embedded_versions": [
+            "4.0.3"
+          ],
+          "image_path": "/root/.m2/repository/org/codehaus/plexus/plexus-utils/4.0.3/plexus-utils-4.0.3.jar",
+          "physical_scope": "build-cache",
+          "sha256": "421ff6ed146c53a9d4eaade8f629b52b12af7187101f1bd06c2c64e904019f3c"
+        },
+        {
+          "bytes": 272101,
+          "embedded_versions": [
+            "3.6.1"
+          ],
+          "image_path": "/usr/share/maven/lib/plexus-utils-3.6.1.jar",
+          "physical_scope": "maven-bootstrap",
+          "sha256": "05a63effd67e2d6b9d610cc82e2bd7473289d34802e57a529b28110f28af5679"
+        }
+      ],
+      "historical_4_0_2_copy_observed_in_current_inventory": false,
+      "historical_image": {
+        "config_sha256": "ed4628aa871222f3ee2866d7bb5768ddb4b353c6813cfd0e39b68931d96d6619",
+        "configuration_sha256": "c3e5499b2c0d4b4f663c7b59eed1342cb1d3fdfc292aa940810b2d5ff153046a",
+        "image_id": "sha256:ed4628aa871222f3ee2866d7bb5768ddb4b353c6813cfd0e39b68931d96d6619",
+        "jar_sha256": "2662b2c3b4f6d51d0b2fff7bc49cc0b8b0d297c3426c9e309ba5069dc2094e8d",
+        "platform": "linux/amd64"
+      },
+      "historical_target_rows": [
+        0,
+        603
+      ]
+    },
+    {
+      "actual_clean_realm": {
+        "boundary": "separate clean/verify run; cache copies are not individually assigned to realms",
+        "debug_line": 2676,
+        "evidence": {
+          "archive_member": "cases/crud-pg-j21/proof/actual-realms.json",
+          "sha256": "27037fd6619a7fdecf6a4b6a2f8a30c6cb52df6635cbda0f0f1e5804df52b56b"
+        },
+        "included_plexus": "4.0.3",
+        "key": "plugin>org.apache.maven.plugins:maven-clean-plugin:3.5.0"
+      },
+      "case": "crud-pg-j21",
+      "comparison": "current selected-copy evidence only; original October 20 OPEN dispositions unchanged",
+      "current_image_id": "sha256:c9baf59b1387988802074ced9ac5b02a5fa5f7dd8f3fbdd3347c464750ce6aad",
+      "current_plexus_physical_copies": [
+        {
+          "bytes": 272101,
+          "embedded_versions": [
+            "3.6.1"
+          ],
+          "image_path": "/root/.m2/repository/org/codehaus/plexus/plexus-utils/3.6.1/plexus-utils-3.6.1.jar",
+          "physical_scope": "build-cache",
+          "sha256": "05a63effd67e2d6b9d610cc82e2bd7473289d34802e57a529b28110f28af5679"
+        },
+        {
+          "bytes": 193088,
+          "embedded_versions": [
+            "4.0.3"
+          ],
+          "image_path": "/root/.m2/repository/org/codehaus/plexus/plexus-utils/4.0.3/plexus-utils-4.0.3.jar",
+          "physical_scope": "build-cache",
+          "sha256": "421ff6ed146c53a9d4eaade8f629b52b12af7187101f1bd06c2c64e904019f3c"
+        },
+        {
+          "bytes": 272101,
+          "embedded_versions": [
+            "3.6.1"
+          ],
+          "image_path": "/usr/share/maven/lib/plexus-utils-3.6.1.jar",
+          "physical_scope": "maven-bootstrap",
+          "sha256": "05a63effd67e2d6b9d610cc82e2bd7473289d34802e57a529b28110f28af5679"
+        }
+      ],
+      "historical_4_0_2_copy_observed_in_current_inventory": false,
+      "historical_image": {
+        "config_sha256": "0c3f0ad05654bbbbe4c1774d6155b01153fdf3200205b123492b253d1819ba0b",
+        "configuration_sha256": "016be8f6c15d6c2fa7be610562916fe57df3eb96981ea35d7f95076b7b0ee44a",
+        "image_id": "sha256:0c3f0ad05654bbbbe4c1774d6155b01153fdf3200205b123492b253d1819ba0b",
+        "jar_sha256": "e1d37752cdc3e0194116d591e05bb82ed38a5360720504f4c6dce609f07548a2",
+        "platform": "linux/amd64"
+      },
+      "historical_target_rows": [
+        0,
+        603
+      ]
+    },
+    {
+      "actual_clean_realm": {
+        "boundary": "separate clean/verify run; cache copies are not individually assigned to realms",
+        "debug_line": 2769,
+        "evidence": {
+          "archive_member": "cases/kafka-pg-j17/proof/actual-realms.json",
+          "sha256": "b2d5af7f37bf1e2ed2e26d7082cc19c4a0142e61eb84691ac6f68a0a6cde3d83"
+        },
+        "included_plexus": "4.0.3",
+        "key": "plugin>org.apache.maven.plugins:maven-clean-plugin:3.5.0"
+      },
+      "case": "kafka-pg-j17",
+      "comparison": "current selected-copy evidence only; original October 20 OPEN dispositions unchanged",
+      "current_image_id": "sha256:f511bbe4572a46b41f68902e6b5d5d1904f6171d42aab604cb66f77b1ae3f567",
+      "current_plexus_physical_copies": [
+        {
+          "bytes": 272101,
+          "embedded_versions": [
+            "3.6.1"
+          ],
+          "image_path": "/root/.m2/repository/org/codehaus/plexus/plexus-utils/3.6.1/plexus-utils-3.6.1.jar",
+          "physical_scope": "build-cache",
+          "sha256": "05a63effd67e2d6b9d610cc82e2bd7473289d34802e57a529b28110f28af5679"
+        },
+        {
+          "bytes": 193088,
+          "embedded_versions": [
+            "4.0.3"
+          ],
+          "image_path": "/root/.m2/repository/org/codehaus/plexus/plexus-utils/4.0.3/plexus-utils-4.0.3.jar",
+          "physical_scope": "build-cache",
+          "sha256": "421ff6ed146c53a9d4eaade8f629b52b12af7187101f1bd06c2c64e904019f3c"
+        },
+        {
+          "bytes": 272101,
+          "embedded_versions": [
+            "3.6.1"
+          ],
+          "image_path": "/usr/share/maven/lib/plexus-utils-3.6.1.jar",
+          "physical_scope": "maven-bootstrap",
+          "sha256": "05a63effd67e2d6b9d610cc82e2bd7473289d34802e57a529b28110f28af5679"
+        }
+      ],
+      "historical_4_0_2_copy_observed_in_current_inventory": false,
+      "historical_image": {
+        "config_sha256": "8c88c0fd0f63db28021938edcb77a43bc01b334022dcb9f8349020ad17f359cd",
+        "configuration_sha256": "c3e5499b2c0d4b4f663c7b59eed1342cb1d3fdfc292aa940810b2d5ff153046a",
+        "image_id": "sha256:8c88c0fd0f63db28021938edcb77a43bc01b334022dcb9f8349020ad17f359cd",
+        "jar_sha256": "cea1265f1145c3801d79059d3b7e495a94ca758a00d5385000b1f4bf54a895b6",
+        "platform": "linux/amd64"
+      },
+      "historical_target_rows": [
+        0,
+        603
+      ]
+    },
+    {
+      "actual_clean_realm": {
+        "boundary": "separate clean/verify run; cache copies are not individually assigned to realms",
+        "debug_line": 2769,
+        "evidence": {
+          "archive_member": "cases/kafka-pg-j21/proof/actual-realms.json",
+          "sha256": "3b80f2f38f1b8e7049bce9eddd1f1ea81cf6fbc8965be1c9f9a2d54c759a80cd"
+        },
+        "included_plexus": "4.0.3",
+        "key": "plugin>org.apache.maven.plugins:maven-clean-plugin:3.5.0"
+      },
+      "case": "kafka-pg-j21",
+      "comparison": "current selected-copy evidence only; original October 20 OPEN dispositions unchanged",
+      "current_image_id": "sha256:46c765968d7d8e09004711daf25d48dc9ff9ee6d95ffdf9f99d7d956ab635634",
+      "current_plexus_physical_copies": [
+        {
+          "bytes": 272101,
+          "embedded_versions": [
+            "3.6.1"
+          ],
+          "image_path": "/root/.m2/repository/org/codehaus/plexus/plexus-utils/3.6.1/plexus-utils-3.6.1.jar",
+          "physical_scope": "build-cache",
+          "sha256": "05a63effd67e2d6b9d610cc82e2bd7473289d34802e57a529b28110f28af5679"
+        },
+        {
+          "bytes": 193088,
+          "embedded_versions": [
+            "4.0.3"
+          ],
+          "image_path": "/root/.m2/repository/org/codehaus/plexus/plexus-utils/4.0.3/plexus-utils-4.0.3.jar",
+          "physical_scope": "build-cache",
+          "sha256": "421ff6ed146c53a9d4eaade8f629b52b12af7187101f1bd06c2c64e904019f3c"
+        },
+        {
+          "bytes": 272101,
+          "embedded_versions": [
+            "3.6.1"
+          ],
+          "image_path": "/usr/share/maven/lib/plexus-utils-3.6.1.jar",
+          "physical_scope": "maven-bootstrap",
+          "sha256": "05a63effd67e2d6b9d610cc82e2bd7473289d34802e57a529b28110f28af5679"
+        }
+      ],
+      "historical_4_0_2_copy_observed_in_current_inventory": false,
+      "historical_image": {
+        "config_sha256": "d79f9de47019bd1b888c34533f96dad1af56aade93f17520103b5fedeb26190b",
+        "configuration_sha256": "016be8f6c15d6c2fa7be610562916fe57df3eb96981ea35d7f95076b7b0ee44a",
+        "image_id": "sha256:d79f9de47019bd1b888c34533f96dad1af56aade93f17520103b5fedeb26190b",
+        "jar_sha256": "cbf04c9ff1cad56ae3737ad78b77fad1970533d26ae1858d3a2a6203f46d88b9",
+        "platform": "linux/amd64"
+      },
+      "historical_target_rows": [
+        0,
+        603
+      ]
+    }
+  ],
+  "historical_dispositions_changed": false,
+  "historical_scanner_identities": [
+    {
+      "id": "GHSA-6fmv-xxpf-w3cw",
+      "ledger_index": 0,
+      "name": "plexus-utils",
+      "observations": 30,
+      "original_disposition_unchanged": "OPEN; applicability and risk acceptance not established",
+      "scanner": "grype",
+      "scanner_fix_claim": [
+        "4.0.3"
+      ],
+      "version": "4.0.2"
+    },
+    {
+      "id": "CVE-2025-67030",
+      "ledger_index": 603,
+      "name": "org.codehaus.plexus:plexus-utils",
+      "observations": 30,
+      "original_disposition_unchanged": "OPEN; applicability and risk acceptance not established",
+      "scanner": "trivy",
+      "scanner_fix_claim": "4.0.3, 3.6.1",
+      "version": "4.0.2"
+    }
+  ]
+}

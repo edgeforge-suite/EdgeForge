@@ -1,0 +1,7 @@
+table: job_explorer_staging
+entity: JobExplorer
+field_mappings:
+  - source: JobExplorer.widgetId
+    target: widget_id
+  - source: JobExplorer.payloadKey
+    target: payload_key

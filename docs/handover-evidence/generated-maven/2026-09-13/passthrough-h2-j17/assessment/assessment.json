@@ -1,0 +1,89 @@
+{
+  "advisory_database_snapshot": "not supplied",
+  "advisory_service": "https://api.osv.dev",
+  "affected_packages": 17,
+  "assessment_time_utc": "2026-09-13T22:51:48.709654+00:00",
+  "exit_code": 1,
+  "findings": 73,
+  "inventory_coverage": "complete",
+  "inventory_sha256": "8790e38ee96c8b2479102b8c67d6fc718aa5a93ab83eee59108947aa6f54c614",
+  "maven_warnings": [
+    "[WARNING] Unknown keyword meta:enum - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword",
+    "[WARNING] Unknown keyword deprecated - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword"
+  ],
+  "pom_sha256": "13b0fc385b7a70051839dcb390db53042aca1a51a08110d50facf2530cdab73a",
+  "provenance": {
+    "archetype": "passthrough-router",
+    "engine_sha": "582c853f2566ac5cdf45ad239c1827a5aa47f12e",
+    "generation_input": {
+      "app_archetype": "passthrough-router",
+      "app_name": "CountryRouter",
+      "bounded_context": "payments",
+      "downstream_interfaces": [
+        {
+          "name": "app-a-api",
+          "spec": "downstream/app-a-openapi.yaml",
+          "system": "APP_A",
+          "type": "rest-json"
+        },
+        {
+          "name": "app-b-api",
+          "spec": "downstream/app-b-openapi.yaml",
+          "system": "APP_B",
+          "type": "rest-json"
+        },
+        {
+          "name": "app-c-api",
+          "spec": "downstream/app-c-openapi.yaml",
+          "system": "APP_C",
+          "type": "rest-json"
+        }
+      ],
+      "rules": [
+        "rules/payment-routing.yaml"
+      ],
+      "schema_version": "2.0",
+      "target_profile": "springboot-legacy-compatible",
+      "upstream_interfaces": [
+        {
+          "name": "inbound-payments-api",
+          "spec": "upstream/payments-openapi.yaml",
+          "type": "rest-json"
+        }
+      ]
+    },
+    "generation_run_id": "maven-assessment-passthrough-h2-j17",
+    "input_manifest": "examples/input-projects/country-router/app-definition.yaml",
+    "input_package_sha256": "eff7d02f54a734b7786d90c0c43800ad632cd1005f76d28073f27d732268d4ac",
+    "target_profile": "springboot-legacy-compatible"
+  },
+  "release_acceptance": "not established",
+  "resolved_artifacts": 75,
+  "scanned_maven_packages": 75,
+  "scanner_exit_code": 1,
+  "scopes": [
+    "compile",
+    "provided",
+    "runtime",
+    "system",
+    "test"
+  ],
+  "source_after_sha256": "adaf7048765df48964e77ffa1b82a6723b380ac19be98bbc2148d7780df842c3",
+  "source_before_sha256": "adaf7048765df48964e77ffa1b82a6723b380ac19be98bbc2148d7780df842c3",
+  "source_unchanged": true,
+  "status": "complete",
+  "tools": {
+    "cyclonedx_maven_plugin": "2.9.1",
+    "java": "17.0.18",
+    "java_vendor": "Homebrew",
+    "maven": "3.9.12",
+    "maven_dependency_plugin": "3.8.1",
+    "scanner": [
+      "osv-scanner version: 2.3.8",
+      "osv-scalibr version: 0.4.5",
+      "commit: 408fcd6f8707999a29e7ba45e15809764cf24f67",
+      "built at: 2026-05-08T04:54:35Z"
+    ],
+    "scanner_sha256": "a8cd6507b06239f463a7642430cfd2d154882f150f6e30cdc0653e28dfc34216"
+  }
+}

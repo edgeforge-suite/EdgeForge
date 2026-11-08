@@ -1,0 +1,74 @@
+[
+  {
+    "path": "BatchPreviewRuntimeTest.java",
+    "sha256": "3b0140218b45cc2186a63926f4ec90163f45b0cc733b8079dfd53f2f9e47f7a6"
+  },
+  {
+    "path": "M5aHistoryIntegrityTest.java",
+    "sha256": "be213adbc5c6b11d87b95dd13699ab3695c1d3787b17f9480e18af4883f47893"
+  },
+  {
+    "path": "OrdinaryStagingRuntimeTest.java",
+    "sha256": "5b21f99b8aa80eff8a4e71f0e6f3789b5f3b3f03f5a4e987f084ba4f53f3053e"
+  },
+  {
+    "path": "ReadBatchContext.java",
+    "sha256": "265b254478cec910acdffff1d96f2fdac9e0f98186d2cf079f80597c21d654c5"
+  },
+  {
+    "path": "job-explorer-staging-mapping.yaml",
+    "sha256": "dedf5dd4f22fc1cad112dda6019c1e0d4ecebf8f6f3257951b8a25b858fe3c76"
+  },
+  {
+    "path": "job-explorer-staging.sql",
+    "sha256": "9bc2528faac30e2bb9e737963f6e88734b876832ae9bc45493f7dbf15fea2d0e"
+  },
+  {
+    "path": "job-launcher-api-mapping.yaml",
+    "sha256": "1f92326626a27ada501a4a9a3f763df9e2f8823f2e12df4f5b332b89a69d4eee"
+  },
+  {
+    "path": "job-launcher-staging-mapping.yaml",
+    "sha256": "fb230d9aa09244809af3aeea695080dbd543f0fa5bea8d6d09b1846adf339ca5"
+  },
+  {
+    "path": "job-launcher-staging.sql",
+    "sha256": "6fad07bc3084b390a9753e8705a8799ca286c6bef36a4b063d1547e12e0d4116"
+  },
+  {
+    "path": "names-m5a-app-definition.yaml",
+    "sha256": "6436bfd282cb0ce01515cfaaf9058bc637dab3babc01347b241c504d1380614a"
+  },
+  {
+    "path": "names-ordinary-app-definition.yaml",
+    "sha256": "c983c564bb9441cfc97179225a616ef2b18f757db958cc0e57039c3eb0f6f050"
+  },
+  {
+    "path": "ordinary-app-definition.yaml",
+    "sha256": "ded63b3cade277e10a8e462aaa3c670199cf0374619ead6c6d4116544025602e"
+  },
+  {
+    "path": "widget-api-mapping.yaml",
+    "sha256": "ad21485470b7f9024e0e761adfd3606fabf7e745085b0db85d7c0f3b7f59f218"
+  },
+  {
+    "path": "widget-api.json",
+    "sha256": "3279663d38ff517f9af3d6327c6e718cb28ed1a2d3e6d8ad3a0defe48e9d064d"
+  },
+  {
+    "path": "widget-request.json",
+    "sha256": "e5db7b4822996dbe4fe8a1b85a1100d80981a5b5ee68b213efcda87772fc7d58"
+  },
+  {
+    "path": "widget-response.json",
+    "sha256": "4a6318bb176df5e22dacf9d52532c27bdf9130fd83e5bfac67fe0c3b32c570c0"
+  },
+  {
+    "path": "widget-staging-mapping.yaml",
+    "sha256": "bbe0afcbd7c85a4abae070143323f9cfcccd9ea164e2167831f92ad5213cace6"
+  },
+  {
+    "path": "widget-staging.sql",
+    "sha256": "4ae434b13bf617af35e9e00892cacda3a93c21f04abd5b022a33d55ae50fc342"
+  }
+]

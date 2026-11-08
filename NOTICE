@@ -1,0 +1,15 @@
+EdgeForge Engine
+Copyright 2026 Santosh Hommaradi
+
+EdgeForge is licensed under the Apache License, Version 2.0.
+Third-party components and incorporated material retain their applicable terms.
+See docs/third-party-attribution.md for retained evidence source attribution.
+
+The Open Banking Payment Initiation API specification v4.0.1 is third-party
+material, Copyright 2023 Open Banking Limited, under its MIT Open Licence.
+See examples/input-projects/obie-wire-transfer/contracts/OPEN-BANKING-NOTICE.txt
+for the complete notice and EdgeForge modification disclosure.
+
+EdgeForge claims no ownership of your generated applications; Apache-2.0 covers
+EdgeForge itself, while third-party components and any incorporated licensed
+material retain their applicable terms.
