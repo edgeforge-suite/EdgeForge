@@ -155,7 +155,7 @@ Before cutting a coordinated Engine release tag:
    The following is a future operator template, not a preparation command:
 
    ```bash
-   git tag -a vX.Y.Z -m "EdgeForge vX.Y.Z — <summary>"
+   git tag -a vX.Y.Z <tested-source-sha> -m "EdgeForge vX.Y.Z — <summary>"
    git push origin vX.Y.Z
    ```
 
