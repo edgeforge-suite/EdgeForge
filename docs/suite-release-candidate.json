@@ -12,7 +12,7 @@
     },
     "studio": {
       "repository": "edgeforge-suite/EdgeForgeStudio",
-      "sha": "b412050531f18813354df0406e41d4fed0ce9f86"
+      "sha": "c224af844bcc6a5dbfc347d3bfe520ec54f2fbae"
     },
     "ks": {
       "repository": "edgeforge-suite/EdgeForgeKnowledgeServer",

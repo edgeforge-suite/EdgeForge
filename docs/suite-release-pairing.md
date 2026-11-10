@@ -30,12 +30,19 @@ keeps `acceptance_status` set to `pending`. It selects manifest schema `2.0` and
 | Role | Repository | Selected commit |
 |---|---|---|
 | Engine | `edgeforge-suite/EdgeForge` | `c52dd93b5c33b74f6ead06e15490415740874716` |
-| Studio | `edgeforge-suite/EdgeForgeStudio` | `b412050531f18813354df0406e41d4fed0ce9f86` |
+| Studio | `edgeforge-suite/EdgeForgeStudio` | `c224af844bcc6a5dbfc347d3bfe520ec54f2fbae` |
 | KS | `edgeforge-suite/EdgeForgeKnowledgeServer` | `6fb5be6efd82e93ca735595e9e7b37dfb5f36418` |
 
 The record contains no branch names, version ranges, credentials, or checkout paths.
-The pins identify the tested PR #1 merge commits. The PR #2 documentation
-successors remain separate from this selection. The canonical
+Engine and KS retain their tested PR #1 merge sources. Studio is explicitly
+reselected at its reviewed shared-fixture correction, based on the previously
+reviewed PR #2 contributor documentation. The initial candidate commit
+`0ea1df6c0c720e9473a049e8d98188bda48edc40` retains the earlier Studio selection
+`b412050531f18813354df0406e41d4fed0ce9f86`. This successor selection preserves that
+history. The Studio delta adds a required request-body declaration to the
+synthetic live-handoff fixture and includes the contributor documents.
+Application code, dependencies, image recipe and newcomer inputs match the
+original selected Studio source. The canonical
 [release sequence](v5-release-readiness.md#replacement-cutover-and-release-sequence)
 defines the acceptance and public-launch gates.
 
