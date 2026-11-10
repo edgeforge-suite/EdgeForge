@@ -8,15 +8,17 @@ See [publication preparation](public-content-preparation.md) for current proof.
 ## 1. Prerequisites
 
 Use Python 3.11+, JDK 17 and Maven 3.9+. The example targets Java 17/H2.
-`make setup` downloads Python packages; Maven may download from Central. An
+The constrained setup below downloads Python packages; Maven may download from Central. An
 offline build requires an already populated compatible cache. Do not call a
 package-only or skipped-test build executed-test proof.
 
 ```bash
-python3 --version
+python3.11 --version
 java -version
 mvn -version
-make setup
+python3.11 -m venv --copies .venv
+.venv/bin/python -m pip install -c requirements-lock.txt -r requirements.txt
+.venv/bin/python -m pip check
 ```
 
 ## 2. Generate

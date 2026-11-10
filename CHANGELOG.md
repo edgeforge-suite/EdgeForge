@@ -6,8 +6,9 @@ the repo tags **suite baselines** ([SemVer](https://semver.org/)). This is the
 **Engine-local** changelog; Studio, Knowledge Server / Assist, and TestBench keep
 their own.
 
-> **Honest scope.** The manifest stays **additive / backward-compatible**
-> (`schema_version: "1.0"` unchanged; new concepts are optional extensions).
+> **Honest scope.** The current manifest dialect is `schema_version: "2.0"`;
+> new concepts are optional, backward-compatible extensions within that dialect.
+> Historical entries retain their then-current schema and evidence scope.
 > Edge-contract **v1 is closed and proven** per the
 > [readiness matrix](docs/edgecontracts/edge-contract-handoff-readiness-matrix.md);
 > **SOAP is bounded** (`read_by_id` / `invoke_by_id`) and broader SOAP operations
@@ -17,6 +18,16 @@ their own.
 > are **not** resolved here.
 
 ## [Unreleased]
+
+## [5.0.0] — source preparation; acceptance and publication pending
+
+This section collects the v5 source changes for review. No release date, tag,
+successful coordinated acceptance or publication is asserted.
+
+- Set the Engine package/runtime version to 5.0.0 in the completed private
+  `edgeforge-suite/EdgeForge` import. Align constrained local setup and the later
+  source-selection, pairing and acceptance sequence; preserve the pending
+  candidate descriptor, historical baseline and public-launch gates.
 
 - Clarify independent community maintenance and optional self-managed enterprise
   adoption; use neutral publication-authorization wording in preparation
