@@ -558,11 +558,25 @@ def _copy_fixture_with_target_profile(
 
 
 def _run_flyway_migrate(package_dir: Path) -> None:
+    resolved = _run(
+        [
+            "mvn",
+            "-q",
+            "-Dstyle.color=never",
+            "org.apache.maven.plugins:maven-help-plugin:3.5.2:evaluate",
+            "-Dexpression=flyway.version",
+            "-DforceStdout",
+        ],
+        cwd=package_dir,
+    )
+    version = re.sub(r"\x1b\[[0-9;]*m", "", resolved.stdout).strip()
+    if not re.fullmatch(r"[0-9]+(?:\.[0-9A-Za-z_-]+)+", version):
+        raise AssertionError("Generated application's Flyway version could not be resolved")
     _run(
         [
             "mvn",
             "-q",
-            "org.flywaydb:flyway-maven-plugin:10.20.1:migrate",
+            f"org.flywaydb:flyway-maven-plugin:{version}:migrate",
             f"-Dflyway.url=jdbc:postgresql://127.0.0.1:{POSTGRES_PORT}/{POSTGRES_DB}",
             f"-Dflyway.user={POSTGRES_USER}",
             f"-Dflyway.password={POSTGRES_PASSWORD}",

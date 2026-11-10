@@ -6,6 +6,7 @@ on:
     paths:
       - ".github/workflows/generated-app-compile.yml"
       - "scripts/smoke/generated_app_independence.py"
+      - "scripts/smoke/engine_l1_l3_smoke.py"
       - "scripts/smoke/boot41_preview_proof.py"
       - "scripts/smoke/boot41_batch*.py"
       - "scripts/smoke/boot41_kafka*.py"
@@ -40,6 +41,7 @@ on:
     paths:
       - ".github/workflows/generated-app-compile.yml"
       - "scripts/smoke/generated_app_independence.py"
+      - "scripts/smoke/engine_l1_l3_smoke.py"
       - "scripts/smoke/boot41_preview_proof.py"
       - "scripts/smoke/boot41_batch*.py"
       - "scripts/smoke/boot41_kafka*.py"
