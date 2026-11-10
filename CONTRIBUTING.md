@@ -47,9 +47,11 @@ The builder should:
 - do not merge directly to `main`
 - all changes should go through pull requests
 - expect parallel review branches from multiple AI agents
-- keep examples synthetic and exclude customer/private organization material;
-  public upstream references, dependency names and source-specific attribution
-  are permitted when needed for accurate documentation and supported samples
+- keep examples synthetic and exclude secrets and private employer/customer
+  material. Necessary public dependency names, upstream references and attribution
+  are permitted for accurate documentation and supported examples. Preserve the
+  applicable source/distribution permissions, notices and modification disclosures;
+  public attribution does not authorize private material.
 - treat `.claude/session-notes.md` as Claude-local continuity context; do not commit it and do not edit it unless explicitly asked
 - adopter-defined review automation should be configured through `CODEOWNERS`,
   branch protection, and required checks; this repo does not carry a
@@ -79,6 +81,34 @@ Recommended PR title prefixes:
 - `[DOCS]`
 - `[CHORE]`
 - `[GENERATED]`
+
+## PR lifecycle and ownership
+
+GitHub Issues are authoritative for task ownership and progress. The Engine-owned
+Suite roadmap sets direction; the tracker is a dated documentation view, not an
+assignment board. A Project board is optional and does not replace issue ownership.
+
+1. Before substantial work, comment on the owning issue with the proposed scope
+   and obtain maintainer confirmation of ownership.
+2. Open a focused draft PR linked to that issue. Explain the problem, resulting
+   change, relevant validation and compatibility risks.
+3. Mark the PR ready when implementation and relevant checks are complete.
+   **Ready for review does not mean approved.**
+4. Record review findings and their resolution in the PR. Identify the reviewed
+   revision and review subsequent changes; an earlier approval does not
+   automatically cover a new revision.
+5. Maintainers retain merge control. Before merging, confirm applicable checks
+   passed, required findings are resolved and the latest changes have been reviewed.
+6. After merging, check applicable main-branch results and update the linked issue
+   with the outcome; close it only when its work is complete. Delete completed
+   branches only when they are no longer needed.
+
+Recorded Claude/Codex review reports are review evidence, not formal GitHub
+approvals. Identify the actual reviewer and reviewed revision. When the maintainer
+also authored the PR, record their merge decision as a maintainer decision, not an
+independent human approval. Preserve the existing independent-review approach and
+any task-specific repair/re-review limits; this process adds no universal second
+review, new release gate or reset of an existing allowance.
 
 ## Generated Application Rules
 
