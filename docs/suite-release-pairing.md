@@ -2,11 +2,10 @@
 
 This document defines the bounded release-pairing foundation for the three core EdgeForge Suite
 repositories. The sole candidate-selection descriptor is
-[`suite-release-candidate.json`](suite-release-candidate.json). It currently preserves
-the pre-cutover snapshot below; it does not select the new private repositories'
-v5 release sources, recommend installation or establish integration, security or
-release acceptance. The approved private import is complete. Release preparation
-does not change this descriptor or the historical baseline.
+[`suite-release-candidate.json`](suite-release-candidate.json). It records the frozen v5
+sources selected after the three release-preparation PRs merged. Acceptance
+results are recorded separately. The historical baseline retains its original
+scope.
 
 ## Candidate, Run, Evidence, and Release
 
@@ -25,25 +24,25 @@ promoted by this foundation.
 
 ## Active Selection
 
-The preserved pre-cutover preparation snapshot has candidate ID `public-v5-preparation`, targets `v5.0.0`, and
+The active selection has candidate ID `public-v5-preparation`, targets `v5.0.0`, and
 keeps `acceptance_status` set to `pending`. It selects manifest schema `2.0` and these exact commits:
 
 | Role | Repository | Selected commit |
 |---|---|---|
-| Engine | `santosh-sh/EdgeForge` | `e39d415c3f3401247894ca38b7961db769fe637b` |
-| Studio | `santosh-sh/EdgeForgeStudio` | `d23d99f480e242291750724d192875e53b37e85f` |
-| KS | `santosh-sh/EdgeForgeKnowledgeServer` | `51bbff05f36c85c65a37694006e46e8eb3c21bf9` |
+| Engine | `edgeforge-suite/EdgeForge` | `c52dd93b5c33b74f6ead06e15490415740874716` |
+| Studio | `edgeforge-suite/EdgeForgeStudio` | `b412050531f18813354df0406e41d4fed0ce9f86` |
+| KS | `edgeforge-suite/EdgeForgeKnowledgeServer` | `6fb5be6efd82e93ca735595e9e7b37dfb5f36418` |
 
 The record contains no branch names, version ranges, credentials, or checkout paths.
-Its pins and pending status are historical preparation state, not a current
-dependency-remediation assessment or a release decision. The canonical
+The pins identify the tested PR #1 merge commits. The PR #2 documentation
+successors remain separate from this selection. The canonical
 [release sequence](v5-release-readiness.md#replacement-cutover-and-release-sequence)
-defines the remaining selection, acceptance and public-launch gates.
+defines the acceptance and public-launch gates.
 
 ## Preflight Usage
 
-After separately authorized new-source selection is recorded at P, prepare three
-separate clean worktrees at E/S/K, then run from the recorded P tool checkout:
+Prepare three separate clean checkouts at the selected E/S/K and run the
+verifier from a clean checkout of the committed candidate record P:
 
 ```bash
 python scripts/verify_suite_pairing.py \
@@ -94,7 +93,7 @@ tested new Engine/Studio/KS source commits E/S/K. Engine E must carry the
 no manual trigger. Capture actual generated compile/standalone results at E
 or a verified identical tested merge tree, never another docs-only head.
 
-Commit candidate P later with the full E/S/K hashes and acceptance pending.
+Candidate record P names the full E/S/K hashes and keeps acceptance pending.
 Execute one coordinated acceptance on those clean sources, then record actual
 outcomes at R and obtain independent final release review. Pairing/evidence
 commits P/R are not the product commits exercised by L5. Run L5 from E, with
@@ -111,16 +110,13 @@ Mixed cohorts, wrong role/name/host, incomplete SHAs and dirty checkouts fail.
 An archive descriptor never verifies a fresh-import checkout merely because
 its files match; remote identity and full commit must match too.
 
-The existing descriptor remains unchanged and pending. Only separately
-authorized release selection can replace it with actual new-repository SHAs.
-The accepted-release decision is a separate record, not a new descriptor
-status. The eventual Release body or later record identifies P/R by full SHA;
+The descriptor uses `status: candidate` and `acceptance_status: pending`.
+Record the acceptance decision separately using the existing evidence convention. The eventual Release body or later record identifies P/R by full SHA;
 R cannot identify itself. The candidate descriptor embedded in release source
 or an eventual tag may predate final selection. After separately authorized
 publication, the v5.0.0 Release record will name accepted E/S/K, P/R, validation
-and limitations; that record and its URL do not yet exist. No current README
-may present a future record as published. This preparation does not authorize
-pin refresh, acceptance, tags or publication.
+and limitations; that record and its URL do not yet exist. Refer to the release record only after publication is separately authorized
+and completed.
 
 ## Updating the Selection
 

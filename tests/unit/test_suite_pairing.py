@@ -63,12 +63,14 @@ def _new_repo(root: Path, role: str) -> tuple[Path, str]:
 
 def _candidate_document(shas: dict[str, str] | None = None) -> dict[str, object]:
     document = json.loads(CANDIDATE_PATH.read_text(encoding="utf-8"))
-    if shas is not None:
-        repos = document["repos"]
-        assert isinstance(repos, dict)
-        for role in pairing.ROLE_ORDER:
-            entry = repos[role]
-            assert isinstance(entry, dict)
+    repos = document["repos"]
+    assert isinstance(repos, dict)
+    for role in pairing.ROLE_ORDER:
+        entry = repos[role]
+        assert isinstance(entry, dict)
+        # Synthetic fixtures use archive remotes regardless of the active selection.
+        entry["repository"] = pairing.EXPECTED_REPOSITORIES[role]
+        if shas is not None:
             entry["sha"] = shas[role]
     return document
 
