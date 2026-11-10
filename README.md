@@ -54,12 +54,14 @@ Key entry points behind that index: the
 
 ## Suite status
 
-**v5 source preparation:** [approved release scope and cutover](docs/v5-release-readiness.md)
+**v5.0.0 source preparation:** [approved release scope and cutover](docs/v5-release-readiness.md)
 select source repositories and tags under Apache-2.0, not official binaries/images
 or production certification. Maintainer publication authorization
-and verified reporting routes remain public-exposure gates. Preparation stays private.
-Future active destination: [edgeforge-suite/EdgeForge](https://github.com/edgeforge-suite/EdgeForge);
-the historical baseline below is not v5 acceptance. Docker recipes support
+and verified reporting routes remain public-exposure gates. This is the private
+v5 release-preparation repository under
+[edgeforge-suite/EdgeForge](https://github.com/edgeforge-suite/EdgeForge).
+The private import is complete; public launch remains gated. The historical
+baseline below is not v5 acceptance. Docker recipes support
 self-managed builds, not official published images or a maintainer-operated service.
 
 EdgeForge claims no ownership of your generated applications; Apache-2.0 covers EdgeForge itself, while third-party components and any incorporated licensed material retain their applicable terms.
@@ -67,9 +69,11 @@ EdgeForge claims no ownership of your generated applications; Apache-2.0 covers 
 References to pre-v5 commits, pull requests, issues and workflow runs point to the private development archive and may be inaccessible to public readers.
 
 See [NOTICE](NOTICE), [third-party attribution](docs/third-party-attribution.md)
-and [SECURITY](SECURITY.md). New-repository release commits and their eventual
-Release body will identify the accepted selection and later evidence records;
-the descriptor embedded in an older tag is not the accepted v5 pairing.
+and [SECURITY](SECURITY.md). The candidate descriptor embedded in release source
+or an eventual tag may predate final selection. After acceptance and separately
+authorized publication, the v5.0.0 Release record will identify the accepted
+Engine/Studio/KS revisions, validation and limitations. That record does not yet
+exist; no embedded historical descriptor establishes the accepted v5 pairing.
 The [three documented import exclusions](docs/v5-release-readiness.md#public-import-exclusions-and-historical-replay)
 retain their originals privately. Public readers cannot fully replay that
 historical Maven/vendor assessment from the public repository alone; normal
@@ -87,9 +91,9 @@ Ordinary generation and contributions do not require the release-evidence
 campaign. Maintainers replaying or retaining assessment evidence should use the
 [tool map and workflow boundaries](docs/handover-evidence/generated-image-maintainer-tools.md).
 
-EdgeForge is on the **`v4.1.0` suite baseline** (Engine + Studio `v4.1.0`, KS `v4.0.0` — the
+The **historical `v4.1.0` suite baseline** (Engine + Studio `v4.1.0`, KS `v4.0.0` — the
 feature-flagged regen-preview UX increment on the `v4.0.0` enterprise-readiness MVP / handoff
-baseline). The Engine handover-evidence pack and reviewer front-door are in place, and the baseline
+baseline) has its Engine handover-evidence pack and reviewer front-door in place. That baseline
 is **proven GREEN by the hermetic
 L5 acceptance gate** (cross-repo runtime + multi-session isolation + regenerate/maintain
 data-integrity), so the available evidence is ready for adopter review. The Engine-owned
@@ -115,11 +119,11 @@ would re-stale).
 - **Plan & what's in flight** → the
   [enterprise-readiness roadmap](docs/enterprise-readiness-roadmap.md) (suite-level
   master tracker); the full doc set is indexed in [`docs/README.md`](docs/README.md).
-- **Release history** → [`CHANGELOG.md`](CHANGELOG.md) — current through **`[4.1.1]`**
-  (the A6 generated-app credential fallback hardening hotfix; `[1.0.0]` through `[4.1.1]` all recorded).
+- **Release history** → [`CHANGELOG.md`](CHANGELOG.md) — **`[5.0.0]` source preparation**,
+  with acceptance and publication pending; dated `[1.0.0]` through `[4.1.1]` entries remain intact.
   Future changes accrue under `[Unreleased]`.
 
-**Proven today (high level):** the CRUD, passthrough-router, and Kafka-integration
+**Established functional coverage (historical proof):** the CRUD, passthrough-router, and Kafka-integration
 Engine lanes are proven end to end, and **edge-contract v1 is closed and proven** —
 REST / JSON, fixed-width, CSV, XML / XSD, and *bounded* SOAP. See the
 [edge-contract readiness matrix](docs/edgecontracts/edge-contract-handoff-readiness-matrix.md)
@@ -314,8 +318,9 @@ a PR list here.
 Install dependencies:
 
 ```bash
-python3 -m venv .venv
-.venv/bin/pip install -r requirements.txt
+python3.11 -m venv --copies .venv
+.venv/bin/python -m pip install -c requirements-lock.txt -r requirements.txt
+.venv/bin/python -m pip check
 ```
 
 Run tests:

@@ -16,8 +16,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "appbuilder"
-# Version tracks the EdgeForge suite baseline tag (currently v4.1.1).
-version = "4.1.1"
+# Prepared v5 source version; acceptance and release tagging are separate gates.
+version = "5.0.0"
 description = "EdgeForge Engine — contract-preserving modernization engine that generates standalone Spring Boot apps from reviewed manifests (product = EdgeForge; module/CLI = appbuilder)."
 requires-python = ">=3.11"
 license = "Apache-2.0"

@@ -119,9 +119,9 @@ contribution on those terms; it is not a CLA. Do not sign for someone else or
 submit private employer/customer material. No CLA is required. Maintainers
 review contributions and retain merge control.
 
-Current destination: `https://github.com/edgeforge-suite/EdgeForge` (planned
-fresh repository; availability is not asserted). The existing private repository
-receives preparation changes before becoming the pre-v5 archive. See the
+Current repository: `https://github.com/edgeforge-suite/EdgeForge`, the private
+v5 release-preparation repository. The approved private import is complete;
+the original `santosh-sh` repository remains the private pre-v5 archive. See the
 [release policy](docs/v5-release-readiness.md) for pending publication authority.
 Private security reports follow [SECURITY.md](SECURITY.md), never public issues.
 
@@ -132,8 +132,9 @@ References to pre-v5 commits, pull requests, issues and workflow runs point to t
 ## Release Procedure
 
 For v5, the approved [fresh-repository cutover sequence](docs/v5-release-readiness.md#replacement-cutover-and-release-sequence)
-supersedes the old archive-repository E/P/R/M ordering. Preparation does not
-authorize versions, tags, imports, settings or publication. The commands below
+supersedes the old archive-repository E/P/R/M ordering. The current scoped
+preparation covers version and release-documentation changes, not acceptance,
+tags, settings or publication. The commands below
 are later human-directed operations, not instructions to run in a preparation PR.
 
 Before cutting a coordinated Engine release tag:
@@ -141,13 +142,20 @@ Before cutting a coordinated Engine release tag:
 1. Update `pyproject.toml` `[project].version`.
 2. Update `appbuilder/__init__.py` `__version__`.
 3. Promote `CHANGELOG.md` `[Unreleased]` content into the release section.
-4. Refresh the root `README.md` baseline/status and any suite-baseline notes.
-5. Confirm the version matches the intended `vX.Y.Z` tag.
-6. Run the required tests and generated-app compile checks.
-7. Create and push an annotated tag:
+4. Refresh active `README.md` release guidance; preserve the historical Suite
+   baseline and change the candidate descriptor only at separately authorized P.
+5. Human-merge the three preparation PRs, then select tested source commits E/S/K.
+   Record the candidate at P, execute coordinated acceptance and record results
+   at R; obtain independent release review as the canonical sequence requires.
+6. Confirm required tests and generated-app compile/standalone checks actually
+   executed at the selected Engine source. A later docs-only head does not
+   inherit proof from an earlier head. Confirm package/version agreement.
+7. Only under subsequent human authorization, after the last advisory check,
+   create and push an annotated tag on the tested source commit, never P/R.
+   The following is a future operator template, not a preparation command:
 
    ```bash
-   git tag -a vX.Y.Z -m "EdgeForge vX.Y.Z — <summary>"
+   git tag -a vX.Y.Z <tested-source-sha> -m "EdgeForge vX.Y.Z — <summary>"
    git push origin vX.Y.Z
    ```
 
