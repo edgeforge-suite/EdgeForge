@@ -8,11 +8,11 @@
   "repos": {
     "engine": {
       "repository": "edgeforge-suite/EdgeForge",
-      "sha": "c52dd93b5c33b74f6ead06e15490415740874716"
+      "sha": "fe0aa4dc565bae3be3b003bfcc3f473d251cd7fd"
     },
     "studio": {
       "repository": "edgeforge-suite/EdgeForgeStudio",
-      "sha": "c224af844bcc6a5dbfc347d3bfe520ec54f2fbae"
+      "sha": "854d51c8dea36ecb9d8e130e7161b8b7615d2435"
     },
     "ks": {
       "repository": "edgeforge-suite/EdgeForgeKnowledgeServer",
