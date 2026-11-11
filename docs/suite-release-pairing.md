@@ -3,8 +3,9 @@
 This document defines the bounded release-pairing foundation for the three core EdgeForge Suite
 repositories. The sole candidate-selection descriptor is
 [`suite-release-candidate.json`](suite-release-candidate.json). It records the frozen v5
-sources selected after the three release-preparation PRs merged. Acceptance
-results are recorded separately. The historical baseline retains its original
+sources selected after the three release-preparation PRs merged. The scoped
+[technical acceptance execution record](handover-evidence/v5-acceptance-2026-11-10.md)
+records results separately; independent final release review remains pending. The historical baseline retains its original
 scope.
 
 ## Candidate, Run, Evidence, and Release
