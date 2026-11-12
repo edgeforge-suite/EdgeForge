@@ -133,3 +133,39 @@ def test_engine_l5_change_plan_entrypoint_passes_without_external_services() -> 
     assert any("dry-run plan stable" in step for step in result.steps)
     assert any("edge-contract impact surfaced" in step for step in result.steps)
     assert result.artifacts["plan_hash"]
+
+
+@pytest.mark.parametrize("version", ["12.4.0", "10.20.1"])
+def test_regeneration_migration_matches_generated_flyway_version(monkeypatch, tmp_path, version):
+    import subprocess
+    from scripts.smoke import engine_l1_l3_smoke
+
+    calls = []
+
+    def run(command, *, cwd):
+        calls.append((command, cwd))
+        output = f"\x1b[0m{version}\x1b[0m" if len(calls) == 1 else ""
+        return subprocess.CompletedProcess(command, 0, output)
+
+    monkeypatch.setattr(engine_l1_l3_smoke, "_run", run)
+    engine_l1_l3_smoke._run_flyway_migrate(tmp_path)
+    assert "-Dexpression=flyway.version" in calls[0][0]
+    assert f"org.flywaydb:flyway-maven-plugin:{version}:migrate" in calls[1][0]
+    assert all(cwd == tmp_path for _, cwd in calls)
+
+
+@pytest.mark.parametrize("output", ["", "null object or invalid expression", "12.4.0\nwarning"])
+def test_regeneration_refuses_unresolved_flyway_version(monkeypatch, tmp_path, output):
+    import subprocess
+    from scripts.smoke import engine_l1_l3_smoke
+
+    calls = []
+
+    def run(command, *, cwd):
+        calls.append(command)
+        return subprocess.CompletedProcess(command, 0, output)
+
+    monkeypatch.setattr(engine_l1_l3_smoke, "_run", run)
+    with pytest.raises(AssertionError, match="could not be resolved"):
+        engine_l1_l3_smoke._run_flyway_migrate(tmp_path)
+    assert len(calls) == 1

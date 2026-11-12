@@ -7,16 +7,16 @@
   "manifest_schema_version": "2.0",
   "repos": {
     "engine": {
-      "repository": "santosh-sh/EdgeForge",
-      "sha": "e39d415c3f3401247894ca38b7961db769fe637b"
+      "repository": "edgeforge-suite/EdgeForge",
+      "sha": "fe0aa4dc565bae3be3b003bfcc3f473d251cd7fd"
     },
     "studio": {
-      "repository": "santosh-sh/EdgeForgeStudio",
-      "sha": "d23d99f480e242291750724d192875e53b37e85f"
+      "repository": "edgeforge-suite/EdgeForgeStudio",
+      "sha": "854d51c8dea36ecb9d8e130e7161b8b7615d2435"
     },
     "ks": {
-      "repository": "santosh-sh/EdgeForgeKnowledgeServer",
-      "sha": "51bbff05f36c85c65a37694006e46e8eb3c21bf9"
+      "repository": "edgeforge-suite/EdgeForgeKnowledgeServer",
+      "sha": "6fb5be6efd82e93ca735595e9e7b37dfb5f36418"
     }
   }
 }
