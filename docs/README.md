@@ -47,7 +47,7 @@ over older planning notes; archived documents are preserved under
   [`suite-release-candidate.json`](suite-release-candidate.json).
 - [v5 Source-Release Readiness](v5-release-readiness.md) — approved scope-reset
   revision 3, disclosed M2 limitations, fresh-repository cutover and retained
-  acceptance checks; maintainer publication authorization and operational activation pending.
+  acceptance checks; maintainer publication authorization and reporting prerequisites.
 - [Public-Content Preparation](public-content-preparation.md) — independent
   Workspace/Item example, before/after coverage, retained design review,
   Open Banking attribution and intended-tree boundaries.
