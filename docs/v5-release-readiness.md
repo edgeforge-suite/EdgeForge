@@ -3,10 +3,12 @@
 **Authority: EF-V5-RELEASE-SCOPE-RESET revision 3, approved by Santosh Hommaradi
 on 2026-10-25.** This supersedes conflicting October 6 release gates and the
 old E/P/R/M procedure. It authorizes private preparation, not release execution.
-**Current update — 2026-11-07:** EF-V5-RELEASE-PREP-ENGINE-S1 revision 2
-authorizes Engine version/documentation preparation in the new private repository.
-The approved private cutover is complete; acceptance, tags and public launch
-remain separate, later gates.
+**Current release guidance:** the approved private cutover is complete.
+Selected-source technical acceptance was independently approved; executed results
+are in [the November 10 record](handover-evidence/v5-acceptance-2026-11-10.md).
+The earlier EF-V5-RELEASE-PREP-ENGINE-S1 revision 2 authorized version/documentation
+preparation. Tags, public exposure and website launch require separate human
+authorization; documentation-only successors do not replace accepted E/S/K or P/R.
 Broad M2 remains incomplete; historical findings and acceptance pins are unchanged.
 The approved **EF-V5-SOURCE-PREP-ENGINE-S1 revision 2** content amendment below
 documents three advisory-source future-public-import exclusions, not findings clearance.
@@ -34,8 +36,8 @@ does not satisfy ownership, confidentiality or other applicable obligations.
 
 Apache-2.0, a short [NOTICE](../NOTICE), DCO 1.1 sign-off without a CLA, and
 copyright Santosh Hommaradi are selected.
-**Maintainer publication authorization is pending and blocks
-all public exposure, including previews, not private preparation.** Keep
+**Maintainer publication authorization is required before
+all public exposure, including previews; private preparation is separately authorized.** Keep
 non-public correspondence and planning material private.
 The choice of license does not itself prove authority to publish. The maintainer
 must verify the applicable rights and permissions before authorizing exposure;
@@ -47,7 +49,7 @@ satisfy or waive any prerequisite, accept risk or authorize publication.
 Enterprise adoption remains optional and self-managed; the project continues
 to be independently maintained with community contributions welcome.
 
-The three private product repositories now exist: `edgeforge-suite/EdgeForge`,
+The three product repositories are: `edgeforge-suite/EdgeForge`,
 `edgeforge-suite/EdgeForgeStudio` and `edgeforge-suite/EdgeForgeKnowledgeServer`.
 Their approved parentless initial imports and repository controls were verified
 and independently approved. Release preparation now belongs in these repositories.
@@ -59,7 +61,7 @@ do not rename, delete, scrub or expose those repositories.
 
 | Lane | Required outcome |
 |---|---|
-| Private preparation | Complete version/release-documentation PRs in the three new private repositories, with ordinary required checks and independent review, then human merge. Maintainer publication authorization and route activation remain pending without blocking preparation. The three lanes may proceed in parallel. Engine alone owns the canonical Suite roadmap/tracker. |
+| Private preparation | Complete version/release-documentation PRs in the three new private repositories, with ordinary required checks and independent review, then human merge. Maintainer publication authorization and reporting-route verification are required for public exposure, not private preparation. The three lanes may proceed in parallel. Engine alone owns the canonical Suite roadmap/tracker. |
 | Coordinated release selection | Actual new-repository source commits, strict clean pairing, required repo/build checks, fresh strict audits, selected Studio-image build/run, full L5 with required services and no skipped-success, newcomer journey, focused security QA and one independent final release review. Green CI or matching pins is not acceptance. |
 | Public exposure | Maintainer publication authorization, reviewed intended trees and attribution, verified email route, verified tags/targets and human authorization. Enable/verify PVR immediately on public cutover before announcing launch. |
 | Website hosting | Protected Cloudflare previews before launch; production only after acceptance and human authorization. Verify the bounded hosting controls below. No live Studio/KS/Engine/demo/generated-app service is authorized. |
@@ -120,16 +122,21 @@ three Engine advisory files below were omitted. Private source/tree/import
 correspondence and independent verification remain in the sealed cutover record;
 old history was not imported. Branch protection, required checks, gitleaks and
 read-only default Actions permissions were verified. Private controls must remain
-supported by the selected organization plan. Reporting-route activation is still
-pending; PVR must be enabled and verified at public cutover, before announcement.
+supported by the selected organization plan. Email receipt and replies must be
+tested before public exposure. Enable and verify PVR at public cutover, including
+its reporter-facing route, before Release publication or announcement.
 No re-import or repository-settings change is part of release preparation.
+
+Steps 1–5 describe the completed v5 preparation/acceptance ordering; reuse the
+recorded proof. Documentation-only main successors do not repeat those steps or
+become tag targets. Later operators still verify drift and required approvals.
 
 1. **Prepare and human-merge the three release PRs.** Set versions, changelogs
    and active release/setup guidance in the new private repositories. Complete
    ordinary applicable CI and independent lane reviews, then the coordinated
    pre-merge review and human merge decisions. Keep the three product lanes
    parallel. No acceptance, tags or public exposure is authorized by preparation.
-2. **Select tested source commits E/S/K later.** Select actual new-repository
+2. **Select tested source commits E/S/K.** Select actual new-repository
    source commits after the preparation merges. Capture exact-source required
    checks, including Engine **generated-app compile/standalone proof**. Engine E
    must carry the `pyproject.toml` version bump: both generated-app path filters
@@ -137,10 +144,10 @@ No re-import or repository-settings change is part of release preparation.
    docs-only head and reuse another head's run. A merge commit qualifies only
    with checks at that source or a verified identical tested tree. Version inputs
    also ensure the Python suite and strict audit execute rather than docs-only skip.
-3. **Record candidate P later.** In a separate candidate-record commit, select
+3. **Record candidate P.** In a separate candidate-record commit, select
    full E/S/K hashes and the complete `edgeforge-suite` repository cohort.
-   Keep `status: candidate` and `acceptance_status: pending`. The present
-   preparation does not edit the existing descriptor or historical v4 baseline.
+   Keep `status: candidate` and `acceptance_status: pending`. Descriptor updates
+   belong at authorized P; preserve the historical v4 baseline.
    P names prior source commits; it cannot select itself as Engine E.
 4. **Execute one coordinated acceptance on E/S/K.** Run the [pairing verifier](suite-release-pairing.md)
    from a recorded tool checkout against clean E/S/K. Run L5 **from E**, with
@@ -153,16 +160,16 @@ No re-import or repository-settings change is part of release preparation.
    release-QA clarifications within their existing tasks, not new workstreams.
    Retain the bounded Studio-to-Engine adversarial proof and its nested-input/
    concurrent-writer limitations; full M3 automation remains separate.
-5. **Record results R and obtain independent release review later.** Commit
+5. **Record results R and obtain independent release review.** Commit
    sanitized acceptance records with actual outcomes and limitations. Review all E-to-P/R changes;
    behavior-affecting changes require reselection and affected proof. An R record
    cannot contain its own full SHA: the later Release body or subsequent record
    names P/R. The independent final release review covers actual tested identities,
    later evidence and limitations. An older descriptor embedded in E is not the
    accepted selection. The candidate descriptor embedded in release source or
-   an eventual tag may predate final selection. After separately authorized
-   publication, the v5.0.0 Release record will identify accepted E/S/K, P/R,
-   validation and limitations. That record does not yet exist; do not invent its URL.
+   a tag may predate final selection. Any separately authorized v5.0.0 Release
+   must identify accepted E/S/K, P/R, validation and limitations. Use verified
+   publication records for actual Release URLs.
 6. **Verify tags under subsequent human authorization.** Immediately before tagging,
    check current advisories for the unchanged selected inventories; reuse qualifying
    same-input results rather than duplicate campaigns. Triage new findings;
@@ -187,6 +194,10 @@ source SHA. This preparation authorizes none of the later release operations abo
 <a id="v5-environment-and-mcp-launch"></a>
 
 ### Current-release environment and Engine MCP launch verification — 2026-11-07
+
+This dated procedure explains the retained acceptance provenance. Actual executed
+results are in the [November 10 record](handover-evidence/v5-acceptance-2026-11-10.md);
+this documentation refresh does not rerun or relabel them.
 
 The July [L5 record](handover-evidence/l5-acceptance-run.md#reproduce) remains
 historical proof at its recorded pins. Later v5 acceptance uses separate clean

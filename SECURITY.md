@@ -1,34 +1,37 @@
 # Security Policy
 
-## Private reporting and activation
+## Private vulnerability reporting
 
-GitHub Private Vulnerability Reporting (PVR) is the selected primary route for
-the currently private `edgeforge-suite/EdgeForge` repository after public cutover.
-The private import is complete; PVR must be enabled and
-verified immediately at public cutover, before the launch announcement.
-The selected email route is **security@edgeforgesuite.com**; configure and test
-monitored receipt and replies before the public flip. **Neither PVR activation
-nor email delivery is verified by this preparation PR.** Do not send sensitive
-reports to an unverified route or open a public issue/PR. Until activation,
-coordinate privately with the maintainer through an already verified private
-channel; do not assume an unlisted address.
+Use this repository's GitHub
+[Report a vulnerability](https://github.com/edgeforge-suite/EdgeForge/security/advisories/new)
+form **when available**, or the designated email **security@edgeforgesuite.com**.
+If neither private route is available, request a private maintainer channel
+without including vulnerability details in a public issue or pull request.
+Share reproduction details and sensitive material only through an available
+private route; never disclose an undisclosed vulnerability in a public issue/PR.
+Route selection alone does not establish delivery or replies. The
+[source-release policy](docs/v5-release-readiness.md) requires email receipt/reply
+checks before public exposure and PVR enablement and verification at public cutover.
 
 Accountable maintainer: Santosh Hommaradi, responsible for private triage and
 coordinated disclosure. No response-time SLA or guaranteed fix is promised.
 Report component, exact version/commit, reproduction and impact; omit credentials
 and production/customer data. For ordinary project questions, use the
 [documentation and issue guidance](README.md#project-intent-and-community).
-The selected `contact@edgeforgesuite.com` route is for project administration,
-not sales or implementation enquiries; operational verification remains pending.
+The designated `contact@edgeforgesuite.com` address is for project administration,
+not sales or implementation enquiries.
 
 ## Supported boundaries
 
 Security fixes target the current supported baseline; older tags are not
-separately maintained. v5 is a tested source-and-tags release, not an official
-binary/container distribution, hosted product service or production certification.
-It is not yet accepted or published. See the
+separately maintained. v5 distribution is source and separately authorized tags
+for self-managed builds, not an official binary/container distribution, hosted
+product service or production certification.
+Selected-source technical acceptance is recorded in the
+[November 10 results](docs/handover-evidence/v5-acceptance-2026-11-10.md).
+It does not authorize tags or publication. See the
 [source-release policy](docs/v5-release-readiness.md) for retained checks,
-known limitations and outstanding publication gates.
+known limitations and publication requirements.
 
 Generated applications are standalone. Their dependencies, adopter business
 logic and object/tenant/row authorization remain separate responsibilities.

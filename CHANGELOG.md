@@ -19,10 +19,12 @@ their own.
 
 ## [Unreleased]
 
-## [5.0.0] — source preparation; acceptance and publication pending
+## [5.0.0] — source preparation
 
-This section collects the v5 source changes for review. No release date, tag,
-successful coordinated acceptance or publication is asserted.
+This section collects the v5 source changes. Selected-source technical acceptance
+is recorded in the [November 10 results](docs/handover-evidence/v5-acceptance-2026-11-10.md),
+separately from tag creation and publication. No public release date is assigned
+by this section; consult verified tags and Release records for publication status.
 
 - Set the Engine package/runtime version to 5.0.0 in the completed private
   `edgeforge-suite/EdgeForge` import. Align constrained local setup and the later
@@ -62,8 +64,8 @@ successful coordinated acceptance or publication is asserted.
 - Adopt approved v5 source-release policy: Apache-2.0/NOTICE/DCO, fresh private
   repository cutover and disclosed M2 limitations with retained release checks.
   Pairing supports strict archive/new cohorts; the no-tag bootstrap is scoped
-  to the new Engine repository. Publication authority and activation remain
-  pending; no version, generated behavior or historical evidence changes.
+  to the new Engine repository. Public exposure requires maintainer authorization
+  and reporting-route verification; no generated behavior or historical evidence changes.
 
 - Correct the Python reference audit with FastMCP 3.4.10 and OpenTelemetry API
   1.45.1, preserving the then-supported Python 3.10 and all other selected versions. Retain coherent
