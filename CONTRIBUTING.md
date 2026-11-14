@@ -149,10 +149,10 @@ contribution on those terms; it is not a CLA. Do not sign for someone else or
 submit private employer/customer material. No CLA is required. Maintainers
 review contributions and retain merge control.
 
-Current repository: `https://github.com/edgeforge-suite/EdgeForge`, the private
-v5 release-preparation repository. The approved private import is complete;
-the original `santosh-sh` repository remains the private pre-v5 archive. See the
-[release policy](docs/v5-release-readiness.md) for pending publication authority.
+Current repository: `https://github.com/edgeforge-suite/EdgeForge`.
+The approved private import is complete; the original `santosh-sh` repository
+remains the private pre-v5 archive. Public exposure requires maintainer
+authorization under the [release policy](docs/v5-release-readiness.md).
 Private security reports follow [SECURITY.md](SECURITY.md), never public issues.
 
 EdgeForge claims no ownership of your generated applications; Apache-2.0 covers EdgeForge itself, while third-party components and any incorporated licensed material retain their applicable terms.
@@ -162,10 +162,12 @@ References to pre-v5 commits, pull requests, issues and workflow runs point to t
 ## Release Procedure
 
 For v5, the approved [fresh-repository cutover sequence](docs/v5-release-readiness.md#replacement-cutover-and-release-sequence)
-supersedes the old archive-repository E/P/R/M ordering. The current scoped
-preparation covers version and release-documentation changes, not acceptance,
-tags, settings or publication. The commands below
-are later human-directed operations, not instructions to run in a preparation PR.
+supersedes the old archive-repository E/P/R/M ordering. The selected v5 sources
+and completed technical acceptance are recorded in the
+[acceptance results](docs/handover-evidence/v5-acceptance-2026-11-10.md).
+Documentation-only successors do not change those sources or restart acceptance.
+The procedure below describes release ordering; tag creation, settings and
+publication require separate human authorization.
 
 Before cutting a coordinated Engine release tag:
 

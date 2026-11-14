@@ -1,5 +1,11 @@
 # Engine Public-Content Preparation
 
+> **Current guidance:** this is a retained preparation record at the base below;
+> its then-pending statements describe that preparation stage. Current publication
+> and reporting requirements follow the [release policy](v5-release-readiness.md).
+> Selected-source v5 technical acceptance is recorded in the
+> [November 10 results](handover-evidence/v5-acceptance-2026-11-10.md).
+
 Approved scope: EF-V5-PUBLIC-CONTENT-ENGINE-S1 revision 4. Preparation base:
 `8a94e5697c2ccd02f917ee7f94385f02d6a22398`. No import, public exposure, original
 history cleanup or ownership clearance is performed. Existing repositories and

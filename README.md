@@ -24,8 +24,7 @@ service commitments.
 
 Start with the [documentation](docs/README.md). Use
 [project issues](https://github.com/edgeforge-suite/EdgeForge/issues) for ordinary
-questions, bugs and suggestions once the public destination is activated; its
-availability is not asserted here. See [CONTRIBUTING](CONTRIBUTING.md) for
+questions, bugs and suggestions with repository access. See [CONTRIBUTING](CONTRIBUTING.md) for
 contributions and [SECURITY](SECURITY.md) for private vulnerability reporting.
 Share only synthetic examples and redacted diagnostics.
 
@@ -54,14 +53,14 @@ Key entry points behind that index: the
 
 ## Suite status
 
-**v5.0.0 source preparation:** [approved release scope and cutover](docs/v5-release-readiness.md)
-select source repositories and tags under Apache-2.0, not official binaries/images
-or production certification. Maintainer publication authorization
-and verified reporting routes remain public-exposure gates. This is the private
-v5 release-preparation repository under
+**v5.0.0 technical acceptance** of the selected Engine/Studio/KS sources is
+recorded in the [November 10 acceptance results](docs/handover-evidence/v5-acceptance-2026-11-10.md).
+The [release policy](docs/v5-release-readiness.md) selects source repositories
+and tags under Apache-2.0, not official binaries/images or production certification.
+Tag creation, public exposure and Release publication each require maintainer
+authorization; reporting-route checks are part of public cutover. This repository is
 [edgeforge-suite/EdgeForge](https://github.com/edgeforge-suite/EdgeForge).
-The private import is complete; public launch remains gated. The historical
-baseline below is not v5 acceptance. Docker recipes support
+The historical baseline below is not the v5 selection. Docker recipes support
 self-managed builds, not official published images or a maintainer-operated service.
 
 EdgeForge claims no ownership of your generated applications; Apache-2.0 covers EdgeForge itself, while third-party components and any incorporated licensed material retain their applicable terms.
@@ -70,10 +69,10 @@ References to pre-v5 commits, pull requests, issues and workflow runs point to t
 
 See [NOTICE](NOTICE), [third-party attribution](docs/third-party-attribution.md)
 and [SECURITY](SECURITY.md). The candidate descriptor embedded in release source
-or an eventual tag may predate final selection. After acceptance and separately
-authorized publication, the v5.0.0 Release record will identify the accepted
-Engine/Studio/KS revisions, validation and limitations. That record does not yet
-exist; no embedded historical descriptor establishes the accepted v5 pairing.
+or a tag may predate final selection. The acceptance record identifies the
+accepted Engine/Studio/KS revisions, validation and limitations; any v5.0.0
+Release must name that selection and its candidate/results records. An embedded
+historical descriptor does not supersede the accepted v5 pairing.
 The [three documented import exclusions](docs/v5-release-readiness.md#public-import-exclusions-and-historical-replay)
 retain their originals privately. Public readers cannot fully replay that
 historical Maven/vendor assessment from the public repository alone; normal
@@ -102,7 +101,7 @@ still requires example classification and active-reference cleanup. PR #291's ca
 shape guard is intentionally bounded and is not a repository-wide semantic-neutrality scan.
 Adopter-decided and post-import work also remains — IdP wiring and any future
 optional-AI production gate. Maintainer publication authorization (G1) is separately
-pending, as listed under "still open" below and tracked in the
+required for public exposure, as described below and tracked in the
 [enterprise-readiness roadmap](docs/enterprise-readiness-roadmap.md). This summary
 is intentionally high-level so it stays current; the authoritative, living detail
 lives in the sources below (follow them rather than a PR-by-PR list here, which
@@ -120,7 +119,7 @@ would re-stale).
   [enterprise-readiness roadmap](docs/enterprise-readiness-roadmap.md) (suite-level
   master tracker); the full doc set is indexed in [`docs/README.md`](docs/README.md).
 - **Release history** → [`CHANGELOG.md`](CHANGELOG.md) — **`[5.0.0]` source preparation**,
-  with acceptance and publication pending; dated `[1.0.0]` through `[4.1.1]` entries remain intact.
+  with technical acceptance recorded separately from publication; dated `[1.0.0]` through `[4.1.1]` entries remain intact.
   Future changes accrue under `[Unreleased]`.
 
 **Established functional coverage (historical proof):** the CRUD, passthrough-router, and Kafka-integration
@@ -138,7 +137,7 @@ AI capability to enable.
   PR #291 proves the exact canonical CI fixture shape only, not repository-wide semantic neutrality.
 
 - **Publication authority** — Apache-2.0 is selected; maintainer publication
-  authorization is pending before public exposure (G1).
+  authorization is required before public exposure (G1).
 - **Per-repo import-gate governance** — this **Engine** repo has delivered its governance,
   secret-pattern scan, and SBOM gates, but its composite import-gate lane remains partial while
   G5 is open; each sibling repo (Studio, KS) carries its **own** equivalent governance in its own
@@ -269,7 +268,7 @@ new independent [Workspace/Item example](examples/input-projects/workspace-items
 Its separate proof and content treatment are recorded in
 [publication preparation](docs/public-content-preparation.md).
 
-The current suite baseline is **`v4.1.0`** — the feature-flagged regen-preview UX increment on
+The historical suite baseline is **`v4.1.0`** — the feature-flagged regen-preview UX increment on
 the `v4.0.0` enterprise-readiness baseline. Suite pin: engine `v4.1.0` `8f758f4` / studio
 `v4.1.0` `6537a75` / ks `v4.0.0` `11aed44` (**KS unchanged — not retagged**). Engine and Studio
 are re-verified GREEN by the hermetic **L5 acceptance** gate, including the regen-apply addendum.
@@ -286,14 +285,13 @@ git tag -a vX.Y.Z <pinned-sha> -m "EdgeForge vX.Y.Z — <summary>"
 git push origin vX.Y.Z
 ```
 
-For a future coordinated v5 release, a tagged Engine source checkout may
-contain an earlier **candidate** descriptor, not the final accepted Suite
-selection. Consult the eventual GitHub Release body (or its linked later
-acceptance record) for the full-SHA candidate-descriptor commit and evidence
-record, then compare their selected Engine/Studio/KS commits with the tested
-run SHAs. See the [release-pairing guide](docs/suite-release-pairing.md) and
-[proposed v5 release sequence](docs/v5-release-readiness.md). This guidance is
-not a claim that v5 has been accepted or released.
+The accepted v5 Engine source contains an earlier **candidate** descriptor.
+Use the [acceptance record](docs/handover-evidence/v5-acceptance-2026-11-10.md)
+for the selected Engine/Studio/KS commits and candidate P; later Release notes
+must also name results R. Compare those identities with the tested run SHAs.
+See the [release-pairing guide](docs/suite-release-pairing.md) and
+[v5 release sequence](docs/v5-release-readiness.md). Technical acceptance does
+not itself create tags, publish a Release or authorize public exposure.
 
 Post-baseline work continues on `origin/main`. For the current state and the
 detailed history, see the
