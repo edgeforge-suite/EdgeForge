@@ -7,6 +7,9 @@ sources selected for the bounded dependency-correction qualification. The earlie
 [technical acceptance execution record](handover-evidence/v5-acceptance-2026-11-10.md)
 retains its original sources, results and limitations; it does not qualify this
 successor selection. The historical baseline retains its original scope.
+The [dependency-correction results](handover-evidence/v5-dependency-acceptance-2026-11-14.md)
+record this successor's affected execution, scoped reuse and remaining decisions;
+they do not authorize merges, tags or publication.
 
 ## Candidate, Run, Evidence, and Release
 
@@ -40,7 +43,7 @@ to 1.45.2 in the three constrained graphs. Direct dependencies, FastMCP/MCP pins
 product code and the manifest contract are unchanged. Current dependency evidence
 is regenerated; Engine's November 2 evidence is preserved and its historical
 test reads that fixed snapshot. The sources also include the merged contributor
-and current-main guidance. New exact-source CI and affected qualification must
+and current-main guidance. New exact-source CI and the recorded affected qualification
 cover this selection; earlier images and installed environments do not become new
 proof merely because product code is unchanged.
 
