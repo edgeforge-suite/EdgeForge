@@ -2,11 +2,11 @@
 
 This document defines the bounded release-pairing foundation for the three core EdgeForge Suite
 repositories. The sole candidate-selection descriptor is
-[`suite-release-candidate.json`](suite-release-candidate.json). It records the frozen v5
-sources selected after the three release-preparation PRs merged. The scoped
+[`suite-release-candidate.json`](suite-release-candidate.json). It records the exact v5
+sources selected for the bounded dependency-correction qualification. The earlier
 [technical acceptance execution record](handover-evidence/v5-acceptance-2026-11-10.md)
-records results separately; independent final release review remains pending. The historical baseline retains its original
-scope.
+retains its original sources, results and limitations; it does not qualify this
+successor selection. The historical baseline retains its original scope.
 
 ## Candidate, Run, Evidence, and Release
 
@@ -30,22 +30,27 @@ keeps `acceptance_status` set to `pending`. It selects manifest schema `2.0` and
 
 | Role | Repository | Selected commit |
 |---|---|---|
-| Engine | `edgeforge-suite/EdgeForge` | `fe0aa4dc565bae3be3b003bfcc3f473d251cd7fd` |
-| Studio | `edgeforge-suite/EdgeForgeStudio` | `854d51c8dea36ecb9d8e130e7161b8b7615d2435` |
-| KS | `edgeforge-suite/EdgeForgeKnowledgeServer` | `6fb5be6efd82e93ca735595e9e7b37dfb5f36418` |
+| Engine | `edgeforge-suite/EdgeForge` | `57a59759e968887177e51043a2620ba08bb6858e` |
+| Studio | `edgeforge-suite/EdgeForgeStudio` | `1c19275d2960640105ca28f9a7e17e247833cc61` |
+| KS | `edgeforge-suite/EdgeForgeKnowledgeServer` | `4a6cfae77cb88567f9538f7db09a092ba2f0f47b` |
 
 The record contains no branch names, version ranges, credentials, or checkout paths.
-Engine selects its migration-harness correction with actual generated-app CI.
-Studio selects the reviewed export-provenance and smoke-isolation corrections.
-KS retains its tested PR #1 merge source. Engine and Studio also include the
-previously reviewed contributor documentation. The initial candidate commit
-`0ea1df6c0c720e9473a049e8d98188bda48edc40` retains the earlier Studio selection
-`b412050531f18813354df0406e41d4fed0ce9f86`. This successor selection preserves that
-history. The later selection repairs portable export provenance and isolates test-scenario
-resource budgets. A new selected image and affected focused proof cover the
-changed Studio export code. Engine migration tooling follows the generated
-application's Flyway version. Dependency constraints and the historical baseline
-are preserved. The canonical
+This successor updates only transitive dnspython to 2.9.2 and OpenTelemetry API
+to 1.45.2 in the three constrained graphs. Direct dependencies, FastMCP/MCP pins,
+product code and the manifest contract are unchanged. Current dependency evidence
+is regenerated; Engine's November 2 evidence is preserved and its historical
+test reads that fixed snapshot. The sources also include the merged contributor
+and current-main guidance. New exact-source CI and affected qualification must
+cover this selection; earlier images and installed environments do not become new
+proof merely because product code is unchanged.
+
+The previous candidate P `1f90850fac48f119fe39a79b894cabf4ffab9af9` and results R
+`92d0de224d127525b3b3db1365cf931188ccfffb` retain the November 10 selection and
+independent review. Its Engine migration-harness, Studio export-provenance and
+scenario-isolation corrections remain present. The initial candidate
+`0ea1df6c0c720e9473a049e8d98188bda48edc40` and earlier Studio source
+`b412050531f18813354df0406e41d4fed0ce9f86` remain history. No historical baseline
+or dated acceptance record is rewritten. The canonical
 [release sequence](v5-release-readiness.md#replacement-cutover-and-release-sequence)
 defines the acceptance and public-launch gates.
 
@@ -92,6 +97,13 @@ proof must use a controlled checkout set and must continue to record the revisio
 This foundation does not implement the M3 scenario registry, affected-set scheduler, resolved-run
 identity, environment provenance, evidence bundle, runtime negotiation, or acceptance decision. It
 also does not replace the remaining security closure or final coordinated public-v5 acceptance.
+
+The initial preparation and documentation PRs have merged. This separately
+authorized successor qualification selects exact tested repair-branch commits
+before their human merge decisions. It authorizes no merge or tag. Later merges
+must preserve these tested commits in main's history, and the resulting content
+and applicable main CI must be verified; merge, candidate and results commits
+are not substitute tag targets.
 
 The approved [fresh-repository sequence](v5-release-readiness.md#replacement-cutover-and-release-sequence)
 replaces the old E/P/R/M archive-repository procedure. The approved parentless
