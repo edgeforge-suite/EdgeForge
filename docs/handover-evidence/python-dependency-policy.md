@@ -47,6 +47,20 @@ checks pass. The existing stdout aggregate JSON and exits 0/1/2 are unchanged.
 Use the existing `--output` option to retain a detailed private diagnostic report;
 raw advisory bodies, source and credentials are not printed to CI.
 
+## Current constrained correction — 2026-11-14
+
+The current lock updates only dnspython 2.9.0 to 2.9.2 and OpenTelemetry API
+1.45.1 to 1.45.2 for
+[GHSA-vvf4-9x63-8xvv](https://github.com/advisories/GHSA-vvf4-9x63-8xvv) and
+[GHSA-mf5v-w3w3-f6cg](https://github.com/advisories/GHSA-mf5v-w3w3-f6cg).
+The other 74 reference pins, direct requirements and Python floor are unchanged.
+The regenerated [`python-current/`](python-current/) evidence records the actual
+assessment input, time and complete 76-package inventory. The original November 2
+outputs and declarations are preserved byte-for-byte in
+[`history/2026-11-02/`](python-current/history/2026-11-02/); the dated correction
+below retains its original scope. These package reports do not establish new
+Suite acceptance, whole-image clearance or publication authorization.
+
 ## Bounded correction on 2026-11-02
 
 PR #338's required audit at `e6b59f8` reported `joserfc==1.7.5` /

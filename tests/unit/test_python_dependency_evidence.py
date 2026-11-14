@@ -146,18 +146,18 @@ def test_october29_correction_preserves_two_pin_scope_and_evidence_bindings() ->
 
 def test_november02_joserfc_correction_preserves_single_pin_and_evidence() -> None:
     directory = ROOT / "docs/handover-evidence"
-    current = directory / "python-current"
-    previous = current / "history/2026-10-29"
+    current = directory / "python-current/history/2026-11-02"
+    previous = current.parent / "2026-10-29"
     receipt = json.loads((directory / "python-audit-correction-2026-11-02.json").read_text())
     provenance = json.loads((current / "provenance.json").read_text())
     assert receipt["after"] == provenance
     assert receipt["corrected_source_sha"] == provenance["engine_source_sha"]
     old = audit.parse_lock((previous / "requirements-lock.txt").read_text())
-    selected = audit.parse_lock((ROOT / "requirements-lock.txt").read_text())
+    selected = audit.parse_lock((current / "requirements-lock.txt").read_text())
     assert old.keys() == selected.keys()
     assert {name for name in old if old[name] != selected[name]} == {"joserfc"}
     assert old["joserfc"] == "1.7.5" and selected["joserfc"] == "1.7.6"
-    assert (previous / "requirements.txt").read_bytes() == (ROOT / "requirements.txt").read_bytes()
+    assert (previous / "requirements.txt").read_bytes() == (current / "requirements.txt").read_bytes()
     for name, expected in receipt["current_evidence_sha256"].items():
         assert evidence.digest(current / name) == expected
     for name, expected in receipt["historical_snapshot_sha256"].items():
