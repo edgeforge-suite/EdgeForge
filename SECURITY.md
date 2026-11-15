@@ -27,8 +27,9 @@ Security fixes target the current supported baseline; older tags are not
 separately maintained. v5 distribution is source and separately authorized tags
 for self-managed builds, not an official binary/container distribution, hosted
 product service or production certification.
-Selected-source technical acceptance is recorded in the
-[November 10 results](docs/handover-evidence/v5-acceptance-2026-11-10.md).
+The successor selection's execution and justified reuse are recorded in the
+[November 14 results](docs/handover-evidence/v5-dependency-acceptance-2026-11-14.md).
+Later independent approval is recorded separately.
 It does not authorize tags or publication. See the
 [source-release policy](docs/v5-release-readiness.md) for retained checks,
 known limitations and publication requirements.

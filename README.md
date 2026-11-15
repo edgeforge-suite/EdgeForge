@@ -53,8 +53,11 @@ Key entry points behind that index: the
 
 ## Suite status
 
-**v5.0.0 technical acceptance** of the selected Engine/Studio/KS sources is
-recorded in the [November 10 acceptance results](docs/handover-evidence/v5-acceptance-2026-11-10.md).
+The accepted **v5.0.0 successor selection**, its execution and justified reuse
+are recorded in the [November 14 results](docs/handover-evidence/v5-dependency-acceptance-2026-11-14.md).
+Later independent approval is recorded separately. The
+[November 10 results](docs/handover-evidence/v5-acceptance-2026-11-10.md) remain
+the preceding selection's dated record.
 The [release policy](docs/v5-release-readiness.md) selects source repositories
 and tags under Apache-2.0, not official binaries/images or production certification.
 Tag creation, public exposure and Release publication each require maintainer
@@ -69,8 +72,9 @@ References to pre-v5 commits, pull requests, issues and workflow runs point to t
 
 See [NOTICE](NOTICE), [third-party attribution](docs/third-party-attribution.md)
 and [SECURITY](SECURITY.md). The candidate descriptor embedded in release source
-or a tag may predate final selection. The acceptance record identifies the
-accepted Engine/Studio/KS revisions, validation and limitations; any v5.0.0
+or a tag may predate final selection. The
+[successor results](docs/handover-evidence/v5-dependency-acceptance-2026-11-14.md)
+identify the accepted Engine/Studio/KS revisions, execution and limitations; any v5.0.0
 Release must name that selection and its candidate/results records. An embedded
 historical descriptor does not supersede the accepted v5 pairing.
 The [three documented import exclusions](docs/v5-release-readiness.md#public-import-exclusions-and-historical-replay)
@@ -286,9 +290,11 @@ git push origin vX.Y.Z
 ```
 
 The accepted v5 Engine source contains an earlier **candidate** descriptor.
-Use the [acceptance record](docs/handover-evidence/v5-acceptance-2026-11-10.md)
+Use the [November 14 successor results](docs/handover-evidence/v5-dependency-acceptance-2026-11-14.md)
 for the selected Engine/Studio/KS commits and candidate P; later Release notes
-must also name results R. Compare those identities with the tested run SHAs.
+must also name results R. That record describes execution and justified reuse;
+later independent approval is recorded separately. Compare the selected identities
+with the tested run SHAs.
 See the [release-pairing guide](docs/suite-release-pairing.md) and
 [v5 release sequence](docs/v5-release-readiness.md). Technical acceptance does
 not itself create tags, publish a Release or authorize public exposure.
