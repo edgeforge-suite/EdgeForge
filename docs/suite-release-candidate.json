@@ -8,15 +8,15 @@
   "repos": {
     "engine": {
       "repository": "edgeforge-suite/EdgeForge",
-      "sha": "fe0aa4dc565bae3be3b003bfcc3f473d251cd7fd"
+      "sha": "57a59759e968887177e51043a2620ba08bb6858e"
     },
     "studio": {
       "repository": "edgeforge-suite/EdgeForgeStudio",
-      "sha": "854d51c8dea36ecb9d8e130e7161b8b7615d2435"
+      "sha": "1c19275d2960640105ca28f9a7e17e247833cc61"
     },
     "ks": {
       "repository": "edgeforge-suite/EdgeForgeKnowledgeServer",
-      "sha": "6fb5be6efd82e93ca735595e9e7b37dfb5f36418"
+      "sha": "4a6cfae77cb88567f9538f7db09a092ba2f0f47b"
     }
   }
 }

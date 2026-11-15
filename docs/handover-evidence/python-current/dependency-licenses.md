@@ -1,6 +1,6 @@
 # Engine Python dependency licenses
 
-Scan time: 2026-11-02T04:32:27.996978Z. Tool: pip-licenses 5.5.5. Packages: 76. Copyleft/UNKNOWN classifications requiring review: 1. This is inventory, not a license acceptance decision.
+Scan time: 2026-11-14T15:34:39.449237Z. Tool: pip-licenses 5.5.5. Packages: 76. Copyleft/UNKNOWN classifications requiring review: 1. This is inventory, not a license acceptance decision.
 
 | Package | Version | License | Scope |
 |---|---|---|---|
@@ -18,7 +18,7 @@ Scan time: 2026-11-02T04:32:27.996978Z. Tool: pip-licenses 5.5.5. Packages: 76. 
 | `click` | 8.5.0 | BSD-3-Clause | transitive |
 | `cryptography` | 50.0.1 | Apache-2.0 OR BSD-3-Clause | transitive |
 | `cyclopts` | 4.25.3 | Apache-2.0 | transitive |
-| `dnspython` | 2.9.0 | ISC | transitive |
+| `dnspython` | 2.9.2 | ISC | transitive |
 | `docstring_parser` | 0.18.0 | MIT License | transitive |
 | `email-validator` | 2.3.0 | The Unlicense (Unlicense) | transitive |
 | `exceptiongroup` | 1.3.1 | MIT License | transitive |
@@ -49,7 +49,7 @@ Scan time: 2026-11-02T04:32:27.996978Z. Tool: pip-licenses 5.5.5. Packages: 76. 
 | `mdurl` | 0.1.2 | MIT License | transitive |
 | `more-itertools` | 11.1.0 | MIT | transitive |
 | `openapi-pydantic` | 0.5.1 | MIT License | transitive |
-| `opentelemetry-api` | 1.45.1 | Apache-2.0 | transitive |
+| `opentelemetry-api` | 1.45.2 | Apache-2.0 | transitive |
 | `packaging` | 26.3 | Apache-2.0 OR BSD-2-Clause | transitive |
 | `pathable` | 0.6.0 | Apache Software License | transitive |
 | `platformdirs` | 4.11.12 | MIT | transitive |

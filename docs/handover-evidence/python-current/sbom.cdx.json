@@ -304,7 +304,7 @@
     },
     {
       "bom-ref": "requirements-L25",
-      "description": "requirements line 25: dnspython==2.9.0",
+      "description": "requirements line 25: dnspython==2.9.2",
       "externalReferences": [
         {
           "comment": "implicit dist url",
@@ -313,9 +313,9 @@
         }
       ],
       "name": "dnspython",
-      "purl": "pkg:pypi/dnspython@2.9.0",
+      "purl": "pkg:pypi/dnspython@2.9.2",
       "type": "library",
-      "version": "2.9.0"
+      "version": "2.9.2"
     },
     {
       "bom-ref": "requirements-L26",
@@ -739,7 +739,7 @@
     },
     {
       "bom-ref": "requirements-L54",
-      "description": "requirements line 54: opentelemetry-api==1.45.1",
+      "description": "requirements line 54: opentelemetry-api==1.45.2",
       "externalReferences": [
         {
           "comment": "implicit dist url",
@@ -748,9 +748,9 @@
         }
       ],
       "name": "opentelemetry-api",
-      "purl": "pkg:pypi/opentelemetry-api@1.45.1",
+      "purl": "pkg:pypi/opentelemetry-api@1.45.2",
       "type": "library",
-      "version": "1.45.1"
+      "version": "1.45.2"
     },
     {
       "bom-ref": "requirements-L55",
@@ -1374,7 +1374,7 @@
     }
   ],
   "metadata": {
-    "timestamp": "2026-11-02T04:32:21.045407+00:00",
+    "timestamp": "2026-11-14T15:34:35.841577+00:00",
     "tools": {
       "components": [
         {
@@ -1478,7 +1478,7 @@
       ]
     }
   },
-  "serialNumber": "urn:uuid:aa4721e0-897b-4ba0-bd5f-55e1d740de35",
+  "serialNumber": "urn:uuid:4280407d-90c9-4182-a52b-1c7b7585653d",
   "specVersion": "1.6",
   "version": 1
 }

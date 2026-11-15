@@ -1,16 +1,16 @@
 {
-  "assessment_time_utc": "2026-11-02T04:32:27.996978Z",
+  "assessment_time_utc": "2026-11-14T15:34:39.449237Z",
   "audit_dependency_count": 76,
   "audit_exit_code": 0,
   "dependency_count": 76,
-  "engine_source_sha": "c85998355dcc5ee23944bfa055e4001ebde96c97",
+  "engine_source_sha": "2205c0d1aef85c0897386cf76f9e2e145d98e39d",
   "exclusions": [
     "local Engine package",
     "pip/setuptools/wheel bootstrap tools"
   ],
   "finding_count": 0,
   "license_row_count": 76,
-  "lock_sha256": "21273ec4a9f0135a53c31798f389d9f219566f2f18d5f4ba68c66bc1fc2b3f8b",
+  "lock_sha256": "ce7131160a827b29255833dd2d39bf30f37f33607afe31fb55419aa36f4ee39a",
   "reference_image": "python:3.11.15-bookworm@sha256:a8f8fbe1a0edc9e4dddafa64ba73f7e04be7be5ebc23f332362e779e0a2e4e52",
   "reference_python": {
     "libc": "2.36",
