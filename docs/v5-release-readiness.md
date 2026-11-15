@@ -4,12 +4,16 @@
 on 2026-10-25.** This supersedes conflicting October 6 release gates and the
 old E/P/R/M procedure. It authorizes private preparation, not release execution.
 **Current release guidance:** the approved private cutover is complete.
-Selected-source technical acceptance was independently approved; executed results
-are in [the November 10 record](handover-evidence/v5-acceptance-2026-11-10.md).
+The successor selection's technical acceptance was independently approved;
+execution and justified reuse are in
+[the November 14 record](handover-evidence/v5-dependency-acceptance-2026-11-14.md).
+The later independent approval is recorded separately, not in that results commit.
+[The November 10 record](handover-evidence/v5-acceptance-2026-11-10.md) retains
+the preceding selection's scope.
 The earlier EF-V5-RELEASE-PREP-ENGINE-S1 revision 2 authorized version/documentation
 preparation. Tags, public exposure and website launch require separate human
 authorization; documentation-only successors do not replace accepted E/S/K or P/R.
-Broad M2 remains incomplete; historical findings and acceptance pins are unchanged.
+Broad M2 remains incomplete; historical findings and records retain their original pins.
 The approved **EF-V5-SOURCE-PREP-ENGINE-S1 revision 2** content amendment below
 documents three advisory-source future-public-import exclusions, not findings clearance.
 The approved EF-V5-PUBLIC-CONTENT-ENGINE-S1 cleanup additionally replaces external

@@ -21,9 +21,10 @@ their own.
 
 ## [5.0.0] — source preparation
 
-This section collects the v5 source changes. Selected-source technical acceptance
-is recorded in the [November 10 results](docs/handover-evidence/v5-acceptance-2026-11-10.md),
-separately from tag creation and publication. No public release date is assigned
+This section collects the v5 source changes. Successor selected-source execution
+and justified reuse are recorded in the
+[November 14 results](docs/handover-evidence/v5-dependency-acceptance-2026-11-14.md).
+Later independent approval is recorded separately, as are tag creation and publication. No public release date is assigned
 by this section; consult verified tags and Release records for publication status.
 
 - Set the Engine package/runtime version to 5.0.0 in the completed private

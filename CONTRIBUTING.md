@@ -162,10 +162,13 @@ References to pre-v5 commits, pull requests, issues and workflow runs point to t
 ## Release Procedure
 
 For v5, the approved [fresh-repository cutover sequence](docs/v5-release-readiness.md#replacement-cutover-and-release-sequence)
-supersedes the old archive-repository E/P/R/M ordering. The selected v5 sources
-and completed technical acceptance are recorded in the
-[acceptance results](docs/handover-evidence/v5-acceptance-2026-11-10.md).
-Documentation-only successors do not change those sources or restart acceptance.
+supersedes the old archive-repository E/P/R/M ordering. The selected successor
+v5 sources, execution and justified reuse are recorded in the
+[November 14 results](docs/handover-evidence/v5-dependency-acceptance-2026-11-14.md).
+Later independent approval is recorded separately. The
+[November 10 results](docs/handover-evidence/v5-acceptance-2026-11-10.md) retain
+the preceding selection's scope. Documentation-only successors do not change
+the accepted sources or restart acceptance.
 The procedure below describes release ordering; tag creation, settings and
 publication require separate human authorization.
 
